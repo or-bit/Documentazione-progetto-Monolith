@@ -1,0 +1,39 @@
+\input{./../../modello/layout}
+\input{./../../modello/global}
+\input{local}
+
+\begin{document}
+
+\makeFrontPage
+
+\input{diario_modifiche}
+
+\clearpage
+
+\tableofcontents
+\listoftables
+\listoffigures
+
+\clearpage
+
+\input{capitolo-introduzione}
+\clearpage
+\input{capitolo-gestioneQualita-generale}
+\clearpage
+\input{capitolo-gestioneQualita-dettaglio}
+\clearpage
+\begin{appendices}	
+	\appendixpage
+	\input{appendice-spice}
+	\clearpage
+	\input{appendice-iso9126}
+	\clearpage
+	\input{appendice-pdca}
+	%\clearpage
+	%\input{appendice-test}
+	\clearpage
+	\input{appendice-resocontoA}
+\end{appendices}
+
+
+\end{document}
