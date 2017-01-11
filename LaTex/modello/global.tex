@@ -1,0 +1,187 @@
+%%%%%%%%%%%%%%
+%  COSTANTI  %
+%%%%%%%%%%%%%%
+
+% In questa prima parte vanno definite le 'costanti' utilizzate da due o più documenti.
+% Serve a dare la giusta formattazione alle parole presenti nel glossario
+% il nome del comando \glossary è già usato da LaTeX
+\newcommand{\glossario}[1]{\textit{#1\ped{\ped{G}}}}
+
+% Meglio non mettere gli \emph dentro le costanti, in certi casi creano problemi
+\newcommand{\GroupName}{Or-bit}
+\newcommand{\GroupEmail}{orbit.swe@gmail.com}
+\newcommand{\ProjectName}{Monolith}
+\newcommand{\ProjectVersion}{v1.0.0}
+
+\newcommand{\Proponente}{Red Babel}
+\newcommand{\Committente}{Prof. Tullio Vardanega \\ Prof. Riccardo Cardin}
+\newcommand{\CommittenteInline}{Prof. Tullio Vardanega, Prof. Riccardo Cardin}
+\newcommand{\ResponsabileInCarica}{}
+
+% La versione dei documenti deve essere definita qui in global, perchè serve anche agli altri documenti
+\newcommand{\VersioneG}{1.0.0}
+\newcommand{\VersionePQ}{1.0.0}
+\newcommand{\VersioneNP}{1.0.0}
+\newcommand{\VersionePP}{1.0.0}
+\newcommand{\VersioneAR}{1.0.0}
+\newcommand{\VersioneSF}{1.0.0}
+\newcommand{\VersioneST}{0.0.0}
+\newcommand{\VersioneMA}{0.0.0}
+\newcommand{\VersioneMS}{0.0.0}
+\newcommand{\VersioneMU}{0.0.0}
+\newcommand{\VersioneDP}{0.0.0}
+% Il verbale non ha versionamento.
+% Lasciare vuoto, non mettere trattini o puntini
+% Non sono permessi numeri nel nome di un comando :(
+\newcommand{\VersioneVprimo}{} 
+\newcommand{\VersioneVsecondo}{}
+
+%ATTENZIONE: vengono rimossi dai comandi sottostanti i numeri di versione dei documenti non ancora esistenti
+% Quando serve riferirsi a ``Nome del Documento + ultima versione x.y.z'' usiamo queste costanti:
+\newcommand{\Glossario}{\emph{Glossario v\VersioneG{}}}
+\newcommand{\PianoDiQualifica}{\emph{Piano di Qualifica v\VersionePQ{}}}
+\newcommand{\NormeDiProgetto}{\emph{Norme di Progetto v\VersioneNP{}}}
+\newcommand{\PianoDiProgetto}{\emph{Piano di Progetto v\VersionePP{}}}
+\newcommand{\StudioDiFattibilita}{\emph{Studio di Fattibilità v\VersioneSF{}}}
+\newcommand{\AnalisiDeiRequisiti}{\emph{Analisi dei Requisiti v\VersioneAR{}}}
+\newcommand{\SpecificaTecnica}{\emph{Specifica Tecnica}}
+\newcommand{\ManualeAdmin}{\emph{Manuale Admin}}
+\newcommand{\ManualeSviluppatore}{\emph{Manuale Sviluppatore}}
+\newcommand{\ManualeUtente}{\emph{Manuale Utente}}
+\newcommand{\DefinizioneDiProdotto}{\emph{Definizione di Prodotto}}
+\newcommand{\LetteraPresentazione}{\emph{Lettera di Presentazione}}
+
+% Per riferirsi alle revisioni usare i comandi seguenti:
+\newcommand{\RR}{Revisione dei Requisiti}
+\newcommand{\RP}{Revisione di Progettazione}
+\newcommand{\RQ}{Revisione di Qualifica}
+\newcommand{\RA}{Revisione di Accettazione}
+
+% Comandi utili per riferirsi alle varie fasi
+\newcommand{\AR}{Analisi dei Requisiti}
+\newcommand{\AD}{Analisi di Dettaglio}
+\newcommand{\PA}{Progettazione Architetturale}
+\newcommand{\PD}{Progettazione di Dettaglio}
+\newcommand{\Cod}{Codifica}
+\newcommand{\VV}{Verifica e Validazione}
+
+% Comandi utili per riferirsi ai ruoli di progetto
+\newcommand{\Responsabile}{\textit{Responsabile di Progetto}}
+\newcommand{\Amministratore}{\textit{Amministratore}}
+\newcommand{\Analista}{\textit{Analista}}
+\newcommand{\Progettista}{\textit{Progettista}}
+\newcommand{\Programmatore}{\textit{Programmatore}}
+\newcommand{\Verificatore}{\textit{Verificatore}}
+
+\newcommand{\Responsabili}{\textit{Responsabili di Progetto}}
+\newcommand{\Amministratori}{\textit{Amministratori}}
+\newcommand{\Analisti}{\textit{Analisti}}
+\newcommand{\Progettisti}{\textit{Progettisti}}
+\newcommand{\Programmatori}{\textit{Programmatori}}
+\newcommand{\Verificatori}{\textit{Verificatori}}
+\newcommand{\Redattori}{\textit{Redattori}}
+
+
+\newcommand{\ScopoDelProdotto}{
+Lo scopo di questo progetto è sviluppare un \glossario{framework} volto alla costruzione di \glossario{bubble} interattive per aggiungere funzionalità al programma di comunicazione \glossario{Rocket.Chat}.
+Il progetto si propone anche di utilizzare il \glossario{framework} prodotto per fornire esempi significativi delle suddette \glossario{bubble}.
+}
+
+\newcommand{\GlossarioIntroduzione}{
+Insieme al progetto il gruppo fornisce un glossario nel quale sono raccolti i termini tecnici, gli acronimi e le parole che necessitano di chiarimenti utilizzate nella documentazione.\\
+I vocaboli presenti nel documento \Glossario{} sono marcati con una \textit{\small{G}} al pedice.
+}
+
+% Altri comandi utili
+\newcommand{\email}{email}
+\newcommand*{\sezione}[1]{\hyperref[{#1}]{sezione §\ref*{#1}}}
+\newcommand*{\appendice}[1]{\hyperref[{#1}]{Appendice \autoref*{#1}}}
+
+%%%%%%%%%%%%%%
+%  FUNZIONI  %
+%%%%%%%%%%%%%%
+
+% In questa seconda parte vanno definite le 'funzioni' utilizzate da due o più documenti.
+
+% Comando per usare comodamente le virgolette
+\newcommand{\virgolette}[1]{``#1''}
+
+\newcommand*\flextt{%
+  \fontdimen2\font=0.4em% interword space
+  \fontdimen3\font=0.6em% interword stretch
+  \fontdimen4\font=0.1em% interword shrink
+  \fontdimen7\font=0.1em% extra space
+  \hyphenchar\font=`\:
+}
+
+% Serve a dare la giusta formattazione al codice inline
+\newcommand{\code}[1]{\flextt{\texttt{#1}}}
+
+% Serve a dare la giusta formattazione a tutte le path presenti nei documenti
+\newcommand{\file}[1]{\flextt{\texttt{#1}}}
+
+% Permette di andare a capo all'interno di una cella in una tabella
+\newcommand{\multiLineCell}[2][c]{\begin{tabular}[#1]{@{}l@{}}#2\end{tabular}}
+
+% Per l'allineamento delle immagini
+\usepackage[export]{adjustbox}
+
+% Genera automaticamente la pagina di copertina
+\newcommand{\makeFrontPage}{
+  % Declare new goemetry for the title page only.
+  \newgeometry{top=1cm}
+  
+  \begin{titlepage}
+  \begin{center}
+
+  \begin{center}
+  \includegraphics[width=8cm]{../../modello/or-bit_bkg.png}
+  \end{center}
+  
+%  \vspace{1cm}
+
+  \begin{Huge}
+  \textbf{\DocTitle{}}
+  \end{Huge}
+  
+  \textbf{\emph{Gruppo \GroupName{} \, \texttwelveudash{} \, Progetto \ProjectName{}}}
+  
+  \vspace{10pt}
+
+  \bgroup
+  \def\arraystretch{1.3}
+  \begin{tabular}{ r|l }
+    \multicolumn{2}{c}{\textbf{Informazioni sul documento}} \\
+    \hline
+		% differenzia a seconda che \DocVersion{} stampi testo o no
+		\setbox0=\hbox{\DocVersion{}\unskip}\ifdim\wd0=0pt
+			% nulla (non ho trovato come togliere l'a capo)
+			\\
+		\else
+			\textbf{Versione} & \DocVersion{} \\
+		\fi
+    \textbf{Redazione} & \multiLineCell[t]{\DocRedazione{}} \\
+    \textbf{Verifica} & \multiLineCell[t]{\DocVerifica{}} \\
+    \textbf{Approvazione} & \multiLineCell[t]{\DocApprovazione{}} \\
+    \textbf{Uso} & \DocUso{} \\
+    \textbf{Distribuzione} & \multiLineCell[t]{\DocDistribuzione{}} \\
+  \end{tabular}
+  \egroup
+
+  \vspace{10pt}
+
+  \textbf{Descrizione} \\
+  \DocDescription{}  
+
+%  \vspace{0.2cm}
+  
+
+  \end{center}
+  \begin{figure}[H]
+	\includegraphics[height=3.7cm, right]{../../modello/monolith}
+  \end{figure}
+  \end{titlepage}
+  
+  % Ends the declared geometry for the titlepage
+  \restoregeometry
+}
