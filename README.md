@@ -1,2 +1,2 @@
-# WIP-docs
-This repo WILL BE DELETED once documentation will be completed.
+# Documentazione-progetto-Monolith
+In questa repository verranno salvati i file della documentazione del gruppo Or-bit per il progetto Monolith.
