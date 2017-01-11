@@ -1,0 +1,64 @@
+\section{Descrizione generale}
+\subsection{Obiettivo del prodotto}
+Il prodotto si inserisce in un panorama in evoluzione continua, costituito da bot e sistemi automatici di comunicazione che interagiscono con gli utenti.
+Lo scopo di  questa interazione è l'integrazione dei servizi offerti dalla rete all'interno delle piattaforme di messaggistica. 
+\ProjectName{} propone agli sviluppatori un \glossario{framework} che permetta loro la creazione agevole di \glossario{bubble} interattive all'interno dell'ambiente \glossario{Rocket.Chat}. Esso inoltre fornisce alcune \glossario{bubble} complete, sviluppate utilizzando il \glossario{framework} realizzato, che potranno essere utilizzate direttamente dagli utenti oppure dagli sviluppatori come punto di partenza per la creazione di altre \glossario{bubble}.
+Esempi di queste sono: 
+\begin{itemize}
+	\item \glossario{bubble} multimediali per includere all'interno di \glossario{Rocket.Chat} la visualizzazione diretta di contenuti video, anteprima di link multimediali e \glossario{GIF};
+	\item \glossario{bubble} relative a informazioni mutabili nel tempo come informazioni su tracking di voli, previsioni del tempo, o prezzi di articoli online;
+	\item \glossario{bubble} editabili che consentano di tenere traccia di sondaggi integrati nella chat, di avere un elenco interattivo o di caricare su un server remoto documenti.
+\end{itemize}
+
+\subsection{Funzioni del prodotto}
+Il prodotto è composto da due parti. La prima consiste di un \glossario{framework} destinato agli sviluppatori, mentre la seconda è formata da alcune \glossario{bubble} interattive, destinate a qualsiasi tipo di utente.
+
+\subsubsection{Framework}
+Il \glossario{framework} consiste in un insieme di elementi, suddivisi in 2 categorie: grafici e funzionali.\\
+Gli elementi grafici sono \glossario{widget} inseribili all'interno della \glossario{bubble}, mediante i quali sarà possibile per l'utilizzatore del servizio interagire con la \glossario{bubble} stessa.\\
+Gli elementi funzionali rappresentano uno strato logico dell'applicazione tramite cui si rende programmabile il comportamento della bolla.\\
+Per una descrizione più dettagliata delle funzionalità offerte dal \glossario{framework} si rimanda alla lettura dei casi d'uso in questo documento.
+
+\subsubsection{Bubble}
+Il team \GroupName{} mette a disposizione due casi pratici di \glossario{bubble} interattive realizzati per mezzo del \glossario{framework} sopracitato.\\
+Il primo caso consiste in una \glossario{bubble} nominata \virgolette{To-do list}, la quale fornisce ai suoi utilizzatori le funzionalità di una lista condivisa. Alla To-do list è possibile:
+\begin{itemize}
+	\item inserire nuovi elementi;
+	\item segnalare come completati elementi esistenti nell'elenco;
+	\item impostare reminder opzionali per l'inserimento e il completamento degli elementi nell'elenco.
+\end{itemize}
+Il secondo caso pratico sviluppato è un sistema automatizzato per la gestione di un'attività di ristorazione per asporto; il sistema permette di amministrare l'attività di ristorazione mediante l'utilizzo delle \glossario{bubble}. All'interno di questo scenario sono previsti ruoli con diversi privilegi di accesso e modifica dell'informazione e diverse \glossario{GUI} corrispondenti.
+Lo scopo di questa \glossario{bubble} è quello di distribuire gli incarichi a chi di dovere utilizzando la \glossario{bubble} To do list descritta precedentemente e dare la possibilità di marcare il proprio compito come svolto.\\
+Un cliente dell'attività di ristorazione può compiere un'ordinazione tramite \glossario{bubble}, che viene processata automaticamente dal sistema.\\
+Per una descrizione più dettagliata delle funzionalità offerte si rimanda alla lettura dei casi d'uso in questo documento.
+
+\subsection{Caratteristiche degli utenti}
+Per quanto riguarda le \glossario{bubble} interattive, il target è costituito da utenti senza alcuna competenza particolare. Insieme alle \glossario{bubble} viene fornito un manuale relativo al loro utilizzo. Questo non vale per il \glossario{framework}, destinato a sviluppatori con conoscenze base dell'ambiente \glossario{Rocket.Chat}.
+
+\subsection{Demo}
+
+\subsubsection{Descrizione}
+Per la demo del progetto il gruppo \GroupName{} presenterà ai proponenti del progetto una \glossario{bubble} interattiva legata alla gestione di un'attività di ristorazione per asporto. Questa \glossario{bubble} viene chiamata \textit{Bubble \& eat}.
+\\Questa \glossario{bubble} apparirà con layout e funzionalità diverse a seconda della tipologia di utente che ne fruirà dei servizi.
+\\L'utente generico della \glossario{bubble} potrà visualizzare il menù del ristorante e fare un ordine, previo inserimento dei propri dati, incluso l'indirizzo in cui consegnare il cibo ordinato.
+\\L'ordine così effettuato verrà trasmesso alla cucina del locale tramite \glossario{bubble} \virgolette{\glossario{To-do list}}, sotto forma di casella aggiunta automaticamente in fondo alla lista. Il \glossario{Cuoco} una volta completato l'ordine avrà facoltà di segnare completata l'ordinazione dalla lista.
+\\Contemporaneamente alla notifica alla cucina dell'ordine verrà registrato automaticamente sul database dell'attività il consumo di ingredienti.
+\\Qualora la quantità di un ingrediente dovesse scendere al di sotto di una soglia prefissata verrà inviata automaticamente una notifica all'addetto agli acquisti dell'azienda tramite \glossario{to-do list}, il quale provvederà a recuperare gli ingredienti mancanti.
+\\È prevista anche la figura del \glossario{Direttore} dell'attività il quale avrà facoltà di inserire nuove pietanze nel menù e deciderne il prezzo.
+
+\subsubsection{Attori}
+\begin{itemize}
+	\item \glossario{Cliente}: colui che ha facoltà di creare un ordine previa consultazione del menù e registrazione dei propri dati;
+	\item \glossario{Cuoco}: addetto alla preparazione della pietanza selezionata in precedenza dall'utente, ha facoltà di eliminare dalla propria \glossario{to do list} le pietanze che ha già preparato;
+	\item \glossario{Responsabile Acquisti}: addetto a rifornire il magazzino, sulla base degli ingredienti consumati dal \glossario{Cuoco}, in base a quanto gli è notificato dalla sua \glossario{to-do list} nella \glossario{bubble};
+	\item \glossario{Fattorino}: addetto alla consegna delle ordinazioni, ha la facoltà di selezionare le consegne ed eliminarle quando completate;
+	\item \glossario{Direttore}: può modificare il menù e il prezzo di ciascuna pietanza riportata in esso.
+\end{itemize}
+
+\subsection{Piattaforma d'esecuzione}
+La piattaforma di esecuzione principale sarà \glossario{Rocket.Chat}, che costituisce anche una dipendenza per il corretto funzionamento delle \glossario{bubble}.
+
+\subsection{Vincoli generali}
+Il \glossario{framework} e le \glossario{bubble} sono pensate e progettate per funzionare all'interno dell'ambiente \glossario{Rocket.Chat}, in qualsiasi sistema operativo su cui sia possibile usufruirne.
+
+

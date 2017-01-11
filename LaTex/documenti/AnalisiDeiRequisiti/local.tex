@@ -1,0 +1,67 @@
+%%%%%%%%%%%%%%
+%  COSTANTI  %
+%%%%%%%%%%%%%%
+
+% In questa prima parte vanno definite le 'costanti' utilizzate soltanto da questo documento.
+% Devono iniziare con una lettera maiuscola per distinguersi dalle funzioni.
+
+\newcommand{\DocTitle}{Analisi dei Requisiti}
+\newcommand{\DocVersion}{\VersioneAR{}}
+
+\newcommand{\DocRedazione}{Tommaso Rosso\\Alice V. Sasso\\Lorenzo Ferrarin\\Marco Ponchia}
+\newcommand{\DocVerifica}{Beatrice Guerra\\Nicola Dal Maso}
+\newcommand{\DocApprovazione}{Mattia Zecchinato}
+
+\newcommand{\DocUso}{Esterno}
+\newcommand{\DocDistribuzione}{
+	\Committente{} \\
+	Gruppo \GroupName{}
+}
+
+% La descrizione del documento
+\newcommand{\DocDescription}{
+Documento relativo all'analisi dei requisiti e dei casi d'uso del progetto \ProjectName{} fatta dal gruppo \GroupName{}.
+ }
+
+%%%%%%%%%%%%%%
+%  FUNZIONI  %
+%%%%%%%%%%%%%%
+
+% In questa seconda parte vanno definite le 'funzioni' utilizzate soltanto da questo documento.
+
+%Counter per requisiti
+\newcounter{requisito}
+
+% Comandi per creare riferimenti
+% ai requisiti obbligatori
+\newcommand*{\RequisitoObFRef}[1]{\hyperref[{#1}]{R1F\ref*{#1}}}
+\newcommand*{\RequisitoObQRef}[1]{\hyperref[{#1}]{R1Q\ref*{#1}}}
+\newcommand*{\RequisitoObVRef}[1]{\hyperref[{#1}]{R1V\ref*{#1}}}
+\newcommand*{\RequisitoObPRef}[1]{\hyperref[{#1}]{R1P\ref*{#1}}}
+% ai requisiti desiderabili 
+\newcommand*{\RequisitoDFRef}[1]{\hyperref[{#1}]{R2F\ref*{#1}}}
+\newcommand*{\RequisitoDQRef}[1]{\hyperref[{#1}]{R2Q\ref*{#1}}}
+\newcommand*{\RequisitoDVRef}[1]{\hyperref[{#1}]{R2V\ref*{#1}}}
+\newcommand*{\RequisitoDPRef}[1]{\hyperref[{#1}]{R2P\ref*{#1}}}
+% ai requisiti opzionali
+\newcommand*{\RequisitoOpFRef}[1]{\hyperref[{#1}]{R3F\ref*{#1}}}
+\newcommand*{\RequisitoOpQRef}[1]{\hyperref[{#1}]{R3Q\ref*{#1}}}
+\newcommand*{\RequisitoOpVRef}[1]{\hyperref[{#1}]{R3V\ref*{#1}}}
+\newcommand*{\RequisitoOpPRef}[1]{\hyperref[{#1}]{R3P\ref*{#1}}}
+
+% Comandi per creare i requisiti
+% obbligatori
+\newcommand*{\RequisitoObF}{\refstepcounter{requisito} R1F\therequisito}
+\newcommand*{\RequisitoObQ}{\refstepcounter{requisito} R1Q\therequisito}
+\newcommand*{\RequisitoObV}{\refstepcounter{requisito} R1V\therequisito}
+\newcommand*{\RequisitoObP}{\refstepcounter{requisito} R1P\therequisito}
+% desiderabili
+\newcommand*{\RequisitoDF}{\refstepcounter{requisito} R2F\therequisito}
+\newcommand*{\RequisitoDQ}{\refstepcounter{requisito} R2Q\therequisito}
+\newcommand*{\RequisitoDV}{\refstepcounter{requisito} R2V\therequisito}
+\newcommand*{\RequisitoDP}{\refstepcounter{requisito} R2P\therequisito}
+% opzionali
+\newcommand*{\RequisitoOpF}{\refstepcounter{requisito} R3F\therequisito}
+\newcommand*{\RequisitoOpQ}{\refstepcounter{requisito} R3Q\therequisito}
+\newcommand*{\RequisitoOpV}{\refstepcounter{requisito} R3V\therequisito}
+\newcommand*{\RequisitoOpP}{\refstepcounter{requisito} R3P\therequisito}
