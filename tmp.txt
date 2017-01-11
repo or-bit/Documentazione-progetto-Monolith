@@ -1,0 +1,380 @@
+﻿﻿Or-bit
+Monolith: an interactive bubble provider
+
+
+<logo>
+
+
+Norme di progetto
+
+
+Informazioni sul documento
+Versione: 0.0.0
+Redazione:
+Verifica:
+Responsabile:
+Uso: interno
+
+
+Descrizione
+Documento relativo alle norme stabilite dal gruppo Or-bit per la realizzazione del progetto Monolith
+
+
+Diario delle modifiche
+
+
+//indice che tanto genera latex
+
+
+Introduzione
+
+
+Scopo del documento
+
+
+Lo scopo di questo documento è quello di definire le norme interne utilizzate per regolare lo svolgimento dell'attività progettuale monolith svolto dal gruppo Or-bit.
+Il presente, tra le altre cose, tratterà di:
+. modalità di stesura dei documenti;
+. norme relative alle comunicazioni sia interne sia esterne;
+. norme relative alla pianificazione delle attività da svolgere e allo svolgimento delle stesse.
+    
+Scopo del prodotto
+Lo scopo di questo progetto è sviluppare un framework volto alla costruzione di bolle interattive, per andare ad aggiungere funzionalità al programma di comunicazione Rocket.Chat (tm) (link a homepage).
+In secondo luogo, utilizzare il framework prodotto per fornire esempi significativi delle suddette bolle.
+    
+Glossario
+Insieme al progetto il gruppo fornirà anche un glossario nel quale saranno raccolti i termini tecnici, acronimi e le parole che necessitano di chiarimenti, che verranno utilizzate nella documentazione.
+I vocaboli presenti nel documento Glossario v0.0.1 saranno marcati con una g al pedice.
+    
+2 Collaborazione
+
+
+2.1 Comunicazioni
+    
+2.1.1 Comunicazioni esterne
+Per le comunicazioni esterne al gruppo sono stati previsti diversi canali.
+Il principale tra questi è la e-mail orbit.swe@gmail.com che verrà impiegata per le comunicazioni ufficiali.
+Sotto suggerimento dei proponenti del progetto, verrà utilizzato anche un canale Slack (tm) (link a homepage), per comunicazioni più dirette e rapide con gli stessi durante la durata del progetto. Nel caso in cui le comunicazioni scritte non dovessero essere sufficienti è stata prevista la possibilità di comunicare tramite Skype(tm) (link a homepage) e/o incontrarsi in un luogo da concordarsi tra team il team di sviluppo e proponenti. A tale scopo è stato costituito un gruppo su Skype contenente sia i partecipanti del gruppo che proponenti del progetto
+            
+2.1.2 Comunicazioni interne
+Il mezzo predefinito per le comunicazioni tra i membri del gruppo è un canale Slack.
+In aggiunta a questo verrà utilizzato anche discord per le chat vocali.
+Ogni comunicazione inerente a decisioni importanti di progetto tra membri del gruppo dovrà essere verbalizzata.
+È stato previsto un incontro quotidiano tramite chat vocale della durata di 30 minuti, compatibilmente con gli impegni dei singoli, per tenersi aggiornati sui progressi e prendere le decisioni per cui si ritiene necessaria la presenza degli altri. Per questi incontri dovrà essere selezionata una persona che si occupi di scrivere un verbale contenente le informazioni più importanti discusse durante l’incontro.
+
+
+2.1.3 Regole di stesura delle e-mail
+L'utilizzo della e-mail è previsto solamente per comunicazioni formali verso l'esterno quindi il mittente dovrà essere necessariamente il nome del gruppo e la e-mail inviata dal Responsabile di Progetto.
+
+
+2.2 Riunioni 
+
+
+
+
+
+
+2.2.1 Riunioni interne
+
+
+2.2.1.1 Frequenza delle riunioni
+Le riunioni sono previste principalmente tramite chat vocale con una cadenza bisettimanale.
+
+
+2.2.1.2 Convocazione delle riunioni
+Il compito di convocare le riunioni spetta al Responsabile di Progetto, il quale si occuperà di comunicarle tramite Slack agli altri membri del gruppo, con un preavviso di almeno quattro giorni. Il Responsabile dovrà fornire la data e la durata dell'incontro e l'ordine del giorno, indipendentemente dalla tipologia di riunione. In caso di un incontro di persona dovrà anche rendere noto il luogo della riunione. Gli altri membri dovranno accettare sempre tramite Slack e la riunione si terrà solamente se tutti i membri del gruppo sono disponibili. Qualora fosse necessaria una riunione tra un sottoinsieme dei membri del gruppo, per esempio in caso di necessità di comunicazione tra persone con funzioni affini o complementari, le decisioni prese in essa dovranno essere comunicate agli altri tramite il canale di slack.
+            
+2.2.1.3 Svolgimento delle riunioni
+Verranno selezionate tra i partecipanti del gruppo due persone, le quali avranno l'incarico di mettere a verbale un resoconto delle cose più importanti dette durante la riunione. All'inizio della riunione verranno comunicati i progressi fatti da ciascuno e verranno prese decisioni su come procedere con lo sviluppo del progetto. Seguirà quindi una trattazione degli argomenti specificati nell'ordine del giorno. Le due persone incaricate di mettere a verbale la riunione dovranno anche verificare che l'ordine del giorno venga rispettato.
+
+
+2.2.2 Riunioni esterne
+Nel caso di riunione con i proponenti o con il professore il verbale sarà un documento ufficiale  e verrà inserito quindi nella documentazione del progetto.
+Questo documento dovrà essere redatto utilizzando un particolare template di latex.
+
+
+
+
+2.2.2.1 Frequenza delle riunioni
+
+
+2.2.2.2 Convocazione delle riunioni
+
+
+2.2.2.3 Svolgimento delle riunioni
+            
+2.2.4 Verbale
+
+
+2.2.4.1 Riunione interna
+Ciascun tipo di riunione dovrà produrre un verbale. Nel caso di riunione interna il documento prodotto verrà conservato su una repository condivisa tra tutti membri del progetto. Persone incaricate di scriverlo saranno scelte di volta in volta rotazione. Il documento avrà come titolo verbale è il giorno della riunione. Il primo paragrafo sarà un elenco puntato con l'ordine del giorno trattato nella riunione in questione.
+                
+2.2.4.2 Riunione esterna
+
+
+2.3 Repository e strumenti per la condivisione dei file
+
+
+2.3.1 Repository
+Per il versionamento sia dei documenti che del codice sorgente del progetto utilizzeremo due repository di git. Il repository del sorgente ha licenza MIT e sarà possibile accedervi al seguente indirizzo: <indirizzo da mettere>.
+La documentazione avrà lo stesso tipo di licenza e sarà mantenuta su un altro repository git al seguente indirizzo: <indirizzo da mettere>.
+Il repository dei documenti sarà suddiviso in due cartelle: 
+. "Documenti interni", che conterrà tutti i documenti interni (da mettere nel glossario la definizione di documento interno/esterno);
+. "Documenti esterni", che conterrà tutti i documenti esterni.
+Tutti i partecipanti al progetto verranno aggiunti come collaboratori ai due repository.
+
+
+2.3.2 Condivisione file
+Tutti i file principali del progetto saranno resi disponibili sulla piattaforma di GitHub(tm). Per tutti gli altri file di utilità non compresi di cui sia necessaria la condivisione viene utilizzato il servizio offerto da Google Drive (™).
+
+
+3 Documentazione
+        
+3.1 Template
+È stato scelto/creato un template LaTeX per la stesura di tutta la documentazione, mantenendo così costanti le scelte stilistiche. Il template può essere trovato al seguente indirizzo <inserire locazione del template qui>.
+        
+3.2 Struttura del documento
+Questa sezione tratta della struttura generale dei diversi documenti
+3.2.1 Prima pagina
+. Nome gruppo
+. Nome progetto
+. Logo
+. Nome documento
+. Informazioni sul documento (versione, redazione, verifica, responsabile, uso, lista di distribuzione)
+. Descrizione del documento
+
+
+3.2.2 Diario delle modifiche
+Il diario delle modifiche viene rappresentato tramite una tabella. Ogni riga della tabella rappresenta una versione del documento. In ogni riga viene indicato: 
+. versione corrente del documento; 
+. data della modifica che ha portato al cambiamento di versione; 
+. autore della modifica e suo ruolo; 
+. breve descrizione della modifica. 
+La tabella è ordinata in ordine cronologico decrescente, in modo che risulti l'ultima versione come prima riga della tabella.
+
+
+3.2.3 Indici
+Ogni documento avrà tre indici: 
+. indice delle sezioni;
+. indice delle figure;
+. indice delle tabelle.
+Nel caso di mancanza di figure o tabelle all'interno del documento i rispettivi indici non verranno inseriti.
+
+
+3.2.4 Formattazione generale delle pagine
+Tutte le pagine avranno la seguente struttura:
+-Intestazione:
+. Logo del gruppo affiancato dal nome;
+. Sezione corrente
+-Corpo:
+. Testo della pagina corrente;
+-Piè di pagina:
+. Nome e versione del documento;
+. Numero della pagina corrente nel formato N di T dove N è il numero di pagina corrente e T è il numero di pagine totali.
+
+
+3.3 Norme tipografiche
+In questa sezione vengono descritte tutte le norme stilistiche che devono essere seguite nella scrittura dei documenti.
+
+
+3.3.1 Orientamento del testo
+I caratteri tipografici utilizzati nei documenti saranno il tondo(documento), il corsivo(documento scritto in corsivo), il maiuscolo(DOCUMENTO).
+
+
+3.3.1.1 Corsivo-Tondo-Maiuscolo
+Vanno scritti in corsivo:
+. I titoli di libri e documentazioni esterne (altri documenti di progetto, libri di riferimento ecc.);
+. le parole o brevi espressioni in lingua diversa da quella del testo, che seguiranno le flessioni proprie della lingua originale.
+Vanno composti in tondo:
+. Le parole in lingua straniera che, pur conservando ancora la forma grafica originaria, sono ormai assimilate all'italiano: come tali esse non seguono la flessione originaria e sono considerate invariabili. Qualsiasi parola straniera che ricorra con particolare frequenza in un testo potrà essere stampata in tondo e diventerà invariabile (ad esempio la parola input, scritta in tondo, è da considerarsi invariabile: l'input (singolare), gli input(plurale)).
+. I nomi propri stranieri di associazioni, cariche pubbliche, istituzioni, ecc., che non hanno equivalente in italiano.
+. I nomi delle parti interne di un volume con iniziale maiuscola (Introduzione, Appendice, Glossario ecc.).
+
+
+3.3.1.2 Lettere maiuscole
+Come norma generale, l'uso dell'iniziale maiuscola, esclusi i nomi propri e le parole che seguono un punto fermo, andrà limitata ai casi strettamente necessari.
+Si fornisce una lista esemplificativa:
+. Soprannomi e pseudonimi: esempi
+. Aggettivi sostantivi che indicano territori: esempi
+. Nomi geografici costituiti da due sostantivi o da un sostantivo e un aggettivo in funzione di nomi propri: esempi (USA, EU, ecc.)
+. Il primo termine delle denominazioni ufficiali di associazioni, enti, organismi istituzionali, ecc.: esempi
+. Titoli, cariche e gradi, quando facciano parte integrante del nome: esempi    
+
+
+3.3.1.4 I segni di interpunzione
+I segni di interpunzione e le parentesi mantengono sempre lo stile di formattazione del testo in cui sono inserite.
+I periodi interi fra virgolette o parentesi dovranno concludersi con il punto fermo prima della parentesi di chiusura.
+Evitare l’uso consecutivo dei due punti all’interno di uno stesso periodo.
+
+
+3.3.1.5 Parentesi, rigati e trattini
+-Si usano normalmente le parentesi tonde.
+-I trattini congiuntivi (-) si usano tra due parole formanti un nome composto.
+
+
+3.3.1.6 Citazioni
+Le citazioni si compongono in tondo fra virgolette basse.
+
+
+3.3.1.7 Date
+Le date saranno suddivise in forma estesa e forma breve. Il formato di data estesa sarà composto da:
+. numero del giorno del mese (gg);
+. nome del mese in maiuscolo (mese);
+. anno in forma integrale (aaaa).
+Il formato breve consisterà in:
+. numero del mese;
+. numero del giorno;
+. anno per intero;
+tutti separati da trattini (ad esempio: 12-10-2016).
+Saranno utilizzati numeri arabi con uso anglosassone del punto nei numeri decimali, tranne nelle seguenti eccezioni: numeri di pagina di Prefazioni.
+
+
+3.3.2 Sigle e abbreviazioni
+Le denominazioni di enti e Organizzazioni si abbreviano nelle sigle d’uso,composte
+di seguito, senza interporre punti e in maiuscolo/minuscolo.
+Si raccomanda di usare le seguenti abbreviazioni: [inserire abbreviazioni].
+            
+3.3.3 Note
+Tutte le note sono composte normalmente in tondo, in un corpo più piccolo di quelli del testo e dei riportati.
+Le note saranno numerate normalmente con numeri arabi a esponente (esponenti di nota). La numerazione ripartirà di regola da 1 all’inizio di ogni nuovo capitolo.
+Le note seguiranno la consuetudine della lingua inglese di essere riportate dopo la punteggiatura.
+
+
+3.3.4 Indici
+Sono presenti l'indice delle sezioni, l'indice delle figure e l'indice dei nomi.
+L'indice delle sezioni presenta in ordine le sezioni del documento e ne evidenzia le pagine di inizio.
+L'indice delle figure riporta il nome ed il numero di tutte le figure presenti nel documento.
+L'indice dei nomi è composto da tutte le parole più importanti nel documento per semplificare la consultazione dei termini.
+
+
+3.4 Norme grafiche
+
+
+3.4.1 Colori
+È permesso l'uso del colore nelle immagini ed è assicurata la corretta visibilità per la stampa di esse.     
+
+
+3.4.2 Immagini
+Per convenzione le immagini saranno salvate in formato vettoriale ".svg" ma è prevista l'eccezione per l'utilizzo di screenshot che saranno invece salvati in formato ad alta risoluzione ".png".
+
+
+3.4.3 Tabelle
+In tutte le tabelle le righe saranno numerate e i termini nell’intestazione saranno in grassetto.
+Per aumentare la leggibilità sarà adottata la convenzione di colorare righe alterne in grigio chiaro.
+Le tabelle saranno individuabili per mezzo di un numero progressivo, relativo al capitolo di appartenenza, per l'inserimento di esse nell'indice delle tabelle.
+
+
+3.5 Documenti interni
+I Documenti interni sono rivolti ai componenti del gruppo e sono redatti in lingua italiana.
+
+
+3.6  Documenti esterni
+I Documenti esterni sono rivolti ai proponenti del capitolato e sono redatti in lingua inglese.
+            
+3.7 Documenti informali
+I Documenti informali sono tutti quelli che non sono ancora passati per le fasi di revisione, validazione e conseguente approvazione da parte del Responsabile di Progetto.
+
+
+3.8 Documenti formali
+I Documenti formali sono tutti quelli approvati dal Responsabile di Progetto.
+
+
+3.9 Versioning
+Il ciclo di vita dei documenti è tracciato dal numero di versione degli stessi.
+Viene rispettato il seguente formato: una v piccola seguita da tre numeri intervallati da un punto:
+vX.Y.Z
+dove
+. X rappresenta progressivamente le approvazioni attraversate dal documento;
+. Y le  modifiche al documento;
+. Z la correzione di errori minori.
+
+
+3.10 Ciclo di vita
+Il ciclo di vita rappresenta tutte le fasi in cui un documento si trova dalla modifica  all'approvazione.
+Nello stato iniziale di lavorazione un documento può essere nato oppure aver subito una modifica, diventando così un documento informale.
+Dovrà poi essere sottoposto ad una fase di verifica che verrà effettuata dai verificatori.
+Una volta superata la verifica il documento verrà approvato dal Responsabile di Progetto e quindi diventerà un documento formale.
+
+
+3.11 Glossario
+Per la definizione di tutti i termini si rimanda alla consultazione del Glossario 0.0.0 .
+
+
+4 Ruoli di progetto
+Questa sezione si occupa di descrivere esaustivamente le responsabilità e i compiti di ciascun ruolo all'interno del team di sviluppo durante lo svolgimento del progetto.
+Ogni ruolo dovrà essere ricoperto a rotazione da ogni membro del gruppo almeno una volta in maniera significativa. Nell’assegnazione dei ruoli dovrà essere prestata particolare attenzione ad evitare che il processo di verifica di una particolare attività sia effettuato dalle stesse persone che l’hanno svolta originariamente.
+Definire delle regole per la suddivisione dei ruoli (es. non si può passare più del 50% delle ore di lavoro totali su un singolo ruolo, determinare il numero di ore minime da spendere su un ruolo per essere considerata una quantità di lavoro significativa)
+
+
+4.1 Analista
+Il compito dell’analista è quello di svolgere tutte le attività di analisi necessarie prima dello svolgimento del progetto o di una particolare attività. Sottopone ad analisi il problema reale per soddisfare le richieste degli stakeholders. Deve quindi possedere una piena conoscenza della natura e complessità del progetto in tutte le sue parti. L’analista ha il compito di redigere due documenti:
+. Studio di fattibilità;
+. Analisi dei requisiti.
+Lo Studio di fattibilità definirà formalmente e ufficialmente quelle che saranno le funzionalità offerte dal prodotto, mentre l'Analisi dei requisiti elencherà tutte le risorse e attività necessarie a realizzarle. I documenti citati dovranno essere resi facilmente comprensibili a:
+. Proponente;
+. Committente;
+. Progettista.
+L’analista partecipa anche alla redazione del Piano di Qualifica rendendo disponibile le sue approfondite conoscenze dal punto di vista teorico e applicativo.
+
+
+4.2 Progettista
+Studia il dominio e stabilisce l’insieme delle tecnologie impiegate per lo svolgimento del progetto. Sviluppa la soluzione al problema rispettando i vincoli. Redige la Specifica tecnica e la Definizione di prodotto
+
+
+4.3 Programmatore
+Il programmatore ha il compito di implementare le soluzioni determinate dal Progettista per aderire a quanto stabilito dagli analisti durante la fase di analisi. Sarà inoltre responsabilità del programmatore documentare il codice prodotto secondo gli standard descritti nella sezione <!!!inserire sezione!!!!>delle norme di progetto e dotare il codice di appropriati test per le attività di verifica e validazione. Il programmatore dovrà inoltre assicurarsi che il codice prodotto sia correttamente versionato e facilmente manutenibile.
+
+
+4.4 Verificatore
+Il verificatore ha il compito di valutare la correttezza del lavoro svolto dagli altri membri del team e di assicurarsi che sia svolto in maniera conforme a quanto descritto nelle norme di progetto. In caso trovi errori il verificatore, se na ha la possibilità, dovrà anche provvedere a correggerli. In caso l’attività di correzione risulti troppo dispendiosa sarà compito del verificatore comunicarlo al project manager, il quale provvederà ad aggiornare l'ordine del giorno della prossima riunione. Redige parte del Piano di Qualifica
+"La riunione potrebbe perciò essere modificata (nel luogo e nel tempo) per fronteggiare eventuali emergenze" (pensiero espresso a pds)
+
+
+4.5 Responsabile di progetto
+Il responsabile di progetto si occupa degli aspetti organizzativi e decisionali:
+. si avvarrà del Piano di Progetto 0.0.0 per pianificare l'allocazione delle risorse umane e materiali, affidando i diversi compiti ai vari componenti del team e gestendo le interdipendenze fra le attività pianificate stimando scadenze e costi.
+Assegnare i compiti ai vari componenti del team.
+Pianificare le attività e la loro distribuzione.
+Redige il piano di progetto insieme all’ Amministratore.
+Instanziare i processi nel progetto, cercando le dipendenze tra le varie attività
+Gestire e controllare le risorse impiegate, stimando i costi e i tempi
+Sono compiti specifici del responsabile di progetto:
+Analizzare i rischi connessi al progetto.
+Approvare i documenti. Eventualmente delegando un verificatore.
+Verificare che le attività di verifica e validazione siano svolte in maniera conforme a quanto riportato nelle norme di progetto versione 0.0.0.
+Controllare che non vi siano conflitti di interesse tra attività di verifica e di produzione.
+Nello specifico ciascun membro del team non potrà mai verificare quello che ha prodotto.
+Il responsabile si occupa anche delle relazioni con i committenti
+Il responsabile di progetto è anche il responsabile ultimo dei risultati conseguiti
+
+
+4.6 Amministratore
+
+
+Garantisce il funzionamento dell’infrastruttura tecnologica predisponendo strumenti e regole. Si assicura che tutte le risorse siano operanti. E’ compito dell’amministratore garantire l’efficienza e l’operatività dell’ambiente. A questo fine tra le sue mansioni si annoverano:
+. ricerca degli strumenti volti all’ automatizzazione dei vari compiti;
+. controllo delle versioni e configurazioni del prodotto;
+. gestione dell’archiviazione della documentazione del progetto;
+. redazione delle norme di progetto e del piano di qualifica.
+
+
+5 Procedure a supporto dei processi
+
+
+5.1 Gestione di progetto
+La responsabilità delle scelte progettuali è del responsabile di progetto.
+Al fine di adempiere agli obblighi presentati al punto 4.5 delle norme di progetto v 0.0.1 egli potrà avvalersi di strumenti specifici.
+
+
+5.1.1 Pianificazione delle attività
+
+
+Il responsabile di progetto al fine di pianificare le attività si avvarrà di diagrammi di gantt  di pert (glossario) relativi alle fasi presentate nel piano di progetto v 0.0.1
+
+
+5.1.2 Coordinazione e controllo delle attività
+        
+
+
+
+
