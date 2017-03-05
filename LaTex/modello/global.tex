@@ -5,7 +5,19 @@
 % In questa prima parte vanno definite le 'costanti' utilizzate da due o più documenti.
 % Serve a dare la giusta formattazione alle parole presenti nel glossario
 % il nome del comando \glossary è già usato da LaTeX
-\newcommand{\glossario}[1]{\textit{#1\ped{\ped{G}}}}
+% permette di distingure la prima occorrenza della parola nel documento
+\usepackage{xparse}
+\ExplSyntaxOn
+\seq_new:N \l_hernan_seq
+\NewDocumentCommand{\glossario}{m}{
+    \seq_if_in:NnTF{\l_hernan_seq}{#1}{
+        #1
+    }{
+        \seq_put_left:Nn{\l_hernan_seq}{#1}
+        \textit{#1\ped{\ped{G}}}
+    }
+}
+\ExplSyntaxOff
 
 % Meglio non mettere gli \emph dentro le costanti, in certi casi creano problemi
 \newcommand{\GroupName}{Or-bit}
@@ -13,19 +25,21 @@
 \newcommand{\ProjectName}{Monolith}
 \newcommand{\ProjectVersion}{v1.0.0}
 
+\newcommand{\DemoName}{Bubble \& eat}
+
 \newcommand{\Proponente}{Red Babel}
 \newcommand{\Committente}{Prof. Tullio Vardanega \\ Prof. Riccardo Cardin}
 \newcommand{\CommittenteInline}{Prof. Tullio Vardanega, Prof. Riccardo Cardin}
 \newcommand{\ResponsabileInCarica}{}
 
 % La versione dei documenti deve essere definita qui in global, perchè serve anche agli altri documenti
-\newcommand{\VersioneG}{1.0.0}
-\newcommand{\VersionePQ}{1.0.0}
-\newcommand{\VersioneNP}{1.0.0}
-\newcommand{\VersionePP}{1.0.0}
-\newcommand{\VersioneAR}{1.0.0}
+\newcommand{\VersioneG}{2.0.0}
+\newcommand{\VersionePQ}{2.0.0}
+\newcommand{\VersioneNP}{2.0.0}
+\newcommand{\VersionePP}{2.0.0}
+\newcommand{\VersioneAR}{2.0.0}
 \newcommand{\VersioneSF}{1.0.0}
-\newcommand{\VersioneST}{0.0.0}
+\newcommand{\VersioneST}{1.0.0}
 \newcommand{\VersioneMA}{0.0.0}
 \newcommand{\VersioneMS}{0.0.0}
 \newcommand{\VersioneMU}{0.0.0}
@@ -44,7 +58,7 @@
 \newcommand{\PianoDiProgetto}{\emph{Piano di Progetto v\VersionePP{}}}
 \newcommand{\StudioDiFattibilita}{\emph{Studio di Fattibilità v\VersioneSF{}}}
 \newcommand{\AnalisiDeiRequisiti}{\emph{Analisi dei Requisiti v\VersioneAR{}}}
-\newcommand{\SpecificaTecnica}{\emph{Specifica Tecnica}}
+\newcommand{\SpecificaTecnica}{\emph{Specifica Tecnica v\VersioneST{}}}
 \newcommand{\ManualeAdmin}{\emph{Manuale Admin}}
 \newcommand{\ManualeSviluppatore}{\emph{Manuale Sviluppatore}}
 \newcommand{\ManualeUtente}{\emph{Manuale Utente}}
@@ -65,6 +79,15 @@
 \newcommand{\Cod}{Codifica}
 \newcommand{\VV}{Verifica e Validazione}
 
+% Comandi utili per riferirsi ai componenti del gruppo (Diari delle modifiche)
+\newcommand{\alice}{Alice V. Sasso}
+\newcommand{\bea}{Beatrice Guerra}
+\newcommand{\lorenzo}{Lorenzo Ferrarin}
+\newcommand{\marco}{Marco Ponchia}
+\newcommand{\mattia}{Mattia Zecchinato}
+\newcommand{\nick}{Nicola Dal Maso}
+\newcommand{\tommy}{Tommaso Rosso}
+
 % Comandi utili per riferirsi ai ruoli di progetto
 \newcommand{\Responsabile}{\textit{Responsabile di Progetto}}
 \newcommand{\Amministratore}{\textit{Amministratore}}
@@ -84,18 +107,23 @@
 
 \newcommand{\ScopoDelProdotto}{
 Lo scopo di questo progetto è sviluppare un \glossario{framework} volto alla costruzione di \glossario{bubble} interattive per aggiungere funzionalità al programma di comunicazione \glossario{Rocket.Chat}.
-Il progetto si propone anche di utilizzare il \glossario{framework} prodotto per fornire esempi significativi delle suddette \glossario{bubble}.
+Il progetto si propone anche di utilizzare il framework prodotto per fornire esempi significativi delle suddette bubble.
 }
 
 \newcommand{\GlossarioIntroduzione}{
 Insieme al progetto il gruppo fornisce un glossario nel quale sono raccolti i termini tecnici, gli acronimi e le parole che necessitano di chiarimenti utilizzate nella documentazione.\\
-I vocaboli presenti nel documento \Glossario{} sono marcati con una \textit{\small{G}} al pedice.
+I vocaboli presenti nel documento \Glossario{} sono marcati alla loro prima occorrenza con una \textit{\small{G}} al pedice.
 }
+
+\newcommand{\ToBeContinued}{\textit{Continua nella prossima pagina}}
 
 % Altri comandi utili
 \newcommand{\email}{email}
 \newcommand*{\sezione}[1]{\hyperref[{#1}]{sezione §\ref*{#1}}}
 \newcommand*{\appendice}[1]{\hyperref[{#1}]{Appendice \autoref*{#1}}}
+
+% Bisognerebbe aggiungere anche altri brand utilizzati spesso nei vari documenti
+\newcommand{\Macos}{macOs}
 
 %%%%%%%%%%%%%%
 %  FUNZIONI  %
@@ -178,7 +206,7 @@ I vocaboli presenti nel documento \Glossario{} sono marcati con una \textit{\sma
 
   \end{center}
   \begin{figure}[H]
-	\includegraphics[height=3.7cm, right]{../../modello/monolith}
+	\includegraphics[height=3cm, right]{../../modello/monolith}
   \end{figure}
   \end{titlepage}
   

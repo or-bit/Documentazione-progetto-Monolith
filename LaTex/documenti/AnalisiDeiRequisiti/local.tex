@@ -8,14 +8,15 @@
 \newcommand{\DocTitle}{Analisi dei Requisiti}
 \newcommand{\DocVersion}{\VersioneAR{}}
 
-\newcommand{\DocRedazione}{Tommaso Rosso\\Alice V. Sasso\\Lorenzo Ferrarin\\Marco Ponchia}
-\newcommand{\DocVerifica}{Beatrice Guerra\\Nicola Dal Maso}
-\newcommand{\DocApprovazione}{Mattia Zecchinato}
+\newcommand{\DocRedazione}{\bea{} \\ \alice{} \\ \lorenzo{}}
+\newcommand{\DocVerifica}{\mattia{} \\ \tommy{}}
+\newcommand{\DocApprovazione}{\alice{}}
 
 \newcommand{\DocUso}{Esterno}
 \newcommand{\DocDistribuzione}{
 	\Committente{} \\
-	Gruppo \GroupName{}
+	Gruppo \GroupName{} \\
+	\Proponente{}
 }
 
 % La descrizione del documento
@@ -29,39 +30,130 @@ Documento relativo all'analisi dei requisiti e dei casi d'uso del progetto \Proj
 
 % In questa seconda parte vanno definite le 'funzioni' utilizzate soltanto da questo documento.
 
+%Counter per casi d'uso
+\newcounter{usecase}
+\newcounter{usecasefiglio}[usecase]
+\newcounter{ucff}[usecasefiglio]
+\newcounter{alternativi}
+
+%\newcommand*{\UC}{\stepcounter{usecase} UC\theusecase}
+%\newcommand{\UCF}{\stepcounter{usecasefiglio} UC\theusecase.\theusecasefiglio}
+\newcommand{\UCCaption}{UC\theusecase{}}
+\newcommand{\UCFCaption}{UC\theusecase.\theusecasefiglio{}}
+\newcommand{\UCFFCaption}{UC\theusecase.\theusecasefiglio.\theucff{}}
+\newcommand{\UCCCaption}{
+	\ifisfiglio
+		UC\theusecase.\theusecasefiglio.\thealternativi{}
+	\else
+		UC\theusecase.\thealternativi{}
+	\fi
+}
+
+%Comandi per creare sezioni per i casi d'uso, evitando gli errori di compilazione
+\newif\ifisfirst
+\newif\ifisfiglio
+
+\makeatletter
+\newcommand*{\textlabel}[2]{%
+	\edef\@currentlabel{#1}% Set target label
+	\phantomsection% Correct hyper reference link
+	\label{#2}% store label
+}
+\makeatother
+
+\newcommand{\UC}[2]{
+	\refstepcounter{usecase}
+	\isfirsttrue
+	\textlabel{UC\theusecase{}}{#2}
+	\subsubsection{UC\theusecase{} #1} 
+}
+\newcommand{\UCF}[2]{
+	\refstepcounter{usecasefiglio} 
+	\isfirsttrue 
+	\textlabel{UC\theusecase.\theusecasefiglio{}}{#2}
+	\paragraph{UC\theusecase.\theusecasefiglio{} #1} 
+	\mbox{}\\
+}
+\newcommand{\UCFF}[2]{
+	\refstepcounter{ucff} 
+	\isfirsttrue 
+	\textlabel{UC\theusecase.\theusecasefiglio.\theucff{}}{#2}
+	\subparagraph{UC\theusecase.\theusecasefiglio.\theucff{} #1}
+	\mbox{}\\
+}
+\newcommand{\UCC}[3][1]{
+	\ifnum#1=1
+		\ifisfirst
+			\setcounter{alternativi}{1}
+			\global\isfirstfalse
+			\global\isfigliofalse
+			\refstepcounter{usecase}
+			\textlabel{UC\theusecase.\thealternativi{}}{#3}
+			\subsubsection{UC\theusecase.\thealternativi{} #2}
+		\else
+			\refstepcounter{alternativi}
+			\textlabel{UC\theusecase.\thealternativi{}}{#3}
+			\subsubsection{UC\theusecase.\thealternativi{} #2}
+		\fi
+	\else
+		\ifnum#1=2
+			\ifisfirst
+				\setcounter{alternativi}{1}
+				\global\isfirstfalse
+				\global\isfigliotrue
+				\refstepcounter{usecasefiglio}
+				\textlabel{UC\theusecase.\theusecasefiglio.\thealternativi{}}{#3}
+				\paragraph{UC\theusecase.\theusecasefiglio.\thealternativi{} #2}
+				\mbox{}\\
+			\else
+				\refstepcounter{alternativi}
+				\textlabel{UC\theusecase.\theusecasefiglio.\thealternativi{}}{#3}
+				\paragraph{UC\theusecase.\theusecasefiglio.\thealternativi{} #2}
+				\mbox{}\\
+			\fi
+		\fi
+	\fi
+}
+
+
 %Counter per requisiti
 \newcounter{requisito}
-
-% Comandi per creare riferimenti
-% ai requisiti obbligatori
-\newcommand*{\RequisitoObFRef}[1]{\hyperref[{#1}]{R1F\ref*{#1}}}
-\newcommand*{\RequisitoObQRef}[1]{\hyperref[{#1}]{R1Q\ref*{#1}}}
-\newcommand*{\RequisitoObVRef}[1]{\hyperref[{#1}]{R1V\ref*{#1}}}
-\newcommand*{\RequisitoObPRef}[1]{\hyperref[{#1}]{R1P\ref*{#1}}}
-% ai requisiti desiderabili 
-\newcommand*{\RequisitoDFRef}[1]{\hyperref[{#1}]{R2F\ref*{#1}}}
-\newcommand*{\RequisitoDQRef}[1]{\hyperref[{#1}]{R2Q\ref*{#1}}}
-\newcommand*{\RequisitoDVRef}[1]{\hyperref[{#1}]{R2V\ref*{#1}}}
-\newcommand*{\RequisitoDPRef}[1]{\hyperref[{#1}]{R2P\ref*{#1}}}
-% ai requisiti opzionali
-\newcommand*{\RequisitoOpFRef}[1]{\hyperref[{#1}]{R3F\ref*{#1}}}
-\newcommand*{\RequisitoOpQRef}[1]{\hyperref[{#1}]{R3Q\ref*{#1}}}
-\newcommand*{\RequisitoOpVRef}[1]{\hyperref[{#1}]{R3V\ref*{#1}}}
-\newcommand*{\RequisitoOpPRef}[1]{\hyperref[{#1}]{R3P\ref*{#1}}}
+%Contatori per riepilogo
+%funzionali
+\newcounter{totObF}
+\newcounter{totOpF}
+\newcounter{totDF}
+%di qualità
+\newcounter{totObQ}
+\newcounter{totOpQ}
+\newcounter{totDQ}
+%di vincolo
+\newcounter{totObV}
+\newcounter{totOpV}
+\newcounter{totDV}
+%prestazionali
+\newcounter{totObP}
+\newcounter{totOpP}
+\newcounter{totDP}
 
 % Comandi per creare i requisiti
+\newcommand*{\req}[2]{
+	\refstepcounter{requisito}
+	\textlabel{R#1#2\therequisito}{R#1#2\therequisito}
+	R#1#2\therequisito
+}
 % obbligatori
-\newcommand*{\RequisitoObF}{\refstepcounter{requisito} R1F\therequisito}
-\newcommand*{\RequisitoObQ}{\refstepcounter{requisito} R1Q\therequisito}
-\newcommand*{\RequisitoObV}{\refstepcounter{requisito} R1V\therequisito}
-\newcommand*{\RequisitoObP}{\refstepcounter{requisito} R1P\therequisito}
+\newcommand*{\RequisitoObF}{\stepcounter{totObF} \req{1}{F}}
+\newcommand*{\RequisitoObQ}{\stepcounter{totObQ} \req{1}{Q}}
+\newcommand*{\RequisitoObV}{\stepcounter{totObV} \req{1}{V}}
+\newcommand*{\RequisitoObP}{\stepcounter{totObP} \req{1}{P}}
 % desiderabili
-\newcommand*{\RequisitoDF}{\refstepcounter{requisito} R2F\therequisito}
-\newcommand*{\RequisitoDQ}{\refstepcounter{requisito} R2Q\therequisito}
-\newcommand*{\RequisitoDV}{\refstepcounter{requisito} R2V\therequisito}
-\newcommand*{\RequisitoDP}{\refstepcounter{requisito} R2P\therequisito}
+\newcommand*{\RequisitoDF}{\stepcounter{totDF} \req{2}{F}}
+\newcommand*{\RequisitoDQ}{\stepcounter{totDQ} \req{2}{Q}}
+\newcommand*{\RequisitoDV}{\stepcounter{totDV} \req{2}{V}}
+\newcommand*{\RequisitoDP}{\stepcounter{totDP} \req{2}{P}}
 % opzionali
-\newcommand*{\RequisitoOpF}{\refstepcounter{requisito} R3F\therequisito}
-\newcommand*{\RequisitoOpQ}{\refstepcounter{requisito} R3Q\therequisito}
-\newcommand*{\RequisitoOpV}{\refstepcounter{requisito} R3V\therequisito}
-\newcommand*{\RequisitoOpP}{\refstepcounter{requisito} R3P\therequisito}
+\newcommand*{\RequisitoOpF}{\stepcounter{totOpF} \req{3}{F}}
+\newcommand*{\RequisitoOpQ}{\stepcounter{totOpQ} \req{3}{Q}}
+\newcommand*{\RequisitoOpV}{\stepcounter{totOpV} \req{3}{V}}
+\newcommand*{\RequisitoOpP}{\stepcounter{totOpP} \req{3}{P}}

@@ -1,0 +1,166 @@
+\section{Tracciamento}
+\subsection{Tracciamento componenti-requisiti}
+\begin{longtable}{|>{\centering}P{7cm}|>{\centering}P{5cm}|}
+	\hline \textbf{Componente} & \textbf{Requisiti} \tabularnewline 
+	\endfirsthead
+	% Framework
+	\hline \nameref{api-ciclovita} & \ref{AdR-L9} \linebreak \ref{AdR-L10} \linebreak \ref{AdR-L93} \tabularnewline
+	\hline \nameref{api-notifica} & \ref{AdR-L15} \linebreak \ref{AdR-L16} \linebreak \ref{AdR-L20} \linebreak \ref{AdR-L76} \tabularnewline
+	\hline \nameref{api-esterne} & \ref{AdR-L44} \linebreak \ref{AdR-L92} \tabularnewline
+	\hline \nameref{api-partecipanti} & \ref{AdR-L36} \linebreak \ref{AdR-L37} \tabularnewline
+	\hline \nameref{api-db} & \ref{AdR-L8} \linebreak \ref{AdR-L81} \linebreak \ref{AdR-L82} \linebreak \ref{AdR-L83} \linebreak \ref{AdR-L89} \tabularnewline
+	\hline \nameref{api-limiti} & \ref{AdR-L47} \linebreak \ref{AdR-L48} \tabularnewline
+	\hline \nameref{api-timing} & \ref{AdR-L43} \tabularnewline
+	\hline \nameref{api-file} & \ref{AdR-L39} \linebreak \ref{AdR-L40} \tabularnewline
+	\hline \nameref{api-json} & \ref{AdR-L35} \tabularnewline
+	\hline \nameref{api-regexpr} & \ref{AdR-L42} \tabularnewline
+	\hline \nameref{fm-memory} & \ref{AdR-L90} \linebreak \ref{AdR-L91} \tabularnewline
+	\hline \nameref{fm-generica} & \ref{AdR-L6} \linebreak \ref{AdR-L7} \linebreak \ref{AdR-L86} \linebreak \ref{AdR-L87} \linebreak \ref{AdR-L11} \linebreak \ref{AdR-L56} \linebreak \ref{AdR-L89} \linebreak \ref{AdR-L55} \linebreak \ref{AdR-L88} \linebreak \ref{AdR-L94} \tabularnewline
+	\hline \nameref{gui} & \ref{AdR-L13} \linebreak \ref{AdR-L14} \linebreak \ref{AdR-L63} \tabularnewline
+	\hline \nameref{gui-container} & \ref{AdR-L11} \linebreak \ref{AdR-L56} \linebreak \ref{AdR-L89} \linebreak \ref{AdR-L55} \linebreak \ref{AdR-L88} \linebreak \ref{AdR-L94} \tabularnewline
+	\hline \nameref{gui-label} & \ref{AdR-L12} \tabularnewline
+	\hline \nameref{gui-file} & \ref{AdR-L38} \linebreak \ref{AdR-L49} \tabularnewline
+	\hline \nameref{gui-button} & \ref{AdR-L41} \linebreak \ref{AdR-L71} \linebreak \ref{AdR-L73} \tabularnewline
+	\hline \nameref{gui-tedit} & \ref{AdR-L34} \linebreak \ref{AdR-L72} \tabularnewline
+	\hline \nameref{gui-tview} & \ref{AdR-L33} \tabularnewline
+	\hline \nameref{gui-image} & \ref{AdR-L45} \tabularnewline
+	\hline \nameref{gui-check} & \ref{AdR-L85} \tabularnewline
+	\hline \nameref{gui-radio} & \ref{AdR-L84} \tabularnewline
+	\hline \nameref{gui-pie} & \ref{AdR-L46} \tabularnewline
+	\hline \nameref{gui-bar} & \ref{AdR-L64} \tabularnewline
+	
+	% To-do list
+	\hline \nameref{todo-item} & \ref{AdR-L18} \linebreak \ref{AdR-L74} \linebreak \ref{AdR-L19} \tabularnewline
+	\hline \nameref{todo-container} & \ref{AdR-L17} \tabularnewline
+	\hline \nameref{todo-gateway} & \ref{AdR-L42} \tabularnewline
+	\hline \nameref{todo-controller} & \ref{AdR-L75} \linebreak \ref{AdR-L95} \linebreak \ref{AdR-L73} \tabularnewline
+	
+	% Bubble & eat
+	\hline \nameref{eat-customer} & \ref{AdR-L22} \linebreak \ref{AdR-L96} \linebreak \ref{AdR-L97} \linebreak \ref{AdR-L98} \linebreak \ref{AdR-L23} \linebreak \ref{AdR-L68} \linebreak \ref{AdR-L24} \linebreak \ref{AdR-L69} \linebreak \ref{AdR-L77} \linebreak \ref{AdR-L70} \linebreak \ref{AdR-L99} \linebreak \ref{AdR-L100} \tabularnewline
+	\hline \nameref{eat-manager} & \ref{AdR-L104} \linebreak \ref{AdR-L105} \linebreak \ref{AdR-L29} \linebreak \ref{AdR-L79} \linebreak \ref{AdR-L108} \linebreak \ref{AdR-L80} \linebreak \ref{AdR-L106} \linebreak \ref{AdR-L30} \linebreak \ref{AdR-L31} \linebreak \ref{AdR-L32} \linebreak \ref{AdR-L101} \linebreak \ref{AdR-L102} \linebreak \ref{AdR-L107} \linebreak \ref{AdR-L103} \linebreak \ref{AdR-L53} \linebreak \ref{AdR-L65} \linebreak \ref{AdR-L109} \tabularnewline
+	\hline \nameref{eat-chef} & \ref{AdR-L25} \linebreak \ref{AdR-L26} \linebreak \ref{AdR-L78} \tabularnewline
+	\hline \nameref{eat-deliveryman} & \ref{AdR-L50} \linebreak \ref{AdR-L51} \linebreak \ref{AdR-L52} \tabularnewline
+	\hline \nameref{eat-purchasing} & \ref{AdR-L27} \linebreak \ref{AdR-L28} \tabularnewline
+	\hline \nameref{eat-gateway} & \ref{AdR-L21} \linebreak \ref{AdR-L61} \linebreak \ref{AdR-L62} \tabularnewline
+	\hline \nameref{eat-menu} & \ref{AdR-L21} \linebreak \ref{AdR-L61} \linebreak \ref{AdR-L62} \linebreak \ref{AdR-L23} \tabularnewline
+	\hline \nameref{eat-order} & \ref{AdR-L22} \linebreak \ref{AdR-L96} \linebreak \ref{AdR-L97} \linebreak \ref{AdR-L98} \linebreak \ref{AdR-L23} \linebreak \ref{AdR-L68} \linebreak \ref{AdR-L24} \linebreak \ref{AdR-L69} \linebreak \ref{AdR-L77} \linebreak \ref{AdR-L70} \linebreak \ref{AdR-L99} \linebreak \ref{AdR-L100} \tabularnewline
+	\hline \nameref{eat-container} & \ref{AdR-L22} \linebreak \ref{AdR-L96} \linebreak \ref{AdR-L97} \linebreak \ref{AdR-L98} \linebreak \ref{AdR-L23} \linebreak \ref{AdR-L68} \linebreak \ref{AdR-L24} \linebreak \ref{AdR-L69} \linebreak \ref{AdR-L77} \linebreak \ref{AdR-L70} \linebreak \ref{AdR-L99} \linebreak \ref{AdR-L100} \tabularnewline
+	
+	\hline
+	\caption{Tracciamento componenti-requisiti}
+\end{longtable}
+
+\subsection{Tracciamento requisiti-componenti}
+
+\begin{longtable}{|>{\centering}P{5cm}|>{\centering}P{7cm}|}
+	\hline \textbf{Requisito} & \textbf{Componenti} \tabularnewline 
+	\endfirsthead
+	% Framework
+	\hline \ref{AdR-L6} & \nameref{fm-generica} \tabularnewline %5
+	\hline \ref{AdR-L7} & \nameref{fm-generica} \tabularnewline 
+	\hline \ref{AdR-L8} & \nameref{api-db} \tabularnewline
+	\hline \ref{AdR-L81} & \nameref{api-db} \tabularnewline
+	\hline \ref{AdR-L82} & \nameref{api-db} \tabularnewline
+	\hline \ref{AdR-L83} & \nameref{api-db} \tabularnewline %10
+	\hline \ref{AdR-L86} & \nameref{fm-generica} \tabularnewline
+	\hline \ref{AdR-L87} & \nameref{fm-generica} \tabularnewline
+	\hline \ref{AdR-L9} & \nameref{api-ciclovita} \tabularnewline
+	\hline \ref{AdR-L10} & \nameref{api-ciclovita} \tabularnewline
+	\hline \ref{AdR-L11} & \nameref{fm-generica} \linebreak \nameref{gui-container} \tabularnewline %15
+	\hline \ref{AdR-L56} & \nameref{fm-generica} \linebreak \nameref{gui-container} \tabularnewline
+	\hline \ref{AdR-L89} & \nameref{api-db} \linebreak \nameref{fm-generica} \linebreak \nameref{gui-container} \tabularnewline
+	\hline \ref{AdR-L55} & \nameref{fm-generica} \linebreak \nameref{gui-container} \tabularnewline
+	\hline \ref{AdR-L88} & \nameref{fm-generica} \linebreak \nameref{gui-container} \tabularnewline
+	\hline \ref{AdR-L12} & \nameref{gui-label} \tabularnewline %20
+	\hline \ref{AdR-L13} & \nameref{gui} \tabularnewline
+	\hline \ref{AdR-L14} & \nameref{gui} \tabularnewline
+	\hline \ref{AdR-L63} & \nameref{gui} \tabularnewline
+	\hline \ref{AdR-L15} & \nameref{api-notifica} \tabularnewline
+	\hline \ref{AdR-L16} & \nameref{api-notifica} \tabularnewline %25
+	\hline \ref{AdR-L33} & \nameref{gui-tview} \tabularnewline
+	\hline \ref{AdR-L34} & \nameref{gui-tedit} \tabularnewline
+	\hline \ref{AdR-L35} & \nameref{api-json} \tabularnewline
+	\hline \ref{AdR-L94} & \nameref{fm-generica} \linebreak \nameref{gui-container} \tabularnewline
+	\hline \ref{AdR-L36} & \nameref{api-partecipanti} \tabularnewline %30
+	\hline \ref{AdR-L37} & \nameref{api-partecipanti} \tabularnewline
+	\hline \ref{AdR-L38} & \nameref{gui-file} \tabularnewline
+	\hline \ref{AdR-L39} & \nameref{api-file} \tabularnewline
+	\hline \ref{AdR-L40} & \nameref{api-file} \tabularnewline
+	\hline \ref{AdR-L41} & \nameref{gui-button} \tabularnewline %35
+	\hline \ref{AdR-L84} & \nameref{gui-radio} \tabularnewline
+	\hline \ref{AdR-L85} & \nameref{gui-check} \tabularnewline
+	\hline \ref{AdR-L42} & \nameref{api-regexpr} \tabularnewline
+ 	\hline \ref{AdR-L43} & \nameref{api-timing} \tabularnewline
+	\hline \ref{AdR-L44} & \nameref{api-esterne} \tabularnewline %40
+	\hline \ref{AdR-L92} & \nameref{api-esterne} \tabularnewline
+	\hline \ref{AdR-L45} & \nameref{gui-image} \tabularnewline
+	\hline \ref{AdR-L46} & \nameref{gui-pie} \tabularnewline
+	\hline \ref{AdR-L64} & \nameref{gui-bar} \tabularnewline
+	\hline \ref{AdR-L93} & \nameref{api-ciclovita} \tabularnewline %45
+	\hline \ref{AdR-L47} & \nameref{api-limiti} \tabularnewline
+	\hline \ref{AdR-L48} & \nameref{api-limiti} \tabularnewline
+	\hline \ref{AdR-L49} & \nameref{gui-file} \tabularnewline
+	\hline \ref{AdR-L3} & \nameref{todo-list} \tabularnewline
+	\hline \ref{AdR-L4} & \nameref{bubbleeat} \tabularnewline %50
+	\hline \ref{AdR-L90} & \nameref{fm-memory} \tabularnewline
+	\hline \ref{AdR-L91} & \nameref{fm-memory} \tabularnewline %52
+	
+	% To-do list
+	\hline \ref{AdR-L17} & \nameref{todo-container} \tabularnewline %59
+	\hline \ref{AdR-L71} & \nameref{gui-button} \tabularnewline %60
+	\hline \ref{AdR-L95} & \nameref{todo-controller} \tabularnewline
+	\hline \ref{AdR-L72} & \nameref{gui-tedit} \tabularnewline
+	\hline \ref{AdR-L73} & \nameref{gui-button} \linebreak \nameref{todo-controller} \tabularnewline
+	\hline \ref{AdR-L18} & \nameref{todo-item} \tabularnewline
+	\hline \ref{AdR-L74} & \nameref{todo-item} \tabularnewline %65
+	\hline \ref{AdR-L19} & \nameref{todo-item} \tabularnewline
+	\hline \ref{AdR-L75} & \nameref{todo-controller} \tabularnewline
+	\hline \ref{AdR-L20} & \nameref{api-notifica} \tabularnewline
+	\hline \ref{AdR-L76} & \nameref{api-notifica} \tabularnewline %69
+	
+	% Bubble & eat
+	\hline \ref{AdR-L21} & \nameref{eat-gateway} \linebreak \nameref{eat-menu} \tabularnewline %70
+	\hline \ref{AdR-L61} & \nameref{eat-gateway} \linebreak \nameref{eat-menu} \tabularnewline
+	\hline \ref{AdR-L62} & \nameref{eat-gateway} \linebreak \nameref{eat-menu} \tabularnewline
+	\hline \ref{AdR-L22} & \nameref{eat-customer} \tabularnewline
+	\hline \ref{AdR-L96} & \nameref{eat-customer} \tabularnewline
+	\hline \ref{AdR-L97} & \nameref{eat-customer} \tabularnewline %75
+	\hline \ref{AdR-L98} & \nameref{eat-customer} \tabularnewline
+	\hline \ref{AdR-L23} & \nameref{eat-customer} \linebreak \nameref{eat-menu} \tabularnewline
+	\hline \ref{AdR-L68} & \nameref{eat-customer} \tabularnewline
+	\hline \ref{AdR-L24} & \nameref{eat-customer} \tabularnewline
+	\hline \ref{AdR-L69} & \nameref{eat-customer} \tabularnewline %80
+	\hline \ref{AdR-L77} & \nameref{eat-customer} \tabularnewline
+	\hline \ref{AdR-L70} & \nameref{eat-customer} \tabularnewline
+	\hline \ref{AdR-L99} & \nameref{eat-customer} \tabularnewline
+	\hline \ref{AdR-L100} & \nameref{eat-customer} \tabularnewline
+	\hline \ref{AdR-L25} & \nameref{eat-chef} \tabularnewline %85
+	\hline \ref{AdR-L26} & \nameref{eat-chef} \tabularnewline
+	\hline \ref{AdR-L78} & \nameref{eat-chef} \tabularnewline
+	\hline \ref{AdR-L27} & \nameref{eat-purchasing} \tabularnewline
+	\hline \ref{AdR-L28} & \nameref{eat-purchasing} \tabularnewline
+	\hline \ref{AdR-L104} & \nameref{eat-manager} \tabularnewline %90
+	\hline \ref{AdR-L105} & \nameref{eat-manager} \tabularnewline
+	\hline \ref{AdR-L29} & \nameref{eat-manager} \tabularnewline
+	\hline \ref{AdR-L79} & \nameref{eat-manager} \tabularnewline
+	\hline \ref{AdR-L108} & \nameref{eat-manager} \tabularnewline
+	\hline \ref{AdR-L80} & \nameref{eat-manager} \tabularnewline %95
+	\hline \ref{AdR-L106} & \nameref{eat-manager} \tabularnewline
+	\hline \ref{AdR-L30} & \nameref{eat-manager} \tabularnewline
+	\hline \ref{AdR-L31} & \nameref{eat-manager} \tabularnewline
+	\hline \ref{AdR-L32} & \nameref{eat-manager} \tabularnewline
+	\hline \ref{AdR-L101} & \nameref{eat-manager} \tabularnewline %100
+	\hline \ref{AdR-L102} & \nameref{eat-manager} \tabularnewline
+	\hline \ref{AdR-L107} & \nameref{eat-manager} \tabularnewline
+	\hline \ref{AdR-L103} & \nameref{eat-manager} \tabularnewline
+	\hline \ref{AdR-L53} & \nameref{eat-manager} \tabularnewline
+	\hline \ref{AdR-L65} & \nameref{eat-manager} \tabularnewline %105
+	\hline \ref{AdR-L109} & \nameref{eat-manager} \tabularnewline
+	\hline \ref{AdR-L50} & \nameref{eat-deliveryman} \tabularnewline
+	\hline \ref{AdR-L51} & \nameref{eat-deliveryman} \tabularnewline
+	\hline \ref{AdR-L52} & \nameref{eat-deliveryman} \tabularnewline %109
+	
+	\hline
+	\caption{Tracciamento componenti-requisiti}
+\end{longtable}
+

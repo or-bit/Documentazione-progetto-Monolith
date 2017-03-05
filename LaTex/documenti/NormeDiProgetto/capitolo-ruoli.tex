@@ -1,10 +1,35 @@
-\section{Ruoli di progetto}
-
-Questa sezione si occupa di descrivere esaustivamente le responsabilità e i compiti di ciascun ruolo all'interno del team di sviluppo durante lo svolgimento del progetto.
-Ogni ruolo deve essere ricoperto in maniera significativa da ogni membro del gruppo almeno una volta. Nell'assegnazione dei ruoli deve essere prestata particolare attenzione ad evitare che il processo di verifica di una particolare attività sia effettuato dalle stesse persone che l'hanno svolta originariamente.
+\subsection{Ruoli di progetto}
 
 
-\subsection{Responsabile di Progetto} \label{sec:responsabile}
+Il gruppo \GroupName{} si impegna a organizzare una rotazione dei ruoli per permettere a tutti i membri del gruppo di aver svolto almeno una volta ogni ruolo, durante la durata del progetto. Durante una fase un singolo componente potrà ricoprire più ruoli, purché non entrino in conflitto, non sarà permesso per esempio che qualcuno sia il \Verificatore{} del lavoro da lui svolto. Alcuni ruoli potranno essere ricoperti da più persone contemporaneamente.
+Nell'assegnazione dei ruoli deve essere prestata particolare attenzione ad evitare che il processo di verifica di una particolare attività sia effettuato dalle stesse persone che l'hanno svolta originariamente.
+
+Ciascun ruolo ha un diverso costo, riportato nella tabella sottostante.
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		\textbf{Ruolo} &
+		\textbf{Costo}\\
+		\hline
+		Responsabile & 30€  \\
+		\hline
+		Amministratore &  20€ \\
+		\hline
+		Analista & 25€  \\
+		\hline
+		Progettista & 22€  \\
+		\hline 
+		Programmatore & 15€  \\
+		\hline
+		Verificatore &  15€ \\
+		\hline
+	\end{tabular}
+	\caption{Costi per ruolo}
+\end{table}
+
+
+\subsubsection{Responsabile di Progetto} \label{sec:responsabile}
 Il \Responsabile{} si occupa degli aspetti organizzativi e decisionali.\\
 Sono compiti specifici del \Responsabile:
 \begin{itemize}
@@ -20,9 +45,10 @@ Sono compiti specifici del \Responsabile:
 \end{itemize}
 Il \Responsabile{} deve occuparsi delle relazioni con il Committente.
 Egli è anche il responsabile ultimo dei risultati conseguiti.
+Redige \textit{Piano di Progetto} e \textit{Piano di Qualifica}.
 
 
-\subsection{Amministratore}
+\subsubsection{Amministratore}
 L'\Amministratore{} garantisce il funzionamento dell'infrastruttura tecnologica predisponendo strumenti e regole. Si assicura che tutte le risorse siano operanti. \`{E} compito dell'\Amministratore{} garantire l'efficienza e l'operatività dell'ambiente. A questo fine tra le sue mansioni si annoverano:
 \begin{itemize}
 	\item ricerca degli strumenti volti all'automatizzazione dei vari compiti;
@@ -30,9 +56,10 @@ L'\Amministratore{} garantisce il funzionamento dell'infrastruttura tecnologica 
 	\item gestione dell'archiviazione della documentazione del progetto;
 	\item redazione delle \textit{Norme di Progetto} e del \textit{Piano di Qualifica}.
 \end{itemize}
+Redige \textit{Norme di progetto} e \textit{Piano di Qualifica}.
 
-\subsection{Analista}
-Il compito dell'\Analista{} è quello di svolgere tutte le attività di analisi necessarie prima dello svolgimento del progetto o di una particolare attività. Sottopone ad analisi il problema reale per soddisfare le richieste degli \glossario{stakeholders}. Deve quindi possedere una piena conoscenza della natura e complessità del progetto in tutte le sue parti. L'\Analista{} ha il compito di redigere due documenti:
+\subsubsection{Analista}
+Il compito dell'\Analista{} è quello di svolgere tutte le attività di analisi necessarie prima dello svolgimento del progetto o di una particolare attività. Sottopone ad analisi il problema reale per soddisfare le richieste degli stakeholders. Deve quindi possedere una piena conoscenza della natura e complessità del progetto in tutte le sue parti. L'\Analista{} ha il compito di redigere due documenti:
 \begin{itemize}
 	\item \textit{Studio di Fattibilità};
 	\item \textit{Analisi dei Requisiti}.
@@ -44,8 +71,9 @@ Lo \textit{Studio di Fattibilità} definisce formalmente e ufficialmente quelle 
 	\item Progettista.
 \end{itemize}
 L'\Analista{} partecipa anche alla redazione del \textit{Piano di Qualifica} rendendo disponibile le sue approfondite conoscenze dal punto di vista teorico e applicativo.
+Redige \textit{Studio di fattibilità}, \textit{Analisi dei Requisiti} e \textit{Piano di Qualifica}.
 
-\subsection{Progettista}
+\subsubsection{Progettista}
 \`{E} compito del \Progettista:
 \begin{itemize}
 	\item studiare il dominio e stabilire l'insieme delle tecnologie impiegate per lo svolgimento del progetto;
@@ -53,10 +81,12 @@ L'\Analista{} partecipa anche alla redazione del \textit{Piano di Qualifica} ren
 	\item redigere la \textit{Specifica Tecnica} e la \textit{Definizione di Prodotto};
 	\item individuare le metriche di verifica da includere nel \textit{Piano di Qualifica}.
 \end{itemize}
+Redige \textit{Specifica Tecnica}, \textit{Definizione di Prodotto} e \textit{Piano di Qualifica}.
 
-\subsection{Programmatore}
+\subsubsection{Programmatore}
 Il \Programmatore{} ha il compito di implementare le soluzioni determinate dal \Progettista, per aderire a quanto stabilito dagli \Analisti{} durante le attività di analisi. \`{E} inoltre responsabilità del \Programmatore{} documentare il codice prodotto secondo gli standard descritti nella \sezione{sec:convenzioni} delle \NormeDiProgetto{} e dotare il codice di appropriati test per le attività di \VV. Il \Programmatore{} deve inoltre assicurarsi che il codice prodotto sia correttamente versionato e facilmente manutenibile.
+Redige \textit{Manuale utente} e documenta il codice implementato.
 
-\subsection{Verificatore}
+\subsubsection{Verificatore}
 Il \Verificatore{} ha il compito di valutare la correttezza del lavoro fatto dagli altri membri del team e di assicurarsi che sia svolto in maniera conforme a quanto descritto nelle \NormeDiProgetto. In caso trovi errori il \Verificatore, se ne ha la possibilità, deve anche provvedere a correggerli. In caso l'attività di correzione risulti troppo dispendiosa è compito del \Verificatore{} comunicarlo al \Responsabile, il quale provvederà ad aggiornare l'ordine del giorno della successiva riunione.\\
 Il \Verificatore{} redige parte del \textit{Piano di Qualifica}, in particolare quanto concerne l'esito e la completezza delle verifiche e delle prove effettuate.

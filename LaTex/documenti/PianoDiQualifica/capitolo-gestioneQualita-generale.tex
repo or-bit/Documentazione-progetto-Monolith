@@ -7,15 +7,15 @@ Vengono utilizzati strumenti di valutazione della qualità dei processi per attu
 
 \subsubsection{Qualità di processo}
 Per definire e controllare i processi si è deciso di basarsi sulle norme \textbf{\glossario{ISO} 9000} descritte in \sezione{sec:iso9000} del presente documento.\\
-Fra gli standard di valutazione viene adottato \textbf{\glossario{ISO}/\glossario{IEC} 15504}, denominato \textbf{SPICE} (Software Process Improvement and Capability dEtermination).\\
+Fra gli standard di valutazione viene adottato \textbf{ISO/\glossario{IEC} 15504}, denominato \textbf{SPICE} (Software Process Improvement and Capability dEtermination).\\
 SPICE fornisce gli strumenti necessari a valutare la qualità e l'adeguatezza dei processi.\\
 Il modello viene descritto approfonditamente in \appendice{app:spice}.\\
 Per utilizzare questo strumento è necessario dotarsi di una disciplina di miglioramento dei processi, realizzata attraverso il \glossario{ciclo di Deming}, definito in \appendice{app:pdca}.
 
 \paragraph{Standard ISO 9000 per la qualità di processo}\label{sec:iso9000} \mbox{}\\
-Gli standard \glossario{ISO} 9000 e 9001 per la qualità di processo sono basati su norme e regole raccolte in un sistema di sette principi per la gestione della qualità.
+Gli standard ISO 9000 e 9001 per la qualità di processo sono basati su norme e regole raccolte in un sistema di sette principi per la gestione della qualità.
 \begin{itemize}
-	\item \textbf{Costumer focus}: l'impegnarsi al soddisfacimento dei bisogni del cliente e la previsione delle loro future necessità è di fondamentale importanza; ciò aumenta la soddisfazione del cliente con conseguente aumento della fedeltà da parte del consumatore e della reputazione aziendale, utili per aumentare la base clientelare. L'obiettivo di questo principio è l'aumento del mercato attraverso l'incremento qualitativo del rapporto clientelare. 
+	\item \textbf{Customer focus}: l'impegnarsi al soddisfacimento dei bisogni del cliente e la previsione delle loro future necessità è di fondamentale importanza; ciò aumenta la soddisfazione del cliente con conseguente aumento della fedeltà da parte del consumatore e della reputazione aziendale, utili per aumentare la base clientelare. L'obiettivo di questo principio è l'aumento del mercato attraverso l'incremento qualitativo del rapporto clientelare. 
 	\item \textbf{Leadership}: un sistema di ruoli è importante per impostare una direzione comune per il raggiungimento degli obiettivi. La comunicazione e l'assegnazione dei compiti sono i mezzi di coordinazione principale del team per realizzare il proprio coordinamento e quello delle risorse impiegate.
 	\item \textbf{Engagement of people}: competenza del personale ad ogni livello e promozione della collaborazione.
 	\item \textbf{Process Approach}: per capire la gestione di qualità va compreso che i processi produttivi sono parte di un sistema. Vanno quindi pensate le interdipendenze fra essi e pianificato il loro consumo di risorse. Deve essere compiuto un monitoraggio dei rischi e l'analisi delle performance di processo.
@@ -24,24 +24,60 @@ Gli standard \glossario{ISO} 9000 e 9001 per la qualità di processo sono basati
 	\item \textbf{Relationship management}: il mantenimento dei rapporti con l'esterno è fondamentale per mantenere attivi i processi e reagire a cambiamenti nella catena di fornitura.
 \end{itemize}
 
+Vengono ora elencati gli obiettivi che il gruppo si prefigge di raggiungere:
+\begin{itemize}
+	\item i documenti prodotti devono essere leggibili e comprensibili;
+	\item i documenti prodotti devono essere aggiornati;
+	\item le componenti progettate devono essere associate ai requisiti;
+	\item le componenti progettate devono garantire il maggior riuso possibile;
+	\item deve essere garantito un basso accoppiamento ed un'alta coesione;
+	\item la progettazione deve agevolare le attività di codifica e i test rispettando la massima precisione possibile;
+	\item la progettazione di dettaglio deve definire in modo chiaro l'architettura a basso livello del prodotto software;
+	\item il codice prodotto deve essere facilmente comprensibile e garantire una complessità tale da risultare facilmente testabile;
+	\item il flusso di esecuzione del codice deve garantire una complessità tale da equilibrare manutenibilità ed efficienza;
+	\item il codice deve essere facilmente manutenibile;
+	\item non devono esistere variabili inutilizzate;
+	\item i test devono essere svolti su un sistema verificato e ben integrato;
+	\item il sistema deve implementare i requisiti obbligatori individuati;
+	\item l'analisi dinamica deve coprire la maggior parte delle casistiche di esecuzione;
+	\item l'analisi dinamica deve coprire la maggior parte delle funzioni del codice;
+	\item gli errori devono essere segnalati e corretti secondo quanto stabilito nelle \NormeDiProgetto{}.
+\end{itemize}
+
 \paragraph{Procedure di controllo di qualità di processo}\mbox{}\\
 Per garantire la qualità dei processi viene applicato il principio \textbf{PDCA} (Plan Do Check Act), descritto in \appendice{app:pdca}.\\ 
 L'obiettivo che si vuole raggiungere è il continuo miglioramento della qualità dei processi, e pertanto dei prodotti.\\
 Per un controllo completo della qualità, è necessaria una regolamentazione dei processi: essi devono essere pianificati in modo dettagliato, le risorse devono essere assegnate ad essi ed entrambi devono essere sottoposti ad un controllo continuativo.\\
-Le metriche di quantificazione della qualità dei processi vengono descritte in \sezione{sec:metriche}.
+Le metriche di quantificazione della qualità dei processi vengono descritte in \NormeDiProgetto{} e gli obiettivi per le metriche in \sezione{sec:metriche} del presente documento.
 
 \subsubsection{Qualità di prodotto}
 Il gruppo si prefigge di realizzare un prodotto che raggiunga la qualità adatta al soddisfacimento degli obiettivi di progetto sanciti per il suo funzionamento.\\
-Per compiere ciò si adotta lo standard \textbf{\glossario{ISO}/\glossario{IEC} 9126} per la valutazione della qualità del software. Esso viene descritto approfonditamente in \appendice{app:iso9126} del presente documento.
+Per compiere ciò si adotta lo standard \textbf{ISO/IEC 9126} per la valutazione della qualità del software. Esso viene descritto approfonditamente in \appendice{app:iso9126} del presente documento.\\
+Gli obiettivi che il gruppo si impegna a raggiungere sono:
+\begin{itemize}
+	\item \textbf{adeguatezza}: le funzionalità fornite sono conformi alle aspettative;
+	\item \textbf{accuratezza}: il prodotto fornisce i risultati attesi;
+	\item \textbf{maturità}: sono evitati malfunzionamenti, operazioni non consentite e restituzione di risultati errati;
+	\item \textbf{tolleranza agli errori}: gli errori sono previsti e gestiti per evitare malfunzionamenti;
+\end{itemize}
+
 
 \paragraph{Procedure di controllo di qualità di prodotto}\mbox{}\\
-Per garantire la qualità di prodotto vengono applicate le attività di Quality Assurance, Verifica e Validazione.
+Per garantire la qualità di prodotto vengono applicate le attività di Quality Assurance, \VV{}.
 \begin{itemize}
 	\item \textbf{Quality Assurance}: garantisce il raggiungimento degli obiettivi di qualità, tramite analisi statica e dinamica;
-	\item \textbf{Verifica}: determina la correttezza dei risultati. \`{E} un’attività continuativa durante lo svolgimento del progetto. Ad ogni verifica vengono riportati i risultati in \appendice{app:risultati _verifica};
+	\item \textbf{Verifica}: determina la correttezza dei risultati. \`{E} un’attività continuativa durante lo svolgimento del progetto. Ad ogni verifica vengono riportati i risultati in \appendice{app:resoconto_verifica};
 	\item \textbf{Validazione}: corrisponde alla verifica e collaudo finale del prodotto e ne determina il corretto funzionamento rispetto ai requisiti.
 \end{itemize}
 
 \subsection{Scadenze temporali}
-Le scadenze temporali sono fissate nel \PianoDiProgetto{}, così come le metodologie da seguire per individuare e correggere gli errori.\\
+Le scadenze temporali sono fissate nel \PianoDiProgetto{}, così come le metodologie da seguire per individuare e gestire i rischi.\\
 Per evitare errori di impostazione dei documenti, errori tecnici o di contenuto non pertinente ad un documento, si è scelto di far precedere alla redazione dei documenti la stesura della struttura degli stessi.
+
+\subsection{Modalità di verifica}
+Sono state individuate varie modalità di verifica al fine di garantire una copertura continua per le varie attività.
+\begin{itemize}
+	\item \textbf{Travis CI}: vengono eseguiti test sulla corretta compilazione dei documenti e del codice, ad ogni push sul repository, attraverso il sistema di integrazione continua Travis CI. In caso la compilazione non vada a buon fine viene segnalato un errore e il commit non viene integrato nella release.
+	\item \textbf{Script}: sono stati creati degli script per automatizzare il controllo lessicografico dei documenti. Viene così garantita la segnalazione di termini scritti con lettere sbagliate, invertite o mancanti, favorendo il lavoro dei \Verificatori{}. Questo tipo di verifica va eseguito dopo ogni modifica \virgolette{importante}, quali il completamento di una sezione o di grandi parti di testo.
+	\item \textbf{\Verificatore{}}: è compito del \Verificatore{} eseguire i test che non possono essere svolti in maniera automatica. È altresì compito suo verificare che i risultati dei test effettuati in modo automatico siano corretti. Questo tipo di attività va svolta secondo quanto pianificato nel \PianoDiProgetto{}.
+\end{itemize}

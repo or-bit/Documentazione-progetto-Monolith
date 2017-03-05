@@ -12,8 +12,31 @@ Per ognuno vengono inoltre specificati:
 	\item \textbf{grado di criticità};
 	\item \textbf{descrizione};
 	\item \textbf{strategie di rilevamento};
-	\item \textbf{contromisure}.
+	\item \textbf{contromisure};
+	\item \textbf{riscontro}.
 \end{enumerate}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		\textbf{Livello} &
+		\textbf{Tipologia} &
+		\textbf{Probabilità di occorrenza} &
+		\textbf{Criticità}\\
+		\hline
+		\multirow{2}{*}{Tecnologico} & Problemi software & Media & Alto \\\cline{2-4}
+									  & Problemi hardware & Bassa & Basso \\
+		\hline
+		\multirow{3}{*}{Personale} & Problemi personali & Alta & Medio \\\cline{2-4}
+								   & Problemi di collaborazione & Bassa & Alto \\\cline{2-4}
+								   & Problemi di inesperienza & Alta & Alto \\
+		\hline
+		Costo &  Problemi sul preventivo & Media & Alto \\
+		\hline
+	\end{tabular}
+	\caption{Tabella dei rischi}
+\end{table}
 
 \subsection{Rischi tecnologici}
 \subsubsection{Rischi sugli strumenti software}
@@ -21,58 +44,89 @@ Per ognuno vengono inoltre specificati:
 	\item \textbf{Probabilità:} media.
 	\item \textbf{Grado di criticità:} alto.
 	\item \textbf{Descrizione:} le tecnologie utilizzate nel progetto sono solo in parte conosciute dai componenti del gruppo, spesso non per utilizzo diretto della stessa.
-	\item \textbf{Strategie di rilevamento:} il gruppo si impegna a dedicare del tempo prima di utilizzare ogni strumento software, per apprenderne le funzionalità ed utilizzarlo nel modo ottimale.
-	\item \textbf{Contromisure:} in caso si verifichino errori gravi nell'utilizzo dei software è previsto un momento di pausa del lavoro precedentemente organizzato per correggere ed apprenderne le sue cause.
+	\item \textbf{Strategie di rilevamento:} il gruppo si impegna a dedicare del tempo, prima di utilizzare ogni strumento software, per apprenderne le funzionalità ed utilizzarlo nel modo ottimale.
+	\item \textbf{Contromisure:} in caso si verifichino errori gravi nell'utilizzo dei software è previsto un momento di pausa del lavoro precedentemente organizzato per correggere gli errori ed apprenderne le cause.
+	\item \textbf{Riscontro:} 
+	\begin{itemize}
+		\item \AR: la preparazione personale svolta da ciascun membro del gruppo è risultata sufficiente ad evitare grossi errori nell'utilizzo dei nuovi strumenti software. I piccoli problemi che si sono verificati sono stati rapidamente corretti anche tramite la collaborazione tra i diversi membri del gruppo.
+		\item \AD: non si sono verificati problemi durante questo periodo di ampliamento dell'analisi per quanto riguarda l’utilizzo degli strumenti software.
+		\item \PA: sono stati necessari alcuni momenti in cui il gruppo si è riunito per approfondire la conoscenze sulle tecnologie da utilizzare nel progetto, è stato necessario per poter affrontare in modo adeguato la progettazione dell'architettura del sistema.
+	\end{itemize}
 \end{enumerate}
 
-\subsubsection{Rischi sugli strumenti hardware}
+\paragraph{Rischi sugli strumenti hardware}\mbox{}\\
 \begin{enumerate}
 	\item \textbf{Probabilità:} basso.
 	\item \textbf{Grado di criticità:} basso.
 	\item \textbf{Descrizione:} gli strumenti utilizzati per lo sviluppo del progetto potrebbero essere soggetti a malfunzionamenti;
 	\item \textbf{Strategie di rilevamento:} ogni membro del gruppo si impegna a controllare personalmente ogni strumento utilizzato per quanto possibile e prevenire ogni malfunzionamento.
 	\item \textbf{Contromisure:} lo sviluppo del progetto è stato demandato principalmente a strumenti che permettono il lavoro condiviso e all’archiviazione dei dati in uno spazio condiviso e non su una singola unità hardware, si cercherà di rendere più brevi possibili i momenti in cui il lavoro svolto stazionerà in un’unità locale singola.
+	\item \textbf{Riscontro:} 
+	\begin{itemize}
+		\item \AR: tale rischio non si è mai verificato, e non ha dunque avuto alcun impatto negativo sullo svolgimento del progetto.
+		\item \AD: tale rischio non si è mai verificato, e non ha dunque avuto alcun impatto negativo sullo svolgimento del progetto.
+		\item \PA: durante questo periodo un membro del gruppo ha avuto problemi con il PC su cui lavorava, nei pochi giorni in cui lo strumento veniva riparato il \Responsabile{} lo ha indirizzato verso attività da svolgere senza l’uso dell’intero sistema di progettazione, non inficiando così l'organizzazione del progetto.
+	\end{itemize}
 \end{enumerate}
 
-\subsection{Rischi relativi al personale}
-\subsubsection{Rischi relativi ai problemi personali dei componenti del gruppo}
+\subsubsection{Rischi relativi al personale}
+\paragraph{Rischi relativi ai problemi personali dei componenti del gruppo}\mbox{}\\
 \begin{enumerate}
 	\item \textbf{Probabilità:} alta.
 	\item \textbf{Grado di criticità:} medio.
 	\item \textbf{Descrizione:} ogni componente del gruppo ha impegni personali e necessità che rendono difficoltoso trovare continuativamente momenti di collaborazione. Nel gruppo sono presenti 4 studenti lavoratori che potrebbero perciò non essere sempre disponibili.
 	\item \textbf{Strategie di rilevamento:} l’organizzazione dei ruoli viene generata con un calendario comune attraverso la comunicazione delle proprie disponibilità.
 	\item \textbf{Contromisure:} il \Responsabile{} provvederà ad aggiornare la pianificazione non appena si verifica un impegno imprevisto ad un componente, compromettendone la produttività.
+	\item \textbf{Riscontro:}
+	\begin{itemize}
+		\item \AR: i diversi componenti del gruppo sono stati in grado di gestire efficacemente i loro impegni personali in modo da evitare ritardi nello svolgimento delle loro attività.
+		\item \AD: durante questa fase ci sono stati alcuni problemi di coordinamento del lavoro di gruppo in quanto posizionata temporalmente all’interno della sessione di esami del primo semestre. Non si sono verificati però problemi di collaborazione e i membri si sono adeguatamente organizzati per limitare questo problema.
+		\item \PA: anche questo periodo, come il precedente, è stato per la maggior parte influenzato dalla concomitanza con la sessione di esami del primo semestre.
+	\end{itemize}
 \end{enumerate}
 
-\subsubsection{Rischi relativi ai problemi di collaborazione}
+\paragraph{Rischi relativi ai problemi di collaborazione}\mbox{}
 \begin{enumerate}
 	\item \textbf{Probabilità:} bassa.
 	\item \textbf{Grado di criticità:} alto.
 	\item \textbf{Descrizione:} i vari componenti del gruppo hanno idee e motivazioni differenti che potrebbero portare alla nascita di difficoltà collaborative.
-	\item \textbf{Strategie di rilevamento:} il \Responsabile{} ha il compito di monitorare l’attività dei componenti del gruppo ed evitare la presenza di problematiche relazionali;
-	\item \textbf{Contromisure:} il \Responsabile{} provvederà a collocare i componenti del gruppo non in grado di collaborare ad altri compiti, per rendere l’ambiente di lavoro più sereno e proficuo.
+	\item \textbf{Strategie di rilevamento:} il \Responsabile{} ha il compito di monitorare l’attività dei componenti del gruppo ed evitare la presenza di problematiche relazionali.
+	\item \textbf{Contromisure:} il \Responsabile{} provvederà a collocare i componenti del gruppo non in grado di collaborare ad altri compiti, per rendere l’ambiente di lavoro più sereno e proficuo;
+	\item \textbf{Riscontro:}
+	\begin{itemize}
+		\item \AR: non è stato riscontrato alcun conflitto tra i diversi componenti del gruppo, i quali sono stati in grado di collaborare insieme senza l'insorgere di problemi.
+		\item \AD: non c'è stato alcun problema nel rapporto tra i membri del gruppo, collaborando e aiutandosi reciprocamente.
+		\item \PA: durante la stesura dell'architettura del sistema, sono sorti diversi dubbi e idee su come affrontare alcune problematiche, sono state tutte discusse e nessuna ha mai portato a scontri all’interno del gruppo. Nei casi in cui la decisione era di notevole importanza e la scelta non chiara, sono state seguite le norme presenti sul documento \NormeDiProgetto{}.
+	\end{itemize}
 \end{enumerate}
 
-\subsubsection{Rischi relativi all'inesperienza}
+\paragraph{Rischi relativi all'inesperienza}\mbox{}\\
 \begin{enumerate}
 	\item \textbf{Probabilità:} alta.
 	\item \textbf{Grado di criticità:} alto.
-	\item \textbf{Descrizione:} il progetto prevede un metodo di lavoro basato pesantemente su analisi e previsioni completamente nuovo per tutti i membri del gruppo. Anche gli strumenti che vengono utilizzati per lo sviluppo del progetto risultano nella maggioranza dei casi completamente nuovi, richiedendo dunque una fase di apprendimento per imparare ad utilizzarli.
+	\item \textbf{Descrizione:} il progetto prevede un metodo di lavoro basato pesantemente su analisi e previsioni completamente nuovo per tutti i membri del gruppo. Anche gli strumenti che vengono utilizzati per lo sviluppo del progetto risultano nella maggioranza dei casi completamente nuovi, richiedendo dunque un periodo di apprendimento per imparare ad utilizzarli.
 	\item \textbf{Strategie di rilevamento:} il \Responsabile{} provvederà a dedicare del tempo per organizzare dei momenti in cui il gruppo si confronterà per condividere la conoscenze e l'esperienza fatta.
 	\item \textbf{Contromisure:} in caso si verificassero momenti problematici causati dall'inesperienza il \Responsabile{} provvederà ad organizzare una riunione per la risoluzione.
+	\item \textbf{Riscontro:}
+	\begin{itemize}
+	\item \AR: l'inesperienza dei componenti del gruppo non ha portato a problematiche evidenti durante questo periodo del progetto.
+	\item \AD: l'inesperienza dei componenti del gruppo non ha portato a problematiche evidenti durante questo periodo del progetto.
+	\item \PA: in questo periodo è stato necessario testare le tecnologie da utilizzare nel progetto per capirne a fondo le potenzialità e sfruttarle nel modo ottimale. Questo ha portato il gruppo a dover affrontare un periodo di analisi e apprendimento delle tecnologie prima di usarle effettivamente.
+	\end{itemize}
 \end{enumerate}
 
-\subsection{Rischi relativi ai costi}
-\subsubsection{Rischi sul preventivo}
+\subsubsection{Rischi relativi ai costi}
+\paragraph{Rischi sul preventivo}\mbox{}\\
 \begin{enumerate}
 	\item \textbf{Probabilità:} media.
 	\item \textbf{Grado di criticità:} alto.
 	\item \textbf{Descrizione:} l’inesperienza del gruppo a preventivare il proprio lavoro, può causare una forte variazione tra i costi preventivati e quelli rilevati a consuntivo, causando un aumento dei costi e un ritardo nei tempi di consegna.
 	\item \textbf{Strategie di rilevamento:} l controllo periodico dello stato del lavoro è fatto dal Responsabile, che dovrà notare la generazione di ritardi.
 	\item \textbf{Contromisure:} ogni attività è stata preventivata tenendo conto di un periodo di slack, per evitare che piccole imprecisioni nel calcolo preventivo possano accumularsi generando una variazione consistente della proposta.
+	\item \textbf{Riscontro:}
+	\begin{itemize}
+	\item \AR: durante questo periodo del progetto non sono stati riscontrati grossi problemi di preventivo e i periodi di slack sono stati generalmente sufficienti a coprire le difficoltà riscontrate.
+	\item \AD: durante questo periodo non di sono verificati problemi riguardanti la previsione dei costi.
+	\item \PA: i periodi di slack sono stati utilizzati per adeguare gli impegni, sopratutto di studio, al tempo dedicato al progetto, ma hanno permesso l'assenza di variazioni sul preventivo.
+	\end{itemize}
 \end{enumerate}
-
-
-
-
-

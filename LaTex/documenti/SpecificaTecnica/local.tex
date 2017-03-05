@@ -1,0 +1,70 @@
+%%%%%%%%%%%%%%
+%  COSTANTI  %
+%%%%%%%%%%%%%%
+
+% In questa prima parte vanno definite le 'costanti' utilizzate soltanto da questo documento.
+% Devono iniziare con una lettera maiuscola per distinguersi dalle funzioni.
+
+\newcommand{\DocTitle}{Specifica Tecnica}
+\newcommand{\DocVersion}{\VersioneST{}}
+\newcommand{\DocRedazione}{\nick \\ \tommy \\ \bea \\ \marco \\ \mattia \\ \lorenzo \\ \alice}
+\newcommand{\DocVerifica}{\lorenzo \\ \mattia}
+\newcommand{\DocApprovazione}{\mattia}
+\newcommand{\DocUso}{Esterno}
+\newcommand{\DocDistribuzione}{
+	\Committente{} \\
+	Gruppo \GroupName{} \\
+	\Proponente{} 
+}
+
+% La descrizione del documento
+\newcommand{\DocDescription}{
+ Questo documento descrive l'architettura del framework \ProjectName{} e delle sue applicazioni dimostrative To-do list e \DemoName.
+}
+
+%%%%%%%%%%%%%%
+%  FUNZIONI  %
+%%%%%%%%%%%%%%
+% Funzioni locali
+
+\usepackage{xr}
+\externaldocument[AdR-]{../AnalisiDeiRequisiti/capitolo-requisiti}
+
+%comandi per i ruoli
+\newcommand{\Manager}[1][1]{%
+	\ifnum#1=1
+	\textit{Manager}%
+	\else
+	\textit{Managers}%
+	\fi
+}
+\newcommand{\Customer}[1][1]{%
+	\ifnum#1=1
+	\textit{Customer}%
+	\else
+	\textit{Customers}%
+	\fi
+}
+\newcommand{\Deliveryman}[1][1]{%
+	\ifnum#1=1
+	\textit{Deliveryman}%
+	\else
+	\textit{Deliverymen}%
+	\fi
+}
+\newcommand{\Purchasingmanager}[1][1]{%
+	\ifnum#1=1
+	\textit{Purchasing Manager}%
+	\else
+	\textit{Purchasing Managers}%
+	\fi
+}
+\newcommand{\Chef}[1][1]{%
+	\ifnum#1=1
+	\textit{Chef}%
+	\else
+	\textit{Chefs}%
+	\fi
+}
+
+\usepackage{subfig}

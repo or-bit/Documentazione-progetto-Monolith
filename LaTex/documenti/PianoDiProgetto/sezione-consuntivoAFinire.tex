@@ -1,4 +1,4 @@
-\section{Consuntivo a finire}
+\section{Consuntivo parziale}
 In questa sezione vengono riportate le spese effettivamente sostenute. Verrà mostrato l'effettivo consumo di ore sia per ruolo che per persona ed in base al risultato avremo un bilancio:
 \begin{itemize}
 	\item positivo: se il consuntivo è inferiore al preventivo;
@@ -7,8 +7,8 @@ In questa sezione vengono riportate le spese effettivamente sostenute. Verrà mo
 \end{itemize}
 I valori positivi indicano un eccesso di ore, i negativi un consumo inferiore a quello preventivato.
 
-\subsection{Analisi}
-La tabella sottostante riporta la differenza tra preventivo e consuntivo della fase di \AR{} divisa per ruolo.
+\subsection{Analisi dei Requisiti}
+La tabella sottostante riporta la differenza tra preventivo e consuntivo del periodo di \AR{} divisa per ruolo.
 \begin{table}[H]
 	\centering
 	\begin{tabular}{|c|c|c|}
@@ -32,10 +32,10 @@ La tabella sottostante riporta la differenza tra preventivo e consuntivo della f
 		\textbf{Totale} & \textbf{1} & \textbf{20} \\
 		\hline
 	\end{tabular}
-	\caption{Differenza preventivo consuntivo per ruolo, fase di \AR}
+	\caption{Differenza preventivo consuntivo per ruolo, periodo di \AR}
 \end{table}
 
-La tabella sottostante riporta la differenza tra preventivo e consuntivo della fase di \AR{} divisa per componente.
+La tabella sottostante riporta la differenza tra preventivo e consuntivo della periodo di \AR{} divisa per componente.
 \begin{table}[H]
 	\centering
 	\begin{tabular}{|l|c|c|c|c|c|c|c|}
@@ -54,8 +54,118 @@ La tabella sottostante riporta la differenza tra preventivo e consuntivo della f
 		Mattia Zecchinato & 1& &-0.5 & & & & .5  \\
 		\hline
 	\end{tabular}
-	\caption{Differenza preventivo consuntivo per componente, fase di \AR}
+	\caption{Differenza preventivo consuntivo per componente, periodo di \AR}
 \end{table}
 \subsubsection{Conclusioni}
-Per completare la fase di \AR{} è stata necessaria un'ora di lavoro in più di quanto preventivato, con un aumento di spesa di \textbf{20€}. Non essendo la fase di \AR{} inclusa nella proposta, non ci saranno ripercussioni nel preventivo.
+Per completare il periodo di \AR{} è stata necessaria un'ora di lavoro in più di quanto preventivato, con un aumento di spesa di \textbf{20€}.
+\subsubsection{Impatto sul preventivo a finire}
+Non essendo il periodo di \AR{} inclusa nella proposta, non ci saranno ripercussioni nel preventivo. Per quanto riguarda il preventivo totale, comprendente le ore non rendicontate, lo scostamento rilevato non è influente poiché corrisponde a meno di un'ora di lavoro.
 
+\subsection{Analisi di Dettaglio}
+La tabella sottostante riporta la differenza tra preventivo e consuntivo del periodo di \AD{} divisa per ruolo.
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		\textbf{Ruolo} &
+		\textbf{Ore} &
+		\textbf{Costo} \\
+		\hline
+		\Responsabile & 0 & 0\\
+		\hline
+		\Amministratore & 0 & 0\\
+		\hline
+		\Analista & 5 & 125\\
+		\hline
+		\Progettista & 0 & 0 \\
+		\hline
+		\Verificatore & 0 & 0\\
+		\hline
+		\Programmatore & 0 & 0 \\
+		\hline
+		\textbf{Totale} & \textbf{5} & \textbf{125} \\
+		\hline
+	\end{tabular}
+	\caption{Differenza preventivo consuntivo per ruolo, periodo di \AD}
+\end{table}
+
+La tabella sottostante riporta la differenza tra preventivo e consuntivo della periodo di \AD{} divisa per componente.
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|l|c|c|c|c|c|c|c|}
+		\hline
+		\textbf{Nominativo} & 
+		\multicolumn{6}{c|}{\textbf{Ore per ruolo}} & 
+		\textbf{Ore totali} \\
+		& Re & Am & An & Pj & Pr & Ve & \\
+		\hline
+		Nicola Dal Maso & & & & & & & 0 \\
+		Lorenzo Ferrarin & & & & & & & 0 \\
+		Beatrice Guerra & & &2 & & & & 2 \\
+		Marco Ponchia & & & & & & & 0 \\
+		Tommaso Rosso & & & & & & & 0 \\
+		Alice V. Sasso & & & 2& & & & 2 \\
+		Mattia Zecchinato & & &1 & & & & 1  \\
+		\hline
+	\end{tabular}
+	\caption{Differenza preventivo consuntivo per componente, periodo di \AD}
+\end{table}
+\subsubsection{Conclusioni}
+Per completare il periodo di \AD{} è stato necessario un investimento non preventivato di cinque ore, che ha portato ad un aumento dei costi di \textbf{125€}. Lo sforamento dal preventivo è stato causato da una visione ottimistica dei tempi, sono stati quindi analizzati i periodi successivi e risultano realistici per la realizzazione del progetto.
+\subsubsection{Impatto sul preventivo a finire}
+Questo periodo ha avuto un impatto di una certa sensibilità sul preventivo, non tanto riguardo ai costi i quali sono comunque mitigati dalla presenza di una soglia di sicurezza nel preventivo, ma soprattutto per quanto riguarda il monte ore totali disponibile per ogni componente sull'arco del progetto. Sarà forse quindi necessario un riadattamento degli impegni per ruolo.
+
+\subsection{Progettazione Architetturale}
+La tabella sottostante riporta la differenza tra preventivo e consuntivo del periodo di \PA{} divisa per ruolo.
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		\textbf{Ruolo} &
+		\textbf{Ore} &
+		\textbf{Costo} \\
+		\hline
+		\Responsabile & 0 & 0\\
+		\hline
+		\Amministratore & 0 & 0\\
+		\hline
+		\Analista & -2 & -50\\
+		\hline
+		\Progettista & -2 & -44 \\
+		\hline
+		\Verificatore & 1 & 15 \\
+		\hline
+		\Programmatore & 0 & 0 \\
+		\hline
+		\textbf{Totale} & \textbf{-3} & \textbf{-79} \\
+		\hline
+	\end{tabular}
+	\caption{Differenza preventivo consuntivo per ruolo, periodo di \PA}
+\end{table}
+
+La tabella sottostante riporta la differenza tra preventivo e consuntivo della periodo di \PA{} divisa per componente.
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|l|c|c|c|c|c|c|c|}
+		\hline
+		\textbf{Nominativo} & 
+		\multicolumn{6}{c|}{\textbf{Ore per ruolo}} & 
+		\textbf{Ore totali} \\
+		& Re & Am & An & Pj & Pr & Ve & \\
+		\hline
+		Nicola Dal Maso & & & & & & & 0 \\
+		Lorenzo Ferrarin & & & & & & & 0 \\
+		Beatrice Guerra & & & -2& & & 1& -1 \\
+		Marco Ponchia & & & & & & & 0 \\
+		Tommaso Rosso & & & & & & & 0 \\
+		Alice V. Sasso & & & 1& -2& & & -1 \\
+		Mattia Zecchinato & & & -1& & & & -1 \\
+		\hline
+	\end{tabular}
+	\caption{Differenza preventivo consuntivo per componente, periodo di \PA}
+\end{table}
+\subsubsection{Conclusioni}
+Durante il periodo di \PA{} sono state necessarie delle piccole riorganizzazioni nell'impegno orario per alcuni componenti, che non hanno mai riguardato un periodo superiore alle due ore a persona.
+Queste scelte hanno portato ad un risparmio di tre ore e di \textbf{-79€} sul preventivo.
+\subsubsection{Impatto sul preventivo a finire}
+Il risparmio ottenuto in questo periodo, sia dal punto di vista dei costi, che da quello dell'impegno orario, ha portato ad un riavvicinamento al preventivo iniziale. Il riassestamento delle ore per alcune persone ha permesso di sistemare gli squilibri creatisi nei periodi precedenti evitando così un superamento del limite massimo delle ore.

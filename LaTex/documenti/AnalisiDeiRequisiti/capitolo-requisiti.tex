@@ -11,7 +11,7 @@ La tabella dei requisiti presenta i requisiti fino al massimo livello di dettagl
 		\item opzionale, per i requisiti relativamente utili o contrattabili in seguito.
 	\end{itemize}
 	\item una descrizione esaustiva del requisito;
-	\item le fonti dal quale il requisito ha avuto origine, sia essa l'analisi diretta del capitolato oppure il dialogo con i Proponenti e/o in base alle necessità architetturali ed implementative del progetto individuate tramite casi d'uso;	
+	\item le fonti dal quale il requisito ha avuto origine, sia essa l'analisi diretta del capitolato oppure il dialogo con i Proponenti e/o in base alle necessità architetturali ed implementative del progetto individuate tramite casi d'uso.	
 \end{itemize}
 
 \subsection{Tabella dei requisiti per il framework \ProjectName}
@@ -20,11 +20,9 @@ La tabella dei requisiti presenta i requisiti fino al massimo livello di dettagl
 
 \begin{longtable}{|P{1.5cm}|P{2.5cm}|P{6.5cm}|P{2.5cm}|}
 	\hline \textbf{Codice} & \textbf{Categoria} & \textbf{Descrizione} & \textbf{Fonti} \\
-	\hline \RequisitoObV\label{L1} & Obbligatorio & Il \glossario{framework} e la demo sono sviluppati in \glossario{JavaScript}. & Capitolato \\
-	\hline \RequisitoObV \label{L2} & Obbligatorio & Il \glossario{framework} è sviluppato come pacchetto per \glossario{Rocket.Chat} & Capitolato \\
-	\hline \RequisitoObV\label{L3} & Obbligatorio & Viene sviluppata una \glossario{bubble} di tipo \glossario{to-do list}. & Capitolato \\
-	\hline \RequisitoObV\label{L4} & Obbligatorio & Viene sviluppata una \glossario{bubble} per la gestione di un esercizio commerciale di ristorazione per asporto, che permetta la gestione da parte del ristorante delle attività da svolgere, tra le quali consegne da effettuare, piatti da preparare e acquisti di merce, e che permetta ai clienti l'ordinazione dei pasti. & Capitolato \\
-	\hline \RequisitoObV\label{L5} & Obbligatorio & Il \glossario{framework} offre metodi con la funzionalità di modificare la \glossario{bubble memory}, quindi per gestire lo stato della \glossario{bubble} & VerbaleEsterno23\_12\_2016 \linebreak \hyperref[UC1.06.1]{UC1.06.1}  \\
+	\hline \RequisitoObV\label{L1} & Obbligatorio & Il framework e la demo sono sviluppati in JavaScript 6th edition & Capitolato \\
+	\hline \RequisitoObV \label{L2} & Obbligatorio & Il framework è sviluppato come pacchetto per Rocket.Chat & Capitolato \\
+	\hline \RequisitoObV\label{L5} & Obbligatorio & Il framework offre metodi con la funzionalità di modificare la bubble memory, quindi per gestire lo stato della bubble & VerbaleEsterno23\_12\_2016 \linebreak \ref{UC1.06.1}  \\
 	\hline \RequisitoObV\label{L54} & Obbligatorio & La demo è caricata in \glossario{Heroku}. & Capitolato \\
 	\hline
 	\caption{Requisiti di vincolo per il framework}
@@ -34,39 +32,70 @@ La tabella dei requisiti presenta i requisiti fino al massimo livello di dettagl
 
 \begin{longtable}{|P{1.5cm}|P{2.5cm}|P{6.5cm}|P{2.5cm}|}
 	\hline \textbf{Codice} & \textbf{Categoria} & \textbf{Descrizione} & \textbf{Fonti} \\
-	\hline \RequisitoObF\label{L6} & Obbligatorio & L'utilizzatore del \glossario{framework} può istanziare una \glossario{bubble generica}. & \hyperref[UC1.35]{UC1.35} \\
-	\hline \RequisitoObF\label{L7} & Obbligatorio & L'utilizzatore del \glossario{framework} può rendere visibile una \glossario{bubble generica} precedentemente istanziata. & \hyperref[UC1.36]{UC1.36} \\
-	\hline \RequisitoObF\label{L8} & Obbligatorio & Il \glossario{framework} offre la funzionalità di interfacciarsi con un database \glossario{MongoDB} fornito dall'utente. & VerbaleEsterno23\_12\_2016 \linebreak \hyperref[UC1.00]{UC1.00} \linebreak \hyperref[UC1.01]{UC1.01} \hyperref[UC1.02]{UC1.02} \\
-	\hline \RequisitoObF\label{L9} & Obbligatorio & Il \glossario{framework} offre funzionalità di settaggio della durata della \glossario{bubble}. & \hyperref[UC1.13]{UC1.13} \\
-	\hline \RequisitoObF\label{L10} & Obbligatorio & Il \glossario{framework} offre funzionalità di terminazione della \glossario{bubble}. & \hyperref[UC1.19]{UC1.19} \\
-	\hline \RequisitoObF\label{L11} & Obbligatorio & Il \glossario{framework} offre la possibilità di aggiungere, rimuovere o modificare elementi dalla \glossario{bubble}. & \hyperref[UC1.03.1]{UC1.03.1} \hyperref[UC1.04]{UC1.04} \hyperref[UC1.05.1]{UC1.05.1} \\
-	\hline \RequisitoObF\label{L12} & Obbligatorio & Il \glossario{framework} offre la possibilità di inserire \glossario{label} nella \glossario{bubble} & \hyperref[UC1.27]{UC1.27} \\
-	\hline \RequisitoObF\label{L13} & Obbligatorio & Il \glossario{framework} fornisce le funzionalità per impostare manualmente la posizione degli elementi grafici all'interno di una \glossario{bubble generica}. & \hyperref[UC1.23]{UC1.23} \\
-	\hline \RequisitoObF\label{L14} & Obbligatorio & Il \glossario{framework} fornisce le funzionalità per mostrare e nascondere la posizione degli elementi grafici all'interno di una \glossario{bubble generica}. & \hyperref[UC1.21]{UC1.21} \linebreak \hyperref[UC1.22]{UC1.22} \\
-	\hline \RequisitoObF\label{L15} & Obbligatorio & Il \glossario{framework} mette a disposizione funzionalità di creazione di notifiche per le \glossario{bubble} & \hyperref[UC1.18]{UC1.18} \\
-	\hline \RequisitoObF\label{L16} & Obbligatorio & Il \glossario{framework} mette a disposizione funzionalità di visualizzazione per le notifiche per le \glossario{bubble} & \hyperref[UC1.17]{UC1.17} \\
-	\hline \RequisitoObF\label{L33} & Obbligatorio & L'utilizzatore del \glossario{framework} può inserire all'interno della \glossario{bubble} un \glossario{TextView} & \hyperref[UC1.26]{UC1.26} \\
-	\hline \RequisitoObF\label{L34} & Obbligatorio & L'utilizzatore del \glossario{framework} può inserire all'interno della \glossario{bubble} un \glossario{TextEdit} editabile & \hyperref[UC1.33]{UC1.33} \\
-	\hline \RequisitoOpF\label{L35} & Opzionale & Il \glossario{framework} mette a disposizione metodi per la lettura di file \glossario{JSON} e il loro controllo rispetto ad uno schema specificato. & \hyperref[UC1.12]{UC1.12} \\
-	\hline \RequisitoOpF\label{L36} & Opzionale & Il \glossario{framework} offre la possibilità di monitorare gli utenti di \glossario{Rocket.Chat} utilizzatori della \glossario{bubble}. & \hyperref[UC1.14]{UC1.14} \\
-	\hline \RequisitoOpF\label{L37} & Opzionale & Funzionalità per consultare lo storico delle interazioni che un singolo utente ha avuto con la \glossario{bubble}. & \hyperref[UC1.15.1]{UC1.15.1} \\
-	\hline \RequisitoOpF\label{L38} & Opzionale & Il \glossario{framework} offre la possibilità di stabilire una richiesta di file in input per la \glossario{bubble} & \hyperref[UC1.34]{UC1.34} \\
-	\hline \RequisitoOpF\label{L39} & Opzionale & Il \glossario{framework} offre la possibilità di creare degli output per la \glossario{bubble} & \hyperref[UC1.24.1]{UC1.24.1} \\
-	\hline \RequisitoOpF\label{L40} & Opzionale & Il \glossario{framework} offre la possibilità di creare un output \glossario{PDF} per la \glossario{bubble} & \hyperref[UC1.20.1]{UC1.20.1} \\	
-	\hline \RequisitoOpF\label{L41} & Opzionale & Il \glossario{framework} offre la possibilità di inserire \glossario{bottoni} quali \glossario{bottoni radio} e \glossario{checkbox} nella \glossario{bubble} & \hyperref[UC1.30]{UC1.30} \linebreak \hyperref[UC1.31]{UC1.31} \linebreak \hyperref[UC1.32]{UC1.32} \\
-	\hline \RequisitoOpF\label{L42} & Opzionale & Il \glossario{framework} offre metodi per fare matching con espressioni regolari
-	 & \hyperref[UC1.10]{UC1.10} \\
-	\hline \RequisitoOpF\label{L43} & Opzionale & Il \glossario{framework} offre la possibilità di stabilire l'esecuzione ad un orario prestabilito & \hyperref[UC1.16]{UC1.16} \\
-	\hline \RequisitoOpF\label{L44} & Opzionale & Il \glossario{framework} offre la possibilità di chiamata di metodi di \glossario{API} esterne per ricevere informazioni \glossario{JSON} & \hyperref[UC1.07.1]{UC1.07.1} \\
-	\hline \RequisitoOpF\label{L45} & Opzionale & Il \glossario{framework} mette a disposizione metodi per l'inserimento di immagini nelle \glossario{bubble}
-	 & \hyperref[UC1.25]{UC1.25} \\
-	\hline \RequisitoOpF\label{L46} & Opzionale & Il \glossario{framework} offre metodi per la creazione di grafici a torta ed istogrammi
-	 & \hyperref[UC1.28]{UC1.28} \linebreak \hyperref[UC1.29]{UC1.29}  \\	 
-	 \hline \RequisitoOpF\label{L47} & Opzionale & Possibilità di impostare un numero massimo di interazioni per ogni singolo utente di \glossario{Rocket.Chat} con la \glossario{bubble}. & \hyperref[UC1.08]{UC1.08} \\
-	 \hline \RequisitoOpF\label{L48} & Opzionale & Possibilità di inserire un numero massimo di interazioni totali con la \glossario{bubble} & \hyperref[UC1.09]{UC1.09} \\
-	 \hline \RequisitoOpF\label{L49} & Opzionale & Il \glossario{framework} offre la possibilità di specificare una dimensione massima per i file di input & \hyperref[UC1.11]{UC1.11} \\
+	\hline \RequisitoObF\label{L6} & Obbligatorio & L'utilizzatore del framework può istanziare una bubble generica & \ref{UC1.35} \\
+	\hline \RequisitoObF\label{L7} & Obbligatorio & L'utilizzatore del framework può rendere visibile una bubble generica precedentemente istanziata & \ref{UC1.36} \\
+	\hline \RequisitoObF \label{L8} & Obbligatorio & Il framework offre la funzionalità di interfacciarsi con un database MongoDB fornito dall'utente & VerbaleEsterno23\_12\_2016 \linebreak \ref{UC2} \ref{UC1.00} \ref{UC1.01} \ref{UC1.02} \\
+	\hline \RequisitoObF\label{L81} & Obbligatorio & Il framework offre la possibilità di connettersi ad un database MongoDB dato il suo indirizzo & \ref{UC1.00} \\
+	\hline \RequisitoObF\label{L82} & Obbligatorio & Il framework offre la possibilità di leggere informazioni da un database MongoDB al quale ci si è precedentemente connessi & \ref{UC1.01} \\
+	\hline \RequisitoObF\label{L83} & Obbligatorio & Il framework offre la possibilità di scrivere informazioni su un database MongoDB al quale ci si è precedentemente connessi & \ref{UC1.02} \\
+	\hline \RequisitoObF\label{L86} & Obbligatorio & Il framework permette di effettuare operazioni sugli elementi & \ref{UC3} \\
+	\hline \RequisitoObF\label{L87} & Obbligatorio & Il framework permette di creare elementi & \ref{UC3.01} \\
+	\hline \RequisitoObF\label{L9} & Obbligatorio & Il framework offre funzionalità di settaggio della durata della bubble & \ref{UC1.13} \\
+	\hline \RequisitoObF\label{L10} & Obbligatorio & Il framework offre funzionalità di terminazione della bubble & \ref{UC1.19} \\
+	\hline \RequisitoObF\label{L11} & Obbligatorio & Il framework offre la possibilità di aggiungere elementi alla bubble & \ref{UC1.04} \\
+	\hline \RequisitoObF\label{L56} & Obbligatorio & Il framework offre la possibilità di modificare elementi della bubble & \ref{UC1.05.1} \\
+	\hline \RequisitoObF\label{L89} & Obbligatorio & Il framework avvisa l'utente con un messaggio di errore nel caso in cui l'elemento che si vuole modificare non è presente & \ref{UC1.05.2} \\
+	\hline \RequisitoObF\label{L55} & Obbligatorio & Il framework offre la possibilità di rimuovere elementi dalla bubble. & \ref{UC1.03.1} \\
+	\hline \RequisitoObF\label{L88} & Obbligatorio & Se si prova a rimuovere un elemento non presente il framework deve restituire un messaggio di errore & \ref{UC1.03.2} \\
+	\hline \RequisitoObF\label{L12} & Obbligatorio & Il framework offre la possibilità di creare un elemento label & \ref{UC1.27} \\
+	\hline \RequisitoObF\label{L13} & Obbligatorio & Il framework fornisce le funzionalità per impostare manualmente la posizione degli elementi grafici all'interno di una bubble generica & \ref{UC1.23} \\
+	\hline \RequisitoObF\label{L14} & Obbligatorio & Il framework fornisce le funzionalità per mostrare la posizione degli elementi grafici all'interno di una bubble generica & \ref{UC1.21} \\
+	\hline \RequisitoObF\label{L63} & Obbligatorio & Il framework fornisce le funzionalità per nascondere la posizione degli elementi grafici all'interno di una bubble generica &  \ref{UC1.22} \\
+	\hline \RequisitoObF\label{L15} & Obbligatorio & Il framework mette a disposizione funzionalità di creazione di notifiche per le bubble & \ref{UC1.18} \\
+	\hline \RequisitoObF\label{L16} & Obbligatorio & Il framework mette a disposizione funzionalità di visualizzazione per le notifiche per le bubble & \ref{UC1.17} \\
+	\hline \RequisitoObF\label{L33} & Obbligatorio & L'utilizzatore del framework può creare un elemento TextView & \ref{UC1.26} \\
+	\hline \RequisitoObF\label{L34} & Obbligatorio & L'utilizzatore del framework può creare un elemento TextEdit & \ref{UC1.33} \\
+	\hline \RequisitoOpF\label{L35} & Opzionale & Il framework mette a disposizione metodi per la il controllo di file JSON rispetto ad uno schema specificato. & \ref{UC1.12} \\
+	\hline \RequisitoOpF\label{L94} & Opzionale & Il framework restituisce un messaggio di errore per operazioni non permesse & \ref{UC1.00.2} \ref{UC1.03.2} \ref{UC1.05.2} \ref{UC1.06.2} \ref{UC1.07.2} \ref{UC1.15.2} \ref{UC1.20.2} \ref{UC1.24.2} \\
+	\hline \RequisitoOpF\label{L36} & Opzionale & Il framework offre la possibilità di monitorare gli utenti di Rocket.Chat utilizzatori della bubble & \ref{UC1.14} \\
+	\hline \RequisitoOpF\label{L37} & Opzionale & Funzionalità per consultare lo storico delle interazioni che un singolo utente ha avuto con la bubble & \ref{UC1.15.1} \\
+	\hline \RequisitoOpF\label{L38} & Opzionale & Il framework offre la possibilità di stabilire una richiesta di file in input per la bubble & \ref{UC1.34} \\
+	\hline \RequisitoOpF\label{L39} & Opzionale & Il framework offre la possibilità di creare degli output per la bubble & \ref{UC1.24.1} \\
+	\hline \RequisitoOpF\label{L40} & Opzionale & Il framework offre la possibilità di creare un output PDF per la bubble & \ref{UC1.20.1} \\	
+	\hline \RequisitoOpF\label{L41} & Opzionale & Il framework offre la possibilità di creare un elemento bottone & \ref{UC1.32} \\
+ 	\hline \RequisitoOpF\label{L84} & Opzionale & Il framework offre la possibilità di creare un elemento radio button & \ref{UC1.31} \\
+ 	\hline \RequisitoOpF\label{L85} & Opzionale & Il framework offre la possibilità di creare un elemento checkbox & \ref{UC1.30} \\
+	\hline \RequisitoOpF\label{L42} & Opzionale & Il framework offre metodi per fare matching con espressioni regolari & \ref{UC1.10} \\
+	\hline \RequisitoOpF\label{L43} & Opzionale & Il framework offre la possibilità di stabilire l'esecuzione ad un orario prestabilito & \ref{UC1.16} \\
+	\hline \RequisitoOpF\label{L44} & Opzionale & Il framework offre la possibilità di chiamata di metodi di API esterne per ricevere informazioni JSON & \ref{UC1.07.1} \\
+	\hline \RequisitoOpF\label{L92} & Opzionale & Il framework restituisce un messaggio di errore qualora le API indicate non risultino disponibili & \ref{UC1.07.2} \\
+	\hline \RequisitoOpF\label{L45} & Opzionale & Il framework permette la creazione di un elemento immagine & \ref{UC1.25} \\
+	\hline \RequisitoOpF\label{L46} & Opzionale & Il framework offre metodi per la creazione di un elemento grafico a torta  & \ref{UC1.28} \\
+	\hline \RequisitoOpF\label{L64} & Opzionale & Il framework offre metodi per la creazione di un elemento istogramma &\ref{UC1.29} \\	 	 
+	\hline \RequisitoDF\label{L93} & Desiderabile & Il framework permette di configurare la bubble & \ref{UCimpostazioni} \\
+	\hline \RequisitoOpF\label{L47} & Opzionale & Possibilità di impostare un numero massimo di interazioni per ogni singolo utente di Rocket.Chat con la bubble & \ref{UC1.08} \\
+	\hline \RequisitoOpF\label{L48} & Opzionale & Possibilità di inserire un numero massimo di interazioni totali con la bubble & \ref{UC1.09} \\
+	\hline \RequisitoOpF\label{L49} & Opzionale & Il framework offre la possibilità di specificare una dimensione massima per i file di input & \ref{UC1.11} \\
+	\hline \RequisitoObF\label{L3} & Obbligatorio & Viene sviluppata una bubble di tipo to-do list & Capitolato \\
+	\hline \RequisitoObF\label{L4} & Obbligatorio & Viene sviluppata una bubble per la gestione di un esercizio commerciale di ristorazione per asporto, che permetta la gestione da parte del ristorante delle attività da svolgere, tra le quali consegne da effettuare, piatti da preparare e acquisti di merce, e che permetta ai clienti l'ordinazione dei pasti & Capitolato \\
+	\hline \RequisitoObF\label{L90} & Obbligatorio & Il framework permette di modificare lo stato della bubble intervenendo sulle sue proprietà & \ref{UC1.06.1} \\
+	\hline \RequisitoObF\label{L91} & Obbligatorio & Il framework restituisce un messaggio di errore qualora l'utente tenti di modificare lo stato della bubble su proprietà non esistenti & \ref{UC1.06.2} \\
 	\hline
 	\caption{Requisiti funzionali per il framework}
+\end{longtable}
+
+\subsubsection{Requisiti di qualità}
+
+\begin{longtable}{|P{1.5cm}|P{2.5cm}|P{6.5cm}|P{2.5cm}|}
+	\hline \textbf{Codice} & \textbf{Categoria} & \textbf{Descrizione} & \textbf{Fonti} \\
+	\hline \RequisitoObQ\label{L57} & Obbligatorio & Viene fornito il manuale utente in lingua inglese & Capitolato \\
+	\hline \RequisitoObQ\label{L66} & Obbligatorio & La documentazione del codice deve essere in lingua inglese & Capitolato \\
+	\hline \RequisitoObQ\label{L58} & Obbligatorio & Il framework è sviluppato con uso di promise per la programmazione asincrona & Capitolato \\
+	\hline \RequisitoObQ\label{L59} & Obbligatorio & La programmazione in JavaScript segue la Airbnb style guide & Capitolato \\
+	\hline \RequisitoObQ\label{L60} & Obbligatorio & La scrittura del codice segue la guida 12Factor App & Capitolato \\
+	\hline \RequisitoObQ\label{L67} & Obbligatorio & Il manuale utente deve descrivere come installare \ProjectName{} in ambiente Rocket.Chat & Capitolato \\
+	\hline
+\caption{Requisiti di qualità per il framework}
 \end{longtable}
 
 
@@ -76,10 +105,17 @@ La tabella dei requisiti presenta i requisiti fino al massimo livello di dettagl
 
 \begin{longtable}{|P{1.5cm}|P{2.5cm}|P{6.5cm}|P{2.5cm}|}
 	\hline \textbf{Codice} & \textbf{Categoria} & \textbf{Descrizione} & \textbf{Fonti} \\
-	\hline \RequisitoObF\label{L17} & Obbligatorio & La \glossario{bubble} \glossario{To-do list} permette all'utente la creazione di liste & \hyperref[UC2.1]{UC2.1} \\
-	\hline \RequisitoObF\label{L18} & Obbligatorio & La \glossario{bubble} \glossario{To-do list} offre la funzionalità di inserimento di nuovi elementi nella lista & \hyperref[UC2.2]{UC2.2} \\
-	\hline \RequisitoObF\label{L19} & Obbligatorio & La \glossario{bubble} \glossario{To-do list} offre la possibilità di segnare come completati elementi della lista & \hyperref[UC2.3]{UC2.3} \\
-	\hline \RequisitoObF\label{L20} & Obbligatorio & La \glossario{To-do list} permette di settare un reminder come notifica statica & \hyperref[UC2.4]{UC2.4} \\
+	\hline \RequisitoObF\label{L17} & Obbligatorio & La bubble To-do list permette all'utente la creazione di liste & \ref{UC2.1} \\
+	\hline \RequisitoObF\label{L71} & Obbligatorio & L'utente può invocare il comando di creazione della to-do list & \ref{UC2.1.1} \\
+	\hline \RequisitoObF\label{L95} & Obbligatorio & La bubble deve caricare un form per l'inserimento delle informazioni & \ref{UC2.1.2} \ref{UC2.2.2}  \ref{UC2.4.2} \\
+	\hline \RequisitoObF\label{L72} & Obbligatorio & L'utente può inserire le informazioni per la creazione della to-do list & \ref{UC2.1.3} \ref{UC2.2.3} \ref{UC2.4.3}\\
+	\hline \RequisitoObF\label{L73} & Obbligatorio & L'utente può confermare le informazioni inserite & \ref{UC2.1.4} \ref{UC2.2.4} \ref{UC2.4.4}\\
+	\hline \RequisitoObF\label{L18} & Obbligatorio & La bubble To-do list offre la funzionalità di inserimento di nuovi elementi nella lista & \ref{UC2.2} \ref{UC2.2.1} \\
+	\hline \RequisitoObF\label{L74} & Obbligatorio & Una volta aggiunti nuovi elementi la bubble li deve mostrare nella to-do list & \ref{UC2.2} \\
+	\hline \RequisitoObF\label{L19} & Obbligatorio & La bubble To-do list offre la possibilità di segnare come completati elementi della lista & \ref{UC2.3} \\
+	\hline \RequisitoDF\label{L75} & Desiderabile & Una volta segnato come completato un elemento della to-do list viene disabilitato e reso non modificabile & \ref{UC2.3} \\
+	\hline \RequisitoDF\label{L20} & Desiderabile & La To-do list permette di settare un reminder come notifica statica & \ref{UC2.4} \ref{UC2.4.1}\\
+	\hline \RequisitoDF\label{L76} & Desiderabile & La notifica statica viene visualizzata una volta scaduto l'intervallo temporale impostato & \ref{UC2.4} \\
 	\hline
 	\caption{Requisiti funzionali per la bubble To-do list}
 \end{longtable}
@@ -90,24 +126,48 @@ La tabella dei requisiti presenta i requisiti fino al massimo livello di dettagl
 
 \begin{longtable}{|P{1.5cm}|P{2.5cm}|P{6.5cm}|P{2.5cm}|}
 	\hline \textbf{Codice} & \textbf{Categoria} & \textbf{Descrizione} & \textbf{Fonti} \\
-	\hline \RequisitoObF\label{L21} & Obbligatorio & La \glossario{bubble} per la ristorazione può interfacciarsi con un database. In questo modo è possibile salvare informazioni riguardati i clienti e i dati riguardanti l'impresa, come merci e attività da svolgere. Grazie a questa funzione sarà possibile l'inserimento, la modifica e la cancellazione dei dati in base ai metodi utilizzati nella \glossario{bubble}. & \hyperref[UC3.2.1]{UC3.2.1} \hyperref[UC3.4.3]{UC3.4.3} \hyperref[UC3.5.1]{UC3.5.1} \hyperref[UC3.6.2]{UC3.6.2} \hyperref[UC3.7.1]{UC3.7.1} \hyperref[UC3.8.2]{UC3.8.2} \hyperref[UC3.9.1]{UC3.9.1} \hyperref[UC3.10.2]{UC3.10.2} \hyperref[UC3.11.2]{UC3.11.2} \hyperref[UC3.12.1]{UC3.12.1} \hyperref[UC3.12.6]{UC3.12.6} \hyperref[UC3.13.1.1]{UC3.13.1.1} \hyperref[UC3.13.2.3]{UC3.13.2.3} \hyperref[UC3.13.3.5]{UC3.13.3.5} \hyperref[UC3.13.4.4]{UC3.13.4.4} \hyperref[UC3.14.1]{UC3.14.1} \hyperref[UC3.14.6]{UC3.14.6} \hyperref[UC3.15.1]{UC3.15.1} \hyperref[UC3.15.5]{UC3.15.5} \\
-	\hline \RequisitoObF\label{L22} & Obbligatorio & Per permettere ai clienti l'utilizzo della \glossario{bubble} per la ristorazione sono incluse funzionalità di registrazione, con il fine di raccogliere i dati per la consegna dei prodotti e permettere le ordinazioni. & \hyperref[UC3.1]{UC3.1} \\
-	\hline \RequisitoObF\label{L23} & Obbligatorio & I clienti possono consultare il menù del ristorante, in questo modo potranno informarsi sui cibi e sui prezzi per poi effettuare le scelte per l'ordine. & \hyperref[UC3.2]{UC3.2} \\
-	\hline \RequisitoObF\label{L24} & Obbligatorio & I clienti possono selezionare cibi e relative quantità per effettuare un ordine. & \hyperref[UC3.3]{UC3.3} \\
-	\hline \RequisitoObF\label{L25} & Obbligatorio & L'utente \glossario{Cuoco} può visualizzare la lista di piatti da preparare. & \hyperref[UC3.5]{UC3.5} \\
-	\hline \RequisitoObF\label{L26} & Obbligatorio & L'utente \glossario{Cuoco} può spuntare i piatti che ha preparato dalla lista di piatti da preparare  & \hyperref[UC3.6]{UC3.6} \\
-	\hline \RequisitoObF\label{L27} & Obbligatorio & L'utente \glossario{Responsabile acquisti} può visualizzare la lista degli acquisti da effettuare. & \hyperref[UC3.7]{UC3.7} \\
-	\hline \RequisitoObF\label{L28} & Obbligatorio & L'utente \glossario{Responsabile acquisti} ha la capacità di spuntare i prodotti che ha acquistato dalla lista acquisti.
-	 & \hyperref[UC3.8]{UC3.8} \\
-	\hline \RequisitoObF\label{L29} & Obbligatorio & L'utente \glossario{Direttore} ha la possibilità di modificare, aggiungere e rimuovere le voci del menù con relativi prezzi & \hyperref[UC3.13]{UC3.13} \\
-	\hline \RequisitoObF\label{L30} & Obbligatorio & L'utente \glossario{Direttore} può visualizzare la lista dei piatti da preparare & \hyperref[UC3.12.2]{UC3.12.2} \\
-	\hline \RequisitoObF\label{L31} & Obbligatorio & L'utente \glossario{Direttore} può visualizzare la lista degli acquisti da effettuare. & \hyperref[UC3.14.2]{UC3.14.2} \hyperref[UC3.15.2]{UC3.15.2} \\
-	\hline \RequisitoObF\label{L32} & Obbligatorio & L'utente \glossario{Direttore} può eliminare voci dalla lista dei piatti da preparare. & \hyperref[UC3.12]{UC3.12} \\
-	\hline \RequisitoObF\label{L53} & Obbligatorio & L'utente \glossario{Direttore} può modificare la lista degli acquisti da effettuare, aggiungendo ingredienti da acquistare oppure cancellandoli.
-	 & \hyperref[UC3.14]{UC3.14} \linebreak \hyperref[UC3.15]{UC3.15} \\	 
-	\hline \RequisitoOpF\label{L50} & Opzionale & L'utente \glossario{Fattorino} può visualizzare la lista delle consegne da effettuare & \hyperref[UC3.9]{UC3.9} \\
-	\hline \RequisitoOpF\label{L51} & Opzionale & L'utente \glossario{Fattorino} ha la capacità di selezionare la consegna che intende effettuare & \hyperref[UC3.10]{UC3.10} \\
-	\hline \RequisitoOpF\label{L52} & Opzionale & L'utente \glossario{Fattorino} ha la capacità di confermare la consegna che ha effettuato & \hyperref[UC3.11]{UC3.11} \\
+	
+	\hline \RequisitoObF\label{L21} & Obbligatorio & La bubble per la ristorazione può interfacciarsi con un database per salvare informazioni riguardati i clienti e i dati riguardanti l'impresa & \ref{UC3.4} \ref{UC3.4.3} \ref{UC3.12.6} \ref{UC3.13.3.3} \\
+	\hline \RequisitoObF\label{L61} & Obbligatorio & La bubble per la ristorazione può interfacciarsi con un database per recuperare informazioni & \ref{UC3.2.1} \ref{UC3.4.1} \ref{UC3.4.2} \ref{UC3.5.1} \ref{UC3.7.1}  \ref{UC3.9.1} \ref{UC3.12.1} \ref{UC3.13.1.1} \ref{UC3.14.1} \ref{UC3.15.1} \\
+	\hline \RequisitoObF\label{L62} & Obbligatorio & La bubble per la ristorazione può interfacciarsi con un database per aggiornare informazioni & \ref{UC3.6.2} \ref{UC3.8.2} \ref{UC3.10.2} \ref{UC3.11.2} \ref{UC3.12.6}  \ref{UC3.13.2.3} \ref{UC3.13.3.5} \ref{UC3.13.4.4} \ref{UC3.14.6} \ref{UC3.15.5} \\	
+	\hline \RequisitoObF\label{L22} & Obbligatorio & Per permettere ai clienti l'utilizzo della bubble per la ristorazione sono incluse funzionalità di registrazione, con il fine di raccogliere i dati per la consegna dei prodotti e permettere le ordinazioni & \ref{UC3.1} \\
+	\hline \RequisitoObF\label{L96} & Obbligatorio & La bubble deve caricare un form per l'inserimento delle informazioni personali dell'utente & \ref{UC3.1.1} \\
+	\hline \RequisitoObF\label{L97} & Obbligatorio & L'utente deve poter inserire le informazioni & \ref{UC3.1.2} \ref{UC3.13.4.2} \ref{UC3.14.4}\\
+	\hline \RequisitoObF\label{L98} & Obbligatorio & L'utente può confermare le informazioni inserite & \ref{UC3.1.3} \ref{UC3.3.5} \ref{UC3.13.4.3} \ref{UC3.14.5}\\
+	\hline \RequisitoObF\label{L23} & Obbligatorio & I clienti possono consultare il menu del ristorante & \ref{UC3.2} \ref{UC3.2.2}\\
+	\hline \RequisitoObF \label{L68} & Obbligatorio & I clienti devono poter visualizzare i prezzi delle pietanze & \ref{UC3.2} \ref{UC3.2.2}\\
+	\hline \RequisitoObF\label{L24} & Obbligatorio & I clienti possono selezionare cibi e relative quantità per effettuare un ordine & \ref{UC3.3} \ref{UC3.3.1} \ref{UC3.3.2}\\
+	\hline \RequisitoObF\label{L69} & Obbligatorio & La quantità di default per un cibo non selezionato è 0 & \ref{UC3.3} \\
+	\hline \RequisitoObF\label{L77} & Obbligatorio & La quantità di default per un cibo selezionato è 1 & \ref{UC3.3} \\
+	\hline \RequisitoDF\label{L70} & Desiderabile & Non può essere incrementata la quantità per un cibo non selezionato & \ref{UC3.3} \\
+	\hline \RequisitoObF\label{L99} & Obbligatorio & L'utente conferma di aver concluso la modifica cliccando su un pulsante per proseguire con l'ordine & \ref{UC3.3.3} \\
+	\hline \RequisitoDF\label{L100} & Desiderabile & La bubble mostra all'utente un resoconto dell'ordine prima di confermarlo definitivamente & \ref{UC3.3.4} \\
+	\hline \RequisitoObF\label{L25} & Obbligatorio & L'utente Cuoco può visualizzare la lista di piatti da preparare & \ref{UC3.5} \ref{UC3.5.2} \\
+	\hline \RequisitoObF\label{L26} & Obbligatorio & L'utente Cuoco può spuntare i piatti che ha preparato dalla lista di piatti da preparare  & \ref{UC3.6} \ref{UC3.6.1} \\
+	\hline \RequisitoDF\label{L78} & Desiderabile & I piatti spuntati dal Cuoco vengono eliminati dalla lista dei piatti da preparare & \ref{UC3.6} \\
+	\hline \RequisitoDF\label{L27} & Desiderabile & L'utente Responsabile Acquisti può visualizzare la lista degli acquisti da effettuare & \ref{UC3.7} \ref{UC3.7.2} \\
+	\hline \RequisitoDF\label{L28} & Desiderabile & L'utente Responsabile Acquisti ha la capacità di spuntare i prodotti che ha acquistato dalla lista acquisti
+	 & \ref{UC3.8} \ref{UC3.8.1} \\
+	\hline \RequisitoObF\label{L104} & Obbligatorio & L'utente Direttore ha la possibilità di visualizzare il menu del ristorante & \ref{UC3.13.1} \ref{UC3.13.1.2} \\
+	\hline \RequisitoObF\label{L105} & Obbligatorio & L'utente Direttore ha la possibilità di cambiare il menu del ristorante & \ref{UC3.13} \ref{UC3.13.2} \ref{UC3.13.3} \ref{UC3.13.4}\\
+	\hline \RequisitoObF\label{L29} & Obbligatorio & L'utente Direttore ha la possibilità di modificare le voci del menu ed i relativi prezzi & \ref{UC3.13.3} \\
+	\hline \RequisitoObF\label{L79} & Obbligatorio & L'utente Direttore ha la possibilità di aggiungere le voci del menu con relativi prezzi & \ref{UC3.13.4} \\
+	\hline \RequisitoObF\label{L108} & Obbligatorio & L'utente Direttore seleziona l'opzione per aggiungere elemento & \ref{UC3.13.4.1} \ref{UC3.14.3}\\
+	\hline \RequisitoObF\label{L80} & Obbligatorio & L'utente Direttore ha la possibilità di rimuovere le voci del menu & \ref{UC3.13.2} \\
+	\hline \RequisitoObF\label{L106} & Obbligatorio & L'utente Direttore ha la possibilità di selezionare le voci del menu & \ref{UC3.13.2.1} \ref{UC3.13.3.1} \\
+	\hline \RequisitoObF\label{L30} & Obbligatorio & L'utente Direttore può visualizzare la lista dei piatti da preparare & \ref{UC3.12.2} \\
+	\hline \RequisitoDF\label{L31} & Desiderabile & L'utente Direttore può visualizzare la lista degli acquisti da effettuare & \ref{UC3.14.2} \ref{UC3.15.2} \\
+	\hline \RequisitoObF\label{L32} & Obbligatorio & L'utente Direttore può eliminare voci dalla lista dei piatti da preparare & \ref{UC3.12} \\
+	\hline \RequisitoDF\label{L101} & Desiderabile & L'utente Direttore può selezionare ordini nella lista dei piatti da preparare & \ref{UC3.12.3} \\
+	\hline \RequisitoDF\label{L102} & Desiderabile & L'utente Direttore può selezionare l'opzione per rimuovere gli elementi selezionati & \ref{UC3.12.4} \ref{UC3.13.2.2} \ref{UC3.15.4}\\
+	\hline \RequisitoObF\label{L107} & Obbligatorio & L'utente Direttore può selezionare l'opzione per modificare gli elementi selezionati & \ref{UC3.13.3.2} \\
+	\hline \RequisitoDF\label{L103} & Desiderabile & L'utente Direttore conferma di voler effettuare l'operazione & \ref{UC3.12.5} \ref{UC3.13.3.4} \\
+	\hline \RequisitoDF\label{L53} & Desiderabile & L'utente Direttore può aggiungere ingredienti alla lista degli acquisti da effettuare & \ref{UC3.14}\\
+	 \hline \RequisitoDF\label{L65} & Desiderabile & L'utente Direttore può eliminare ingredienti dalla lista degli acquisti da effettuare & \ref{UC3.15} \\
+	\hline \RequisitoDF\label{L109} & Desiderabile & L'utente Direttore può selezionare elementi dalla lista degli acquisti da effettuare & \ref{UC3.15.3} \\
+	\hline \RequisitoOpF\label{L50} & Opzionale & L'utente Fattorino può visualizzare la lista delle consegne da effettuare & \ref{UC3.9} \ref{UC3.9.2} \\
+	\hline \RequisitoOpF\label{L51} & Opzionale & L'utente Fattorino ha la capacità di selezionare la consegna che intende effettuare & \ref{UC3.10} \ref{UC3.10.1} \\
+	\hline \RequisitoOpF\label{L52} & Opzionale & L'utente Fattorino ha la capacità di confermare la consegna che ha effettuato & \ref{UC3.11} \ref{UC3.11.1} \\
 	\hline
 	\caption{Requisiti funzionali per la bubble Bubble \& eat}
 \end{longtable}
@@ -116,85 +176,149 @@ La tabella dei requisiti presenta i requisiti fino al massimo livello di dettagl
 
 \begin{longtable}{|P{6cm}|P{6cm}|}
 	\hline \textbf{Fonte} & \textbf{Requisiti}\\
-	\hline Capitolato & \RequisitoObVRef{L1} \linebreak \RequisitoObVRef{L2} \linebreak \RequisitoObVRef{L3} \linebreak \RequisitoObVRef{L4} \linebreak \RequisitoObVRef{L54} \\
-	\hline VerbaleEsterno23\_12\_2016 & \RequisitoObVRef{L5} \linebreak \RequisitoObFRef{L8} \\
-	\hline \hyperref[UC1.00]{UC1.00} & \RequisitoObFRef{L8} \\
-	\hline \hyperref[UC1.01]{UC1.01} & \RequisitoObFRef{L8} \\
-	\hline \hyperref[UC1.02]{UC1.02} & \RequisitoObFRef{L8} \\
-	\hline \hyperref[UC1.03.1]{UC1.03.1} & \RequisitoObFRef{L11} \\
-	\hline \hyperref[UC1.04]{UC1.04} & \RequisitoObFRef{L11} \\
-	\hline \hyperref[UC1.05.1]{UC1.05.1} & \RequisitoObFRef{L11} \\
-	\hline \hyperref[UC1.06.1]{UC1.06.1} & \RequisitoObVRef{L5} \\
-	\hline \hyperref[UC1.07.1]{UC1.07.1} & \RequisitoOpFRef{L44} \\
-	\hline \hyperref[UC1.08]{UC1.08} & \RequisitoOpFRef{L47} \\
-	\hline \hyperref[UC1.09]{UC1.09} & \RequisitoOpFRef{L48} \\
-	\hline \hyperref[UC1.10]{UC1.10} & \RequisitoOpFRef{L42} \\
-	\hline \hyperref[UC1.11]{UC1.11} & \RequisitoOpFRef{L49} \\	
-	\hline \hyperref[UC1.12]{UC1.12} & \RequisitoOpFRef{L35} \\
-	\hline \hyperref[UC1.13]{UC1.13} & \RequisitoObFRef{L9} \\	
-	\hline \hyperref[UC1.14]{UC1.14} & \RequisitoOpFRef{L36} \\
-	\hline \hyperref[UC1.15.1]{UC1.15.1} & \RequisitoOpFRef{L37} \\
-	\hline \hyperref[UC1.16]{UC1.16} & \RequisitoOpFRef{L43} \\
-	\hline \hyperref[UC1.17]{UC1.17} & \RequisitoObFRef{L16} \\
-	\hline \hyperref[UC1.18]{UC1.18} & \RequisitoObFRef{L15} \\
-	\hline \hyperref[UC1.19]{UC1.19} & \RequisitoObFRef{L10} \\
-	\hline \hyperref[UC1.20.1]{UC1.20.1} & \RequisitoOpFRef{L40} \\
-	\hline \hyperref[UC1.21]{UC1.21} & \RequisitoObFRef{L14} \\
-	\hline \hyperref[UC1.22]{UC1.22} & \RequisitoObFRef{L14} \\
-	\hline \hyperref[UC1.23]{UC1.23} & \RequisitoObFRef{L13} \\
-	\hline \hyperref[UC1.24.1]{UC1.24.1} & \RequisitoOpFRef{L39} \\
-	\hline \hyperref[UC1.25]{UC1.25} & \RequisitoOpFRef{L45} \\
-	\hline \hyperref[UC1.26]{UC1.26} & \RequisitoObFRef{L33} \\
-	\hline \hyperref[UC1.27]{UC1.27} & \RequisitoObFRef{L12} \\
-	\hline \hyperref[UC1.28]{UC1.28} & \RequisitoOpFRef{L46} \\
-	\hline \hyperref[UC1.29]{UC1.29} & \RequisitoOpFRef{L46} \\
-	\hline \hyperref[UC1.30]{UC1.30} & \RequisitoOpFRef{L41} \\
-	\hline \hyperref[UC1.31]{UC1.31} & \RequisitoOpFRef{L41} \\
-	\hline \hyperref[UC1.32]{UC1.32} & \RequisitoOpFRef{L41} \\
-	\hline \hyperref[UC1.33]{UC1.33} & \RequisitoObFRef{L34} \\
-	\hline \hyperref[UC1.34]{UC1.34} & \RequisitoOpFRef{L38} \\
-	\hline \hyperref[UC1.35]{UC1.35} & \RequisitoObFRef{L6} \\
-	\hline \hyperref[UC1.36]{UC1.36} & \RequisitoObFRef{L7} \\	
-	\hline \hyperref[UC2.1]{UC2.1} & \RequisitoObFRef{L17} \\
-	\hline \hyperref[UC2.2]{UC2.2} & \RequisitoObFRef{L18} \\
-	\hline \hyperref[UC2.3]{UC2.3} & \RequisitoObFRef{L19} \\
-	\hline \hyperref[UC2.4]{UC2.4} & \RequisitoObFRef{L20} \\	
-	\hline \hyperref[UC3.1]{UC3.1} & \RequisitoObFRef{L22} \\
-	\hline \hyperref[UC3.2]{UC3.2} & \RequisitoObFRef{L23} \\
-	\hline \hyperref[UC3.2.1]{UC3.2.1} & \RequisitoObFRef{L21} \\
-	\hline \hyperref[UC3.3]{UC3.3} & \RequisitoObFRef{L24} \\
-	\hline \hyperref[UC3.4.3]{UC3.4.3} & \RequisitoObFRef{L21} \\
-	\hline \hyperref[UC3.5]{UC3.5} & \RequisitoObFRef{L25} \\
-	\hline \hyperref[UC3.5.1]{UC3.5.1} & \RequisitoObFRef{L21} \\
-	\hline \hyperref[UC3.6]{UC3.6} & \RequisitoObFRef{L26} \\
-	\hline \hyperref[UC3.6.2]{UC3.6.2} & \RequisitoObFRef{L21} \\
-	\hline \hyperref[UC3.7]{UC3.7} & \RequisitoObFRef{L27} \\
-	\hline \hyperref[UC3.7.1]{UC3.7.1} & \RequisitoObFRef{L21} \\
-	\hline \hyperref[UC3.8]{UC3.8} & \RequisitoObFRef{L28} \\
-	\hline \hyperref[UC3.8.2]{UC3.8.2} & \RequisitoObFRef{L21} \\
-	\hline \hyperref[UC3.9]{UC3.9} & \RequisitoOpFRef{L50} \\
-	\hline \hyperref[UC3.9.1]{UC3.9.1} & \RequisitoObFRef{L21} \\
-	\hline \hyperref[UC3.10]{UC3.10} & \RequisitoOpFRef{L51} \\
-	\hline \hyperref[UC3.10.2]{UC3.3.10.2} & \RequisitoObFRef{L21} \\
-	\hline \hyperref[UC3.11]{UC3.11} & \RequisitoOpFRef{L52} \\
-	\hline \hyperref[UC3.11.2]{UC3.11.2} & \RequisitoObFRef{L21} \\
-	\hline \hyperref[UC3.12]{UC3.12} & \RequisitoObFRef{L32} \\
-	\hline \hyperref[UC3.12.1]{UC3.12.1} & \RequisitoObFRef{L21} \\
-	\hline \hyperref[UC3.12.2]{UC3.12.2} & \RequisitoObFRef{L30} \\
-	\hline \hyperref[UC3.12.6]{UC3.12.6} & \RequisitoObFRef{L21} \\
-	\hline \hyperref[UC3.13]{UC3.13} & \RequisitoObFRef{L29} \\
-	\hline \hyperref[UC3.13.1.1]{UC3.13.1.1} & \RequisitoObFRef{L21} \\
-	\hline \hyperref[UC3.13.2.3]{UC3.13.2.3} & \RequisitoObFRef{L21} \\
-	\hline \hyperref[UC3.13.3.5]{UC3.13.3.5} & \RequisitoObFRef{L21} \\
-	\hline \hyperref[UC3.13.4.4]{UC3.13.4.4} & \RequisitoObFRef{L21} \\
-	\hline \hyperref[UC3.14]{UC3.14} & \RequisitoObFRef{L53} \\
-	\hline \hyperref[UC3.14.1]{UC3.14.1} & \RequisitoObFRef{L21} \\
-	\hline \hyperref[UC3.14.2]{UC3.14.2} & \RequisitoObFRef{L31} \\
-	\hline \hyperref[UC3.14.6]{UC3.14.6} & \RequisitoObFRef{L21} \\
-	\hline \hyperref[UC3.15]{UC3.15} & \RequisitoObFRef{L53} \\
-	\hline \hyperref[UC3.15.1]{UC3.15.1} & \RequisitoObFRef{L21} \\
-	\hline \hyperref[UC3.15.2]{UC3.15.2} & \RequisitoObFRef{L31} \\
-	\hline \hyperref[UC3.15.5]{UC3.15.5} & \RequisitoObFRef{L21} \\
+	\hline Capitolato & \ref{L1} \linebreak \ref{L2} \linebreak \ref{L54} \linebreak \ref{L3} \linebreak \ref{L4}  \linebreak \ref{L57} \linebreak \ref{L66} \linebreak \ref{L58} \linebreak \ref{L59} \linebreak \ref{L60} \linebreak \ref{L67}\\
+	\hline VerbaleEsterno23\_12\_2016 & \ref{L5} \linebreak \ref{L8} \\
+	\hline \ref{UC1.35} & \ref{L6} \\
+	\hline \ref{UC2} & \ref{L8} \\
+	\hline \ref{UC1.00} & \ref{L8} \linebreak \ref{L81} \\
+	\hline \ref{UC1.00.2} & \ref{L94} \\
+	\hline \ref{UC1.01} & \ref{L8} \linebreak \ref{L82} \\
+	\hline \ref{UC1.02} & \ref{L8} \linebreak \ref{L83} \\
+	\hline \ref{UC3} & \ref{L86} \\
+	\hline \ref{UC3.01} & \ref{L87} \\
+	\hline \ref{UC1.25} & \ref{L45} \\
+	\hline \ref{UC1.26} & \ref{L33} \\
+	\hline \ref{UC1.27} & \ref{L12} \\
+	\hline \ref{UC1.28} & \ref{L46} \\
+	\hline \ref{UC1.29} & \ref{L64} \\
+	\hline \ref{UC1.30} & \ref{L41} \\
+	\hline \ref{UC1.31} & \ref{L84} \\
+	\hline \ref{UC1.32} & \ref{L41} \\
+	\hline \ref{UC1.33} & \ref{L34} \\
+	\hline \ref{UC1.04} & \ref{L11} \\
+	\hline \ref{UC1.03.1} & \ref{L55} \\
+	\hline \ref{UC1.03.2} & \ref{L88} \linebreak \ref{L94} \\
+	\hline \ref{UC1.05.1} & \ref{L56} \\
+	\hline \ref{UC1.05.2} & \ref{L89} \linebreak \ref{L94} \\
+	\hline \ref{UC1.17} & \ref{L16} \\
+	\hline \ref{UC1.18} & \ref{L15} \\
+	\hline \ref{UC1.21} & \ref{L14} \\
+	\hline \ref{UC1.22} & \ref{L63} \\
+	\hline \ref{UC1.23} & \ref{L13} \\
+	\hline \ref{UC1.06.1} & \ref{L5} \linebreak \ref{L90} \\
+	\hline \ref{UC1.06.2} & \ref{L94} \linebreak \ref{L91} \\
+	\hline \ref{UC1.07.1} & \ref{L44} \\
+	\hline \ref{UC1.07.2} & \ref{L94} \linebreak \ref{L92} \\
+	\hline \ref{UC1.12} & \ref{L35} \\
+	\hline \ref{UCimpostazioni} & \ref{L93} \\
+	\hline \ref{UC1.08} & \ref{L47} \\
+	\hline \ref{UC1.09} & \ref{L48} \\
+	\hline \ref{UC1.13} & \ref{L9} \\	
+	\hline \ref{UC1.16} & \ref{L43} \\
+	\hline \ref{UC1.11} & \ref{L49} \\	
+	\hline \ref{UC1.10} & \ref{L42} \\
+	\hline \ref{UC1.14} & \ref{L36} \\
+	\hline \ref{UC1.15.1} & \ref{L37} \\
+	\hline \ref{UC1.15.2} & \ref{L94} \\
+	\hline \ref{UC1.20.1} & \ref{L40} \\
+	\hline \ref{UC1.20.2} & \ref{L94} \\
+	\hline \ref{UC1.24.1} & \ref{L39} \\
+	\hline \ref{UC1.24.2} & \ref{L94} \\
+	\hline \ref{UC1.34} & \ref{L38} \\
+	\hline \ref{UC1.36} & \ref{L7} \\	
+	\hline \ref{UC1.19} & \ref{L10} \\
+	\hline \ref{UC2.1} & \ref{L17} \\
+	\hline \ref{UC2.1.1} & \ref{L71} \\
+	\hline \ref{UC2.1.2} & \ref{L95} \\
+	\hline \ref{UC2.1.3} & \ref{L72} \\
+	\hline \ref{UC2.1.4} & \ref{L73} \\
+	\hline \ref{UC2.2} & \ref{L18} \linebreak \ref{L74}\\
+	\hline \ref{UC2.2.1} & \ref{L18} \\
+	\hline \ref{UC2.2.2} & \ref{L95} \\
+	\hline \ref{UC2.2.3} & \ref{L72} \\
+	\hline \ref{UC2.2.4} & \ref{L73} \\
+	\hline \ref{UC2.3} & \ref{L19} \linebreak \ref{L75} \\
+	\hline \ref{UC2.4} & \ref{L20} \linebreak \ref{L76} \\	
+	\hline \ref{UC2.4.1} & \ref{L20} \\	
+	\hline \ref{UC2.4.2} & \ref{L95} \\	
+	\hline \ref{UC2.4.3} & \ref{L72} \\	
+	\hline \ref{UC2.4.4} & \ref{L73} \\	
+	\hline \ref{UC3.1} & \ref{L22} \\
+	\hline \ref{UC3.1.1} & \ref{L96} \\
+	\hline \ref{UC3.1.2} & \ref{L97} \\
+	\hline \ref{UC3.1.3} & \ref{L98} \\
+	\hline \ref{UC3.2} & \ref{L23} \linebreak \ref{L68} \\
+	\hline \ref{UC3.2.1} & \ref{L61} \\
+	\hline \ref{UC3.2.2} & \ref{L23} \linebreak \ref{L68} \\
+	\hline \ref{UC3.3} & \ref{L24} \linebreak \ref{L69} \linebreak \ref{L77} \linebreak \ref{L70} \\
+	\hline \ref{UC3.3.1} & \ref{L24} \\
+	\hline \ref{UC3.3.2} & \ref{L24} \\
+	\hline \ref{UC3.3.4} & \ref{L100} \\
+	\hline \ref{UC3.3.5} & \ref{L98} \\
+	\hline \ref{UC3.4} & \ref{L21} \\
+	\hline \ref{UC3.4.1} & \ref{L61} \\
+	\hline \ref{UC3.4.2} & \ref{L61} \\
+	\hline \ref{UC3.4.3} & \ref{L21} \\
+	\hline \ref{UC3.5} & \ref{L25} \\
+	\hline \ref{UC3.5.1} & \ref{L61} \\
+	\hline \ref{UC3.5.2} & \ref{L25} \\
+	\hline \ref{UC3.6} & \ref{L26} \linebreak \ref{L78} \\
+	\hline \ref{UC3.6.1} & \ref{L26} \\
+	\hline \ref{UC3.6.2} & \ref{L62} \\
+	\hline \ref{UC3.9} & \ref{L50} \\
+	\hline \ref{UC3.9.1} & \ref{L61} \\
+	\hline \ref{UC3.9.2} & \ref{L50} \\
+	\hline \ref{UC3.10} & \ref{L51} \\
+	\hline \ref{UC3.10.1} & \ref{L51} \\
+	\hline \ref{UC3.10.2} & \ref{L62} \\
+	\hline \ref{UC3.11} & \ref{L52} \\
+	\hline \ref{UC3.11.1} & \ref{L52} \\
+	\hline \ref{UC3.11.2} & \ref{L62} \\
+	\hline \ref{UC3.7} & \ref{L27} \\
+	\hline \ref{UC3.7.1} & \ref{L61} \\
+	\hline \ref{UC3.7.2} & \ref{L27} \\
+	\hline \ref{UC3.8} & \ref{L28} \\
+	\hline \ref{UC3.8.1} & \ref{L28} \\
+	\hline \ref{UC3.8.2} & \ref{L62} \\
+	\hline \ref{UC3.12} & \ref{L32} \\
+	\hline \ref{UC3.12.1} & \ref{L61} \\
+	\hline \ref{UC3.12.2} & \ref{L30} \\
+	\hline \ref{UC3.12.3} & \ref{L101} \\
+	\hline \ref{UC3.12.4} & \ref{L102} \\
+	\hline \ref{UC3.12.5} & \ref{L103} \\
+	\hline \ref{UC3.12.6} & \ref{L21} \\
+	\hline \ref{UC3.13} & \ref{L105} \\
+	\hline \ref{UC3.13.1} & \ref{L104} \\
+	\hline \ref{UC3.13.1.1} & \ref{L61} \\
+	\hline \ref{UC3.13.1.2} & \ref{L104} \\
+	\hline \ref{UC3.13.2} & \ref{L105} \linebreak \ref{L80} \\
+	\hline \ref{UC3.13.2.1} & \ref{L106} \\
+	\hline \ref{UC3.13.2.2} & \ref{L102} \\
+	\hline \ref{UC3.13.2.3} & \ref{L62} \\
+	\hline \ref{UC3.13.3} & \ref{L105} \linebreak \ref{L29} \\
+	\hline \ref{UC3.13.3.1} & \ref{L106} \\
+	\hline \ref{UC3.13.3.2} & \ref{L107} \\
+	\hline \ref{UC3.13.3.3} & \ref{L21} \\
+	\hline \ref{UC3.13.3.4} & \ref{L103} \\
+	\hline \ref{UC3.13.3.5} & \ref{L62} \\
+	\hline \ref{UC3.13.4} & \ref{L53} \\
+	\hline \ref{UC3.13.4.1} & \ref{L108} \\
+	\hline \ref{UC3.13.4.2} & \ref{L97} \\
+	\hline \ref{UC3.13.4.3} & \ref{L98} \\
+	\hline \ref{UC3.13.4.4} & \ref{L62} \\
+	\hline \ref{UC3.14} & \ref{L53} \\
+	\hline \ref{UC3.14.1} & \ref{L61} \\
+	\hline \ref{UC3.14.2} & \ref{L31} \\
+	\hline \ref{UC3.14.3} & \ref{L108} \\
+	\hline \ref{UC3.14.4} & \ref{L97} \\
+	\hline \ref{UC3.14.5} & \ref{L98} \\
+	\hline \ref{UC3.14.6} & \ref{L62} \\
+	\hline \ref{UC3.15} & \ref{L65} \\
+	\hline \ref{UC3.15.1} & \ref{L61} \\
+	\hline \ref{UC3.15.2} & \ref{L31} \\
+	\hline \ref{UC3.15.3} & \ref{L106} \linebreak \ref{L109} \\
+	\hline \ref{UC3.15.4} & \ref{L102} \\
+	\hline \ref{UC3.15.5} & \ref{L62} \\
 	\hline
 	\caption{Tracciamento fonti-requisiti}
 \end{longtable}
@@ -203,72 +327,124 @@ La tabella dei requisiti presenta i requisiti fino al massimo livello di dettagl
 
 \begin{longtable}{|P{6cm}|P{6cm}|}
 	\hline \textbf{Codice Requisito} & \textbf{Fonti}\\
-	\hline \RequisitoObVRef{L1} & Capitolato \\
-	\hline \RequisitoObVRef{L2} & Capitolato \\
-	\hline \RequisitoObVRef{L3} & Capitolato \\
-	\hline \RequisitoObVRef{L4} & Capitolato \\
-	\hline \RequisitoObVRef{L5} & VerbaleEsterno23\_12\_2016 \linebreak \hyperref[UC1.06.1]{UC1.06.1}  \\	
-	\hline \RequisitoObVRef{L54} & Capitolato \\
-	\hline \RequisitoObFRef{L6} & \hyperref[UC1.35]{UC1.35} \\
-	\hline \RequisitoObFRef{L7} & \hyperref[UC1.36]{UC1.36} \\
-	\hline \RequisitoObFRef{L8} & VerbaleEsterno23\_12\_2016 \linebreak \hyperref[UC1.00]{UC1.00} \linebreak \hyperref[UC1.01]{UC1.01} \linebreak \hyperref[UC1.02]{UC1.02} \\
-	\hline \RequisitoObFRef{L9} & \hyperref[UC1.13]{UC1.13} \\
-	\hline \RequisitoObFRef{L10} & \hyperref[UC1.19]{UC1.19} \\
-	\hline \RequisitoObFRef{L11} & \hyperref[UC1.03.1]{UC1.03.1} \linebreak \hyperref[UC1.04]{UC1.04} \linebreak \hyperref[UC1.05.1]{UC1.05.1} \\
-	\hline \RequisitoObFRef{L12} & \hyperref[UC1.27]{UC1.27} \\
-	\hline \RequisitoObFRef{L13} & \hyperref[UC1.23]{UC1.23} \\
-	\hline \RequisitoObFRef{L14} & \hyperref[UC1.21]{UC1.21} \linebreak \hyperref[UC1.22]{UC1.22} \\
-	\hline \RequisitoObFRef{L15} & \hyperref[UC1.18]{UC1.18} \\
-	\hline \RequisitoObFRef{L16} & \hyperref[UC1.17]{UC1.17} \\
-	\hline \RequisitoObFRef{L33} & \hyperref[UC1.26]{UC1.26} \\
-	\hline \RequisitoObFRef{L34} & \hyperref[UC1.33]{UC1.33} \\
-	\hline \RequisitoOpFRef{L35} & \hyperref[UC1.12]{UC1.12} \\
-	\hline \RequisitoOpFRef{L36} & \hyperref[UC1.14]{UC1.14} \\
-	\hline \RequisitoOpFRef{L37} & \hyperref[UC1.15.1]{UC1.15.1} \\
-	\hline \RequisitoOpFRef{L38} & \hyperref[UC1.34]{UC1.34} \\
-	\hline \RequisitoOpFRef{L39} & \hyperref[UC1.24.1]{UC1.24.1} \\
-	\hline \RequisitoOpFRef{L40} & \hyperref[UC1.20.1]{UC1.20.1} \\	
-	\hline \RequisitoOpFRef{L41} & \hyperref[UC1.30]{UC1.30} \linebreak \hyperref[UC1.31]{UC1.31} \linebreak \hyperref[UC1.32]{UC1.32} \\
-	\hline \RequisitoOpFRef{L42} & \hyperref[UC1.10]{UC1.10} \\
-	\hline \RequisitoOpFRef{L43} & \hyperref[UC1.16]{UC1.16} \\
-	\hline \RequisitoOpFRef{L44} & \hyperref[UC1.07.1]{UC1.07.1} \\
-	\hline \RequisitoOpFRef{L45} & \hyperref[UC1.25]{UC1.25} \\
-	\hline \RequisitoOpFRef{L46} & \hyperref[UC1.28]{UC1.28} \linebreak \hyperref[UC1.29]{UC1.29}  \\	 
-	\hline \RequisitoOpFRef{L47} & \hyperref[UC1.08]{UC1.08} \\
-	\hline \RequisitoOpFRef{L48} & \hyperref[UC1.09]{UC1.09} \\
-	\hline \RequisitoOpFRef{L49} & \hyperref[UC1.11]{UC1.11} \\	
-	\hline \RequisitoObFRef{L17} & \hyperref[UC2.1]{UC2.1} \\
-	\hline \RequisitoObFRef{L18} & \hyperref[UC2.2]{UC2.2} \\
-	\hline \RequisitoObFRef{L19} & \hyperref[UC2.3]{UC2.3} \\
-	\hline \RequisitoObFRef{L20} & \hyperref[UC2.4]{UC2.4} \\	
-	\hline \RequisitoObFRef{L21} & \hyperref[UC3.2.1]{UC3.2.1} \linebreak \hyperref[UC3.4.3]{UC3.4.3} \linebreak \hyperref[UC3.5.1]{UC3.5.1} \linebreak \hyperref[UC3.6.2]{UC3.6.2} \linebreak \hyperref[UC3.7.1]{UC3.7.1} \linebreak \hyperref[UC3.8.2]{UC3.8.2} \linebreak \hyperref[UC3.9.1]{UC3.9.1} \linebreak \hyperref[UC3.10.2]{UC3.10.2} \linebreak \hyperref[UC3.11.2]{UC3.11.2} \linebreak  \hyperref[UC3.12.1]{UC3.12.1} \linebreak \hyperref[UC3.12.6]{UC3.12.6} \linebreak  \hyperref[UC3.13.1.1]{UC3.13.1.1} \linebreak \hyperref[UC3.13.2.3]{UC3.13.2.3} \linebreak \hyperref[UC3.13.3.5]{UC3.13.3.5} \linebreak \hyperref[UC3.13.4.4]{UC3.13.4.4} \linebreak \hyperref[UC3.14.1]{UC3.14.1} \linebreak \hyperref[UC3.14.6]{UC3.14.6} \linebreak \hyperref[UC3.15.1]{UC3.15.1} \linebreak \hyperref[UC3.15.5]{UC3.15.5} \\
-	\hline \RequisitoObFRef{L22} & \hyperref[UC3.1]{UC3.1} \\
-	\hline \RequisitoObFRef{L23} & \hyperref[UC3.2]{UC3.2} \\
-	\hline \RequisitoObFRef{L24} & \hyperref[UC3.3]{UC3.3} \\
-	\hline \RequisitoObFRef{L25} & \hyperref[UC3.5]{UC3.5} \\
-	\hline \RequisitoObFRef{L26} & \hyperref[UC3.6]{UC3.6} \\
-	\hline \RequisitoObFRef{L27} & \hyperref[UC3.7]{UC3.7} \\
-	\hline \RequisitoObFRef{L28} & \hyperref[UC3.8]{UC3.8} \\
-	\hline \RequisitoObFRef{L29} & \hyperref[UC3.13]{UC3.13} \\
-	\hline \RequisitoObFRef{L30} & \hyperref[UC3.12.2]{UC3.12.2} \\
-	\hline \RequisitoObFRef{L31} & \hyperref[UC3.14.2]{UC3.14.2} \linebreak \hyperref[UC3.15.2]{UC3.15.2} \\
-	\hline \RequisitoObFRef{L32} & \hyperref[UC3.12]{UC3.12} \\
-	\hline \RequisitoObFRef{L53} & \hyperref[UC3.14]{UC3.14} \linebreak \hyperref[UC3.15]{UC3.15} \\
-	\hline \RequisitoOpFRef{L50} & \hyperref[UC3.9]{UC3.9} \\
-	\hline \RequisitoOpFRef{L51} & \hyperref[UC3.10]{UC3.10} \\
-	\hline \RequisitoOpFRef{L52} & \hyperref[UC3.11]{UC3.11} \\	
+	\hline \ref{L1} & Capitolato \\
+	\hline \ref{L2} & Capitolato \\
+	\hline \ref{L5} & VerbaleEsterno23\_12\_2016 \linebreak \ref{UC1.06.1}  \\	
+	\hline \ref{L54} & Capitolato \\
+	\hline \ref{L6} & \ref{UC1.35} \\
+	\hline \ref{L7} & \ref{UC1.36} \\
+	\hline \ref{L8} & VerbaleEsterno23\_12\_2016 \linebreak \ref{UC2} \linebreak \ref{UC1.00} \linebreak \ref{UC1.01} \linebreak \ref{UC1.02} \\
+	\hline \ref{L81} & \ref{UC1.00} \\
+	\hline \ref{L82} & \ref{UC1.01} \\
+	\hline \ref{L83} & \ref{UC1.02} \\
+	\hline \ref{L86} & \ref{UC3} \\
+	\hline \ref{L87} & \ref{UC3.01} \\
+	\hline \ref{L9} & \ref{UC1.13} \\
+	\hline \ref{L10} & \ref{UC1.19} \\
+	\hline \ref{L11} & \ref{UC1.04}  \\
+	\hline \ref{L56} & \ref{UC1.05.1} \\
+	\hline \ref{L89} & \ref{UC1.05.2} \\
+	\hline \ref{L55} & \ref{UC1.03.1} \\
+	\hline \ref{L88} & \ref{UC1.03.2} \\
+	\hline \ref{L12} & \ref{UC1.27} \\
+	\hline \ref{L13} & \ref{UC1.23} \\
+	\hline \ref{L14} & \ref{UC1.21} \\
+	\hline \ref{L63} & \ref{UC1.22} \\
+	\hline \ref{L15} & \ref{UC1.18} \\
+	\hline \ref{L16} & \ref{UC1.17} \\
+	\hline \ref{L33} & \ref{UC1.26} \\
+	\hline \ref{L34} & \ref{UC1.33} \\
+	\hline \ref{L35} & \ref{UC1.12} \\
+	\hline \ref{L94} & \ref{UC1.00.2} \linebreak \ref{UC1.03.2} \linebreak \ref{UC1.05.2} \linebreak \ref{UC1.06.2} \linebreak \ref{UC1.07.2} \linebreak \ref{UC1.15.2} \linebreak \ref{UC1.20.2} \linebreak \ref{UC1.24.2} \\
+	\hline \ref{L36} & \ref{UC1.14} \\
+	\hline \ref{L37} & \ref{UC1.15.1} \\
+	\hline \ref{L38} & \ref{UC1.34} \\
+	\hline \ref{L39} & \ref{UC1.24.1} \\
+	\hline \ref{L40} & \ref{UC1.20.1} \\	
+	\hline \ref{L41} & \ref{UC1.30} \\
+ 	\hline \ref{L84} & \ref{UC1.31} \\
+ 	\hline \ref{L85} & \ref{UC1.32} \\
+	\hline \ref{L42} & \ref{UC1.10} \\
+	\hline \ref{L43} & \ref{UC1.16} \\
+	\hline \ref{L44} & \ref{UC1.07.1} \\
+	\hline \ref{L92} & \ref{UC1.07.2} \\
+	\hline \ref{L45} & \ref{UC1.25} \\
+	\hline \ref{L46} & \ref{UC1.28} \\
+	\hline \ref{L64} & \ref{UC1.29}  \\
+	\hline \ref{L93} & \ref{UCimpostazioni} \\	 
+	\hline \ref{L47} & \ref{UC1.08} \\
+	\hline \ref{L48} & \ref{UC1.09} \\
+	\hline \ref{L49} & \ref{UC1.11} \\
+	\hline \ref{L3} & Capitolato \\
+	\hline \ref{L4} & Capitolato \\
+	\hline \ref{L90} & \ref{UC1.06.1} \\
+	\hline \ref{L91} & \ref{UC1.06.2} \\	
+	\hline \ref{L57} & Capitolato \\
+	\hline \ref{L66} & Capitolato \\
+	\hline \ref{L58} & Capitolato \\
+	\hline \ref{L59} & Capitolato \\
+	\hline \ref{L60} & Capitolato \\
+	\hline \ref{L67} & Capitolato \\
+	\hline \ref{L17} & \ref{UC2.1} \\
+	\hline \ref{L71} & \ref{UC2.1.1} \\
+	\hline \ref{L95} & \ref{UC2.1.2} \linebreak \ref{UC2.2.2} \linebreak \ref{UC2.4.2} \\
+	\hline \ref{L72} & \ref{UC2.1.3} \linebreak \ref{UC2.2.3} \linebreak \ref{UC2.4.3} \\
+	\hline \ref{L73} & \ref{UC2.1.4} \linebreak \ref{UC2.2.4} \linebreak \ref{UC2.4.4} \\
+	\hline \ref{L18} & \ref{UC2.2} \linebreak \ref{UC2.2.1} \\
+	\hline \ref{L74} & \ref{UC2.2} \\
+	\hline \ref{L19} & \ref{UC2.3} \\
+	\hline \ref{L75} & \ref{UC2.3} \\
+	\hline \ref{L20} & \ref{UC2.4} \linebreak \ref{UC2.4.1} \\
+	\hline \ref{L76} & \ref{UC2.4} \\	
+	\hline \ref{L21} & \ref{UC3.4} \linebreak \ref{UC3.4.3} \linebreak \ref{UC3.12.6} \linebreak \ref{UC3.13.3.3} \\
+	\hline \ref{L61} & \ref{UC3.2.1} \linebreak \ref{UC3.4.1} \linebreak \ref{UC3.4.2} \linebreak \ref{UC3.5.1} \linebreak \ref{UC3.7.1} \linebreak \ref{UC3.9.1} \linebreak \ref{UC3.12.1} \linebreak \ref{UC3.13.1.1} \linebreak \ref{UC3.14.1} \linebreak \ref{UC3.15.1} \\
+	\hline \ref{L62} & \ref{UC3.6.2} \linebreak \ref{UC3.8.2} \linebreak \ref{UC3.10.2} \linebreak \ref{UC3.11.2} \linebreak \ref{UC3.13.2.3} \linebreak \ref{UC3.13.3.5}  \linebreak \ref{UC3.13.4.4} \linebreak \ref{UC3.14.6} \linebreak \ref{UC3.15.5}\\
+	\hline \ref{L22} & \ref{UC3.1} \\
+	\hline \ref{L96} & \ref{UC3.1.1} \\
+	\hline \ref{L97} & \ref{UC3.1.2} \linebreak \ref{UC3.13.4} \ref{UC3.13.4.2} \\
+	\hline \ref{L98} & \ref{UC3.1.3} \linebreak \ref{UC3.3.5} \linebreak \ref{UC3.13.4.3} \linebreak \ref{UC3.14.5} \\
+	\hline \ref{L23} & \ref{UC3.2} \linebreak \ref{UC3.2.2}\\
+	\hline \ref{L68} & \ref{UC3.2} \linebreak \ref{UC3.2.2} \\
+	\hline \ref{L24} & \ref{UC3.3} \linebreak \ref{UC3.3.1} \linebreak \ref{UC3.3.2}\\
+	\hline \ref{L69} & \ref{UC3.3} \\
+	\hline \ref{L77} & \ref{UC3.3} \\
+	\hline \ref{L70} & \ref{UC3.3} \\
+	\hline \ref{L99} & \ref{UC3.3.3} \\
+	\hline \ref{L100} & \ref{UC3.3.4} \\
+	\hline \ref{L25} & \ref{UC3.5} \linebreak \ref{UC3.5.2}\\
+	\hline \ref{L26} & \ref{UC3.6} \linebreak \ref{UC3.3.1}\\
+	\hline \ref{L78} & \ref{UC3.6} \\
+	\hline \ref{L27} & \ref{UC3.7} \linebreak \ref{UC3.7.2}\\
+	\hline \ref{L28} & \ref{UC3.8} \linebreak \ref{UC3.8.1}\\
+	\hline \ref{L104} & \ref{UC3.13.1} \linebreak \ref{UC3.13.1.2} \\
+	\hline \ref{L105} & \ref{UC3.13} \linebreak \ref{UC3.13.2} \linebreak \ref{UC3.13.3} \linebreak \ref{UC3.13.4} \\
+	\hline \ref{L29} & \ref{UC3.13.3} \\
+	\hline \ref{L30} & \ref{UC3.12.2} \\
+	\hline \ref{L31} & \ref{UC3.14.2} \linebreak \ref{UC3.15.2} \\
+	\hline \ref{L32} & \ref{UC3.12} \\
+	\hline \ref{L101} & \ref{UC3.12.3} \\
+	\hline \ref{L102} & \ref{UC3.12.4} \linebreak \ref{UC3.13.2.2} \linebreak \ref{UC3.15.4} \\
+	\hline \ref{L107} & \ref{UC3.13.3.2} \\
+	\hline \ref{L103} & \ref{UC3.12.5} \linebreak \ref{UC3.13.3.4} \\
+	\hline \ref{L53} & \ref{UC3.14} \\
+	\hline \ref{L65} & \ref{UC3.15} \\
+	\hline \ref{L109} & \ref{UC3.15.3} \\
+	\hline \ref{L50} & \ref{UC3.9} \linebreak \ref{UC3.9.2}\\
+	\hline \ref{L51} & \ref{UC3.10} \linebreak \ref{UC3.10.1}\\
+	\hline \ref{L52} & \ref{UC3.11} \linebreak \ref{UC3.11.1}\\	
 	\hline
 	\caption{Tracciamento requisiti-fonti}
 \end{longtable}
 
 \subsection{Riepilogo}
 
-\begin{longtable}{|P{3cm}|P{3cm}|P{3cm}|P{3cm}|}
-	\hline \textbf{Categoria} & \textbf{Obbligatorio} & \textbf{Opzionale} & \textbf{Desiderabile} \\
-	\hline Funzionale & 30 & 18 & 0 \\
-	\hline Prestazionale & 0 & 0 & 0 \\
-	\hline Qualitativo & 0 & 0 & 0 \\
-	\hline di Vincolo & 6 & 0 & 0 \\
+\begin{longtable}{|l|c|c|c|}
+	\hline \multicolumn{1}{|c|}{\textbf{Categoria}} & \multicolumn{1}{c|}{\textbf{Obbligatorio}} & \multicolumn{1}{c|}{\textbf{Opzionale}} & \multicolumn{1}{c|}{\textbf{Desiderabile}} \\
+	\endfirsthead
+	\hline Funzionale & \thetotObF & \thetotOpF & \thetotDF \\
+	\hline Prestazionale & \thetotObP & \thetotOpP & \thetotDP \\
+	\hline Qualitativo & \thetotObQ & \thetotOpQ & \thetotDQ \\
+	\hline di Vincolo & \thetotObV & \thetotOpV & \thetotDV \\
 	\hline
 	\caption{Riepilogo dei requisiti}
 \end{longtable}

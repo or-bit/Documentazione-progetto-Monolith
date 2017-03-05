@@ -4,152 +4,148 @@
 Le risorse umane vengono descritte nelle \NormeDiProgetto{}. I ruoli con maggiori responsabilità sono il \Responsabile{} e il \Verificatore{}, soprattutto per l'attività di \VV{}.
 Le risorse tecnologiche corrispondono a tutti gli strumenti software e hardware utilizzati per la verifica sui processi e prodotti.
 
-\subsection{Misure e Metriche}\label{sec:metriche}
-Per poter descrivere il processo di verifica è necessario che esso sia quantificabile. Questo avviene tramite misure basate su metriche prestabilite.
+\subsection{Obiettivi per le metriche}\label{sec:metriche}
+Per poter descrivere il processo di verifica è necessario che esso sia quantificabile. Questo avviene tramite misure basate su metriche prestabilite consultabili nelle \NormeDiProgetto{}.
 
 \subsubsection{Metriche per la documentazione}\label{sec:metriche_documentazione}
 \paragraph{Indice Gulpease}\mbox{}\\
-Per garantire la leggibilità della documentazione in lingua italiana si applica il calcolo dell'indice di leggibilità Gulpease sui testi, considerando la lunghezza in lettere di parole e frasi.
-\[ 89+\frac{300 \cdot \left(n°\ frasi\right)-10 \cdot \left(n°\ lettere\right)}{n°\ parole} \]
-La formula per il calcolo dell'indice di Gulpease restituisce un punteggio in centesimi che determina il grado di comprensibilità rapportato al livello di istruzione del lettore.
+Per garantire la leggibilità della documentazione in lingua italiana si fa riferimento ai seguenti punteggi minimi e ottimali selezionati per raggiungere un grado di comprensibilità adeguato.
 \begin{itemize}
-	\item punteggi intorno a 0: testi a leggibilità più bassa;
-	\item punteggi minori di 40: testi di difficile comprensione per lettori in possesso di un diploma di scuola superiore;
-	\item punteggi minori di 60: testi di difficile comprensione per lettori in possesso di licenza di scuola media;
-	\item punteggi minori di 80: testi di difficile comprensione per lettori in possesso di licenza elementare;
-	\item punteggi intorno a 100: i testi con maggiore livello di comprensione.
-\end{itemize}
+	\item range ottimale: 50-100;
+	\item range di accettazione: 40-100.
+\end{itemize} 
 
 \paragraph{Indice Gunning Fog}\mbox{}\\
-Per garantire la leggibilità della documentazione in lingua inglese si applica il calcolo dell'indice di leggibilità Gunning Fog. Come per l'indice Gulpease, l'indice Gunning Fog calcola il grado di leggibilità del testo rapportato al livello di istruzione del lettore.\\
-La formula per il calcolo della leggibilità prende in esame la lunghezza media delle frasi e la percentuale di parole formate da più di tre sillabe.
-\[ 0.4 \cdot \left[\left(\frac{n°\ parole}{n°\ frasi}\right)+100 \cdot \left(\frac{n°\ parole\ complesse}{n°\ parole}\right)\right] \]
-La formula produce un punteggio compreso tra 6, minor grado di complessità del testo, e 17, il maggior grado di complessità del testo.
+Per garantire la leggibilità della documentazione in lingua inglese sono stati selezionati i seguenti punteggi minimi e ottimali dell'indice Gunning Fog.
 \begin{itemize}
-	\item punteggio di 17: il testo è adatto a un \textit{College Graduate};
-	\item punteggio di 16: il testo è adatto a un \textit{College Senior};
-	\item punteggio di 15: il testo è adatto a un \textit{College Junior};
-	\item punteggio di 14: il testo è adatto a un \textit{College Sophomore};
-	\item punteggio di 13: il testo è adatto a un \textit{College Freshman};
-	\item punteggio di 12: il testo è adatto a un \textit{High School Senior Student}; 
-	\item punteggio di 11: il testo è adatto a un \textit{High School Junior Student};
-	\item punteggio di 10: il testo è adatto a un \textit{High School Sophomore Student};
-	\item punteggio di 9: il testo è adatto a un \textit{High School Freshman Student};
-	\item punteggio di 8: il testo è adatto a un \textit{Eighth Grade Student};
-	\item punteggio di 7: il testo è adatto a un \textit{Seventh Grade Student};
-	\item punteggio di 6: il testo è adatto a un \textit{Sixth Grade Student}.
+	\item range ottimale: 14-17;
+	\item range di accettazione: 12-17.
 \end{itemize}
 
 \subsubsection{Metriche di processo}\label{sec:metriche_processo}
-Misurano le caratteristiche principali del processo di sviluppo e di manutenzione del software quali costi, tempi e produttività.
-
-\paragraph{Schedule Variance}\mbox{}\\
-Lo Schedule Variance Management permette di valutare lo stato dei progressi nella pianificazione. 
-\[ SV=EV-PV \]
-dove
-\begin{itemize}
-	\item $SV$ = Schedule Variance;
-	\item $EV$ = Earned Value;
-	\item $PV$ = Planned Value.
-\end{itemize}
-La formula calcola l'anticipo o il ritardo sulla pianificazione tramite la differenza fra il valore prodotto dal progetto nel momento della misurazione e il costo pianificato nel momento della misurazione.\\
-Quando la Schedule Variance è di valore positivo si è in anticipo rispetto alla pianificazione. Se il valore è negativo si è in ritardo rispetto alla pianificazione. Quando il valore è zero si sta procedendo come pianificato.
-
-\paragraph{Cost Variance}\mbox{}\\
-Permette di calcolare le stime sull'utilizzo del budget. 
-\[ CV=EV-AC \]
-dove
-\begin{itemize}
-	\item $CV$ = Cost Variance;
-	\item $EV$ = Earned Value;
-	\item $AC$ = Actual Cost.
-\end{itemize}
-La formula calcola la differenza del costo maturato fra costo stimato e costo effettivamente sostenuto.
-
-\subsubsection{Metriche di prodotto}
-Hanno l'obiettivo di misurare la qualità del prodotto software nelle sue caratteristiche fisiche quali dimensioni, funzionabilità, manutenibilità e usabilità.
-
-\paragraph{Metriche per l'analisi}\mbox{}\\
-Consentono di monitorare e controllare costi, scheduling e qualità. Consentono di prevedere quale sarà la misura del processo software all'inizio del suo ciclo di vita, per poterne rapportare le risorse.
-
-\subparagraph{Functional Size Measurement}\mbox{}\\
-Functional Size Measurement (FSM) è una tecnica per misurare il software in termini di funzionalità che esso offre. Lo standard \glossario{ISO}/\glossario{IEC} 14143 definisce FSM come una quantificazione dei Functional User Requirements (FUR), ovvero i requisiti che descrivono ciò che il software dovrebbe fare in termini di compiti e servizi, escludendo quindi le costrizioni in termini di qualità, organizzazione, ambiente e implementazione.\\
-Vantaggi di FSM:
-\begin{itemize}
-	\item è indipendente dalla tecnologia usata per implementare e sviluppare il software;
-	\item è idealmente la componente misurativa delle prestazioni del progetto, poiché queste possono essere comparate come le varie tecnologie, piattaforme, e altro ancora;
-	\item può essere stimata dallo stato dei requisiti a priori.
-\end{itemize}
-\`{E} pertanto utilizzabile per una valutazione preventiva dei costi del progetto.
 
 \paragraph{Metriche per la progettazione}\mbox{}\\
 Si concentrano sulle caratteristiche dell'architettura ad alto livello. Si basano sull'analisi di modelli di progetto nei quali sono evidenziati i moduli di sistema e i dati scambiati.
 
 \subparagraph{Accoppiamento}\mbox{}\\
-L'accoppiamento determina il numero di collaborazioni tra classi, ovvero il numero di altre classi cui una classe è accoppiata.\\
-L'accoppiamento può avvenire a seguito di lettura o modifica di attributi, chiamata di metodi o istanziazione di oggetti. Un uso eccessivo è negativo per la modularità ed il riuso: più una classe è indipendente più è riutilizzabile. L'accoppiamento influisce anche sull'impatto delle modifiche in altri moduli: valori elevati di accoppiamento complicano le attività di testing e le modifiche.
-\[ U = M \cdot N \]
-$M$ componenti in accoppiamento con $N$ altri componenti producono un grado di interdipendenza $U$.
+Per determinare un livello di accoppiamento accettabile il numero di chiamate reciproche fra classi viene racchiuso nei range di ottimalità e accettazione seguenti.
+
+Fan-In:
+\begin{itemize}
+	\item range ottimale: 2 o superiore;
+	\item range di accettazione 0 o superiore.
+\end{itemize}
+
+Fan-Out:
+\begin{itemize}
+	\item range ottimale: 0-1;
+	\item range di accettazione 0-5.
+\end{itemize}
 
 \subparagraph{Complessità ciclomatica}\mbox{}\\
-Questa tecnica utilizza elementi della teoria dei grafi per schematizzare il flusso di controllo del programma. Rappresenta gruppi di istruzioni in nodi e le interazioni fra loro in archi: i nodi corrispondono ai gruppi di istruzioni, mentre gli archi connettono gruppi di istruzioni che possono essere eseguite sequenzialmente.\\
-Dato un grafo $G$ di $n$ nodi ed $e$ archi, la complessità ciclomatica è data da:
-\[ V\left(G\right) = e - n + 2 \]
-Valori alti di complessità indicano poca manutenibilità del codice e maggiore quantità di test per la verifica, ma valori bassi possono indicare poca efficienza.
+Per mantenere sotto controllo la complessità del software prodotto è calcolata la complessità ciclomatica del codice. 
+Sono dichiarati come accettabili i seguenti range di complessità per i risultati ottenuti dal calcolo in modo da massimizzarne la manutenibilità e semplicità di testing: 
+\begin{itemize}
+	\item range 1-10 riguardano programmi semplici con poco rischio d'errore;
+	\item range 11-20 adatti a programmi complessi ma a rischio moderato.
+\end{itemize}
 
 \paragraph{Metriche per la codifica}\mbox{}
-\subparagraph{Metriche di Halstead}\mbox{}\\
-Misurano l'implementazione del programma in base al codice sorgente considerato come un algoritmo, quindi come un insieme di operatori e operandi.\\
-Vengono così contrassegnati i componenti del codice:
+
+\subparagraph{Numero di parametri per metodo}\mbox{}\\
+I limiti imposti per il numero di parametri per metodo sono i seguenti:
 \begin{itemize}
-	\item $\eta_{1}$ = numero di operatori distinti;
-	\item $\eta_{2}$ = numero di operandi distinti;
-	\item $N1$ = numero totale di occorrenze degli operatori; 
-	\item $N2$ = numero totale di occorrenze degli operandi;
+	\item range ottimale: 0-4;
+	\item range di accettazione: 0-7.
 \end{itemize}
-Secondo questa marcatura possiamo calcolare:
+
+\subparagraph{Metriche di Halstead}\mbox{}\\
+La difficoltà di scrittura e comprensione del programma calcolato con le metriche di Halstead per funzione:
 \begin{itemize}
-	\item il vocabolario del programma:
-		\[ \eta = \eta_{1} + \eta_{2} \]
-	\item la lunghezza del programma:
-		\[ N = N1 + N2 \]
-	\item la lunghezza calcolata del programma: 
-		\[ {\hat {N}}=\eta_{1} \cdot \log_{2}\eta_{1}+\eta_{2} \cdot \log_{2}\eta_{2} \]
-	\item il volume del programma:
-		\[ V = N \cdot \log_{2}\eta \] 
-		dove
-		\begin{itemize}
-			\item $ \log_{2}\eta $ è il numero di bit necessari per rappresentare il vocabolario;
-			\item $ V $ è il numero di bit necessari per rappresentare il programma nella sua forma minima.\footnote{Il concetto di volume è legato quindi al contenuto di informazione del programma e dovrebbe dipendere unicamente dall'algoritmo scelto, non dall'espressività del linguaggio di programmazione.}
-		\end{itemize}
-	\item la difficoltà di scrittura e comprensione del programma:
-		\[ D = \frac{\eta_{1}}{2} \cdot \frac{N_{2}}{\eta_{2}} \]
-	\item lo sforzo complessivo sostenuto nella scrittura del programma:
-		\[ E = D \cdot V \]
-	\item il tempo di scrittura del programma:
-		\[ T=\frac{E}{18}\ secondi\]
-	\item il numero di bug in proporzione allo sforzo richiesto:
-		\[ B = \frac{E^{\frac{2}{3}}}{3000} \]	
+	\item range ottimale: 0-15;
+	\item range di accettazione 0-25.
+\end{itemize}
+
+Lo sforzo complessivo di scrittura del programma è calcolato con le metriche di Halstead per funzione:
+\begin{itemize}
+	\item range ottimale: 0-300;
+	\item range di accettazione: 0-400.
+\end{itemize}
+
+Il volume del programma è calcolato con le metriche di Halstead per funzione:
+\begin{itemize}
+	\item range ottimale: 20-100;
+	\item range di accettazione: 20-1500.
+\end{itemize}
+
+\subparagraph{Core size}\mbox{}\\
+Per evitare l'eccessiva interdipendenza tra i file sono stati selezionati i seguenti limiti per il core size:
+\begin{itemize}
+	\item range ottimale: 0-40;
+	\item range di accettazione: 0-50.
+\end{itemize}
+
+\subparagraph{Indice di manutenibilità}\mbox{}\\
+L'indice di manutenibilità indica approssimativamente la difficoltà di mantenere il prodotto.
+\begin{itemize}
+	\item range ottimale: 120-171;
+	\item range di accettazione: 90-171.
 \end{itemize}
 
 \paragraph{Metriche per la verifica}\mbox{}
 \subparagraph{Code coverage}\mbox{}\\
-Misura la capacità di coprire, mediante esecuzione di test, tutte le linee di codice di un modulo. Una copertura topologica del test del 100\% di tipo code coverage garantisce di aver eseguito almeno una volta tutte le istruzioni, ma non tutti i rami.
+La copertura in percentuale dei test effettuati è individuata nel modo seguente:
+\begin{itemize}
+	\item range ottimale: 60-100;
+	\item range di accettazione: 40-100.
+\end{itemize}
 
-\subparagraph{Modified condition/decision coverage (MC/DC)}
-\`{E} una combinazione delle metriche di \textit{function coverage} (copertura delle funzioni chiamate) e \textit{branch coverage} (copertura dei branch delle strutture di controllo). Questa metrica richiede che ogni punto di entrata o uscita in un programma sia invocato almeno una volta e che per ogni decisione condizionale vengano considerati tutti i possibili esiti. La versione \textit{modified} richiede inoltre che entrambe le coperture siano soddisfatte, ed in particolare che ogni condizione influenzi gli esiti condizionali indipendentemente.\footnote{Si rimanda al seguente link \url{https://en.wikipedia.org/wiki/Code_coverage} per esempi esplicativi.}
+\subparagraph{Modified condition/decision coverage (MC/DC)}\mbox{}\\
+E' raggiunta ottenendo risultati accettabili sia in \textit{branch coverage} che in \textit{function coverage}.
+
+Branch Coverage in percentuale:
+\begin{itemize}
+	\item range ottimale: 80-100;
+	\item range di accettazione: 70-100.
+\end{itemize}
+
+Function Coverage in percentuale:
+\begin{itemize}
+	\item range ottimale: 80-100;
+	\item range di accettazione: 70-100.
+\end{itemize}
+
+\subparagraph{Test eseguiti}\mbox{}\\
+\begin{longtable}[h]{|l|c|c|}
+	\hline \multirow{2}{*}{\textbf{Tipo di test}} & \multicolumn{2}{c|}{Range} \\ \cline{2-3}
+	& \multicolumn{1}{c|}{\textbf{Ottimale}} & \multicolumn{1}{c|}{\textbf{Accettazione}} \\ \hline
+	\endfirsthead
+	\hline Unità & 100 & 85-100 \\
+	\hline Integrazione & 70-100 & 60-100 \\
+	\hline Sistema & 80-100 & 70-100 \\
+	\hline Validazione & 100 & 90-100 \\
+	\hline
+	\caption{Percentuale di test eseguiti}
+\end{longtable}
+
+\subparagraph{Test superati}\mbox{}\\
+Percentuale di test superati:
+\begin{itemize}
+	\item range ottimale: 100;
+	\item range di accettazione: 85-100.
+\end{itemize}
 
 \subparagraph{Metriche di gestione degli errori}\mbox{}\\
 \begin{longtable}{|P{6cm}|c|c|P{4cm}|}
 	\hline 
-	\multicolumn{1}{|c|}{\textbf{Errore}} & \multicolumn{1}{c|}{\textbf{Criticità}} & \multicolumn{1}{c|}{\textbf{Priorità}} & \multicolumn{1}{c|}{\textbf{Modalità}} \\ \hline 
+	\multicolumn{1}{|c|}{\textbf{Errore}} & \multicolumn{1}{c|}{\textbf{Criticità}} & \multicolumn{1}{c|}{\textbf{Priorità}} & \multicolumn{1}{c|}{\textbf{Modalità}} \\ \hline
 	\endfirsthead
 	
 	\hline 
 	\multicolumn{1}{|c|}{\textbf{Errore}} & \multicolumn{1}{c|}{\textbf{Criticità}} & \multicolumn{1}{c|}{\textbf{Priorità}} & \multicolumn{1}{c|}{\textbf{Modalità}} \\ \hline 
 	\endhead
 	
-	\hline \multicolumn{4}{|r|}{{Continua nella prossima pagina}} \\ \hline
+	\hline \multicolumn{4}{|r|}{\ToBeContinued} \\ \hline
 	\endfoot
 	
 	\hline
@@ -178,23 +174,35 @@ Misura la capacità di coprire, mediante esecuzione di test, tutte le linee di c
 	\hline
 	\caption{Metriche di gestione degli errori}
 \end{longtable}
-Vengono ora descritti i parametri utilizzati:
+
+\subsubsection{Metriche di prodotto}
+Hanno l'obiettivo di misurare la qualità del prodotto software nelle sue caratteristiche fisiche quali dimensioni, funzionabilità, manutenibilità e usabilità.
+
+\paragraph{Functional Size Measurement}\mbox{}\\
+Copertura in percentuale dei requisiti funzionali implementati:
 \begin{itemize}
-	\item \textbf{Criticità}: indica la gravità dell'errore rispetto all'avanzamento del progetto. Può assumere i seguenti valori:
-	\begin{itemize}
-		\item \textbf{bassa}: l'errore non compromette il corretto avanzamento del progetto;
-		\item \textbf{media}: l'errore non è bloccante, ma può compromettere il corretto avanzamento del progetto;
-		\item \textbf{alta}: l'errore è bloccante e compromette l'avanzamento del progetto.	
-	\end{itemize}
-	\item \textbf{Priorità}: indica la priorità di risoluzione dell'errore. Può assumere i seguenti valori:
-	\begin{itemize}
-		\item \textbf{bassa}: l'errore deve essere risolto entro la milestone successiva;
-		\item \textbf{media}: l'errore deve essere risolto entro una settimana dalla segnalazione;
-		\item \textbf{alta}: l'errore deve essere risolto nel più breve tempo possibile.
-	\end{itemize}
-	\item \textbf{Modalità}: indica la modalità di gestione dell'errore. Può assumere i seguenti valori:
-	\begin{itemize}
-		\item \textbf{correzione immediata}: il \Verificatore{} può correggere immediatamente l'errore se ne è in grado;
-		\item \textbf{segnalazione}: il \Verificatore{} deve effettuare una segnalazione, secondo le procedure indicate nelle \NormeDiProgetto{}.
-	\end{itemize}
+	\item range ottimale: 100;
+	\item range di accettazione: 80-100.
 \end{itemize}
+
+\paragraph{Accuratezza rispetto alle attese}\mbox{}\\
+Percentuale di risultati che rispettano le attese:
+\begin{itemize}
+	\item range ottimale: 100;
+	\item range di accettazione: 80-100.
+\end{itemize}
+
+\paragraph{Fallimento dei test}\mbox{}\\
+Percentuale di test conclusi con fallimento:
+\begin{itemize}
+	\item range ottimale: 0;
+	\item range di accettazione: 0-15.
+\end{itemize}
+
+\paragraph{Gestione delle operazioni non permesse}\mbox{}\\
+Percentuale di funzionalità in grado di gestire gli errori per operazioni non permesse:
+\begin{itemize}
+	\item range ottimale: 100;
+	\item range di accettazione: 80-100.
+\end{itemize}
+

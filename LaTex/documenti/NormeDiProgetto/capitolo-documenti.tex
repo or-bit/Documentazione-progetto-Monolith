@@ -1,12 +1,14 @@
-\section{Documentazione}
+\section{Processi di supporto}
+\subsection{Documentazione}
 
-\subsection{Template}
+\subsubsection{Template}
 È stato creato un template \glossario{\LaTeX{}} per la stesura di tutta la documentazione, mantenendo così costanti le scelte stilistiche.
+Sono definiti comandi globali applicabili a tutti i documenti utilizzati per la formattazione corretta dei vocaboli e l'inserimento più agevole di termini e nomi propri complessi o soggetti a modifiche. Sono definiti anche comandi locali riservati per ogni documento.
 
-\subsection{Struttura del documento}
+\subsubsection{Struttura del documento}
 Questa sezione tratta della struttura generale dei diversi documenti.
 
-\subsubsection{Prima pagina}
+\paragraph{Prima pagina}\mbox{}\\
 Ogni documento deve avere la prima pagina così definita:
 \begin{itemize}
 \item logo del gruppo;
@@ -24,7 +26,7 @@ Ogni documento deve avere la prima pagina così definita:
 \item descrizione del contenuto del documento.
 \end{itemize}
 
-\subsubsection{Diario delle modifiche}
+\paragraph{Diario delle modifiche}\mbox{}\\
 Il diario delle modifiche viene rappresentato tramite una tabella. Ogni riga della tabella rappresenta una versione del documento. In ogni riga viene indicato: 
 \begin{itemize}
 	\item versione corrente del documento; 
@@ -35,21 +37,21 @@ Il diario delle modifiche viene rappresentato tramite una tabella. Ogni riga del
 \end{itemize}
 La tabella è ordinata in ordine cronologico decrescente, in modo che risulti l'ultima versione come prima riga della tabella.
 
-\subsubsection{Indici}
+\paragraph{Indici}\mbox{}\\
 Ogni documento ha tre indici: 
 \begin{itemize}
 	\item \textbf{Indice delle sezioni:} presenta in ordine le sezioni del documento e ne evidenzia le pagine di inizio.
-	\item \textbf{Indice delle figure:} riporta il nome ed il numero di tutte le figure presenti nel documento.
-	\item \textbf{Indice delle tabelle:} riporta il nome ed il numero di tutte le tabelle presenti nel documento.
+	\item \textbf{Elenco delle figure:} riporta il nome ed il numero di tutte le figure presenti nel documento.
+	\item \textbf{Elenco delle tabelle:} riporta il nome ed il numero di tutte le tabelle presenti nel documento.
 \end{itemize}
 Nel caso di mancanza di figure o tabelle all'interno del documento i rispettivi indici non devono essere inseriti.
 
-\subsubsection{Formattazione generale delle pagine}
+\paragraph{Formattazione generale delle pagine}\mbox{}\\
 Tutte le pagine hanno la seguente struttura:
 \begin{itemize}
 	\item \textbf{Intestazione:}
 	\begin{itemize}
-		\item logo del gruppo affiancato dal nome;
+		\item logo del gruppo affiancato dal nome dl gruppo e dal nome del progetto;
 		\item logo del progetto.
 	\end{itemize}
 		\item \textbf{Corpo:}
@@ -63,13 +65,13 @@ Tutte le pagine hanno la seguente struttura:
 	\end{itemize}
 \end{itemize}
 
-\subsection{Norme tipografiche}
+\subsubsection{Norme tipografiche}
 In questa sezione vengono descritte tutte le norme stilistiche che devono essere seguite nella scrittura dei documenti. 
 
-\subsubsection{Orientamento del testo}
+\paragraph{Orientamento del testo}\mbox{}\\
 I caratteri tipografici utilizzati nei documenti sono il tondo, il \textit{corsivo} ed il MAIUSCOLO. È inoltre consentito l'uso del \textbf{grassetto} per dare importanza a voci di elenchi o termini che rappresentano concetti significativi all'interno di un testo.
 
-\paragraph{Uso del corsivo, tondo e maiuscolo} \label{sec:corsivo_tondo_maiuscolo} \mbox{} \\
+\subparagraph{Uso del corsivo, tondo e maiuscolo} \label{sec:corsivo_tondo_maiuscolo} \mbox{} \\
 Devono essere scritti in corsivo:
 \begin{itemize}
 	\item i ruoli di progetto;
@@ -85,7 +87,7 @@ Vanno composti in tondo:
 \end{itemize}
 Vanno scritti in maiuscolo gli acronimi e le sigle.
 
-\paragraph{Lettere maiuscole}\label{sec:lettere_maiuscole} \mbox{} \\
+\subparagraph{Lettere maiuscole}\label{sec:lettere_maiuscole} \mbox{} \\
 Come norma generale l'uso dell'iniziale maiuscola, esclusi i nomi propri e le parole che seguono un punto fermo, va limitata ai casi strettamente necessari.\\
 Si fornisce una lista esemplificativa:
 \begin{itemize}
@@ -98,19 +100,19 @@ Si fornisce una lista esemplificativa:
 	\item titoli, cariche e gradi, quando facciano parte integrante del nome (es.: \CommittenteInline).
 \end{itemize}
 
-\paragraph{Segni di interpunzione} \mbox{} \\
+\subparagraph{Segni di interpunzione} \mbox{} \\
 I segni di interpunzione e le parentesi mantengono sempre lo stile di formattazione del testo in cui sono inserite.\\
 I periodi interi fra virgolette o parentesi devono concludersi con il punto fermo prima della parentesi di chiusura.
 Da evitare l’uso consecutivo dei due punti all'interno di uno stesso periodo.
 
-\paragraph{Parentesi, rigati e trattini} \mbox{} \\
+\subparagraph{Parentesi, rigati e trattini} \mbox{} \\
 Possono essere usate normalmente le parentesi tonde.\\
 I trattini congiuntivi (-) si usano tra due parole formanti un nome composto.
 
-\paragraph{Citazioni} \mbox{} \\
+\subparagraph{Citazioni} \mbox{} \\
 Le citazioni vanno composte in tondo fra virgolette basse.
 
-\paragraph{Date} \mbox{} \\
+\subparagraph{Date} \mbox{} \\
 Le date sono suddivise in forma estesa e forma breve.\\
 Il formato esteso è composto da:
 \begin{itemize}
@@ -127,16 +129,16 @@ Il formato breve consiste in:
 Tutti i termini della forma breve devono essere separati da trattini (ad esempio: 10-12-2016) ed espressi in doppia cifra, pertanto la data 1 gennaio 2017 in forma breve diventa 01-01-2017.
 La data in forma estesa deve essere utilizzata in calce alla \LetteraPresentazione, mentre è preferibile utilizzare la data in forma breve in qualsiasi altra occasione.
 
-\paragraph{Numeri} \mbox{} \\
+\subparagraph{Numeri} \mbox{} \\
 Devono essere utilizzati numeri nella rappresentazione araba con uso anglosassone del punto nei numeri decimali, tranne nei numeri di pagina di Prefazioni.
 
-\subsubsection{Note}
+\paragraph{Note}\mbox{}\\
 Tutte le note sono composte normalmente in tondo, in un corpo più piccolo di quello del testo.\\
 Le note devono essere numerate normalmente con numeri arabi a esponente (esponenti di nota).\\
 La numerazione riparte di regola da 1 all'inizio di ogni nuova pagina.\\
 Le note seguono la consuetudine della lingua inglese di essere riportate dopo la punteggiatura.
 
-\subsubsection{Elenchi}
+\paragraph{Elenchi}\mbox{}\\
 Gli elenchi devono essere non numerati, a meno di casi particolari che ne richiedano la numerazione.\\
 Devono essere inoltre seguite le seguenti norme:
 \begin{itemize}
@@ -144,60 +146,60 @@ Devono essere inoltre seguite le seguenti norme:
 	\item se i termini sono complessi e costituiti da frasi distinte rispetto al periodo introduttivo si usa la maiuscola e il punto alla fine di ogni frase.
 \end{itemize}
 
-\subsubsection{Scelte stilistiche}
+\paragraph{Scelte stilistiche}\mbox{}
 
-\paragraph{Tempo verbale} \mbox{} \\
+\subparagraph{Tempo verbale} \mbox{} \\
 Il tempo verbale prescelto per la stesura dei documenti è il presente, che deve essere adottato sempre, tranne nei casi in cui serva distinguere temporalmente gli avvenimenti; in tal caso devono essere utilizzati i tempi verbali più adatti.
 
-\paragraph{Soggetto} \mbox{} \\
+\subparagraph{Soggetto} \mbox{} \\
 Nella stesura dei documenti il soggetto delle frasi inerenti membri del progetto deve essere una terza persona singolare o plurale.
 
-\paragraph{Altri formati} \mbox{} \\
+\subparagraph{Altri formati} \mbox{} \\
 Vengono adottati i seguenti formati:
 \begin{itemize}
-	\item \textbf{indirizzi assoluti}: gli indirizzi \email{} e i web link assoluti devono essere formattati tramite comando \glossario{\LaTeX{}} \textbackslash{\texttt{url}};
-	\item \textbf{nomi dei documenti}: deve essere utilizzato il comando \glossario{\LaTeX{}} \textbackslash{\texttt{NomedelDocumento}} quando si scrive il nome di un documento, cosicché risulti scritto correttamente secondo quanto riportato nelle sezioni §\ref{sec:corsivo_tondo_maiuscolo} e §\ref{sec:lettere_maiuscole}; lo stesso comando fa riferimento all'ultima versione disponibile del documento;
+	\item \textbf{indirizzi assoluti}: gli indirizzi \email{} e i web link assoluti devono essere formattati tramite comando \LaTeX{} \textbackslash{\texttt{url}};
+	\item \textbf{nomi dei documenti}: deve essere utilizzato il comando \LaTeX{} \textbackslash{\texttt{NomedelDocumento}} quando si scrive il nome di un documento, cosicché risulti scritto correttamente secondo quanto riportato nelle sezioni §\ref{sec:corsivo_tondo_maiuscolo} e §\ref{sec:lettere_maiuscole}; lo stesso comando fa riferimento all'ultima versione disponibile del documento;
 	\item \textbf{nomi dei file}: per riferirsi ad un file è necessario specificare il suo percorso completo, usando il formato \texttt{monospace};
-	\item \textbf{revisioni di progetto}: per riferirsi alle varie revisioni di progetto è necessario utilizzare il comando \glossario{\LaTeX{}} \textbackslash{\texttt{R\textit{X}}} (con \textit{X} iniziale del secondo sostantivo della revisione a cui si fa riferimento) cosicché risultino scritte correttamente secondo quanto riportato in \sezione{sec:lettere_maiuscole};
-	\item \textbf{attività di progetto}: per riferirsi alle varie attività di progetto è necessario utilizzare il comando \glossario{\LaTeX{}} apposito, cosicché risultino scritte correttamente secondo quanto riportato in \sezione{sec:lettere_maiuscole};
+	\item \textbf{revisioni di progetto}: per riferirsi alle varie revisioni di progetto è necessario utilizzare il comando \LaTeX{} \textbackslash{\texttt{R\textit{X}}} (con \textit{X} iniziale del secondo sostantivo della revisione a cui si fa riferimento) cosicché risultino scritte correttamente secondo quanto riportato in \sezione{sec:lettere_maiuscole};
+	\item \textbf{attività di progetto}: per riferirsi alle varie attività di progetto è necessario utilizzare il comando \LaTeX{} apposito, cosicché risultino scritte correttamente secondo quanto riportato in \sezione{sec:lettere_maiuscole};
 	\item \textbf{nomi propri}: per riferirsi ai membri del team di sviluppo è necessario seguire lo schema \virgolette{Nome Cognome};
-	\item \textbf{nome del gruppo}: per riferirsi al nome del gruppo è necessario utilizzare il comando \glossario{\LaTeX{}} \textbackslash{\texttt{GroupName}} affinché risulti scritto correttamente secondo quanto riportato in \sezione{sec:lettere_maiuscole};
-	\item \textbf{nome del proponente}: è necessario riferirsi al Proponente del progetto con il termine \textit{Proponente}, o tramite il comando \glossario{\LaTeX{}} \textbackslash{\texttt{Proponente}};
-	\item \textbf{nome del committente}: è necessario riferirsi al Committente del progetto tramite il comando \glossario{\LaTeX{}} \textbackslash{\texttt{Committente}}, o con il termine \textit{Committente};
-	\item \textbf{nome del progetto}: deve essere utilizzato il comando \glossario{\LaTeX{}} \textbackslash{\texttt{ProjectName}} per riferirsi al nome del progetto, cosicché risulti scritto correttamente secondo quando riportato in \sezione{sec:lettere_maiuscole};
+	\item \textbf{nome del gruppo}: per riferirsi al nome del gruppo è necessario utilizzare il comando \LaTeX{} \textbackslash{\texttt{GroupName}} affinché risulti scritto correttamente secondo quanto riportato in \sezione{sec:lettere_maiuscole};
+	\item \textbf{nome del proponente}: è necessario riferirsi al Proponente del progetto con il termine \textit{Proponente}, o tramite il comando \LaTeX{} \textbackslash{\texttt{Proponente}};
+	\item \textbf{nome del committente}: è necessario riferirsi al Committente del progetto con il termine \textit{Committente}, o tramite il comando \LaTeX{} \textbackslash{\texttt{Committente}};
+	\item \textbf{nome del progetto}: deve essere utilizzato il comando \LaTeX{} \textbackslash{\texttt{ProjectName}} per riferirsi al nome del progetto, cosicché risulti scritto correttamente secondo quando riportato in \sezione{sec:lettere_maiuscole};
 \end{itemize}
 
-\subsection{Norme grafiche}
+\subsubsection{Norme grafiche}
 
-\subsubsection{Colori}
+\paragraph{Colori}\mbox{}\\
 \`{E} permesso l'uso del colore nelle immagini ed è assicurata la corretta visibilità per la stampa di esse.
 
-\subsubsection{Immagini}
+\paragraph{Immagini}\mbox{}\\
 Per convenzione le immagini devono essere salvate in formato vettoriale \glossario{SVG} quando possibile, altrimenti deve essere utilizzato il formato \glossario{PNG} con una risoluzione di stampa di 300 \glossario{DPI}.
 
-\subsubsection{Tabelle}
+\paragraph{Tabelle}\mbox{}\\
 In tutte le tabelle le righe devono essere numerate e i termini nell'intestazione formattati in grassetto.
 %Per aumentare la leggibilità va adottata la convenzione di colorare righe alterne in grigio chiaro.
 \\
 Le tabelle devono essere individuabili per mezzo di un numero progressivo, relativo al capitolo di appartenenza, per l'inserimento di esse nell'indice delle tabelle.
 
-\subsection{Destinatari e lingua dei documenti}
-\subsubsection{Documenti interni}
+\subsubsection{Destinatari e lingua dei documenti}
+\paragraph{Documenti interni}\mbox{}\\
 I documenti interni sono rivolti ai componenti del gruppo e sono redatti in lingua italiana. Fanno parte di questa categoria \NormeDiProgetto, \StudioDiFattibilita{} ed eventuali verbali interni.\footnote[1]{Si rimanda alla \sezione{sec:verbale_riunioni_interne} per la definizione di questi ultimi.}
 
-\subsubsection{Documenti esterni}
+\paragraph{Documenti esterni}\mbox{}\\
 I documenti esterni sono rivolti al Proponente e al Committente del capitolato e sono redatti in lingua inglese o italiana.\\
 Devono essere redatti in lingua italiana: \PianoDiProgetto, \PianoDiQualifica, \SpecificaTecnica, \DefinizioneDiProdotto, \Glossario.\\
 Devono essere redatti in lingua inglese: \ManualeUtente, eventuale altra documentazione rivolta agli utilizzatori del prodotto.
 
-\subsection{Classificazione dei documenti}
-\subsubsection{Documenti informali}
+\subsubsection{Classificazione dei documenti}
+\paragraph{Documenti informali}\mbox{}\\
 I documenti informali sono tutti quei documenti che non sono ancora stati revisionati dai \Verificatori{}, validati e approvati dal \Responsabile{}.
 
-\subsubsection{Documenti formali}
+\paragraph{Documenti formali}\mbox{}\\
 I documenti formali sono tutti quei documenti approvati dal \Responsabile{}.
 
-\subsection{Versioning}
+\subsubsection{Versioning}
 Il ciclo di vita dei documenti è tracciato dal numero di versione degli stessi.\\
 Viene rispettato il seguente formato: una v minuscola seguita da tre indici intervallati da un punto:
 \begin{center}
@@ -213,17 +215,11 @@ Un documento alla sua creazione corrisponde alla versione 0.0.0. L’incremento 
 \begin{itemize}
 	\item le modifiche significative, ovvero che non consistono di sole correzioni minori, incrementano il valore di destra di un'unità ciascuna;
 	\item le verifiche del documento azzerano l'indice delle modifiche e incrementano il valore centrale di un'unità ciascuna;
-	\item l'approvazione del documento azzera gli indici delle modifiche e delle verifiche e incrementa il valore di sinistra di un'unità. Il valore di questo indice deve corrispondere al numero progressivo della revisione che si affronta:
-	\begin{enumerate}
-		\item \RR
-		\item \RP
-		\item \RQ
-		\item \RA
-	\end{enumerate} 
+	\item l'approvazione del documento azzera gli indici delle modifiche e delle verifiche e incrementa il valore di sinistra di un'unità.
 \end{itemize}
 Il raggiungimento di \glossario{milestone} interne non implica l'approvazione finale del documento ma che il documento è stato verificato dai \Verificatori{}.
 
-\subsection{Ciclo di vita}
+\subsubsection{Ciclo di vita}
 Il ciclo di vita indica tutte le fasi in cui un documento può trovarsi a partire dalla sua creazione fino alla sua approvazione. Le fasi in cui può trovarsi il documento sono:
 \begin{itemize}
 	\item \textbf{In lavorazione:} un documento entra in questa fase nel momento della sua creazione, e qui vi rimane per tutto il periodo necessario alla sua realizzazione, o per eventuali successive modifiche. 
@@ -231,5 +227,6 @@ Il ciclo di vita indica tutte le fasi in cui un documento può trovarsi a partir
 	\item \textbf{Approvato:} ogni documento, una volta ultimata l'attività di verifica, deve essere approvato dal \Responsabile{}. L'approvazione sancisce lo stato finale del documento per la data versione.
 \end{itemize}
 
-\subsection{Glossario}
+\subsubsection{Glossario}
 Il \textit{Glossario} è un documento di utilità. Tale documento deve essere aggiornato di pari passo con la stesura dei documenti.
+Si segnalano i termini inclusi nel glossario con una g al pedice alla loro prima occorrenza. 
