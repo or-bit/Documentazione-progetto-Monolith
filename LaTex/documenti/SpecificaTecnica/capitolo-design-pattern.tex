@@ -3,7 +3,7 @@ I \glossario{Design Pattern} descrivono la metodologia con cui affrontare proble
 La conoscenza dei Design Pattern favorisce la progettazione, il riuso e la manutenibilità del codice prodotto.\\
 I principali Design Pattern vengono suddivisi in quattro categorie:
 \begin{itemize}
-	\item \textit{Architetturali}: affrontano il problema di progettazione di un sistema software fornendo uno schema di partenza su cui basare l'architettura (MVC);
+	\item \textit{Architetturali}: affrontano il problema di progettazione di un sistema software fornendo uno schema di partenza su cui basare l'architettura (\glossario{MVC});
 	\item \textit{Creazionali}: affrontano il problema di astrarre il sistema rendendolo indipendente dall'implementazione concreta delle sue componenti;
 	\item \textit{Strutturali}: affrontano il problema riguardante la composizione delle classi e degli oggetti, sfruttando l'ereditarietà e l'aggregazione;
 	\item \textit{Comportamentali}: affrontano il problema dell'interazione tra le componenti, definendo la funzione degli oggetti e il modo in cui interagiscono gli uni con gli altri.
@@ -32,7 +32,7 @@ Viene utilizzato per l'interfaccia che gestisce la comunicazione col database Mo
 \textbf{Scopo:} \\
 Fornisce un'interfaccia unica per un sottosistema più complesso, rendendo visibili solamente alcune parti agli altri oggetti. Rendendo unico il punto d'accesso vengono minimizzate le comunicazioni e le dipendenze. Fa\c{c}ade inoltre non impedisce l'utilizzo delle classi interne al sottosistema, creando un compromesso tra facilità d'uso e generalità. \\
 \textbf{Utilizzo:} \\ 
-Fa\c{c}ade viene utilizzato per creare un livello astratto all'interno della view. Viene infatti delegato alla classe GUI il compito di indirizzare le richieste ricevute dal controller al giusto componente interno. Vengono in questo modo semplificate le comunicazioni, viene ridotto l'accoppiamento e quindi aumentata la portabilità. 
+Fa\c{c}ade viene utilizzato per creare un livello astratto all'interno della view. Viene infatti delegato alla classe \glossario{GUI} il compito di indirizzare le richieste ricevute dal controller al giusto componente interno. Vengono in questo modo semplificate le comunicazioni, viene ridotto l'accoppiamento e quindi aumentata la portabilità. 
 
 \subsubsection{Module}
 \textbf{Scopo:} \\
@@ -46,4 +46,4 @@ Verrà utilizzato questo design qualora nella scrittura dell'oggetto debbano ess
 \textbf{Scopo:} \\
 Permette l'aggiornamento di più viste contemporaneamente, disinteressandosi di quante o quali esse siano.\\
 \textbf{Utilizzo:} \\
-Verrà usato per sincronizzare le varie bubbles che opereranno con dati condivisi, in modo da mantenerle sempre aggiornate e consistenti le une con le altre.
+Verrà usato per sincronizzare le varie bubble che opereranno con dati condivisi, in modo da mantenerle sempre aggiornate e consistenti le une con le altre.

@@ -1,14 +1,14 @@
 \section{Tecnologie utilizzate}
 In questa sezione sono descritte le tecnologie da utilizzare nello sviluppo del progetto \ProjectName{} e la motivazione che ha portato alla loro scelta come strumenti di lavoro. Alcune delle tecnologie sono richieste come requisito dal capitolato scelto.
 \begin{itemize}
-	\item \textbf{Meteor:} framework JavaScript su cui si basa Rocket.Chat;
-	\item \textbf{MongoDB:} database non relazionale integrato con Meteor;
-	\item \textbf{ECMAScript 2015:} standard JavaScript che viene applicato nella scrittura del software;
-	\item \textbf{HTML5:} standard HTML utilizzato da Rocket.Chat per gestire la componente grafica;
-	\item \textbf{Sass (CSS3):} estensione di CSS utilizzata per dare stile all'HTML; 
-	\item \textbf{Bootstrap:} framework utilizzato per realizzare il \glossario{front end};
-	\item \textbf{React:} libreria JavaScript utilizzata per gestire la \glossario{UI};
-	\item \textbf{WebStorm:} IDE utilizzato per lo sviluppo del codice JavaScript.
+	\item \textbf{\glossario{Meteor}:} framework JavaScript su cui si basa Rocket.Chat;
+	\item \textbf{\glossario{MongoDB}:} database non relazionale integrato con \glossario{Meteor};
+	\item \textbf{\glossario{ECMAScript} 2015:} standard JavaScript che viene applicato nella scrittura del software;
+	\item \textbf{\glossario{HTML5}:} standard HTML utilizzato da Rocket.Chat per gestire la componente grafica;
+	\item \textbf{\glossario{Sass} (CSS3):} estensione di \glossario{CSS} utilizzata per dare stile all'HTML; 
+	\item \textbf{\glossario{Bootstrap}:} framework utilizzato per realizzare il \glossario{front end};
+	\item \textbf{\glossario{React}:} libreria JavaScript utilizzata per gestire la \glossario{UI};
+	\item \textbf{\glossario{WebStorm}:} \glossario{IDE} utilizzato per lo sviluppo del codice JavaScript.
 \end{itemize}
 
 \subsection{Meteor}
@@ -16,7 +16,7 @@ Meteor è un framework JavaScript sviluppato con lo scopo di semplificare la cre
 L'utilizzo di Meteor nella realizzazione del progetto è vincolato essendo questo il framework su cui è scritto Rocket.Chat. Questo però porta a numerosi vantaggi, permettendo una gestione semplificata dell'applicativo web.
 
 \subsection{MongoDB}
-\glossario{MongoDB} è un DBMS non relazionale document-oriented di tipo NoSQL ed è distribuito come software libero open-source. L'utilizzo di questa tecnologia è vincolato dalla sua integrazione con Meteor, tuttavia a fronte dello svantaggio di essere una tecnologia poco conosciuta ai membri del gruppo presenta anche numerosi punti di forza:
+MongoDB è un DBMS non relazionale document-oriented di tipo \glossario{NoSQL} ed è distribuito come software libero open-source. L'utilizzo di questa tecnologia è vincolato dalla sua integrazione con Meteor, tuttavia a fronte dello svantaggio di essere una tecnologia poco conosciuta ai membri del gruppo presenta anche numerosi punti di forza:
 \begin{itemize}
 	\item semplicità di apprendimento;
 	\item un'efficienza superiore ai database relazionali non esistendo \textit{join} che porterebbero ad un rallentamento delle operazioni di lettura o scrittura; 
@@ -27,7 +27,7 @@ L'utilizzo di Meteor nella realizzazione del progetto è vincolato essendo quest
 Grazie all'integrazione con Meteor l'accesso al database è ulteriormente semplificato.
 
 \subsection{ECMAScript 2015}
-Il linguaggio JavaScript da utilizzare per il progetto deve implementare le specifiche \glossario{ECMAScript} 2015 (o ECMAScript 6), come richiesto da \Proponente. ECMAScript 2015 introduce in JavaScript diverse migliorie utilizzabili per rendere più efficiente lo sviluppo. Nel dettaglio le funzionalità più rilevanti sono:
+Il linguaggio JavaScript da utilizzare per il progetto deve implementare le specifiche ECMAScript 2015 (o ECMAScript 6), come richiesto da \glossario{\Proponente}. ECMAScript 2015 introduce in JavaScript diverse migliorie utilizzabili per rendere più efficiente lo sviluppo. Nel dettaglio le funzionalità più rilevanti sono:
 \begin{itemize}
 	\item \textbf{Promises:} Gestione degli eventi asincroni più efficace tramite le promises. Comparabili ai future di Java (\url{https://docs.oracle.com/javase/6/docs/api/java/util/concurrent/Future.html}), le promises restituiscono un valore futuro a cui può essere assegnata una callback da chiamare in caso di esecuzione andata a buon fine del metodo asincrono. L'utilizzo di questo modello di concorrenza e la possibilità di concatenare le promises garantisce un rischio molto minore di incorrere nei problemi di concorrenza che si riscontrerebbero utilizzando il modello classico.
 	\item \textbf{ArrowFunctions:} Nel passare come parametro funzioni di callback ad altre funzioni è possibile omettere la definizione esplicita di funzione indicando direttamente parametri e valori di ritorno. In questo modo si incrementa la leggibilità del codice e si diminuisce di conseguenza la probabilità di commettere errori nella stesura.
@@ -35,7 +35,7 @@ Il linguaggio JavaScript da utilizzare per il progetto deve implementare le spec
 \end{itemize}
 
 \subsection{HTML5}
-\glossario{HTML5} è l'ultima versione dell'HTML (HyperText Markup Language). È stato scelto in quanto:
+HTML5 è l'ultima versione dell'HTML (HyperText Markup Language). È stato scelto in quanto:
 \begin{itemize}
 	\item ha il vantaggio di utilizzare una sintassi semplificata e più chiara rispetto alle versioni precedenti dello standard;
 	\item permette l'integrazione con diversi formati multimediali senza utilizzare plugin esterni; 

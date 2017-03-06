@@ -1,7 +1,7 @@
 \subsection{Framework}
 
 \subsubsection{Architettura Generale}
-L'architettura che abbiamo scelto per la progettazione del framework è del tipo Model-View-Controller (MVC). La parte della View consiste nell'interfaccia grafica per l'utente (GUI) che permetterà la gestione di elementi grafici. La parte di Model permetterà la gestione degli elementi funzionali ed è composta dalla bubble memory e dalle API. La parte di Controller che consiste nella bubble generica si occuperà di gestire l'aggiornamento della GUI e l'invio degli input dell'utente agli elementi funzionali.
+L'architettura che abbiamo scelto per la progettazione del framework è del tipo Model-View-Controller (MVC). La parte della View consiste nell'interfaccia grafica per l'utente (GUI) che permetterà la gestione di elementi grafici. La parte di Model permetterà la gestione degli elementi funzionali ed è composta dalla bubble memory e dalle \glossario{API}. La parte di Controller che consiste nella bubble generica si occuperà di gestire l'aggiornamento della GUI e l'invio degli input dell'utente agli elementi funzionali.
 
 \begin{figure}[H]
 	\centering
@@ -123,7 +123,7 @@ Oltre alle normali operazioni sul database l'utente avrà la possibilità di uti
 Controlla i vari input accettati dalle bubble, limitandone contenuto o numero di accessi.\\
 \textbf{Scopo:}\\
 In questo package sono contenute le funzionalità del framework relative alle limitazioni sull'input fornito alla bubble. Saranno quindi presenti metodi per consentire un numero limitato di interazioni pro capite con la bubble o un numero totale di interazioni effettuabili dagli utenti di Rocket.Chat che la utilizzino.\\
-Saranno inoltre presenti dei metodi per verificare il match di un eventuale input testuale con un'espressione regolare e per porre limitazioni sulla sua lunghezza massima. Nel caso l'input da validare sia in formato JSON (per esempio un valore ritornato dalla chiamata di un API REST esterna) è possibile verificare che al loro interno siano presenti determinate chiavi indicate.
+Saranno inoltre presenti dei metodi per verificare il match di un eventuale input testuale con un'espressione regolare e per porre limitazioni sulla sua lunghezza massima. Nel caso l'input da validare sia in formato \glossario{JSON} (per esempio un valore ritornato dalla chiamata di un API REST esterna) è possibile verificare che al loro interno siano presenti determinate chiavi indicate.
 
 \begin{samepage}
 \subparagraph{Api\-::Timing}\label{api-timing}\mbox{}\\
@@ -151,7 +151,7 @@ Verrà utilizzato per la gestione di scadenze o eventi ripetuti in modo automati
 \textbf{Descrizione:}\\ 
 Il package gestisce l'interazione della bubble con dei file.\\ 
 \textbf{Scopo:}\\
-Verrà usato come descritto nei casi d'uso per convertire del testo in PDF e salvare il file così prodotto.
+Verrà usato come descritto nei casi d'uso per convertire del testo in \glossario{PDF} e salvare il file così prodotto.
 
 \begin{samepage}
 \subparagraph{Api\-::Json\-Control}\label{api-json}\mbox{}\\
