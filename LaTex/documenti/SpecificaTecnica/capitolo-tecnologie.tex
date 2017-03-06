@@ -12,7 +12,7 @@ In questa sezione sono descritte le tecnologie da utilizzare nello sviluppo del 
 \end{itemize}
 
 \subsection{Meteor}
-Meteor è un framework JavaScript sviluppato con lo scopo di semplificare la creazione di applicazioni web gestendo allo stesso tempo le parti di front-end, \glossario{back end} e dei dati. Si integra facilmente con diverse tecnologie utilizzate nello sviluppo web come \glossario{AngularJS} e \glossario{React}.
+Meteor è un framework JavaScript sviluppato con lo scopo di semplificare la creazione di applicazioni web gestendo allo stesso tempo le parti di front end, \glossario{back end} e dei dati. Si integra facilmente con diverse tecnologie utilizzate nello sviluppo web come \glossario{AngularJS} e \glossario{React}.
 L'utilizzo di Meteor nella realizzazione del progetto è vincolato essendo questo il framework su cui è scritto Rocket.Chat. Questo però porta a numerosi vantaggi, permettendo una gestione semplificata dell'applicativo web.
 
 \subsection{MongoDB}
@@ -29,7 +29,7 @@ Grazie all'integrazione con Meteor l'accesso al database è ulteriormente sempli
 \subsection{ECMAScript 2015}
 Il linguaggio JavaScript da utilizzare per il progetto deve implementare le specifiche ECMAScript 2015 (o ECMAScript 6), come richiesto da \glossario{\Proponente}. ECMAScript 2015 introduce in JavaScript diverse migliorie utilizzabili per rendere più efficiente lo sviluppo. Nel dettaglio le funzionalità più rilevanti sono:
 \begin{itemize}
-	\item \textbf{Promises:} Gestione degli eventi asincroni più efficace tramite le promises. Comparabili ai future di Java (\url{https://docs.oracle.com/javase/6/docs/api/java/util/concurrent/Future.html}), le promises restituiscono un valore futuro a cui può essere assegnata una callback da chiamare in caso di esecuzione andata a buon fine del metodo asincrono. L'utilizzo di questo modello di concorrenza e la possibilità di concatenare le promises garantisce un rischio molto minore di incorrere nei problemi di concorrenza che si riscontrerebbero utilizzando il modello classico.
+	\item \textbf{Promises:} Gestione degli eventi asincroni più efficace tramite le promises. Comparabili ai future di \glossario{Java} (\url{https://docs.oracle.com/javase/6/docs/api/java/util/concurrent/Future.html}), le promises restituiscono un valore futuro a cui può essere assegnata una callback da chiamare in caso di esecuzione andata a buon fine del metodo asincrono. L'utilizzo di questo modello di concorrenza e la possibilità di concatenare le promises garantisce un rischio molto minore di incorrere nei problemi di concorrenza che si riscontrerebbero utilizzando il modello classico.
 	\item \textbf{ArrowFunctions:} Nel passare come parametro funzioni di callback ad altre funzioni è possibile omettere la definizione esplicita di funzione indicando direttamente parametri e valori di ritorno. In questo modo si incrementa la leggibilità del codice e si diminuisce di conseguenza la probabilità di commettere errori nella stesura.
 	\item \textbf{Classi:} ECMAScript 2015 prevede inoltre di aggiungere zucchero sintattico al pattern \textit{Object-Oriented} (\glossario{OOP}) di JavaScript permettendo la dichiarazione di classi, ereditarietà, metodi statici e di istanza. Di conseguenza il codice prodotto è più semplice da comparare con quello di un qualsiasi altro linguaggio orientato agli oggetti.
 \end{itemize}
@@ -46,7 +46,7 @@ HTML5 è l'ultima versione dell'HTML (HyperText Markup Language). È stato scelt
 È un'estensione del CSS che permette di utilizzare variabili, creare funzioni e organizzare il foglio di stile dividendolo in più file. Rispetto al CSS standard permette di costruire strutture più complesse con minor sforzo, minimizzando così la possibilità di fare errori durante la stesura.
 
 \subsection{Bootstrap}
-Bootstrap è un framework per la progettazione della parte front end di siti e applicazioni web. Questo framework permette di migliorare la qualità del codice utilizzando \glossario{template} HTML e CSS di comprovata efficienza ed efficacia. Bootstrap garantisce un notevole supporto allo sviluppo del front-end di \ProjectName{} grazie alla presenza di numerose componenti responsive e classi CSS già configurate.
+Bootstrap è un framework per la progettazione della parte front end di siti e applicazioni web. Questo framework permette di migliorare la qualità del codice utilizzando \glossario{template} HTML e CSS di comprovata efficienza ed efficacia. Bootstrap garantisce un notevole supporto allo sviluppo del front end di \ProjectName{} grazie alla presenza di numerose componenti responsive e classi CSS già configurate.
 
 \subsection{React}
 Per una migliore gestione della UI il gruppo ha deciso di utilizzare la libreria JavaScript React. Essa utilizza HTML e CSS per creare componenti web. È possibile creare delle viste dedicate per ogni stato dell'applicazione e le modifiche ad ogni componente verranno aggiornate singolarmente direttamente da React. Questo risulta in una maggior facilità di scrittura di codice JavaScript. L'utilizzo della libreria React è stato consigliato dal proponente, vista la notevole diffusione e la conseguente intenzione degli sviluppatori di mantenere il progetto.
