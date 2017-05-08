@@ -1,9 +1,9 @@
-\subsection{Ambiente di Lavoro}
+\subsubsection{Ambiente di Lavoro}
 
-\subsubsection{Software di supporto alla collaborazione}
+\paragraph{Software di supporto alla collaborazione}\mbox{}\\
 Gli strumenti di supporto alla collaborazione scelti sono Slack e Discord, affiancati da Skype in caso si ritenga necessario effettuare videochiamate.
 
-\paragraph{Slack}\mbox{}\\
+\subparagraph{Slack}\mbox{}\\
 Si è scelto di utilizzare Slack per le comunicazioni tra i componenti del gruppo in quanto permette di creare diversi canali, in modo tale da distinguere le conversazioni inerenti il progetto da quelle sociali. Viene così rispettato un certo ordine all'interno delle conversazioni.\\
 Oltre ai canali di comunicazione gestiti da \Proponente{} vengono creati canali dedicati ai seguenti scopi:
 \begin{itemize}
@@ -14,7 +14,7 @@ Oltre ai canali di comunicazione gestiti da \Proponente{} vengono creati canali 
 	\item importantinfo: comunicazioni e avvisi riguardanti il corso e il coordinamento interno.
 \end{itemize}
 
-\paragraph{Discord}\mbox{}\\
+\subparagraph{Discord}\mbox{}\\
 \glossario{Discord} viene scelto come canale di chat vocale. Esso è disponibile in versione gratuita come applicazione, sia per mobile che per \glossario{Windows} e \glossario{\Macos}, ed è inoltre utilizzabile direttamente tramite browser. Le motivazioni alla base di questa scelta ricadono anche sulle origini di questo applicativo: Discord nasce come strumento di chat vocale per videogiochi online e pertanto garantisce buone prestazioni anche in caso di connessioni a banda limitata o sovraccaricata. Ciò non è invece stato riscontrato con altri strumenti.
 Vengono creati canali voce dedicati per agevolare la collaborazione fra piccoli gruppi che collaborano ad uno specifico compito e canali per la chat di testo, riservati al supporto dei canali vocali, per far fronte alla necessità di dover comunicare in maniera testuale link e testo qualora disturbi alla linea lo rendano necessario.
 I canali vocali e corrispondenti canali di testo utilizzati sono:
@@ -27,14 +27,14 @@ I canali vocali e corrispondenti canali di testo utilizzati sono:
 \end{itemize}
 
 
-\paragraph{Skype}\mbox{}\\
+\subparagraph{Skype}\mbox{}\\
 Per le comunicazioni che richiedono funzionalità video si è scelto di utilizzare Skype. La scelta è principalmente basata sulla popolarità di questo strumento, sebbene le prestazioni di questo software non siano delle migliori nel caso di connessioni più lente. \`{E} stata valutata l'idea di utilizzare come alternativa \glossario{Google Hangouts}, poi abbandonata.
 
-\subsubsection{Software di gestione del progetto}
+\paragraph{Software di gestione del progetto}\mbox{}\\
 La piattaforma di gestione del progetto prescelta è \textbf{Teamwork}. Le funzionalità complete di questo strumento vengono descritte in \sezione{sec:teamwork}.\\
 Si è scelto di utilizzare questo software in quanto comprensivo, nel piano gratuito, di molte delle funzionalità comprese nella versione a pagamento, tra cui un numero illimitato di collaboratori e di progetti creabili. Sono stati valutati altri software, tra cui \glossario{Redmine}, \glossario{Asana}, \glossario{Trello}, \glossario{Kimai} ed \glossario{OpenProject}. Asana e Trello sono stati scartati in quanto non offrivano funzionalità sufficienti per la gestione del progetto; \glossario{Redmine} e \glossario{OpenProject} sono stati scartati in quanto richiedevano l'installazione di un server dedicato, mentre Teamwork offriva un servizio \glossario{hosted}. L'opzione Kimai è caduta con la proposta di Teamwork, poiché questo comprende di suo la funzione di time tracking. Non sono poi state trovate altre opzioni gratuite alla pari di Teamwork.
 
-\subsubsection{Software di versionamento}
+\paragraph{Software di versionamento}\mbox{}\\
 La piattaforma di versionamento scelta è \textbf{Git} in tandem al servizio di \glossario{hosting} fornito in \textbf{GitHub}. Git è stato preferito alle alternative (\glossario{SVN}, \glossario{Mercurial}) in quanto precedentemente conosciuto ed usato dalla maggioranza dei membri del team di sviluppo.\\
 \glossario{GitHub} è stato considerato perché:
 \begin{itemize}
@@ -44,11 +44,11 @@ La piattaforma di versionamento scelta è \textbf{Git} in tandem al servizio di 
 	\item è il più utilizzato e diffuso.
 \end{itemize}
 
-\paragraph{Procedure di utilizzo del repository}\mbox{}
+\subparagraph{Procedure di utilizzo del repository}\mbox{}
 
 
 \begin{samepage}
-	\subparagraph{Procedura di clonazione di un Repository:}\mbox{}\\	
+	\subsubparagraph{Procedura di clonazione di un Repository:}\mbox{}\\	
 	\begin{center}
 		\includegraphics[height=17cm]{../../documenti/NormeDiProgetto/DiagrammiProcedure/GitHub-CloneDiUnRepository.png}
 		\captionof{figure}{Procedura di clonazione di un Repository}
@@ -56,7 +56,7 @@ La piattaforma di versionamento scelta è \textbf{Git} in tandem al servizio di 
 \end{samepage}
 
 \begin{samepage}
-	\subparagraph{Procedura di creazione di una Pull Request:}\mbox{}\\
+	\subsubparagraph{Procedura di creazione di una Pull Request:}\mbox{}\\
 	
 	\begin{center}
 		\includegraphics[width=15cm]{../../documenti/NormeDiProgetto/DiagrammiProcedure/GitHub-CreazionePullRequest1.png}
@@ -70,7 +70,7 @@ La piattaforma di versionamento scelta è \textbf{Git} in tandem al servizio di 
 \end{center}
 
 \begin{samepage}
-	\subparagraph{Procedura di tag dell'ultimo commit nel Repository e sua condivisione sul Repository remoto:}\mbox{}\\	
+	\subsubparagraph{Procedura di tag dell'ultimo commit nel Repository e sua condivisione sul Repository remoto:}\mbox{}\\	
 	\begin{center}
 		\includegraphics[width=16cm]{../../documenti/NormeDiProgetto/DiagrammiProcedure/git-tag_ultimo_commit.png}
 		\captionof{figure}{Procedura di tag dell'ultimo commit nel Repository e \textit{push} del tag nel Repository remoto}
@@ -78,18 +78,18 @@ La piattaforma di versionamento scelta è \textbf{Git} in tandem al servizio di 
 \end{samepage}
 
 \begin{samepage}
-	\subparagraph{Procedura di tag di uno specifico commit nel Repository e sua condivisione sul Repository remoto:}\mbox{}\\	
+	\subsubparagraph{Procedura di tag di uno specifico commit nel Repository e sua condivisione sul Repository remoto:}\mbox{}\\	
 	\begin{center}
 		\includegraphics[width=16cm]{../../documenti/NormeDiProgetto/DiagrammiProcedure/git-tag_specifico_commit.png}
 		\captionof{figure}{Procedura di tag di uno specifico commit nel Repository e \textit{push} del tag nel Repository remoto}
 	\end{center}
 \end{samepage}
 
-\subsubsection{Software di integrazione continua}
+\paragraph{Software di integrazione continua}\mbox{}\\
 Come software di integrazione continua viene utilizzato \textbf{\glossario{Travis}}.
 Travis è un servizio open source sotto licenza MIT, quindi disponibile in versione gratuita, hosted ed integrabile con vari altri servizi, tra cui GitHub e \glossario{Heroku}.\\ Travis permette di produrre e testare progetti ospitati su GitHub. Ad ogni nuovo commit o pull request in GitHub, vengono quindi eseguiti specifici test e ne viene segnalato l'esito agli sviluppatori interessati. Travis è inoltre integrabile con strumenti e servizi esterni, per esempio per l'analisi statica.
 
-\subsubsection{Software di pianificazione} \label{sec:teamwork}
+\paragraph{Software di pianificazione} \label{sec:teamwork}\mbox{}\\
 Per la gestione e la pianificazione delle attività del progetto è stato scelto di utilizzare \glossario{\textbf{Teamwork Project}}. Teamwork Project è un programma web-based che permette la gestione completa di un progetto.\\
 Esso fa parte del pacchetto Teamwork ed offre tutte le funzionalità richieste per la coordinazione ed il controllo delle attività.
 \begin{itemize}
@@ -115,9 +115,9 @@ Esso fa parte del pacchetto Teamwork ed offre tutte le funzionalità richieste p
 	tracciamento dei costi di progetto, valutando il costo unitario a seconda dei ruoli e del lavoro svolto.
 \end{itemize}
 
-\paragraph{Modalità di utilizzo} \label{sec:procedure_teamwork}\mbox{}
+\subparagraph{Modalità di utilizzo} \label{sec:procedure_teamwork}\mbox{}
 \begin{samepage}
-	\subparagraph{Procedura di creazione di un evento:}\mbox{}\\
+	\subsubparagraph{Procedura di creazione di un evento:}\mbox{}\\
 	\begin{center}
 		\includegraphics[width=8cm]{../../documenti/NormeDiProgetto/DiagrammiProcedure/CreazioneEventoNelCalendario.png}
 		\captionof{figure}{Procedura di creazione di un evento}
@@ -125,7 +125,7 @@ Esso fa parte del pacchetto Teamwork ed offre tutte le funzionalità richieste p
 \end{samepage}
 
 \begin{samepage}
-	\subparagraph{Procedura di creazione di una Milestone:}\mbox{}\\	
+	\subsubparagraph{Procedura di creazione di una Milestone:}\mbox{}\\	
 	\begin{center}
 		\includegraphics[width=8cm]{../../documenti/NormeDiProgetto/DiagrammiProcedure/CreazioneMilestone1.png}
 		\captionof{figure}{Procedura di creazione di una Milestone parte 1}
@@ -138,7 +138,7 @@ Esso fa parte del pacchetto Teamwork ed offre tutte le funzionalità richieste p
 \end{center}
 
 \begin{samepage}
-	\subparagraph{Procedura di creazione di un Task:}\mbox{}\\
+	\subsubparagraph{Procedura di creazione di un Task:}\mbox{}\\
 	
 	\begin{center}
 		\includegraphics[width=9cm]{../../documenti/NormeDiProgetto/DiagrammiProcedure/CreazioneTask1.png}
@@ -153,7 +153,7 @@ Esso fa parte del pacchetto Teamwork ed offre tutte le funzionalità richieste p
 \end{center}
 
 \begin{samepage}
-	\subparagraph{Procedura di modifica di un evento:}\mbox{}\\
+	\subsubparagraph{Procedura di modifica di un evento:}\mbox{}\\
 	
 	\begin{center}
 		\includegraphics[width=15cm]{../../documenti/NormeDiProgetto/DiagrammiProcedure/EditEventi1.png}
@@ -178,7 +178,7 @@ Esso fa parte del pacchetto Teamwork ed offre tutte le funzionalità richieste p
 \end{center}
 
 \begin{samepage}
-	\subparagraph{Procedura di modifica di un Task:}\mbox{}\\
+	\subsubparagraph{Procedura di modifica di un Task:}\mbox{}\\
 	
 	\begin{center}
 		\includegraphics[width=15cm]{../../documenti/NormeDiProgetto/DiagrammiProcedure/EditTask1.png}
@@ -208,7 +208,7 @@ Esso fa parte del pacchetto Teamwork ed offre tutte le funzionalità richieste p
 \end{center}
 
 \begin{samepage}
-	\subparagraph{Procedura di creazione di una riunione interna ordinaria:}\mbox{}\\
+	\subsubparagraph{Procedura di creazione di una riunione interna ordinaria:}\mbox{}\\
 	
 	\begin{center}
 		\includegraphics[width=15cm]{../../documenti/NormeDiProgetto/DiagrammiProcedure/RiunioneInternaOrdinaria1.png}
@@ -222,7 +222,7 @@ Esso fa parte del pacchetto Teamwork ed offre tutte le funzionalità richieste p
 \end{center}
 
 \begin{samepage}
-	\subparagraph{Procedura di creazione di una riunione interna di emergenza:}\mbox{}\\
+	\subsubparagraph{Procedura di creazione di una riunione interna di emergenza:}\mbox{}\\
 	
 	\begin{center}
 		\includegraphics[width=15cm]{../../documenti/NormeDiProgetto/DiagrammiProcedure/RiunioneInternaDiEmergenza1.png}
@@ -236,7 +236,7 @@ Esso fa parte del pacchetto Teamwork ed offre tutte le funzionalità richieste p
 \end{center}
 
 \begin{samepage}
-	\subparagraph{Procedura di creazione di una riunione esterna:}\mbox{}\\
+	\subsubparagraph{Procedura di creazione di una riunione esterna:}\mbox{}\\
 	
 	\begin{center}
 		\includegraphics[width=14cm]{../../documenti/NormeDiProgetto/DiagrammiProcedure/RiunioneEsterna1.png}
@@ -250,7 +250,7 @@ Esso fa parte del pacchetto Teamwork ed offre tutte le funzionalità richieste p
 \end{center}
 
 \begin{samepage}
-	\subparagraph{Procedura di segnalazione di assenza da un evento:}\mbox{}\\
+	\subsubparagraph{Procedura di segnalazione di assenza da un evento:}\mbox{}\\
 	
 	\begin{center}
 		\includegraphics[width=10cm]{../../documenti/NormeDiProgetto/DiagrammiProcedure/SegnalazioneAssenzaDaUnEvento.png}
@@ -259,34 +259,34 @@ Esso fa parte del pacchetto Teamwork ed offre tutte le funzionalità richieste p
 	
 \end{samepage}
 
-\subsubsection{Software per la stesura dei documenti}
+\paragraph{Software per la stesura dei documenti}\mbox{}\\
 La stesura dei documenti va fatta tramite linguaggio di markup \LaTeX{}, integrato con \glossario{Google Documents} per la scrittura del contenuto. 
 
-\paragraph{\LaTeX}\mbox{}\\
+\subparagraph{\LaTeX}\mbox{}\\
 La scelta di usare \LaTeX{} è stata determinata dalla possibilità di separare il contenuto dalla formattazione, che questo strumento propone in maniera automatica tramite l'utilizzo di costrutti e template. Questi ultimi sono inoltre condivisibili tra documenti diversi, semplificando così il lavoro di aggiornamento e mantenimento di contenuti condivisi, come le versioni dei documenti, il nome del gruppo e altro ancora.
 
-\subparagraph{TeXstudio}\mbox{}\\
+\subsubparagraph{TeXstudio}\mbox{}\\
 \`{E} stato scelto \glossario{TeXstudio} come editor per \LaTeX{} in quanto offre funzionalità complete ed è quello con aggiornamenti più recenti. Sono stati valutati altri editor, tra cui \glossario{TeXMaker} e \glossario{Overleaf}, ma dopo una attenta analisi sono stati scartati. Più precisamente la versione gratuita di Overleaf limitava il numero di progetti e lo spazio disponibile per il salvataggio di documenti nel cloud offerto, sebbene esso offrisse la possibilità di lavorare contemporaneamente su uno stesso documento in real-time. TeXMaker invece non offriva nulla di più di TeXstudio, e risultava meno aggiornato.
 
-\subparagraph{Google Documents}\mbox{}\\
+\subsubparagraph{Google Documents}\mbox{}\\
 Questo strumento è stato scelto per emulare la funzionalità di collaborazione offerta da Overleaf. In particolare viene utilizzato per la stesura del contenuto dei documenti in maniera collaborativa, sfruttando gli strumenti di comunicazione vocale e testuale. Google Documents permette inoltre di tenere traccia delle modifiche fatte da ogni componente, tramite cronologia delle modifiche, e di commentare parti di testo. 
 
-\paragraph{Diagrammi UML}\mbox{}\\
+\subparagraph{Diagrammi UML}\mbox{}\\
 Per la modellazione \glossario{UML} è stato scelto di utilizzare \textbf{\glossario{Visual Paradigm}}, disponibile in versione gratuita per Windows, \Macos{} e \glossario{Linux}. \`{E} uno strumento completo e già conosciuto da alcuni componenti del gruppo. Permette di creare in modo intuitivo diagrammi UML e di esportarli in file immagini, condivisibili e visualizzabili rapidamente attraverso gli strumenti di comunicazione, oltre che integrabili direttamente nei documenti di testo.
 
-\paragraph{Fogli di calcolo} \label{sec:fogli_di_calcolo}\mbox{}
-\subparagraph{Google Sheets}\mbox{}\\
+\subparagraph{Fogli di calcolo} \label{sec:fogli_di_calcolo}\mbox{}
+\subsubparagraph{Google Sheets}\mbox{}\\
 L'elaborazione dei dati avviene tramite Google Sheets, in quanto permette la collaborazione real-time tra i componenti del gruppo. Vengono prodotti con questo software:
 	\begin{itemize}
 	\item tabelle orarie e dei costi per il calcolo del preventivo;
 	\item tabelle di confronto tra preventivo e consuntivo.
 	\end{itemize}
 
-\subparagraph{Microsoft Excel} \mbox{}\\
+\subsubparagraph{Microsoft Excel} \mbox{}\\
 Viene usato per creare grafici personalizzati ed esportarli nei formati immagine. Queste funzionalità sono supportate in modo parziale o nullo in \glossario{Google Sheets}.
 
-\subsubsection{Tecnologie utilizzate}
-\paragraph{JavaScript}\mbox{}\\
+\paragraph{Tecnologie utilizzate}\mbox{}\\
+\subparagraph{JavaScript}\mbox{}\\
 JavaScript è un linguaggio di scripting orientato agli oggetti e agli eventi. Viene comunemente utilizzato nella programmazione web lato client per aggiungere interattività a pagine web.\\
 Le caratteristiche principali di JavaScript sono:
 \begin{itemize}
@@ -298,7 +298,7 @@ Le caratteristiche principali di JavaScript sono:
 Lo standard utilizzato per questo progetto è \glossario{ECMAScript} 6 (o {ECMAScript} 2015) con un approccio \glossario{promise}.
 Il framework e la demo del prodotto finale sono scritti in JavaScript.
 
-\subparagraph{Meteor}\mbox{}\\
+\subsubparagraph{Meteor}\mbox{}\\
 Meteor è una piattaforma JavaScript \glossario{full-stack} per lo sviluppo di applicazioni web e mobile moderne. Include un set di tecnologie chiave per costruire applicazioni \glossario{reactive}, uno \glossario{strumento di build} e un set di pacchetti offerti dalla community Node.js e JavaScript.\\
 Meteor permette di sviluppare in un solo linguaggio, JavaScript, in tutti gli ambienti: applicazioni server, browser web e dispositivi mobile.\\
 In Meteor il server invia dati e non \glossario{HTML}, mentre il client li renderizza.
@@ -308,16 +308,16 @@ Alcune caratteristiche di Meteor sono:
 	\item reattività: l'interfaccia utente rispecchia il reale stato delle variabili con uno sforzo di sviluppo minimale.
 \end{itemize}
 
-\subparagraph{React}\mbox{}\\
+\subsubparagraph{React}\mbox{}\\
 \glossario{React} è una libreria JavaScript per la costruzione di interfacce utente dinamiche e complesse, ma dall'utilizzo semplice e intuitivo. \`{E} alla base del frontend di Facebook, dal quale è stata creata.\\
 React consente l'uso di un approccio dichiarativo simile all'HTML per definire i componenti che rappresentano parti significative e logiche dell'interfaccia utente. Nonostante ciò, la rappresentazione del componente in realtà si traduce in chiamate alle \glossario{API} di React che intervengono sul \glossario{DOM} della pagina per creare gli elementi necessari.
 
-\paragraph{SCSS (Sass 3)}\mbox{}\\
+\subparagraph{SCSS (Sass 3)}\mbox{}\\
 \glossario{Sass} (Syntactically Awesome StyleSheets) è un'estensione del linguaggio \glossario{CSS} che permette di utilizzare variabili, di creare funzioni e di organizzare il foglio di stile in più file.\\
 Il linguaggio Sass si basa sul concetto di preprocessore CSS, il quale serve a definire fogli di stile con una forma più semplice, completa e potente rispetto ai CSS e a generare file CSS ottimizzati, aggregando le strutture definite anche in modo complesso.\\
 \glossario{SCSS} è la versione 3 di Sass e la sua sintassi è basata completamente su CSS. In questo modo è garantita la compatibilità di CSS verso SCSS.
 
-\paragraph{Rocket.Chat}\mbox{}\\
+\subparagraph{Rocket.Chat}\mbox{}\\
 Rocket.Chat è una piattaforma di messaggistica open-source, ispirata a Slack. \`{E} un servizio multi piattaforma, accessibile tramite browser e applicazione desktop e mobile. \`{E} altamente personalizzabile in quanto, oltre ad essere su un repository pubblico, è espandibile tramite pacchetti disponibili online. Alcune funzionalità base di Rocket.Chat sono:
 \begin{itemize}
 	\item livechat;
@@ -329,11 +329,11 @@ Rocket.Chat è una piattaforma di messaggistica open-source, ispirata a Slack. \
 	\item estendibilità tramite pacchetti sviluppabili da chiunque.
 \end{itemize}
 
-\subsubsection{Strumenti per lo sviluppo dell'applicazione}
+\paragraph{Strumenti per lo sviluppo dell'applicazione}\mbox{}\\
 \textbf{Heroku} è un \glossario{Platform-as-a-Service} (PaaS) su cloud basato sul concetto di contenitori, che permette di sviluppare applicazioni in modo indipendente dall'ambiente di sviluppo dei singoli membri del gruppo. \`{E} integrabile con Git e con i sistemi di integrazione continua e pertanto permette un approccio \virgolette{app-centric} e la scalabilità delle applicazioni.\\
 \`{E} stato preso in considerazione anche \glossario{Docker}, per lo stesso scopo, ma è stato scartato in quanto presenta alcuni problemi di gestione e configurazione dell'ambiente run-time, oltre ad essere stato sconsigliato dal Proponente, mentre vi è un esplicito riferimento ad Heroku nel capitolato.
 
-\subsubsection{Strumenti per la documentazione}
+\paragraph{Strumenti per la documentazione}\mbox{}\\
 Come strumento di generazione per la documentazione del codice è stato scelto \textbf{\glossario{Meteor-JSDoc}}.\\
 Meteor-JSDoc fa uso della versione in sviluppo di \textbf{\glossario{JSDoc}} per fornire maggior supporto alla nuova sintassi JavaScript.
 JSDoc è un generatore di documentazione delle API per JavaScript. Aggiungendo commenti che documentino il codice direttamente all'interno dei sorgenti, questo strumento analizza il codice e genera una documentazione completa in formato HTML.
@@ -344,7 +344,7 @@ Alcune caratteristiche di Meteor-JSDoc sono:
 	\item supporta il collegamento al repository GitHub.
 \end{itemize}
 
-\subsubsection{Strumenti per la codifica}
+\paragraph{Strumenti per la codifica}\mbox{}\\
 L'\glossario{IDE} scelto per l'attività di codifica è \textbf{\glossario{WebStorm}}. Esso è disponibile in versione gratuita ed è compreso nel pacchetto studenti offerto da \glossario{JetBrains}. Alcune funzionalità che rende disponibili sono:
 \begin{itemize}
 	\item assistenza nella codifica per React, Meteor e CSS;
@@ -358,23 +358,23 @@ L'\glossario{IDE} scelto per l'attività di codifica è \textbf{\glossario{WebSt
 	\item sistema di versionamento integrato, sia per cambiamenti locali, sia per servizi esterni, tra i quali GitHub.
 \end{itemize}
 
-\subsubsection{Strumenti per la verifica}
-\paragraph{Script}\mbox{}\\
+\paragraph{Strumenti per la verifica}\mbox{}\\
+\subparagraph{Script}\mbox{}\\
 Script scritti per \glossario{bash} vengono eseguiti in un ambiente basato su Ubuntu 14.04 LTS su TravisCI per effettuare test automatici ai commit effettuati in GitHub.
 Gli script utilizzati in TravisCI sono utilizzati per la compilazione automatica dei documenti per il progetto Monolith da \LaTeX{} a PDF, per lo spell check e per la creazione di archivi per contenere i documenti PDF prodotti per il progetto Monolith.
 Vengono utilizzati inoltre degli script per il calcolo degli indici di leggibilità dei documenti.
 
 
-\paragraph{Test di integrazione}\mbox{}
-\subparagraph{Mocha}\mbox{}\\
+\subparagraph{Test di integrazione}\mbox{}
+\subsubparagraph{Mocha}\mbox{}\\
 Mocha è un framework per il testing di codice JavaScript, eseguibile su Node.js e nel browser. I test di Mocha vengono eseguiti in modo seriale, permettendo un controllo flessibile e accurato, mentre vengono mappate le eccezioni non rilevate al corretto test.\\
 Una funzionalità chiave offerta da questo framework è il supporto all'elaborazione asincrona, incluse le promise.
 
-\subparagraph{Chai}\mbox{}\\
+\subsubparagraph{Chai}\mbox{}\\
 Chai è una libreria \glossario{BDD/TDD} per Node.js ed il browser che può essere accoppiata con qualunque framework di testing per JavaScript.\\
 Il vantaggio che questa libreria offre è la possibilità di scrivere test facilmente leggibili, in quanto molto simili al linguaggio naturale. Questo avviene grazie alla concatenazione di costrutti quali \textit{to}, \textit{be}, \textit{is}, insieme ai costrutti base \textit{expect} e \textit{should}. La concatenazione può terminare quindi con funzioni quali \textit{include} o \textit{equals}, che richiedono dei parametri in input, oppure \textit{not}, \textit{true} o \textit{false}.\\
 In questo modo è possibile definire in modo chiaro il comportamento che ci si aspetta il codice abbia, o il risultato atteso dalle operazioni contenute in esso.
 
-\paragraph{ESLint} \label{sec:eslint}\mbox{}\\
+\subparagraph{ESLint} \label{sec:eslint}\mbox{}\\
 ESLint è uno strumento di \glossario{linting} open source per JavaScript. Questo strumento permette di scovare gli errori e i problemi nel codice prodotto senza eseguirlo. ESLint è completamente estendibile tramite plugin, pertanto permette agli sviluppatori di creare regole personalizzate.\\
 In questo progetto ESLint viene configurato per seguire le convenzioni relative al codice descritte in \sezione{sec:convenzioni} di questo documento.

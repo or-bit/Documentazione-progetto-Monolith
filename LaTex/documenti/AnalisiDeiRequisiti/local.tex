@@ -8,9 +8,9 @@
 \newcommand{\DocTitle}{Analisi dei Requisiti}
 \newcommand{\DocVersion}{\VersioneAR{}}
 
-\newcommand{\DocRedazione}{\bea{} \\ \alice{} \\ \lorenzo{}}
-\newcommand{\DocVerifica}{\mattia{} \\ \tommy{}}
-\newcommand{\DocApprovazione}{\alice{}}
+\newcommand{\DocRedazione}{\bea{} \\ \marco{} \\ \mattia{}}
+\newcommand{\DocVerifica}{\alice{}}
+\newcommand{\DocApprovazione}{\tommy{}}
 
 \newcommand{\DocUso}{Esterno}
 \newcommand{\DocDistribuzione}{
@@ -157,3 +157,11 @@ Documento relativo all'analisi dei requisiti e dei casi d'uso del progetto \Proj
 \newcommand*{\RequisitoOpQ}{\stepcounter{totOpQ} \req{3}{Q}}
 \newcommand*{\RequisitoOpV}{\stepcounter{totOpV} \req{3}{V}}
 \newcommand*{\RequisitoOpP}{\stepcounter{totOpP} \req{3}{P}}
+
+\definecolor{green}{RGB}{0,180,0}
+\definecolor{red}{RGB}{215,0,0}
+\newcommand{\si}{\textcolor{green}{Implementato}\stepcounter{si}}
+\newcommand{\no}{\textcolor{red}{Non implementato}\stepcounter{no}}
+
+\newcounter{no}
+\newcounter{si}

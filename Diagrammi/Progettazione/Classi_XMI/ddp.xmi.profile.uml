@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Profile name="ddp_diagrammi_profile" xmi:id="CLiDI9qGAqACFgfS_profile" xmi:version="2.1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/2.0.0/UML" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1">
+	<packageImport xmi:id="CLiDI9qGAqACFgfS_profile_UMLMetaModel">
+		<importedPackage href="pathmap://UML_METAMODELS/UML.metamodel.uml#_0" xmi:type="uml:Model"/>
+	</packageImport>
+	<eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML" xmi:id="CLiDI9qGAqACFgfS_profile_definition">
+		<contents name="ddp_diagrammi_profile" nsPrefix="ddp_diagrammi_profile" nsURI="http:///schemas/ddp_diagrammi_profile/0" xmi:id="CLiDI9qGAqACFgfS_content" xmi:type="ecore:EPackage">
+			<eClassifiers name="Catalog" xmi:id="AB4cG9qGAqACFgoT_classifier" xmi:type="ecore:EClass">
+				<eAnnotations references="AB4cG9qGAqACFgoT" source="http://www.eclipse.org/uml2/2.0.0/UML" xmi:id="AB4cG9qGAqACFgoT_annotation"/>
+				<eStructuralFeatures lowerBound="1" name="base_Package" ordered="false" xmi:id="AB4cG9qGAqACFgoT_structuralFeature" xmi:type="ecore:EReference">
+					<eType href="http://www.eclipse.org/uml2/2.0.0/UML#//Package" xmi:type="ecore:EClass"/>
+				</eStructuralFeatures>
+			</eClassifiers>
+		</contents>
+	</eAnnotations>
+	<packagedElement name="Catalog" xmi:id="AB4cG9qGAqACFgoT" xmi:type="uml:Stereotype">
+		<ownedAttribute association="AB4cG9qGAqACFgoT_extension" name="base_Package" xmi:id="AB4cG9qGAqACFgoT_to">
+			<type href="pathmap://UML_METAMODELS/UML.metamodel.uml#Package" xmi:type="uml:Class"/>
+		</ownedAttribute>
+	</packagedElement>
+	<packagedElement memberEnd="AB4cG9qGAqACFgoT_from AB4cG9qGAqACFgoT_to" name="Package_Catalog" xmi:id="AB4cG9qGAqACFgoT_extension" xmi:type="uml:Extension">
+		<ownedEnd aggregation="composite" association="AB4cG9qGAqACFgoT_extension" type="AB4cG9qGAqACFgoT" xmi:id="AB4cG9qGAqACFgoT_from" xmi:type="uml:ExtensionEnd"/>
+	</packagedElement>
+</uml:Profile>

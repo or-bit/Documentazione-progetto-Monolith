@@ -11,12 +11,17 @@ dove:
 \end{itemize}
 
 \subsection{Framework}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/usecase/framework.png}
+	\caption{Visione generale dei casi d'uso per il framwork}
+\end{figure}
 
 \UC{Istanziazione della bubble generica}{UC1.35}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_35.png}
+	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/usecase/uc1_35.png}
 	\caption{\UCCaption{} Istanziazione della bubble generica}
 \end{figure}
 
@@ -35,13 +40,16 @@ dove:
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/Database.png}
+	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/usecase/Database.png}
 	\caption{\UCCaption{} Interazione con database MongoDB}
 \end{figure}
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utilizzatore del framework.
+	\begin{itemize}
+		\item Utilizzatore del framework;
+		\item Database.
+	\end{itemize}
 	\item \textbf{Scopo e descrizione:} 
 	\\L'utilizzatore del framework interagisce con un database \glossario{MongoDB} esterno.
 	\item \textbf{Precondizioni:}
@@ -64,14 +72,17 @@ dove:
 \nopagebreak
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_00.png}
+	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/usecase/uc1_00.png}
 	\caption{\UCCCaption{} Connessione a database MongoDB}
 \end{figure}
 \end{samepage}
 
 \begin{itemize}
 \item \textbf{Attori:}
-\\Utilizzatore del framework.
+\begin{itemize}
+	\item Utilizzatore del framework;
+	\item Database.
+\end{itemize}
 \item \textbf{Scopo e descrizione:} 
 \\Connettersi ad un database MongoDB esterno all'applicazione.
 \item \textbf{Precondizioni:}
@@ -90,7 +101,10 @@ dove:
 \UCC[2]{Connessione a database MongoDB non possibile}{UC1.00.2}
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utilizzatore del framework.
+	\begin{itemize}
+		\item Utilizzatore del framework;
+		\item Database.
+	\end{itemize}
 	\item \textbf{Scopo e descrizione:} 
 	\\Connettersi ad un database MongoDB esterno all'applicazione.
 	\item \textbf{Precondizioni:}
@@ -111,14 +125,17 @@ dove:
 \nopagebreak	
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_01.png}
+	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/usecase/uc1_01.png}
 	\caption{\UCFCaption{} Lettura da database MongoDB}
 \end{figure}
 \end{samepage}
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utilizzatore del framework.
+	\begin{itemize}
+		\item Utilizzatore del framework;
+		\item Database.
+	\end{itemize}
 	\item \textbf{Scopo e descrizione:} 
 	\\Prelevare dati dal database connesso alla bubble.
 	\item \textbf{Precondizioni:}
@@ -138,14 +155,17 @@ dove:
 \nopagebreak
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_02.png}
+	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/usecase/uc1_02.png}
 	\caption{\UCFCaption{} Scrittura su database MongoDB}
 \end{figure}
 \end{samepage}
 
 \begin{itemize}
 \item \textbf{Attori:}
-\\Utilizzatore del framework.
+\begin{itemize}
+	\item Utilizzatore del framework;
+	\item Database.
+\end{itemize}
 \item \textbf{Scopo e descrizione:} 
 \\Scrittura dati nel database connesso alla bubble.
 \item \textbf{Precondizioni:}
@@ -164,13 +184,16 @@ dove:
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/operazioni.png}
+	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/usecase/operazioni.png}
 	\caption{\UCCaption{} Effettuare operazioni sugli elementi}
 \end{figure}
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utilizzatore del framework.
+	\begin{itemize}
+		\item Utilizzatore del framework;
+		\item Rocket.Chat.
+	\end{itemize}
 	\item \textbf{Scopo e descrizione:} 
 	\\Effettuare una o più operazioni sugli elementi della bubble.
 	\item \textbf{Precondizioni:}
@@ -198,7 +221,7 @@ dove:
 \nopagebreak
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/creazione_elem.png}
+	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/usecase/creazione_elem.png}
 	\caption{\UCFCaption{} Creazione di un elemento}
 \end{figure}
 \end{samepage}
@@ -234,7 +257,7 @@ dove:
 \nopagebreak
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_25.png}
+	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/usecase/uc1_25.png}
 	\caption{\UCFFCaption{} Immagine}
 \end{figure}
 \end{samepage}
@@ -260,7 +283,7 @@ dove:
 \nopagebreak
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_26.png}
+	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/usecase/uc1_26.png}
 	\caption{\UCFFCaption{} TextView}
 \end{figure}
 \end{samepage}
@@ -286,7 +309,7 @@ dove:
 \nopagebreak
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_27.png}
+	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/usecase/uc1_27.png}
 	\caption{\UCFFCaption{} Label}
 \end{figure}
 \end{samepage}
@@ -312,7 +335,7 @@ dove:
 \nopagebreak
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_28.png}
+	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/usecase/uc1_28.png}
 	\caption{\UCFFCaption{} Grafico a torta}
 \end{figure}
 \end{samepage}
@@ -338,7 +361,7 @@ dove:
 \nopagebreak
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_29.png}
+	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/usecase/uc1_29.png}
 	\caption{\UCFFCaption{} Grafico a istogramma}
 \end{figure}
 \end{samepage}
@@ -364,7 +387,7 @@ dove:
 \nopagebreak
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_30.png}
+	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/usecase/uc1_30.png}
 	\caption{\UCFFCaption{} Checkbox}
 \end{figure}
 \end{samepage}
@@ -389,7 +412,7 @@ dove:
 \nopagebreak
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_31.png}
+	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/usecase/uc1_31.png}
 	\caption{\UCFFCaption{} Bottone Radio}
 \end{figure}
 \end{samepage}
@@ -414,7 +437,7 @@ dove:
 \nopagebreak
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_32.png}
+	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/usecase/uc1_32.png}
 	\caption{\UCFFCaption{} Bottone}
 \end{figure}
 \end{samepage}
@@ -440,7 +463,7 @@ dove:
 \nopagebreak
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_33.png}
+	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/usecase/uc1_33.png}
 	\caption{\UCFFCaption{} TextEdit}
 \end{figure}
 \end{samepage}
@@ -465,7 +488,7 @@ dove:
 \nopagebreak
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_04.png}
+	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/usecase/uc1_04.png}
 	\caption{\UCFCaption{} Aggiunta di un elemento}
 \end{figure}
 \end{samepage}
@@ -492,7 +515,7 @@ dove:
 \nopagebreak
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_03.png}
+	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/usecase/uc1_03.png}
 	\caption{\UCCCaption{} Rimozione di un elemento}
 \end{figure}
 \end{samepage}
@@ -541,7 +564,7 @@ dove:
 \nopagebreak
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_05.png}
+	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/usecase/uc1_05.png}
 	\caption{\UCCCaption{} Modifica di un elemento}
 \end{figure}
 \end{samepage}
@@ -589,7 +612,7 @@ dove:
 \nopagebreak
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_17.png}
+	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/usecase/uc1_17.png}
 	\caption{\UCFCaption{} Creazione notifica statica}
 \end{figure}
 \end{samepage}
@@ -615,7 +638,7 @@ dove:
 \nopagebreak
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_18.png}
+	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/usecase/uc1_18.png}
 	\caption{\UCFCaption{} Visualizza notifica statica}
 \end{figure}
 \end{samepage}
@@ -644,7 +667,7 @@ dove:
 \nopagebreak
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_21.png}
+	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/usecase/uc1_21.png}
 	\caption{\UCFCaption{} Mostra elemento grafico}
 \end{figure}
 \end{samepage}
@@ -673,7 +696,7 @@ dove:
 \nopagebreak
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_22.png}
+	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/usecase/uc1_22.png}
 	\caption{\UCFCaption{} Nascondi elemento grafico}
 \end{figure}
 \end{samepage}
@@ -702,7 +725,7 @@ dove:
 \nopagebreak
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_23.png}
+	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/usecase/uc1_23.png}
 	\caption{\UCFCaption{} Imposta posizione elemento grafico}
 \end{figure}
 \end{samepage}
@@ -729,8 +752,8 @@ dove:
 \nopagebreak
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_06.png}
-	\caption{\UCCCaption{} Cambiamento di stato della bubble}
+	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/usecase/uc1_06.png}
+	\caption{\UCCCaption{} Cambiamento di stato della bubble su proprietà esistente}
 \end{figure}
 \end{samepage}
 
@@ -776,14 +799,17 @@ dove:
 \nopagebreak
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_07.png}
-	\caption{\UCCCaption{} Chiamata API esterne}
+	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/usecase/uc1_07.png}
+	\caption{\UCCCaption{} Chiamata API esterne disponibili}
 \end{figure}
 \end{samepage}
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utilizzatore del framework.
+	\begin{itemize}
+		\item Utilizzatore del framework;
+		\item Server remoto.
+	\end{itemize}
 	\item \textbf{Scopo e descrizione:} 
 	\\Ottenere il risultato dell'interrogazione di un servizio esterno al framework tramite chiamata di \glossario{API}.
 	\item \textbf{Precondizioni:}
@@ -823,7 +849,7 @@ dove:
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_12.png}
+	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/usecase/uc1_12.png}
 	\caption{\UCCaption{} Controllo sul JSON}
 \end{figure}
 
@@ -847,13 +873,16 @@ dove:
 \UC{Settare le impostazioni della bubble}{UCimpostazioni}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/Impostazioni.png}
+	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/usecase/Impostazioni.png}
 	\caption{\UCCaption{} Settare le impostazioni della bubble}
 \end{figure}
 
 \begin{itemize}
 	\item \textbf{Attori:}
-	\\Utilizzatore del framework.
+	\begin{itemize}
+		\item Utilizzatore del framework;
+		\item Rocket.Chat.
+	\end{itemize}
 	\item \textbf{Scopo e descrizione:} 
 	\\Modificare le impostazioni della bubble per adattarle allo scopo della stessa.
 	\item \textbf{Precondizioni:}
@@ -877,7 +906,7 @@ dove:
 \nopagebreak
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_08.png}
+	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/usecase/uc1_08.png}
 	\caption{\UCFCaption{} Limite interazioni per persona}
 \end{figure}
 \end{samepage}
@@ -903,7 +932,7 @@ dove:
 \nopagebreak
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_09.png}
+	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/usecase/uc1_09.png}
 	\caption{\UCFCaption{} Limite interazioni totali}
 \end{figure}
 \end{samepage}
@@ -929,7 +958,7 @@ dove:
 \nopagebreak
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_13.png}
+	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/usecase/uc1_13.png}
 	\caption{\UCFCaption{} Durata della bubble}
 \end{figure}
 \end{samepage}
@@ -954,7 +983,7 @@ dove:
 \nopagebreak
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_16.png}
+	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/usecase/uc1_16.png}
 	\caption{\UCFCaption{} Esecuzione in orario specificato}
 \end{figure}
 \end{samepage}
@@ -983,7 +1012,7 @@ dove:
 \nopagebreak
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_11.png}
+	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/usecase/uc1_11.png}
 	\caption{\UCFCaption{} Dimensione massima del file}
 \end{figure}
 \end{samepage}
@@ -1008,7 +1037,7 @@ dove:
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_10.png}
+	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/usecase/uc1_10.png}
 	\caption{\UCCaption{} Match con espressione regolare}
 \end{figure}
 
@@ -1032,7 +1061,7 @@ dove:
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_14.png}
+	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/usecase/uc1_14.png}
 	\caption{\UCCaption{} Lista utenti partecipanti}
 \end{figure}
 
@@ -1056,8 +1085,8 @@ dove:
 \nopagebreak
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_15.png}
-	\caption{\UCCCaption{} Storico interazioni con la bubble per utente}
+	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/usecase/uc1_15.png}
+	\caption{\UCCCaption{} Storico interazioni con la bubble per utente presente}
 \end{figure}
 \end{samepage}
 
@@ -1105,7 +1134,7 @@ dove:
 \nopagebreak
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_20.png}
+	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/usecase/uc1_20.png}
 	\caption{\UCCCaption{} Converti in PDF}
 \end{figure}
 \end{samepage}
@@ -1156,7 +1185,7 @@ dove:
 \nopagebreak
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_24.png}
+	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/usecase/uc1_24.png}
 	\caption{\UCCCaption{} File output}
 \end{figure}
 \end{samepage}
@@ -1203,7 +1232,7 @@ dove:
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_34.png}
+	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/usecase/uc1_34.png}
 	\caption{\UCCaption{} File input}
 \end{figure}
 
@@ -1226,7 +1255,7 @@ dove:
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_36.png}
+	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/usecase/uc1_36.png}
 	\caption{\UCCaption{} Mostra bubble generica}
 \end{figure}
 
@@ -1252,7 +1281,7 @@ dove:
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/uc1_19.png}
+	\includegraphics[width=15cm]{../../documenti/AnalisiDeiRequisiti/Diagrammi_img/usecase/uc1_19.png}
 	\caption{\UCCaption{} Termina bubble}
 \end{figure}
 

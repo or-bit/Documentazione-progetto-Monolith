@@ -1,0 +1,66 @@
+\section{Riunione}
+\subsection{Ordine del Giorno}
+\begin{itemize}
+	\item Presentazione lavoro svolto
+	\begin{itemize}
+		\item Demo
+		\item Architettura
+	\end{itemize}
+	\item Heroku
+	\item MongoDB in sviluppo: esterno o interno a Meteor
+	\item MongoDB in \virgolette{produzione}: esterno o interno a Meteor
+	\item Pianificazione futura
+\end{itemize}
+
+\subsection{Dialogo con \Proponente}
+\subsubsection{Resoconto del progetto}
+Come primo argomento, anche su richiesta del Proponente, è stato esposto un resoconto delle attività e la situazione attuale in quanto a realizzazione del progetto. È stata quindi esposta la nostra idea di demo, ovvero le bubble To-do list e Bubble \& eat. In particolare sono state definite le tipologie di utenti che utilizzeranno la Bubble \& eat:
+\begin{itemize}
+	\item Cliente: può creare le ordinazioni;
+	\item Cuoco: gestisce gli ordini effettuati;
+	\item Direttore: gestisce il menu.
+\end{itemize}
+Sono inoltre stati pensati altri due utenti, resi però facoltativi:
+\begin{itemize}
+	\item Fattorino: consegna le ordinazioni;
+	\item Responsabile Acquisti: gestisce il magazzino.
+\end{itemize}
+Viene quindi confermato al Proponente che sono previste più tipologie di bubble, tutte però basate e derivate dalla bubble To-do list.\\
+L'idea di demo proposta è stata riconfermata molto interessante ed associata ad un gestionale via client, inserito in una chat, gestito come un bot che interagisce tra le diverse bubble.\\
+Il gruppo riceve quindi un ammonimento sulla complessità che il progetto potrebbe assumere e di prestare quindi attenzione.
+
+\subsubsection{Memorizzazione dei dati}
+La memorizzazione dei dati avviene principalmente in due modi:
+\begin{itemize}
+	\item sul server dove è installato Rocket.Chat, con un database MongoDB interrogato da Meteor;
+	\item in locale per mantenere consistente lo stato delle bubble se offline.
+\end{itemize}
+Sorge quindi il dubbio da parte di \Proponente{} se verrà utilizzato un doppio database (interno per la chat, esterno per il gestionale) o singolo (con due collection distinte all'interno). Meteor infatti scarica e aggiorna i dati lato utente e dunque tramite il database di Rocket.Chat è possibile salvare diversi dati, altrimenti è necessario installare un secondo database MongoDB.\\
+L'idea del gruppo è di utilizzare il database di Rocket.Chat per i messaggi, mentre il server esterno mantiene i dati del gestionale. È quindi Rocket.Chat che mette in contatto le diverse bubble, ovvero il server teoricamente installato nella macchina del Direttore.\\
+Il Proponente introduce quindi il concetto \textit{Single Responsibility Principle} (SRP), e propone quindi di utilizzare uno stesso database (quello di Rocket.Chat), utilizzando collection diverse per matenere la separazione delle responsabilità. Teoricamente quindi il sistema vede due unità distinte, che praticamente risiedono però nello stesso database.\\
+Fare ciò con MongoDB è semplice in quanto non ha vincoli sulla struttura, ma proprio per questo essere destrutturato è facile degenerare e perdere il controllo. Va prestata quindi attenzione all'interazione con esso e definita una strategia di sviluppo che si prenda cura di questo.
+
+\subsubsection{Applicazioni White Label}
+Dal resoconto della demo emerge come la nostra applicazione si possa tramutare in \textit{white label}, un'applicazione generica personalizzabile in base all'utilizzo, per esempio attraverso template in grado di modificare la grafica in modo user-friendly, all'interno dell'applicazione stessa e dunque senza mettere mano al codice. Il gruppo non era a conoscenza del significato di questa espressione, ma ne conosceva il concetto. Sebbene Bubble \& eat possa essere utilizzata in questo modo, riteniamo che lo sviluppo di un applicazione simile richieda un impegno in termine di tempo superiore a quanto richiesto dal progetto, e pertanto l'idea, per quanto interessante, viene dichiarata non realizzabile.
+
+\subsubsection{SDK}
+Viene richiesta da \Proponente{} la struttura del framework. Il gruppo spiega quindi l'architettura generale e il pattern MVC seguito, ponendo rilievo alla bubble generica, ovvero il controller, che svolge una funzione di template per tutte le bubble e collega l'interfaccia ai metodi funzionali. Per aggiungere bubble basta estenderela, aggiungere la nuova funzionalità, a scelta tra quelle fornite o una nuova, e collegarla eventualmente con la parte grafica.\\
+Sono quindi state elencate le funzionalità previste dal nostro model dell'SDK.
+
+\subsubsection{Documentazione Rocket.Chat}
+Iniziando ad entrare più nel dettaglio è sorto il problema della documentazione di Rocket.Chat. Essa infatti è molto scarsa ed è difficile trovare informazioni a riguardo. La soluzione posta da \Proponente{} è di contattare direttamente gli sviluppatori di Rocket.Chat stesso e la community relativa, in quanto il lavoro che stiamo svolgendo è vantaggioso anche per loro, in quanto estendiamo le funzionalità del loro prodotto.
+
+\subsubsection{Consegna del progetto}
+Il Proponente è interessato alla data di consegna per le prossime revisioni. Il gruppo, sebbene fin'ora sia rimasto nei termini previsti, ha riscontrato un lieve ritardo a causa di impegni personali e pertanto ritiene possibile uno slittamento della consegna di una revisione, puntando quindi al completamento del progetto per giugno.
+
+\subsubsection{Heroku}
+Nei precedenti tentativi di creare un account Heroku il gruppo aveva riscontrato problemi in quanto era richiesto l'inserimento della carta di credito. Si è quindi indagato insieme al Proponente, arrivando alla conclusione che essa non è richiesta per la tipologia di account gratuita con molte limitazioni, ma nessuna bloccante per il progetto che stiamo svolgendo. Una causa possibile per la richiesta ottenuta era l'add-on di MongoDB installato da Rocket.Chat, pertanto questo va utilizzato come variabile d'ambiente e con un account separato su MongoLab. \\
+Eventualmente in caso di ulteriori problemi, possono essere prese in considerazioni le varianti che Rocket.Chat propone, oppure Galaxy, un sistema di deploy per applicazioni Meteor di recente produzione. Questo però è stato scartato in quanto a pagamento.\\
+Per quanto riguarda Heroku ci viene consigliato di contattare il supporto, indicando che siamo studenti.
+
+\subsubsection{Consigli}
+\Proponente{} ci informa che l'altro gruppo che sta svolgendo il nostro progetto ha chiesto informazioni sugli \textit{action link} per generare i link. Va cercato appunto \virgolette{action link} in Rocket.Chat per avere maggiori informazioni.\\
+Nel repository fornito da \Proponente{} sono presenti alcuni esempi utilizzati come test per la fattibilità del progetto, pertanto contengono vari spunti per l'implementazione.\\
+Viene sottolineato come l'interazione con gli altri gruppi semplifichi il lavoro, pertanto invitano a mantenere i contatti.\\
+Consigliano infine di inviare i prototipi che realizziamo, in quanto si rendono disponibili a testarli.
+\clearpage

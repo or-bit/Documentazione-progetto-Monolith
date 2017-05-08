@@ -1,0 +1,168 @@
+\section{Tracciamento}
+\subsection{Tracciamento classi-requisiti}
+\begin{longtable}{|m{12cm}|>{\centering}m{2cm}|}
+	\hline \textbf{Componente} & \textbf{Requisiti} \tabularnewline 
+	\endfirsthead
+	% Framework
+	\hline \coderef{Framework::Model::BubbleMemory::BubbleMemory} & \ref{AdR-L90} \linebreak \ref{AdR-L91} \tabularnewline
+	\hline \coderef{Framework::Model::API::LifeCycle::LifeCycle} & \ref{AdR-L9} \linebreak \ref{AdR-L10} \linebreak \ref{AdR-L93} \tabularnewline
+	\hline \coderef{Framework::Model::API::Notification::WebNotification} & \ref{AdR-L15} \linebreak \tabularnewline
+	\hline \coderef{Framework::Model::API::ExternalAPI::ExternalAPI} & \ref{AdR-L44} \linebreak \ref{AdR-L92} \tabularnewline
+	\hline \coderef{Framework::Model::API::ExternalAPI::ExternalAPIStore} & \ref{AdR-L44} \linebreak \ref{AdR-L92} \tabularnewline
+	\hline \coderef{Framework::Model::API::DBOperations::DBOperations} & \ref{AdR-L8} \linebreak \ref{AdR-L81} \linebreak \ref{AdR-L82} \linebreak \ref{AdR-L83} \linebreak \ref{AdR-L89} \tabularnewline
+	\hline \coderef{Framework::Model::API::MatchRegularExpr::MatchRegularExpr} & \ref{AdR-L42} \tabularnewline
+	\hline \coderef{Framework::Controller::GenericBubble} & \ref{AdR-L6} \linebreak \ref{AdR-L7} \linebreak \ref{AdR-L86} \linebreak \ref{AdR-L87} \linebreak \ref{AdR-L11} \linebreak \ref{AdR-L56} \linebreak \ref{AdR-L89} \linebreak \ref{AdR-L55} \linebreak \ref{AdR-L88} \linebreak \ref{AdR-L90} \tabularnewline
+	\hline \coderef{Framework::View::GUI::GUI} &\ref{AdR-L11} \linebreak \ref{AdR-L56} \linebreak \ref{AdR-L12} \linebreak  \ref{AdR-L13} \linebreak \ref{AdR-L14} \linebreak \ref{AdR-L63} \linebreak \ref{AdR-L33} \linebreak \ref{AdR-L34} \linebreak \ref{AdR-L38} \linebreak \ref{AdR-L41} \linebreak \ref{AdR-L84} \linebreak \ref{AdR-L85} \linebreak \ref{AdR-L45} \linebreak \ref{AdR-L46} \linebreak \ref{AdR-L64} \tabularnewline
+	\hline \coderef{Framework::View::GUIContainer} & \ref{AdR-L11} \linebreak \ref{AdR-L56} \linebreak \ref{AdR-L89} \linebreak \ref{AdR-L55} \linebreak \ref{AdR-L88} \tabularnewline
+	\hline \coderef{Framework::View::GUI::Label} & \ref{AdR-L12} \tabularnewline
+	\hline \coderef{Framework::View::GUI::InputFile} & \ref{AdR-L38} \tabularnewline
+	\hline \coderef{Framework::View::GUI::Button} & \ref{AdR-L41} \linebreak \ref{AdR-L71} \linebreak \ref{AdR-L73} \tabularnewline
+	\hline \coderef{Framework::View::GUI::TextEdit} & \ref{AdR-L34} \tabularnewline
+	\hline \coderef{Framework::View::GUI::InputText} & \ref{AdR-L72} \tabularnewline
+	\hline \coderef{Framework::View::GUI::TextView} & \ref{AdR-L33} \tabularnewline
+	\hline \coderef{Framework::View::GUI::Image} & \ref{AdR-L45} \tabularnewline
+	\hline \coderef{Framework::View::GUI::CheckBox} & \ref{AdR-L85} \tabularnewline
+	\hline \coderef{Framework::View::GUI::CheckBoxGroup} & \ref{AdR-L85} \tabularnewline
+	\hline \coderef{Framework::View::GUI::RadioButton} & \ref{AdR-L84} \tabularnewline
+	\hline \coderef{Framework::View::GUI::RadioButtonGroup} & \ref{AdR-L84} \tabularnewline
+	\hline \coderef{Framework::View::GUI::PieChart} & \ref{AdR-L46} \tabularnewline
+	\hline \coderef{Framework::View::GUI::BarChart} & \ref{AdR-L64} \tabularnewline
+	
+	% To-do list
+	\hline \coderef{ToDoList::Model::ItemsStore} & \ref{AdR-L17} \linebreak \ref{AdR-L18} \tabularnewline
+	\hline \coderef{ToDoList::Model::ListItem} & \ref{AdR-L17} \linebreak \ref{AdR-L18} \linebreak \ref{AdR-L19} \tabularnewline
+	\hline \coderef{ToDoList::Controller::ListItemController} & \ref{AdR-L17} \linebreak \ref{AdR-L95} \linebreak \ref{AdR-L18}  \tabularnewline
+	\hline \coderef{ToDoList::View::ListItemView} & \ref{AdR-L71} \linebreak \ref{AdR-L72} \linebreak \ref{AdR-L73}  \linebreak \ref{AdR-L74}  \linebreak \ref{AdR-L19} \tabularnewline
+	
+	% Bubble & eat
+	\hline \coderef{BubbleAndEat::Customer::BubbleCustomer} & \ref{AdR-L22} \linebreak \ref{AdR-L96} \linebreak \ref{AdR-L97} \linebreak \ref{AdR-L98} \linebreak \ref{AdR-L23} \linebreak \ref{AdR-L68} \linebreak \ref{AdR-L24} \linebreak \ref{AdR-L69} \linebreak \ref{AdR-L77} \linebreak \ref{AdR-L99} \tabularnewline
+	\hline \coderef{BubbleAndEat::Customer::Client} & \ref{AdR-L21} \linebreak \ref{AdR-L22} \tabularnewline
+	\hline \coderef{BubbleAndEat::Restaurant::Manager::BubbleManager} & \ref{AdR-L104} \linebreak \ref{AdR-L105} \linebreak \ref{AdR-L29} \linebreak \ref{AdR-L79} \linebreak \ref{AdR-L108} \linebreak \ref{AdR-L80} \linebreak \ref{AdR-L106} \linebreak \ref{AdR-L30} \linebreak \ref{AdR-L32} \linebreak \ref{AdR-L101} \linebreak \ref{AdR-L102} \tabularnewline
+	\hline \coderef{BubbleAndEat::Restaurant::Chef::BubbleChef} & \ref{AdR-L25} \linebreak \ref{AdR-L26} \linebreak \ref{AdR-L78} \tabularnewline
+	\hline \coderef{BubbleAndEat::Restaurant::OrderGateway::OrderGateway} & \ref{AdR-L21} \linebreak \ref{AdR-L61} \linebreak \ref{AdR-L62} \linebreak \ref{AdR-L96} \linebreak \ref{AdR-L23} \linebreak \ref{AdR-L68} \linebreak \ref{AdR-L25} \linebreak \ref{AdR-L78} \linebreak \ref{AdR-L104} \linebreak \ref{AdR-L105} \linebreak \ref{AdR-L23} \linebreak \ref{AdR-L79} \linebreak \ref{AdR-L80} \linebreak \ref{AdR-L30} \tabularnewline
+	\hline \coderef{BubbleAndEat::Restaurant::OrderGateway::Handlers::CustomerHandler} & \ref{AdR-L96} \linebreak \ref{AdR-L23} \linebreak \ref{AdR-L68} \tabularnewline
+	\hline \coderef{BubbleAndEat::Restaurant::OrderGateway::Handlers::ManagerHandler} & \ref{AdR-L104} \linebreak \ref{AdR-L105} \linebreak \ref{AdR-L29} \linebreak \ref{AdR-L79} \linebreak \ref{AdR-L80} \linebreak \ref{AdR-L30} \linebreak \ref{AdR-L32} \tabularnewline
+	\hline \coderef{BubbleAndEat::Restaurant::OrderGateway::Handlers::ChefHandler} & \ref{AdR-L25} \linebreak \ref{AdR-L78} \tabularnewline
+	\hline \coderef{BubbleAndEat::Restaurant::OrderGateway::Menu} & \ref{AdR-L23} \linebreak \ref{AdR-L104} \linebreak \ref{AdR-L105} \tabularnewline
+	\hline \coderef{BubbleAndEat::Restaurant::OrderGateway::MenuItem} & \ref{AdR-L68} \linebreak \ref{AdR-L29} \linebreak \ref{AdR-L79} \linebreak \ref{AdR-L80} \tabularnewline
+	\hline \coderef{BubbleAndEat::Restaurant::OrderGateway::Orders::Order} & \ref{AdR-L24} \tabularnewline
+	\hline \coderef{BubbleAndEat::Restaurant::OrderGateway::Orders::OrderItem} & \ref{AdR-L69} \linebreak \ref{AdR-L77} \tabularnewline
+	\hline \coderef{BubbleAndEat::Restaurant::OrderGateway::Orders::OrderContainer} & \ref{AdR-L78} \linebreak \ref{AdR-L30} \linebreak \ref{AdR-L32} \tabularnewline
+	
+	\hline
+	\caption{Tracciamento classi-requisiti}
+\end{longtable}
+
+\subsection{Tracciamento requisiti-classi}
+
+\begin{longtable}{|>{\centering}m{2cm}|m{12cm}|}
+	\hline \textbf{Requisito} & \textbf{Componenti} \tabularnewline 
+	\endfirsthead
+	% Framework
+	\hline \ref{AdR-L6} & \coderef{Framework::Controller::GenericBubble} \tabularnewline %5
+	\hline \ref{AdR-L7} & \coderef{Framework::Controller::GenericBubble} \tabularnewline 
+	\hline \ref{AdR-L8} & \coderef{Framework::Model::API::DBOperations::DBOperations} \tabularnewline
+	\hline \ref{AdR-L81} & \coderef{Framework::Model::API::DBOperations::DBOperations} \tabularnewline
+	\hline \ref{AdR-L82} & \coderef{Framework::Model::API::DBOperations::DBOperations} \tabularnewline
+	\hline \ref{AdR-L83} & \coderef{Framework::Model::API::DBOperations::DBOperations} \tabularnewline %10
+	\hline \ref{AdR-L86} & \coderef{Framework::Controller::GenericBubble} \tabularnewline
+	\hline \ref{AdR-L87} & \coderef{Framework::Controller::GenericBubble} \tabularnewline
+	\hline \ref{AdR-L9} & \coderef{Framework::Model::API::LifeCycle::LifeCycle} \tabularnewline
+	\hline \ref{AdR-L10} & \coderef{Framework::Model::API::LifeCycle::LifeCycle} \tabularnewline
+	\hline \ref{AdR-L11} & \coderef{Framework::Controller::GenericBubble} \linebreak \coderef{Framework::View::GUIContainer} \linebreak \coderef{Framework::View::GUI::GUI} \tabularnewline %15
+	\hline \ref{AdR-L56} & \coderef{Framework::Controller::GenericBubble} \linebreak \coderef{Framework::View::GUIContainer} \linebreak \coderef{Framework::View::GUI::GUI} \tabularnewline
+	\hline \ref{AdR-L89} & \coderef{Framework::Model::API::DBOperations::DBOperations} \linebreak \coderef{Framework::Controller::GenericBubble} \linebreak \coderef{Framework::View::GUIContainer} \tabularnewline
+	\hline \ref{AdR-L55} & \coderef{Framework::Controller::GenericBubble} \linebreak \coderef{Framework::View::GUIContainer} \tabularnewline
+	\hline \ref{AdR-L88} & \coderef{Framework::Controller::GenericBubble} \linebreak \coderef{Framework::View::GUIContainer} \tabularnewline
+	\hline \ref{AdR-L12} & \coderef{Framework::View::GUI::Label} \linebreak \coderef{Framework::View::GUI::GUI} \tabularnewline %20
+	\hline \ref{AdR-L13} & \coderef{Framework::View::GUI::GUIContainer} \linebreak \coderef{Framework::View::GUI::GUI} \tabularnewline
+	\hline \ref{AdR-L14} & \coderef{Framework::View::GUI::GUI} \tabularnewline
+	\hline \ref{AdR-L63} & \coderef{Framework::View::GUI::GUI} \tabularnewline
+	\hline \ref{AdR-L15} & \coderef{Framework::Model::API::Notification::WebNotification} \tabularnewline
+	\hline \ref{AdR-L16} & \coderef{Framework::Model::API::Notification::WebNotification} \tabularnewline %25
+	\hline \ref{AdR-L33} & \coderef{Framework::View::GUI::TextView} \linebreak \coderef{Framework::View::GUI::GUI} \tabularnewline
+	\hline \ref{AdR-L34} & \coderef{Framework::View::GUI::TextEdit} \linebreak \coderef{Framework::View::GUI::GUI} \tabularnewline
+%	\hline \ref{AdR-L35} & \coderef{api-json} \tabularnewline
+%	\hline \ref{AdR-L94} & \coderef{Framework::Controller::GenericBubble} \linebreak \coderef{Framework::View::GUIContainer} \tabularnewline
+%	\hline \ref{AdR-L36} & \coderef{api-partecipanti} \tabularnewline %30
+%	\hline \ref{AdR-L37} & \coderef{api-partecipanti} \tabularnewline
+	\hline \ref{AdR-L38} & \coderef{Framework::View::GUI::InputFile} \linebreak \coderef{Framework::View::GUI::GUI} \tabularnewline
+%	\hline \ref{AdR-L39} & \coderef{api-file} \tabularnewline
+%	\hline \ref{AdR-L40} & \coderef{api-file} \tabularnewline
+	\hline \ref{AdR-L41} & \coderef{Framework::View::GUI::Button} \linebreak \coderef{Framework::View::GUI::GUI} \tabularnewline %35
+	\hline \ref{AdR-L84} & \coderef{Framework::View::GUI::RadioButton} \linebreak \coderef{Framework::View::GUI::RadioButtonGroup} \linebreak \coderef{Framework::View::GUI::GUI} \tabularnewline
+	\hline \ref{AdR-L85} & \coderef{Framework::View::GUI::CheckBox} \linebreak \coderef{Framework::View::GUI::CheckBoxGroup} \linebreak \coderef{Framework::View::GUI::GUI} \tabularnewline
+	\hline \ref{AdR-L42} & \coderef{Framework::Model::API::MatchRegularExpr::MatchRegularExpr} \tabularnewline
+%	\hline \ref{AdR-L43} & \coderef{api-timing} \tabularnewline
+	\hline \ref{AdR-L44} & \coderef{Framework::Model::API::ExternalAPI::ExternalAPI} \linebreak \coderef{Framework::Model::API::ExternalAPI::ExternalAPIStore} \tabularnewline %40
+	\hline \ref{AdR-L92} & \coderef{Framework::Model::API::ExternalAPI::ExternalAPI} \linebreak \coderef{Framework::Model::API::ExternalAPI::ExternalAPIStore} \tabularnewline
+	\hline \ref{AdR-L45} & \coderef{Framework::View::GUI::Image} \linebreak \coderef{Framework::View::GUI::GUI} \tabularnewline
+	\hline \ref{AdR-L46} & \coderef{Framework::View::GUI::PieChart} \linebreak \coderef{Framework::View::GUI::GUI} \tabularnewline
+	\hline \ref{AdR-L64} & \coderef{Framework::View::GUI::BarChart} \linebreak \coderef{Framework::View::GUI::GUI} \tabularnewline
+	\hline \ref{AdR-L93} & \coderef{Framework::Model::API::LifeCycle::LifeCycle} \tabularnewline %45
+%	\hline \ref{AdR-L47} & \coderef{api-limiti} \tabularnewline
+%	\hline \ref{AdR-L48} & \coderef{api-limiti} \tabularnewline
+%	\hline \ref{AdR-L49} & \coderef{gui-file} \tabularnewline
+	\hline \ref{AdR-L3} & \coderef{ToDoList} \tabularnewline
+	\hline \ref{AdR-L4} & \coderef{BubbleAndEat} \tabularnewline %50
+	\hline \ref{AdR-L90} & \coderef{Framework::Controller::GenericBubble} \tabularnewline
+%	\hline \ref{AdR-L91} & \coderef{fm-memory} \tabularnewline %52
+	
+	% To-do list
+	\hline \ref{AdR-L17} & \coderef{ToDoList::Controller::ListItemController} \linebreak \coderef{ToDoList::Model::ItemsStore} \linebreak \coderef{ToDoList::Model::ListItem} \tabularnewline %59
+	\hline \ref{AdR-L71} & \coderef{Framework::View::GUI::Button} \linebreak \coderef{ToDoList::View::ListItemView} \tabularnewline %60
+	\hline \ref{AdR-L95} & \coderef{ToDoList::Controller::ListItemController} \tabularnewline
+	\hline \ref{AdR-L72} & \coderef{Framework::View::GUI::InputText} \linebreak \coderef{ToDoList::View::ListItemView} \tabularnewline
+	\hline \ref{AdR-L73} & \coderef{Framework::View::GUI::Button} \linebreak \coderef{ToDoList::View::ListItemView} \tabularnewline
+	\hline \ref{AdR-L18} & \coderef{ToDoList::Controller::ListItemController} \linebreak \coderef{ToDoList::Model::ItemsStore} \linebreak \coderef{ToDoList::Model::ListItem} \tabularnewline
+	\hline \ref{AdR-L74} & \coderef{ToDoList::View::ListItemView} \tabularnewline %65
+	\hline \ref{AdR-L19} & \coderef{ToDoList::View::ListItemView} \linebreak \coderef{ToDoList::Model::ListItem} \tabularnewline
+%	\hline \ref{AdR-L75} & \coderef{todo-controller} \linebreak \coderef{todo-view} \tabularnewline
+%	\hline \ref{AdR-L20} & \coderef{api-notifica} \linebreak \coderef{todo-controller} \tabularnewline
+%	\hline \ref{AdR-L76} & \coderef{api-notifica} \linebreak \coderef{todo-controller} \linebreak \coderef{todo-view} \tabularnewline %69
+	
+	% Bubble & eat
+	\hline \ref{AdR-L21} & \coderef{BubbleAndEat::Restaurant::OrderGateway::OrderGateway} \linebreak \coderef{BubbleAndEat::Customer::Client} \tabularnewline %70
+	\hline \ref{AdR-L61} & \coderef{BubbleAndEat::Restaurant::OrderGateway::OrderGateway} \tabularnewline
+	\hline \ref{AdR-L62} & \coderef{BubbleAndEat::Restaurant::OrderGateway::OrderGateway} \tabularnewline
+	\hline \ref{AdR-L22} & \coderef{BubbleAndEat::Customer::Client} \linebreak \coderef{BubbleAndEat::Customer::BubbleCustomer} \tabularnewline
+	\hline \ref{AdR-L96} & \coderef{BubbleAndEat::Customer::BubbleCustomer} \linebreak \coderef{BubbleAndEat::Restaurant::OrderGateway::OrderGateway} \linebreak \coderef{BubbleAndEat::Restaurant::OrderGateway::Handlers::CustomerHandler} \tabularnewline
+	\hline \ref{AdR-L97} & \coderef{BubbleAndEat::Customer::BubbleCustomer} \tabularnewline %75
+	\hline \ref{AdR-L98} & \coderef{BubbleAndEat::Customer::BubbleCustomer} \tabularnewline
+	\hline \ref{AdR-L23} & \coderef{BubbleAndEat::Customer::BubbleCustomer} \linebreak \coderef{BubbleAndEat::Restaurant::OrderGateway::OrderGateway} \linebreak \coderef{BubbleAndEat::Restaurant::OrderGateway::Handlers::CustomerHandler} \linebreak \coderef{BubbleAndEat::Restaurant::OrderGateway::Menu} \tabularnewline
+	\hline \ref{AdR-L68} & \coderef{BubbleAndEat::Customer::BubbleCustomer} \linebreak \coderef{BubbleAndEat::Restaurant::OrderGateway::OrderGateway} \linebreak \coderef{BubbleAndEat::Restaurant::OrderGateway::Handlers::CustomerHandler} \linebreak \coderef{BubbleAndEat::Restaurant::OrderGateway::MenuItem} \tabularnewline
+	\hline \ref{AdR-L24} & \coderef{BubbleAndEat::Customer::BubbleCustomer} \linebreak \coderef{BubbleAndEat::Restaurant::OrderGateway::Orders::Order} \tabularnewline
+	\hline \ref{AdR-L69} & \coderef{BubbleAndEat::Customer::BubbleCustomer} \linebreak \coderef{BubbleAndEat::Restaurant::OrderGateway::Orders::OrderItem} \tabularnewline %80
+	\hline \ref{AdR-L77} & \coderef{BubbleAndEat::Customer::BubbleCustomer} \linebreak \coderef{BubbleAndEat::Restaurant::OrderGateway::Orders::OrderItem} \tabularnewline
+%	\hline \ref{AdR-L70} & \coderef{BubbleAndEat::Customer::BubbleCustomer} \linebreak \coderef{BubbleAndEat::Restaurant::OrderGateway::OrderItem} \tabularnewline
+	\hline \ref{AdR-L99} & \coderef{BubbleAndEat::Customer::BubbleCustomer} \tabularnewline
+%	\hline \ref{AdR-L100} & \coderef{eat-customer} \tabularnewline
+	\hline \ref{AdR-L25} & \coderef{BubbleAndEat::Restaurant::Chef::BubbleChef} \linebreak \coderef{BubbleAndEat::Restaurant::OrderGateway::OrderGateway} \linebreak \coderef{BubbleAndEat::Restaurant::OrderGateway::Handlers::ChefHandler} \tabularnewline %85
+	\hline \ref{AdR-L26} & \coderef{BubbleAndEat::Restaurant::Chef::BubbleChef} \tabularnewline
+	\hline \ref{AdR-L78} & \coderef{BubbleAndEat::Restaurant::Chef::BubbleChef} \linebreak \coderef{BubbleAndEat::Restaurant::OrderGateway::OrderGateway} \linebreak \coderef{BubbleAndEat::Restaurant::OrderGateway::Handlers::ChefHandler} \linebreak \coderef{BubbleAndEat::Restaurant::OrderGateway::Orders::OrderContainer} \tabularnewline
+%	\hline \ref{AdR-L27} & \coderef{eat-purchasing} \tabularnewline
+%	\hline \ref{AdR-L28} & \coderef{eat-purchasing} \tabularnewline
+	\hline \ref{AdR-L104} & \coderef{BubbleAndEat::Restaurant::Manager::BubbleManager} \linebreak \coderef{BubbleAndEat::Restaurant::OrderGateway::OrderGateway} \linebreak \coderef{BubbleAndEat::Restaurant::OrderGateway::Handlers::ManagerHandler} \linebreak \coderef{BubbleAndEat::Restaurant::OrderGateway::Menu::Menu} \tabularnewline %90
+	\hline \ref{AdR-L105} & \coderef{BubbleAndEat::Restaurant::Manager::BubbleManager} \linebreak \coderef{BubbleAndEat::Restaurant::OrderGateway::OrderGateway} \linebreak \coderef{BubbleAndEat::Restaurant::OrderGateway::Handlers::ManagerHandler} \linebreak \coderef{BubbleAndEat::Restaurant::OrderGateway::Menu::Menu} \tabularnewline
+	\hline \ref{AdR-L29} & \coderef{BubbleAndEat::Restaurant::Manager::BubbleManager} \linebreak \coderef{BubbleAndEat::Restaurant::OrderGateway::OrderGateway} \linebreak \coderef{BubbleAndEat::Restaurant::OrderGateway::Handlers::ManagerHandler} \linebreak \coderef{BubbleAndEat::Restaurant::OrderGateway::MenuItem} \tabularnewline
+	\hline \ref{AdR-L79} & \coderef{BubbleAndEat::Restaurant::Manager::BubbleManager} \linebreak \coderef{BubbleAndEat::Restaurant::OrderGateway::OrderGateway} \linebreak \coderef{BubbleAndEat::Restaurant::OrderGateway::Handlers::ManagerHandler} \linebreak \coderef{BubbleAndEat::Restaurant::OrderGateway::MenuItem} \tabularnewline
+	\hline \ref{AdR-L108} & \coderef{BubbleAndEat::Restaurant::Manager::BubbleManager} \tabularnewline
+	\hline \ref{AdR-L80} & \coderef{BubbleAndEat::Restaurant::Manager::BubbleManager} \linebreak \coderef{BubbleAndEat::Restaurant::OrderGateway::OrderGateway} \linebreak \coderef{BubbleAndEat::Restaurant::OrderGateway::Handlers::ManagerHandler} \linebreak \coderef{BubbleAndEat::Restaurant::OrderGateway::MenuItem} \tabularnewline %95
+	\hline \ref{AdR-L106} & \coderef{BubbleAndEat::Restaurant::Manager::BubbleManager}  \tabularnewline
+	\hline \ref{AdR-L30} & \coderef{BubbleAndEat::Restaurant::Manager::BubbleManager} \linebreak \coderef{BubbleAndEat::Restaurant::OrderGateway::OrderGateway} \linebreak \coderef{BubbleAndEat::Restaurant::OrderGateway::Handlers::ManagerHandler} \linebreak \coderef{BubbleAndEat::Restaurant::OrderGateway::Orders::OrderContainer} \tabularnewline
+%	\hline \ref{AdR-L31} & \coderef{eat-manager} \tabularnewline
+	\hline \ref{AdR-L32} & \coderef{BubbleAndEat::Restaurant::Manager::BubbleManager} \linebreak \coderef{BubbleAndEat::Restaurant::OrderGateway::OrderGateway} \linebreak \coderef{BubbleAndEat::Restaurant::OrderGateway::Handlers::ManagerHandler} \linebreak \coderef{BubbleAndEat::Restaurant::OrderGateway::Orders::OrderContainer} \tabularnewline
+	\hline \ref{AdR-L101} & \coderef{BubbleAndEat::Restaurant::Manager::BubbleManager} \tabularnewline %100
+	\hline \ref{AdR-L102} & \coderef{BubbleAndEat::Restaurant::Manager::BubbleManager} \tabularnewline
+%	\hline \ref{AdR-L107} & \coderef{BubbleAndEat::Restaurant::Manager::BubbleManager} \tabularnewline
+%	\hline \ref{AdR-L103} & \coderef{BubbleAndEat::Restaurant::Manager::BubbleManager} \tabularnewline
+%	\hline \ref{AdR-L53} & \coderef{eat-manager} \tabularnewline
+%	\hline \ref{AdR-L65} & \coderef{eat-manager} \tabularnewline %105
+%	\hline \ref{AdR-L109} & \coderef{eat-manager} \tabularnewline
+%	\hline \ref{AdR-L50} & \coderef{eat-deliveryman} \tabularnewline
+%	\hline \ref{AdR-L51} & \coderef{eat-deliveryman} \tabularnewline
+%	\hline \ref{AdR-L52} & \coderef{eat-deliveryman} \tabularnewline %109
+	
+	\hline
+	\caption{Tracciamento requisiti-classi}
+\end{longtable}

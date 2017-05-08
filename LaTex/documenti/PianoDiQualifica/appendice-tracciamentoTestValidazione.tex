@@ -1,0 +1,101 @@
+\subsection{Test di validazione}
+
+Di seguito sono elencati i test di validazione attraverso i quali è possibile constatare che il prodotto realizzato sia conforme alle attese.
+
+%\subsubsection{Framework}
+%
+%\begin{longtable}{|P{5cm}|P{5cm}|P{5cm}|}
+%	\hline \textbf{Codice} & \textbf{Descrizione} & \textbf{Requisito} \\
+%	\endfirshead
+%	
+%	\hline \test{S} & Data una GUI con più elementi e un elemento funzionale, simulare un input utente e far inviare un segnale dalla GUI alla bubble, seguendo tutto il percorso, per controllare che ciò che la GUI ritorna sia corretto & \\
+%	\hline \test{S} & Data una GUI con più elementi e un elemento funzionale, simulare un input utente e far inviare un segnale non corretto dalla GUI alla bubble, seguendo tutto il percorso, per controllare che la GUI ritorni un errore e non si aggiorni le informazioni sbagliate & \\
+%	\hline \test{S} & Data una GUI con più elementi e un elemento funzionale, simulare un evento originato dall'elemento funzionale e verificare che questo abbia ripercussioni sulla bubble generica e sulla GUI & \\
+%	\hline \test{S} & Data una GUI con un elemento e più elementi funzionali, simulare un input utente e far inviare un segnale dalla GUI alla bubble, tracciando tutto il percorso, per controllare che ciò che la GUI ritorna sia corretto & \\
+%	\hline \test{S} & Data una GUI con un elemento e più elementi funzionali, simulare un input utente e far inviare un segnale non corretto dalla GUI alla bubble, seguendo tutto il percorso, per controllare che la GUI ritorni un errore e non si aggiorni le informazioni sbagliate & \\
+%	\hline \test{S} & Data una GUI con un elemento e più elementi funzionali, simulare un evento originato dall'elemento funzionale e verificare che questo abbia ripercussioni sulla bubble generica e sulla GUI & \\
+%	\hline \test{S} & Data una GUI con più elementi e più elementi funzionali, simulare un input utente e far inviare un segnale dalla GUI alla bubble, tracciando tutto il percorso, per controllare che ciò che la GUI ritorna sia corretto & \\
+%	\hline \test{S} & Data una GUI con più elementi e più elementi funzionali, simulare un input utente e far inviare un segnale non corretto dalla GUI alla bubble, seguendo tutto il percorso, per controllare che la GUI ritorni un errore e non si aggiorni le informazioni sbagliate & \\
+%	\hline \test{S} & Data una GUI con un elemento e più elementi funzionali, simulare un evento originato dall'elemento funzionale e verificare che questo abbia ripercussioni sulla bubble generica e sulla GUI & \\
+%	\hline
+%	\caption{Test di sistema per il framework}
+%\end{longtable}
+
+\subsubsection{Bubble To-do list}
+
+\begin{longtable}{|c|P{9cm}|P{2.5cm}|}
+	\hline \multicolumn{1}{|l}{\textbf{Codice}} &  \multicolumn{1}{|l|}{\textbf{Descrizione}} & \multicolumn{1}{l|}{\textbf{Requisito}} \\ 
+	\endfirsthead
+	\hline \test{V} & L'utente desidera aggiungere task alla lista. L'utente :
+	\begin{itemize}
+		\item seleziona la barra dell'editor;
+		\item inserisce il nome del task; 
+		\item seleziona il pulsante "Add" ed il task viene aggiunto alla To-do List.
+	\end{itemize}
+	& \ref{AdR-L17} \ref{AdR-L18} \ref{AdR-L95} \ref{AdR-L72} \ref{AdR-L73} \ref{AdR-L74}  \\
+	\hline
+	\hline \test{V} & L'utente desidera selezionare i task, segnare come completati i task selezionati ed eliminare i task selezionati. L'utente :
+	\begin{itemize}
+		\item seleziona il task dalla lista;
+		\item seleziona il pulsante"Complete Selected"; 
+		\item visualizza i task completati in trasparenza;
+		\item seleziona il pulsante "Delete Selected" ed i task selezionati vengono rimossi dalla To-do List.
+	\end{itemize}
+	& \ref{AdR-L19} \ref{AdR-L75} \\
+	\hline
+	\caption{Test di validazione Bubble To-do list}
+\end{longtable}
+
+\subsubsection{\DemoName{}}
+
+\begin{longtable}{|c|P{9cm}|P{2.5cm}|}
+	\hline \multicolumn{1}{|l|}{\textbf{Codice}} &  \multicolumn{1}{l|}{\textbf{Descrizione}} & \multicolumn{1}{l|}{\textbf{Requisito}} \\ 
+	\endfirsthead
+	\hline \test{V} & L'utente cliente intende visualizzare il menu del ristorante consultando i piatti,i prezzi e selezionando le relative quantità ed effettuare la sua ordinazione. L'utente :
+	\begin{itemize}
+		\item interagisce con la bubble effettuando un click sul bottone "New Order";
+		\item consulta il menù che viene visualizzato;
+		\item modifica la quantità attraverso la casella di testo inserendo la cifra oppure attraverso il pulsante con il simbolo "+" per aumentare di 1 e "-" per diminuire di 1; 
+		\item seleziona il pulsante "Insert info";
+		\item inserirce nel form il suo nome e l'indirizzo;
+		\item seleziona il pulsante "Confirm Order";
+		\item attende di ricevere la notifica che il suo ordine sia pronto o in caso il cambio dello stato.
+	\end{itemize}
+    & \ref{AdR-L22} \ref{AdR-L96} \ref{AdR-L97} \ref{AdR-L98} \ref{AdR-L23} \ref{AdR-L68} \ref{AdR-L24} \ref{AdR-L69} \ref{AdR-L77} \ref{AdR-L99} \\
+	\hline \test{V} & L'utente chef intende visualizzare la lista delle ordinazioni attive e per ognuna visulizzare il nome dei piatti ed il rispettivo ammontare quindi seleziona l'ordinazione una volta completata. L'utente :
+	\begin{itemize}
+		\item controlla la bubble ed consulta le ordinazioni attive;
+		\item seleziona un ordinazione e preme il relativo pulsante "Mark as Complete";
+		\item controlla che l'ordinazione completata viene eliminata dall'elenco;
+		\item nel caso non ci siano altre ordinazioni osserva la scritta "No ordinations yet". 
+	\end{itemize}
+	&\ref{AdR-L25} \ref{AdR-L26} \ref{AdR-L78}\\
+	\hline \test{V} & L'utente amministratore intende visualizzare il menu del ristorante consultando i piatti ed i prezzi. In questa sezione può: rimuovere,modificare oppure aggiungere un piatto.
+	Nel caso voglia aggiungere o modificare un piatto verrà visualizzato un apposito form. L'utente :
+	\begin{itemize}
+		\item interagisce con la bubble effettuando un click sul bottone "MenuOperation";
+		\item consulta il menù che viene visualizzato; 
+		\item seleziona il pulsante "AddDishToMenu";
+		\item inserisce nel form nome e prezzo del piatto;
+		\item seleziona il pulsante "Submit" per aggiungerlo;
+		\item decide dal menu quale piatto modificare;
+		\item seleziona il corrispondente pulsante "edit";
+		\item modifica dal form nome e/o prezzo del piatto;
+		\item seleziona il pulsante "Submit" per effettuare le modifiche;
+		\item decide dal menu quale piatto rimuovere;
+		\item seleziona il corrispondente pulsante "delete" per rimuovere il piatto dal menu.
+	\end{itemize}
+	& \ref{AdR-L104} \ref{AdR-L105} \ref{AdR-L105} \ref{AdR-L106} \ref{AdR-L107} \ref{AdR-L108} \ref{AdR-L105} \ref{AdR-L29} \ref{AdR-L79} \ref{AdR-L80} \\
+	\hline \test{V} & L'utente amministratore intende visualizzare la lista delle ordinazioni e consultare quali sono attive e quali completate con i dati relativi al cliente. Inoltre avrà la possibilità di rimuovere le ordinazioni. L'utente :
+	\begin{itemize}
+		\item interagisce con la bubble effettuando un click sul bottone "OrderOperation";
+		\item consulta la lista delle ordinazioni che viene visualizzato; 
+		\item può controllare di ogni ordinazione il nome e l'indirizzo del cliente, lo stato dell'ordine e quali piatti ha ordinato;
+		\item decide quale ordinazione rimuovere;
+		\item seleziona il corrispondente pulsante "delete" per rimuovere l'ordine.
+	\end{itemize}
+	& \ref{AdR-L30} \ref{AdR-L32} \ref{AdR-L101} \\
+	\hline
+	\caption{Test di validazione \DemoName{}}
+\end{longtable}
+

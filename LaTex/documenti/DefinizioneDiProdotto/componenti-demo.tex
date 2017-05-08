@@ -1,0 +1,17 @@
+\subsection{\DemoName}\setclass{BubbleAndEat}\label{\class}
+La bubble \DemoName{} è suddivisa in una parte server, ovvero il package \hyperref[BubbleAndEat::Restaurant::OrderGateway]{\code{BubbleAndEat::Reastau\-rant::OrderGateway}}, e una parte client, ovvero le bubble. Il componente OrderGateway si occupa di gestire tutti i dati base dell'applicazione, mantenendoli aggiornati tra le diverse bubble esistenti. Il diagramma complessivo è presentato in \hyperref[fig:bubbleandeat]{figura \ref{fig:bubbleandeat}}.
+%\clearpage
+\newgeometry{margin=1.5cm}
+\begin{landscape}
+	\pagestyle{empty}
+	\centering
+	\begin{figure}
+		\centering
+		\includegraphics{./diagrammi/demo/bubbleandeat.png}
+		\caption{Diagramma applicazione \DemoName{}}\label{fig:bubbleandeat}
+	\end{figure}
+\end{landscape}
+\restoregeometry
+\pagestyle{plain}
+\input{componenti-demo-server}
+\input{componenti-demo-client}

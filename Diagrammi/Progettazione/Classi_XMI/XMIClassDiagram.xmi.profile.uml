@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Profile name="Monolith_profile" xmi:id="emE84lqAUACWAQzd_profile" xmi:version="2.1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/2.0.0/UML" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1">
+	<packageImport xmi:id="emE84lqAUACWAQzd_profile_UMLMetaModel">
+		<importedPackage href="pathmap://UML_METAMODELS/UML.metamodel.uml#_0" xmi:type="uml:Model"/>
+	</packageImport>
+	<eAnnotations source="http://www.eclipse.org/uml2/2.0.0/UML" xmi:id="emE84lqAUACWAQzd_profile_definition">
+		<contents name="Monolith_profile" nsPrefix="Monolith_profile" nsURI="http:///schemas/Monolith_profile/0" xmi:id="emE84lqAUACWAQzd_content" xmi:type="ecore:EPackage">
+			<eClassifiers name="view" xmi:id="vLzz2lqAUACWAQcr_classifier" xmi:type="ecore:EClass">
+				<eAnnotations references="vLzz2lqAUACWAQcr" source="http://www.eclipse.org/uml2/2.0.0/UML" xmi:id="vLzz2lqAUACWAQcr_annotation"/>
+				<eStructuralFeatures lowerBound="1" name="base_Package" ordered="false" xmi:id="vLzz2lqAUACWAQcr_structuralFeature" xmi:type="ecore:EReference">
+					<eType href="http://www.eclipse.org/uml2/2.0.0/UML#//Package" xmi:type="ecore:EClass"/>
+				</eStructuralFeatures>
+			</eClassifiers>
+			<eClassifiers name="flowofevents" xmi:id="KGrMoVqAUACWAQoH_classifier" xmi:type="ecore:EClass">
+				<eAnnotations references="KGrMoVqAUACWAQoH" source="http://www.eclipse.org/uml2/2.0.0/UML" xmi:id="KGrMoVqAUACWAQoH_annotation"/>
+				<eStructuralFeatures lowerBound="1" name="base_CombinedFragment" ordered="false" xmi:id="KGrMoVqAUACWAQoH_structuralFeature" xmi:type="ecore:EReference">
+					<eType href="http://www.eclipse.org/uml2/2.0.0/UML#//CombinedFragment" xmi:type="ecore:EClass"/>
+				</eStructuralFeatures>
+			</eClassifiers>
+			<eClassifiers name="instantiate" xmi:id="N9.q.NqGAqACCzKk_classifier" xmi:type="ecore:EClass">
+				<eAnnotations references="N9.q.NqGAqACCzKk" source="http://www.eclipse.org/uml2/2.0.0/UML" xmi:id="N9.q.NqGAqACCzKk_annotation"/>
+				<eStructuralFeatures lowerBound="1" name="base_Dependency" ordered="false" xmi:id="N9.q.NqGAqACCzKk_structuralFeature" xmi:type="ecore:EReference">
+					<eType href="http://www.eclipse.org/uml2/2.0.0/UML#//Dependency" xmi:type="ecore:EClass"/>
+				</eStructuralFeatures>
+			</eClassifiers>
+		</contents>
+	</eAnnotations>
+	<packagedElement name="view" xmi:id="vLzz2lqAUACWAQcr" xmi:type="uml:Stereotype">
+		<ownedAttribute association="vLzz2lqAUACWAQcr_extension" name="base_Package" xmi:id="vLzz2lqAUACWAQcr_to">
+			<type href="pathmap://UML_METAMODELS/UML.metamodel.uml#Package" xmi:type="uml:Class"/>
+		</ownedAttribute>
+	</packagedElement>
+	<packagedElement memberEnd="vLzz2lqAUACWAQcr_from vLzz2lqAUACWAQcr_to" name="Package_view" xmi:id="vLzz2lqAUACWAQcr_extension" xmi:type="uml:Extension">
+		<ownedEnd aggregation="composite" association="vLzz2lqAUACWAQcr_extension" type="vLzz2lqAUACWAQcr" xmi:id="vLzz2lqAUACWAQcr_from" xmi:type="uml:ExtensionEnd"/>
+	</packagedElement>
+	<packagedElement name="flow of events" xmi:id="KGrMoVqAUACWAQoH" xmi:type="uml:Stereotype">
+		<ownedAttribute association="KGrMoVqAUACWAQoH_extension" name="base_CombinedFragment" xmi:id="KGrMoVqAUACWAQoH_to">
+			<type href="pathmap://UML_METAMODELS/UML.metamodel.uml#CombinedFragment" xmi:type="uml:Class"/>
+		</ownedAttribute>
+	</packagedElement>
+	<packagedElement memberEnd="KGrMoVqAUACWAQoH_from KGrMoVqAUACWAQoH_to" name="CombinedFragment_flowofevents" xmi:id="KGrMoVqAUACWAQoH_extension" xmi:type="uml:Extension">
+		<ownedEnd aggregation="composite" association="KGrMoVqAUACWAQoH_extension" type="KGrMoVqAUACWAQoH" xmi:id="KGrMoVqAUACWAQoH_from" xmi:type="uml:ExtensionEnd"/>
+	</packagedElement>
+	<packagedElement name="instantiate" xmi:id="N9.q.NqGAqACCzKk" xmi:type="uml:Stereotype">
+		<ownedAttribute association="N9.q.NqGAqACCzKk_extension" name="base_Dependency" xmi:id="N9.q.NqGAqACCzKk_to">
+			<type href="pathmap://UML_METAMODELS/UML.metamodel.uml#Dependency" xmi:type="uml:Class"/>
+		</ownedAttribute>
+	</packagedElement>
+	<packagedElement memberEnd="N9.q.NqGAqACCzKk_from N9.q.NqGAqACCzKk_to" name="Dependency_instantiate" xmi:id="N9.q.NqGAqACCzKk_extension" xmi:type="uml:Extension">
+		<ownedEnd aggregation="composite" association="N9.q.NqGAqACCzKk_extension" type="N9.q.NqGAqACCzKk" xmi:id="N9.q.NqGAqACCzKk_from" xmi:type="uml:ExtensionEnd"/>
+	</packagedElement>
+</uml:Profile>

@@ -4,8 +4,13 @@ This repo WILL BE DELETED once documentation will have been completed.
 
 ## <a name="howto"></a>How to use the provided Dockerfile
 
-*You must have Docker installed in your system. Check the  [official site](https://www.docker.com/products/overview) to get help with Docker's installation.
-The provided Dockerfile has been tested on Docker for Windows `v1.13.0`.*
+*You must have Docker installed in your system. Check the  [official site](https://www.docker.com/products/overview) to get help with Docker's installation.*
+The provided Dockerfile has been tested on: 
+-  Windows 10 Pro with Docker for Windows. Docker engine from version `v1.13.0`
+-  Windows 10 Home with Docker Toolbox. Docker engine version `v1.12.3`
+-  macOS Sierra 10.12.3 with Docker for Mac. Docker engine version `v17.03.0-ce`
+-  Ubuntu 16.04 LTS. Docker engine version `v1.12.6`
+-  Ubuntu 14.04 LTS. Docker engine version `v1.13.1`
 
 ### <a name="mandatoryconf">Mandatory configuration</a>
 
@@ -36,10 +41,13 @@ Make sure your Docker installation is configured for volume mounting.
     -   **Docker for Windows**  
     *Repository cloned in user's Document folder: `C:\Users\<user>\Documents\WIP-docs`*  
     `docker run -it --name PDF -v C:\Users\<user>\Documents\WIP-docs:/data texpdfbuilder`
+    -   **Docker Toolbox (Windows 10 Home)**  
+    *Repository cloned in user's Document folder: `C:\Users\<user>\Documents\WIP-docs`*  
+    `docker run -it --name PDF -v /C/Users/<user>/Documents/WIP-docs:/data texpdfbuilder`
     -   **Docker for Unix/Linux**  
     *Repository cloned in <user> home directory: `/home/<user>/WIP-docs`*  
     `docker run -it --name PDF -v /home/<user>/WIP-docs:/data texpdfbuilder`
-    -   **Docker for Mac (tommaso testa please!)**  
+    -   **Docker for Mac**  
     *Repository cloned in <user> home directory: `/Users/<user>/WIP-docs`*  
     `docker run -it --name PDF -v /Users/<user>/WIP-docs:/data texpdfbuilder`
 

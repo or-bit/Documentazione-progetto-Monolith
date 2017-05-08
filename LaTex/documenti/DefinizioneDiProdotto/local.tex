@@ -1,0 +1,52 @@
+%%%%%%%%%%%%%%
+%  COSTANTI  %
+%%%%%%%%%%%%%%
+
+% In questa prima parte vanno definite le 'costanti' utilizzate soltanto da questo documento.
+% Devono iniziare con una lettera maiuscola per distinguersi dalle funzioni.
+
+\newcommand{\DocTitle}{Definizione di Prodotto}
+\newcommand{\DocVersion}{\VersioneDP{}}
+
+\newcommand{\DocRedazione}{\lorenzo \\ \bea \\ \nick \\ \alice \\ \tommy \\ \marco \\ \mattia}
+\newcommand{\DocVerifica}{\bea \\ \alice}
+\newcommand{\DocApprovazione}{\tommy}
+
+\newcommand{\DocUso}{Esterno}
+\newcommand{\DocDistribuzione}{
+	\Committente{} \\
+	Gruppo \GroupName{} \\
+	\Proponente{}
+}
+
+% La descrizione del documento
+\newcommand{\DocDescription}{
+Documento relativo alla descrizione del prodotto e dei componenti che costituiscono il progetto svolto dal gruppo \GroupName{}.
+}
+
+%%%%%%%%%%%%%%
+%  FUNZIONI  %
+%%%%%%%%%%%%%%
+
+% In questa seconda parte vanno definite le 'funzioni' utilizzate soltanto da questo documento.
+% Setter e getter per il nome::delle::classi::che::è::infinito::da::scrivere
+\newcommand{\class}{}
+\newcommand{\setclass}[1]{
+	\renewcommand{\class}{#1}
+}
+
+% Comando per i riferimenti alle classi
+\newcommand{\cref}[1]{\hyperref[#1]{\texttt{#1}}}
+\newcommand{\coderef}[1]{\hyperref[#1]{\code{#1}}}
+
+% Change symbol for second level lists
+\renewcommand{\labelitemii}{$\circ$}
+
+\definecolor{green}{RGB}{0,102,0}
+\definecolor{blue}{RGB}{0,43,128}
+\newcommand{\method}[1]{\textcolor{blue}{\code{#1}}}
+\newcommand{\field}[1]{\textcolor{green}{\code{#1}}}
+\newcommand{\param}[1]{\textcolor{black}{\code{#1}}}
+
+\usepackage{xr}
+\externaldocument[AdR-]{../AnalisiDeiRequisiti/capitolo-requisiti}

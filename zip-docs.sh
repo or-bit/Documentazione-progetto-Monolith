@@ -34,7 +34,8 @@ if [ "$1" = "-r" -o "$1" = "--release" -o "$1" = "-rc" -o "$1" = "--release-clea
 	mkdir "$RELEASE"/Esterni/Verbali
 	mkdir "$RELEASE"/Interni/Verbali
 	find "$RELEASE" -name "Verbale E*" -exec mv {} "$RELEASE"/Esterni/Verbali/ \;
-	find "$RELEASE" -name "Verbale I*" -exec mv {} "$RELEASE"/Interni/Verbali/ \;	
+	find "$RELEASE" -name "Verbale I*" -exec mv {} "$RELEASE"/Interni/Verbali/ \;
+	find "$RELEASE" -name "Lettera*" -exec mv {} "$RELEASE"/ \;	
 	TOZIP=$RELEASE
 	set +x
 fi

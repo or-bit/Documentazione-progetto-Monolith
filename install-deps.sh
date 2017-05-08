@@ -16,5 +16,6 @@ sudo apt-get -qq install -y --no-install-recommends \
 	texlive-lang-english \
 	texlive-lang-italian \
 	texlive-latex-extra \
-	texlive-latex-recommended \
+	texlive-latex-recommended
+	
 	

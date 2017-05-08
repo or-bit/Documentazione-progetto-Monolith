@@ -9,14 +9,15 @@
 \newcommand{\DocTitle}{Piano di Qualifica}
 \newcommand{\DocVersion}{\VersionePQ{}}
 
-\newcommand{\DocRedazione}{\alice \\ \lorenzo \\ \mattia}
-\newcommand{\DocVerifica}{\bea \\ \lorenzo}
+\newcommand{\DocRedazione}{\lorenzo \\ \mattia \\ \bea}
+\newcommand{\DocVerifica}{\nick \\ \tommy \\ \alice \\ \marco \\ \bea}
 \newcommand{\DocApprovazione}{\nick}
 
 \newcommand{\DocUso}{Esterno}
 \newcommand{\DocDistribuzione}{
 	\Committente{} \\
-	Gruppo \GroupName{}
+	Gruppo \GroupName{} \\
+	\Proponente{}
 }
 
 % La descrizione del documento
@@ -33,4 +34,13 @@
 \externaldocument[AdR-]{../AnalisiDeiRequisiti/capitolo-requisiti}
 
 \newcounter{testcounter}
-\newcommand*{\test}[1]{\stepcounter{testcounter} T#1\thetestcounter}
+\newcommand*{\test}[1]{%
+	\stepcounter{testcounter}
+	T#1\thetestcounter
+}
+
+\newcounter{testcount}
+\newcommand*{\testt}{%
+	\refstepcounter{testcount}
+	TI\thetestcount
+}

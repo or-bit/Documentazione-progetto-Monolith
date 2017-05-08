@@ -1,0 +1,429 @@
+\section{Processi di supporto} \label{sec:supporto}
+\subsection{Documentazione}
+
+\subsubsection{Template}
+È stato creato un template \glossario{\LaTeX{}} per la stesura di tutta la documentazione, mantenendo così costanti le scelte stilistiche.
+Sono definiti comandi globali applicabili a tutti i documenti utilizzati per la formattazione corretta dei vocaboli e l'inserimento più agevole di termini e nomi propri complessi o soggetti a modifiche. Sono definiti anche comandi locali riservati per ogni documento.
+
+\subsubsection{Struttura del documento}
+Questa sezione tratta della struttura generale dei diversi documenti.
+
+\paragraph{Prima pagina}\mbox{}\\
+Ogni documento deve avere la prima pagina così definita:
+\begin{itemize}
+\item logo del gruppo;
+\item titolo del documento;
+\item nome del gruppo - nome del progetto;
+\item informazioni sul documento; in particolare:
+	\begin{itemize}
+		\item versione;
+		\item nome e cognome dei \Redattori{};
+		\item nome e cognome dei \Verificatori{};
+		\item nome e cognome del \Responsabile{} che approva il documento;
+		\item destinazione d'uso;
+		\item lista di distribuzione. 
+	\end{itemize}
+\item descrizione del contenuto del documento.
+\end{itemize}
+
+\paragraph{Diario delle modifiche}\mbox{}\\
+Il diario delle modifiche viene rappresentato tramite una tabella. Ogni riga della tabella rappresenta una versione del documento. In ogni riga viene indicato: 
+\begin{itemize}
+	\item versione corrente del documento; 
+	\item data della modifica che ha portato al cambiamento di versione; 
+	\item autore della modifica;
+	\item ruolo di chi ha modificato; 
+	\item breve descrizione della modifica. 
+\end{itemize}
+La tabella è ordinata in ordine cronologico decrescente, in modo che risulti l'ultima versione come prima riga della tabella.
+
+\paragraph{Indici}\mbox{}\\
+Ogni documento ha tre indici: 
+\begin{itemize}
+	\item \textbf{Indice delle sezioni:} presenta in ordine le sezioni del documento e ne evidenzia le pagine di inizio.
+	\item \textbf{Elenco delle figure:} riporta il nome ed il numero di tutte le figure presenti nel documento.
+	\item \textbf{Elenco delle tabelle:} riporta il nome ed il numero di tutte le tabelle presenti nel documento.
+\end{itemize}
+Nel caso di mancanza di figure o tabelle all'interno del documento i rispettivi indici non devono essere inseriti.
+
+\paragraph{Formattazione generale delle pagine}\mbox{}\\
+Tutte le pagine hanno la seguente struttura:
+\begin{itemize}
+	\item \textbf{Intestazione:}
+	\begin{itemize}
+		\item logo del gruppo affiancato dal nome dl gruppo e dal nome del progetto;
+		\item logo del progetto.
+	\end{itemize}
+		\item \textbf{Corpo:}
+		\begin{itemize}
+			\item testo della pagina corrente.
+		\end{itemize}
+	\item \textbf{Piè di pagina:}
+	\begin{itemize}
+		\item nome e versione del documento;
+		\item numero della pagina corrente nel formato \textit{N} di \textit{T}, dove \textit{N} è il numero di pagina corrente e \textit{T} è il numero di pagine totali.
+	\end{itemize}
+\end{itemize}
+
+\subsubsection{Norme tipografiche}
+In questa sezione vengono descritte tutte le norme stilistiche che devono essere seguite nella scrittura dei documenti. 
+
+\paragraph{Orientamento del testo}\mbox{}\\
+I caratteri tipografici utilizzati nei documenti sono il tondo, il \textit{corsivo} ed il MAIUSCOLO. È inoltre consentito l'uso del \textbf{grassetto} per dare importanza a voci di elenchi o termini che rappresentano concetti significativi all'interno di un testo.
+
+\subparagraph{Uso del corsivo, tondo e maiuscolo} \label{sec:corsivo_tondo_maiuscolo} \mbox{} \\
+Devono essere scritti in corsivo:
+\begin{itemize}
+	\item i ruoli di progetto;
+	\item i nomi dei documenti;
+	\item i titoli di libri e documentazioni esterne (altri documenti di progetto, libri di riferimento, ecc.);
+	\item le parole o brevi espressioni in lingua diversa da quella del testo, che seguono le flessioni proprie della lingua originale.
+\end{itemize}
+Vanno composti in tondo:
+\begin{itemize}
+	\item Le parole in lingua straniera che, pur conservando ancora la forma grafica originaria, sono ormai assimilate all'italiano: come tali esse non seguono la flessione originaria e sono considerate invariabili. Qualsiasi parola straniera che ricorra con particolare frequenza in un testo può essere stampata in tondo e deve essere considerata invariabile (ad esempio la parola input, scritta in tondo, è da considerarsi invariabile: l'input (singolare), gli input (plurale).).
+	\item I nomi propri stranieri di associazioni, cariche pubbliche, istituzioni, ecc., che non hanno equivalente in italiano.
+	\item I nomi delle parti interne di un volume con iniziale maiuscola (Introduzione, Appendice, Glossario, ecc.).
+\end{itemize}
+Vanno scritti in maiuscolo gli acronimi e le sigle.
+
+\subparagraph{Lettere maiuscole}\label{sec:lettere_maiuscole} \mbox{} \\
+Come norma generale l'uso dell'iniziale maiuscola, esclusi i nomi propri e le parole che seguono un punto fermo, va limitata ai casi strettamente necessari.\\
+Si fornisce una lista esemplificativa:
+\begin{itemize}
+	\item riferimenti ai documenti (es.: \textit{Norme di Progetto});
+	\item riferimenti ai ruoli di progetto (es.: \Amministratore{});
+	\item nome del gruppo (\GroupName);
+	\item riferimenti alle attività (es.: \VV) 
+	\item le parole Proponente e Committente.
+	\item denominazioni ufficiali di associazioni, enti, organismi istituzionali (es.: Università degli Studi di Padova);
+	\item titoli, cariche e gradi, quando facciano parte integrante del nome (es.: \CommittenteInline).
+\end{itemize}
+
+\subparagraph{Segni di interpunzione} \mbox{} \\
+I segni di interpunzione e le parentesi mantengono sempre lo stile di formattazione del testo in cui sono inserite.\\
+I periodi interi fra virgolette o parentesi devono concludersi con il punto fermo prima della parentesi di chiusura.
+Da evitare l’uso consecutivo dei due punti all'interno di uno stesso periodo.
+
+\subparagraph{Parentesi, rigati e trattini} \mbox{} \\
+Possono essere usate normalmente le parentesi tonde.\\
+I trattini congiuntivi (-) si usano tra due parole formanti un nome composto.
+
+\subparagraph{Citazioni} \mbox{} \\
+Le citazioni vanno composte in tondo fra virgolette basse.
+
+\subparagraph{Date} \mbox{} \\
+Le date sono suddivise in forma estesa e forma breve.\\
+Il formato esteso è composto da:
+\begin{itemize}
+	\item numero del giorno del mese (gg);
+	\item nome del mese (mese);
+	\item anno in forma integrale (aaaa).
+\end{itemize}
+Il formato breve consiste in:
+\begin{itemize}
+	\item numero del giorno del mese con due cifre (gg);
+	\item numero del mese con due cifre (mm);
+	\item anno in forma integrale (aaaa).
+\end{itemize}
+Tutti i termini della forma breve devono essere separati da trattini (ad esempio: 10-12-2016) ed espressi in doppia cifra, pertanto la data 1 gennaio 2017 in forma breve diventa 01-01-2017.
+La data in forma estesa deve essere utilizzata in calce alla \LetteraPresentazione, mentre è preferibile utilizzare la data in forma breve in qualsiasi altra occasione.
+
+\subparagraph{Numeri} \mbox{} \\
+Devono essere utilizzati numeri nella rappresentazione araba con uso anglosassone del punto nei numeri decimali, tranne nei numeri di pagina di Prefazioni.
+
+\paragraph{Note}\mbox{}\\
+Tutte le note sono composte normalmente in tondo, in un corpo più piccolo di quello del testo.\\
+Le note devono essere numerate normalmente con numeri arabi a esponente (esponenti di nota).\\
+La numerazione riparte di regola da 1 all'inizio di ogni nuova pagina.\\
+Le note seguono la consuetudine della lingua inglese di essere riportate dopo la punteggiatura.
+
+\paragraph{Elenchi}\mbox{}\\
+Gli elenchi devono essere non numerati, a meno di casi particolari che ne richiedano la numerazione.\\
+Devono essere inoltre seguite le seguenti norme:
+\begin{itemize}
+	\item se i termini sono semplici o composti da frasi che sono parte integrante della frase introducente la lista si usa la minuscola, il punto e virgola alla fine di ogni voce e il punto sull'ultima voce;
+	\item se i termini sono complessi e costituiti da frasi distinte rispetto al periodo introduttivo si usa la maiuscola e il punto alla fine di ogni frase.
+\end{itemize}
+
+\paragraph{Scelte stilistiche}\mbox{}
+
+\subparagraph{Tempo verbale} \mbox{} \\
+Il tempo verbale prescelto per la stesura dei documenti è il presente, che deve essere adottato sempre, tranne nei casi in cui serva distinguere temporalmente gli avvenimenti; in tal caso devono essere utilizzati i tempi verbali più adatti.
+
+\subparagraph{Soggetto} \mbox{} \\
+Nella stesura dei documenti il soggetto delle frasi inerenti membri del progetto deve essere una terza persona singolare o plurale.
+
+\subparagraph{Altri formati} \mbox{} \\
+Vengono adottati i seguenti formati:
+\begin{itemize}
+	\item \textbf{indirizzi assoluti}: gli indirizzi \email{} e i web link assoluti devono essere formattati tramite comando \LaTeX{} \textbackslash{\texttt{url}};
+	\item \textbf{nomi dei documenti}: deve essere utilizzato il comando \LaTeX{} \textbackslash{\texttt{NomedelDocumento}} quando si scrive il nome di un documento, cosicché risulti scritto correttamente secondo quanto riportato nelle sezioni §\ref{sec:corsivo_tondo_maiuscolo} e §\ref{sec:lettere_maiuscole}; lo stesso comando fa riferimento all'ultima versione disponibile del documento;
+	\item \textbf{nomi dei file}: per riferirsi ad un file è necessario specificare il suo percorso completo, usando il formato \texttt{monospace};
+	\item \textbf{revisioni di progetto}: per riferirsi alle varie revisioni di progetto è necessario utilizzare il comando \LaTeX{} \textbackslash{\texttt{R\textit{X}}} (con \textit{X} iniziale del secondo sostantivo della revisione a cui si fa riferimento) cosicché risultino scritte correttamente secondo quanto riportato in \sezione{sec:lettere_maiuscole};
+	\item \textbf{attività di progetto}: per riferirsi alle varie attività di progetto è necessario utilizzare il comando \LaTeX{} apposito, cosicché risultino scritte correttamente secondo quanto riportato in \sezione{sec:lettere_maiuscole};
+	\item \textbf{nomi propri}: per riferirsi ai membri del team di sviluppo è necessario seguire lo schema \virgolette{Nome Cognome};
+	\item \textbf{nome del gruppo}: per riferirsi al nome del gruppo è necessario utilizzare il comando \LaTeX{} \textbackslash{\texttt{GroupName}} affinché risulti scritto correttamente secondo quanto riportato in \sezione{sec:lettere_maiuscole};
+	\item \textbf{nome del proponente}: è necessario riferirsi al Proponente del progetto con il termine \textit{Proponente}, o tramite il comando \LaTeX{} \textbackslash{\texttt{Proponente}};
+	\item \textbf{nome del committente}: è necessario riferirsi al Committente del progetto con il termine \textit{Committente}, o tramite il comando \LaTeX{} \textbackslash{\texttt{Committente}};
+	\item \textbf{nome del progetto}: deve essere utilizzato il comando \LaTeX{} \textbackslash{\texttt{ProjectName}} per riferirsi al nome del progetto, cosicché risulti scritto correttamente secondo quando riportato in \sezione{sec:lettere_maiuscole};
+\end{itemize}
+
+\subsubsection{Norme grafiche}
+
+\paragraph{Colori}\mbox{}\\
+\`{E} permesso l'uso del colore nelle immagini ed è assicurata la corretta visibilità per la stampa di esse.
+
+\paragraph{Immagini}\mbox{}\\
+Per convenzione le immagini devono essere salvate in formato vettoriale \glossario{SVG} quando possibile, altrimenti deve essere utilizzato il formato \glossario{PNG} con una risoluzione di stampa di 300 \glossario{DPI}.
+
+\paragraph{Tabelle}\mbox{}\\
+In tutte le tabelle le righe devono essere numerate e i termini nell'intestazione formattati in grassetto.
+%Per aumentare la leggibilità va adottata la convenzione di colorare righe alterne in grigio chiaro.
+\\
+Le tabelle devono essere individuabili per mezzo di un numero progressivo, relativo al capitolo di appartenenza, per l'inserimento di esse nell'indice delle tabelle.
+
+\subsubsection{Destinatari e lingua dei documenti}
+\paragraph{Documenti interni}\mbox{}\\
+I documenti interni sono rivolti ai componenti del gruppo e sono redatti in lingua italiana. Fanno parte di questa categoria \NormeDiProgetto, \StudioDiFattibilita{} ed eventuali verbali interni.\footnote[1]{Si rimanda alla \sezione{sec:verbale_riunioni_interne} per la definizione di questi ultimi.}
+
+\paragraph{Documenti esterni}\mbox{}\\
+I documenti esterni sono rivolti al Proponente e al Committente del capitolato e sono redatti in lingua inglese o italiana.\\
+Devono essere redatti in lingua italiana: \PianoDiProgetto, \PianoDiQualifica, \SpecificaTecnica, \DefinizioneDiProdotto, \Glossario.\\
+Devono essere redatti in lingua inglese: \ManualeUtenteDemo{}, \ManualeUtenteFramework{}, eventuale altra documentazione rivolta agli utilizzatori del prodotto.
+
+\subsubsection{Classificazione dei documenti}
+\paragraph{Documenti informali}\mbox{}\\
+I documenti informali sono tutti quei documenti che non sono ancora stati revisionati dai \Verificatori{}, validati e approvati dal \Responsabile{}.
+
+\paragraph{Documenti formali}\mbox{}\\
+I documenti formali sono tutti quei documenti approvati dal \Responsabile{}.
+
+\subsubsection{Versioning}
+Il ciclo di vita dei documenti è tracciato dal numero di versione degli stessi.\\
+Viene rispettato il seguente formato: una v minuscola seguita da tre indici intervallati da un punto:
+\begin{center}
+	\textit{vX.Y.Z}
+\end{center}
+dove
+\begin{itemize}
+	\item \textit{X} rappresenta le approvazioni attraversate dal documento;
+	\item \textit{Y} rappresenta le verifiche al documento;
+	\item \textit{Z} rappresenta le modifiche al documento.
+\end{itemize}
+Un documento alla sua creazione corrisponde alla versione 0.0.0. L’incremento degli indici avviene nel modo seguente:
+\begin{itemize}
+	\item le modifiche significative, ovvero che non consistono di sole correzioni minori, incrementano il valore di destra di un'unità ciascuna;
+	\item le verifiche del documento azzerano l'indice delle modifiche e incrementano il valore centrale di un'unità ciascuna;
+	\item l'approvazione del documento azzera gli indici delle modifiche e delle verifiche e incrementa il valore di sinistra di un'unità.
+\end{itemize}
+Il raggiungimento di \glossario{milestone} interne non implica l'approvazione finale del documento ma che il documento è stato verificato dai \Verificatori{}.
+
+\subsubsection{Ciclo di vita}
+Il ciclo di vita indica tutte le fasi in cui un documento può trovarsi a partire dalla sua creazione fino alla sua approvazione. Le fasi in cui può trovarsi il documento sono:
+\begin{itemize}
+	\item \textbf{In lavorazione:} un documento entra in questa fase nel momento della sua creazione, e qui vi rimane per tutto il periodo necessario alla sua realizzazione, o per eventuali successive modifiche. 
+	\item \textbf{Da verificare:} una volta che il documento viene ultimato esso deve essere preso in consegna dai \Verificatori{}, i quali hanno il compito di rilevare e correggere eventuali errori e imprecisioni sintattiche e semantiche. 
+	\item \textbf{Approvato:} ogni documento, una volta ultimata l'attività di verifica, deve essere approvato dal \Responsabile{}. L'approvazione sancisce lo stato finale del documento per la data versione.
+\end{itemize}
+
+\subsubsection{Glossario}
+Il \textit{Glossario} è un documento di utilità. Tale documento deve essere aggiornato di pari passo con la stesura dei documenti.
+Si segnalano i termini inclusi nel glossario con una g al pedice alla loro prima occorrenza. 
+
+\subsubsection{Metriche per la documentazione}
+\paragraph{Indice Gulpease}\mbox{}\\
+Per garantire la leggibilità della documentazione in lingua italiana si applica il calcolo dell'indice di leggibilità Gulpease sui testi, considerando la lunghezza in lettere di parole e frasi.
+\[ 89+\frac{300 \cdot \left(n°\ frasi\right)-10 \cdot \left(n°\ lettere\right)}{n°\ parole} \]
+La formula per il calcolo dell'indice di Gulpease restituisce un punteggio in centesimi che determina il grado di comprensibilità rapportato al livello di istruzione del lettore.
+\begin{itemize}
+	\item punteggi intorno a 0: testi a leggibilità più bassa;
+	\item punteggi minori di 40: testi di difficile comprensione per lettori in possesso di un diploma di scuola superiore;
+	\item punteggi minori di 60: testi di difficile comprensione per lettori in possesso di licenza di scuola media;
+	\item punteggi minori di 80: testi di difficile comprensione per lettori in possesso di licenza elementare;
+	\item punteggi intorno a 100: i testi con maggiore livello di comprensione.
+\end{itemize}
+
+\paragraph{Indice Gunning Fog}\mbox{}\\
+Per garantire la leggibilità della documentazione in lingua inglese si applica il calcolo dell'indice di leggibilità Gunning Fog. Come per l'indice Gulpease, l'indice Gunning Fog calcola il grado di leggibilità del testo rapportato al livello di istruzione del lettore.\\
+La formula per il calcolo della leggibilità prende in esame la lunghezza media delle frasi e la percentuale di parole formate da più di tre sillabe.
+\[ 0.4 \cdot \left[\left(\frac{n°\ parole}{n°\ frasi}\right)+100 \cdot \left(\frac{n°\ parole\ complesse}{n°\ parole}\right)\right] \]
+La formula produce un punteggio compreso tra 6, minor grado di complessità del testo, e 17, il maggior grado di complessità del testo.
+\begin{itemize}
+	\item punteggio di 17: il testo è adatto a un \textit{College Graduate};
+	\item punteggio di 16: il testo è adatto a un \textit{College Senior};
+	\item punteggio di 15: il testo è adatto a un \textit{College Junior};
+	\item punteggio di 14: il testo è adatto a un \textit{College Sophomore};
+	\item punteggio di 13: il testo è adatto a un \textit{College Freshman};
+	\item punteggio di 12: il testo è adatto a un \textit{High School Senior Student}; 
+	\item punteggio di 11: il testo è adatto a un \textit{High School Junior Student};
+	\item punteggio di 10: il testo è adatto a un \textit{High School Sophomore Student};
+	\item punteggio di 9: il testo è adatto a un \textit{High School Freshman Student};
+	\item punteggio di 8: il testo è adatto a un \textit{Eighth Grade Student};
+	\item punteggio di 7: il testo è adatto a un \textit{Seventh Grade Student};
+	\item punteggio di 6: il testo è adatto a un \textit{Sixth Grade Student}.
+\end{itemize}
+
+\subsection{Verifica}
+L’attività di verifica deve essere svolta in modo continuativo durante l'avanzamento del progetto. Sono quindi definite modalità operative per agevolare il lavoro dei \Verificatori.
+
+\subsubsection{Analisi statica}
+\`{E} prevista l'attività di analisi statica, applicata a tutti i processi del progetto, per individuare errori nella documentazione e nel software prodotto. Viene eseguita da \Verificatori{} e \Programmatori{}, con ruoli distinti.
+
+\paragraph{Walkthrough} \mbox{}\\
+Si esegue una lettura critica del documento (o codice), a largo spettro e senza alcun presupposto. A seguito di questa attività deve essere redatta una lista che riporti gli errori rilevati con più frequenza, la quale verrà inserita in questo documento per favorire l'uso della tecnica \glossario{inspection} nelle verifiche successive.
+
+\paragraph{Inspection} \mbox{}\\
+Si esegue una lettura mirata del documento (o codice), focalizzando la ricerca sui presupposti individuati tramite precedenti analisi \glossario{walkthrough}.
+
+\paragraph{Linting}\mbox{}\\
+Vengono identificate nel codice prodotto strutture che non rispettano le linee guida imposte tramite strumenti automatici che analizzano il codice e individuano pattern indesiderati o discrepanze.\\
+Alcuni di questi sono:
+\begin{itemize}
+	\item variabili usate prima di essere inizializzate;  
+	\item divisioni per zero;
+	\item condizioni costanti;
+	\item operazioni il cui risultato probabilmente potrebbe risultare esterno all'intervallo di valori rappresentabili con il tipo usato.
+\end{itemize}
+Lo strumento utilizzato per questo tipo di analisi è \glossario{ESLint}, ottimizzato per la Airbnb JavaScript style guide indicata in \sezione{sec:convenzioni} di questo documento. ESLint viene descritto in \sezione{sec:eslint}.
+
+\paragraph{Complexity report}\mbox{}\\
+È un'applicazione installabile come modulo per \glossario{Node.js} e misura metriche riguardanti codice \glossario{JavaScript}, in particolare:
+\begin{itemize}
+	\item complessità ciclomatica;
+	\item numero di parametri per funzioni;
+	\item Halstead;
+	\item core size;
+	\item indice di manutenibilità.
+\end{itemize}
+
+\subsubsection{Analisi dinamica}\mbox{}\\
+\`{E} prevista l’attività di analisi dinamica per il software prodotto per verificarne il corretto funzionamento, in quanto si avvale dell'esecuzione di test su di esso.
+Vengono utilizzati gli strumenti \glossario{Mocha} e \glossario{Chai}, integrati con lo strumento di testing offerto da \glossario{Meteor}.\footnote{Per maggiori dettagli si rimanda al sito ufficiale https://guide.meteor.com/testing.html}
+
+\paragraph{Test}\mbox{}\\
+Vengono svolti vari test, riportati nel \PianoDiQualifica{} e catalogati come segue:
+\begin{center}
+	T[tipo][numero]
+\end{center}
+dove
+\begin{itemize}
+	\item \textit{T} specifica che si sta parlando di un test;
+	\item \textit{tipo} assume uno dei seguenti valori:
+	\begin{itemize}
+		\item [U] se il test è di unità;
+		\item [I] se il test è di integrazione;
+		\item [R] se il test è di regressione;
+		\item [S] se il test è di sistema;
+		\item [V] se il test è di validazione.
+	\end{itemize}
+	\item \textit{numero} è assoluto e rappresenta un riferimento univoco al test in questione.
+\end{itemize}
+In particolare:
+\begin{itemize}
+	\item i test di unità verificano che le singole componenti non abbiano errori prese individualmente;
+	\item i test di integrazione verificano che più unità collaborino correttamente;
+	\item i test di regressione verificano che le modifiche apportate non invalidino i test già svolti in precedenza;
+	\item i test di sistema verificano che il prodotto soddisfi tutti i requisiti;
+	\item i test di validazione coincidono con il collaudo finale.
+\end{itemize}
+
+\subsubsection{Metriche per la verifica}\mbox{}
+\paragraph{Code coverage}\mbox{}\\
+Misura la capacità di coprire, mediante esecuzione di test, tutte le linee di codice di un modulo. Una copertura topologica del test del 100\% di tipo code coverage garantisce di aver eseguito almeno una volta tutte le istruzioni, ma non tutti i rami.
+
+\paragraph{Modified condition/decision coverage (MC/DC)}\mbox{}\\
+\`{E} una combinazione delle metriche di \textit{function coverage} (copertura delle funzioni chiamate) e \textit{branch coverage} (copertura dei branch delle strutture di controllo). Questa metrica richiede che ogni punto di entrata o uscita in un programma sia invocato almeno una volta e che per ogni decisione condizionale vengano considerati tutti i possibili esiti. La versione \textit{modified} richiede inoltre che entrambe le coperture siano soddisfatte, ed in particolare che ogni condizione influenzi gli esiti condizionali indipendentemente.\footnote{Si rimanda al seguente link \url{https://en.wikipedia.org/wiki/Code_coverage} per esempi esplicativi.}
+
+\paragraph{Test eseguiti}\mbox{}
+Rappresenta la percentuale di test eseguiti rispetto a quelli pianificati. Viene calcolata come
+\[\frac{N_{TE}}{N_{TT}} \cdot 100 \]
+dove
+\begin{itemize}
+	\item $N_{TE}$: numero di test eseguiti;
+	\item $N_{TT}$: numero di test totali pianificati.
+\end{itemize}
+
+\paragraph{Test superati}\mbox{}\\
+Indica la percentuale di test superati rispetto a quelli eseguiti. Viene calcolata come
+\[ \frac{N_{TS}}{N_{TE}} \cdot 100 \]
+dove
+\begin{itemize}
+	\item $N_{TS}$: numero di test superati;
+	\item $N_{TE}$: numero di test eseguiti.
+\end{itemize}
+
+\paragraph{Metriche di gestione degli errori}\mbox{}\\
+I parametri utilizzati:
+\begin{itemize}
+	\item \textbf{Criticità}: indica la gravità dell'errore rispetto all'avanzamento del progetto. Può assumere i seguenti valori:
+	\begin{itemize}
+		\item \textbf{bassa}: l'errore non compromette il corretto avanzamento del progetto;
+		\item \textbf{media}: l'errore non è bloccante, ma può compromettere il corretto avanzamento del progetto;
+		\item \textbf{alta}: l'errore è bloccante e compromette l'avanzamento del progetto.	
+	\end{itemize}
+	\item \textbf{Priorità}: indica la priorità di risoluzione dell'errore. Può assumere i seguenti valori:
+	\begin{itemize}
+		\item \textbf{bassa}: l'errore deve essere risolto entro la milestone successiva;
+		\item \textbf{media}: l'errore deve essere risolto entro una settimana dalla segnalazione;
+		\item \textbf{alta}: l'errore deve essere risolto nel più breve tempo possibile.
+	\end{itemize}
+	\item \textbf{Modalità}: indica la modalità di gestione dell'errore. Può assumere i seguenti valori:
+	\begin{itemize}
+		\item \textbf{correzione immediata}: il \Verificatore{} può correggere immediatamente l'errore se ne è in grado;
+		\item \textbf{segnalazione}: il \Verificatore{} deve effettuare una segnalazione, secondo le procedure indicate nelle \NormeDiProgetto{}.
+	\end{itemize}
+\end{itemize}
+
+\subsubsection{Metriche di prodotto}
+Hanno l'obiettivo di misurare la qualità del prodotto software nelle sue caratteristiche fisiche quali dimensioni, funzionabilità, manutenibilità e usabilità.
+
+\paragraph{Functional Size Measurement}\mbox{}\\
+Functional Size Measurement (FSM) è una tecnica per misurare il software in termini di funzionalità che esso offre. Lo standard \glossario{ISO}/\glossario{IEC} 14143 definisce FSM come una quantificazione dei Functional User Requirements (FUR), ovvero i requisiti che descrivono ciò che il software dovrebbe fare in termini di compiti e servizi, escludendo quindi le costrizioni in termini di qualità, organizzazione, ambiente e implementazione.\\
+Vantaggi di FSM:
+\begin{itemize}
+	\item è indipendente dalla tecnologia usata per implementare e sviluppare il software;
+	\item è idealmente la componente misurativa delle prestazioni del progetto, poiché queste possono essere comparate come le varie tecnologie, piattaforme, e altro ancora;
+	\item può essere stimata dallo stato dei requisiti a priori.
+\end{itemize}
+\`{E} pertanto utilizzabile per una valutazione preventiva dei costi del progetto.\\
+Il calcolo della copertura offerta è effettuato mediante la formula
+\[ \left(1 - \frac{N_{FM}}{N_{FI}} \right) \cdot 100 \]
+dove
+\begin{itemize}
+	\item $N_{FM}$: numero di funzionalità mancanti;
+	\item $N_{FI}$: numero di funzionalità individuate. 
+\end{itemize}
+
+\paragraph{Accuratezza rispetto alle attese}\mbox{}\\
+Rappresenta la percentuale di risultati dei test che rispettano quanto previsto. Viene calcolata come
+\[ \left(1 - \frac{N_{RD}}{N_{TE}} \right) \cdot 100 \]
+dove
+\begin{itemize}
+	\item $N_{RD}$: numero di test che producono risultati discordanti;
+	\item $N_{TE}$: numero di test eseguiti.
+\end{itemize}
+
+\paragraph{Fallimento dei test}\mbox{}\\
+Rappresenta la percentuale di operazioni di test che si sono concluse con fallimento. Viene calcolato come
+\[ \frac{N_{FR}}{N_{TE}} \cdot 100\]
+dove
+\begin{itemize}
+	\item $N_{FR}$: numero di fallimenti ricevuti;
+	\item $N_{TE}$: numero di test eseguiti.
+\end{itemize}
+
+\paragraph{Gestione delle operazioni non permesse}\mbox{}\\
+Rappresenta la percentuale di funzionalità che gestiscono correttamente errori che potrebbero verificarsi. Viene calcolato come
+\[ \frac{N_{EE}}{N_{TE}} \cdot 100\]
+dove
+\begin{itemize}
+	\item $N_{EE}$: numero di errori evitati durante i test;
+	\item $N_{TE}$: numero di test eseguiti che prevedono l'esecuzione di operazioni non corrette.
+\end{itemize} 
+
+
+\subsection{Validazione}
+L'attività di Validazione è necessaria per assicurare che il prodotto sia conforme ai requisiti.
+La validazione può essere eseguita attraverso i test di sistema per confermare che l'architettura progettata sia funzionante, corretta e soddisfi tutti i requisti. \\
+Vanno svolti collaudi interni per assicurare la buona riuscita della validazione di accettazione del prodotto, simulando i test che saranno in seguito eseguiti durante il collaudo esterno. In corrispondenza della \RA{} si esegue il collaudo finale volto a verificare la soddisfazione del Proponente, tramite test di validazione.

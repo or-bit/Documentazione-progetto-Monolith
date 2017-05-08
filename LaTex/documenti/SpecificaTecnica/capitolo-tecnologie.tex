@@ -12,52 +12,77 @@ In questa sezione sono descritte le tecnologie da utilizzare nello sviluppo del 
 \end{itemize}
 
 \subsection{Meteor}
-Meteor è un framework JavaScript sviluppato con lo scopo di semplificare la creazione di applicazioni web gestendo allo stesso tempo le parti di front end, \glossario{back end} e dei dati. Si integra facilmente con diverse tecnologie utilizzate nello sviluppo web come \glossario{AngularJS} e \glossario{React}.
-L'utilizzo di Meteor nella realizzazione del progetto è vincolato essendo questo il framework su cui è scritto Rocket.Chat. Questo però porta a numerosi vantaggi, permettendo una gestione semplificata dell'applicativo web.
+Meteor è un framework JavaScript sviluppato con lo scopo di semplificare la creazione di applicazioni web gestendo allo stesso tempo le parti di front end, \glossario{back end} e dei dati.
+\begin{itemize}
+	\item \textbf{Aspetti positivi}: Il vantaggio più immediato di Meteor è la possibilità di sviluppare un'applicazione real-time con il minimo sforzo, il framework infatti si occupa autonomamente di aggiornare la visualizzazione dei dati nel momento in cui questi vengono modificati. L'utilizzo di javascript per front end, back end e gestione dei dati permette inoltre di scrivere l'intera applicazione con un solo semplice linguaggio. Meteor si integra anche facilmente con diverse tecnologie utilizzate nello sviluppo web come \glossario{AngularJS} e \glossario{React} e permette  
+	\item \textbf{Aspetti negativi}: Il framework possiede molte dipendenze che possono portare a scelte quasi obbligate di altre tecnologie, come l'utilizzo del database non relazionale MongoDB. Meteor inoltre non presenta un supporto cross-platform perfetto e può dare dei problemi su alcune piattaforme.
+\end{itemize}
+L'utilizzo di Meteor nella realizzazione del progetto è vincolato essendo questo il framework su cui è scritto Rocket.Chat. Riteniamo tuttavia che questo porti a numerosi vantaggi, permettendo una gestione semplificata dell'applicativo web che si adatta bene agli scopi prefissati del progetto e all'inesperienza del gruppo.
 
 \subsection{MongoDB}
-MongoDB è un DBMS non relazionale document-oriented di tipo \glossario{NoSQL} ed è distribuito come software libero open-source. L'utilizzo di questa tecnologia è vincolato dalla sua integrazione con Meteor, tuttavia a fronte dello svantaggio di essere una tecnologia poco conosciuta ai membri del gruppo presenta anche numerosi punti di forza:
+MongoDB è un DBMS non relazionale document-oriented di tipo \glossario{NoSQL} ed è distribuito come software libero open-source. 
 \begin{itemize}
-	\item semplicità di apprendimento;
-	\item un'efficienza superiore ai database relazionali non esistendo \textit{join} che porterebbero ad un rallentamento delle operazioni di lettura o scrittura; 
-	\item è più flessibile di un database \glossario{SQL} facilitando la rappresentazione su un modello ad oggetti;
-	\item scalabilità a seconda delle esigenze dell'applicazione;
-	\item svincola dall'uso del linguaggio SQL per la generazioni delle query.
+	\item \textbf{Aspetti positivi}: MondoDB è un database di facile apprendimento, che vanta un'efficienza superiore ai database relazionali non esistendo \textit{join} che porterebbero ad un rallentamento delle operazioni di lettura o scrittura. MongoDB è anche più flessibile di un database \glossario{SQL}, facilitando la rappresentazione su un modello ad oggetti. Altri vantaggi di questa tecnologia sono la scalabilità a seconda delle esigenze dell'applicazione e la libertà dall'uso del linguaggio SQL per la generazione delle query.
+	\item \textbf{Aspetti negativi}: come molte soluzione NoSQL MongoDB non sostiene le proprietà ACID(Atomicity, Consistency, Isolation, Durability) delle transizioni altrettanto bene di più consolidati database relazionali. Visto l'abbandono delle transazioni e del join inoltre MongoDB non gestisce bene dati strettamente correlati e si adatta di più a grandi moli di dati poco relazionati tra loro.
 \end{itemize}
-Grazie all'integrazione con Meteor l'accesso al database è ulteriormente semplificato.
+L'utilizzo di questa tecnologia è vincolato dalla sua integrazione con Meteor, tuttavia a fronte dello svantaggio di essere una tecnologia poco conosciuta ai membri del gruppo si presenta come di semplice apprendimento e grazie all'integrazione con Meteor l'accesso al database è ulteriormente semplificato.
 
 \subsection{ECMAScript 2015}
-Il linguaggio JavaScript da utilizzare per il progetto deve implementare le specifiche ECMAScript 2015 (o ECMAScript 6), come richiesto da \glossario{\Proponente}. ECMAScript 2015 introduce in JavaScript diverse migliorie utilizzabili per rendere più efficiente lo sviluppo. Nel dettaglio le funzionalità più rilevanti sono:
+ECMAScript 2015 (o ECMAScript 6) è un linguaggio di programmazione standardizzato che arricchisce e standardizza JavaScript, entrato largamente in uso, inizialmente, come linguaggio client-side nel web development.
 \begin{itemize}
-	\item \textbf{Promises:} Gestione degli eventi asincroni più efficace tramite le promises. Comparabili ai future di \glossario{Java} (\url{https://docs.oracle.com/javase/6/docs/api/java/util/concurrent/Future.html}), le promises restituiscono un valore futuro a cui può essere assegnata una callback da chiamare in caso di esecuzione andata a buon fine del metodo asincrono. L'utilizzo di questo modello di concorrenza e la possibilità di concatenare le promises garantisce un rischio molto minore di incorrere nei problemi di concorrenza che si riscontrerebbero utilizzando il modello classico.
-	\item \textbf{ArrowFunctions:} Nel passare come parametro funzioni di callback ad altre funzioni è possibile omettere la definizione esplicita di funzione indicando direttamente parametri e valori di ritorno. In questo modo si incrementa la leggibilità del codice e si diminuisce di conseguenza la probabilità di commettere errori nella stesura.
-	\item \textbf{Classi:} ECMAScript 2015 prevede inoltre di aggiungere zucchero sintattico al pattern \textit{Object-Oriented} (\glossario{OOP}) di JavaScript permettendo la dichiarazione di classi, ereditarietà, metodi statici e di istanza. Di conseguenza il codice prodotto è più semplice da comparare con quello di un qualsiasi altro linguaggio orientato agli oggetti.
+	\item \textbf{Aspetti positivi}: ECMAScript 2015 introduce in JavaScript diverse migliorie utilizzabili per rendere più efficiente lo sviluppo. Nel dettaglio le funzionalità più rilevanti sono:
+	\begin{itemize}
+		\item \textbf{Promises}: Gestione degli eventi asincroni più efficace tramite le promises. Comparabili ai future di \glossario{Java} (\url{https://docs.oracle.com/javase/6/docs/api/java/util/concurrent/Future.html}), le promises restituiscono un valore futuro a cui può essere assegnata una callback da chiamare in caso di esecuzione andata a buon fine del metodo asincrono. L'utilizzo di questo modello di concorrenza e la possibilità di concatenare le promises garantisce un rischio molto minore di incorrere nei problemi di concorrenza che si riscontrerebbero utilizzando il modello classico.
+		\item \textbf{ArrowFunctions}: Nel passare come parametro funzioni di callback ad altre funzioni è possibile omettere la definizione esplicita di funzione indicando direttamente parametri e valori di ritorno. In questo modo si incrementa la leggibilità del codice e si diminuisce di conseguenza la probabilità di commettere errori nella stesura.
+		\item \textbf{Classi}: ECMAScript 2015 prevede inoltre di aggiungere zucchero sintattico al pattern \textit{Object-Oriented} (\glossario{OOP}) di JavaScript permettendo la dichiarazione di classi, ereditarietà, metodi statici e di istanza. Di conseguenza il codice prodotto è più semplice da comparare con quello di un qualsiasi altro linguaggio orientato agli oggetti. 
+	\end{itemize}
+	\item \textbf{Aspetti negativi}: Lo svantaggio principale presentato dallo standard ECMAScript è che nella sua versione 2015 non è ancora completamente supportato in tutti gli ambienti. 
 \end{itemize}
+L'implementazione delle specifiche ECMAScript prenseta un gran numero di vantaggi e funzionalità che possono risultare molto utili nello sviluppo del progetto ed è stata richiesta da \glossario{\Proponente}. 
 
 \subsection{HTML5}
 HTML5 è l'ultima versione dell'HTML (HyperText Markup Language). È stato scelto in quanto:
 \begin{itemize}
-	\item ha il vantaggio di utilizzare una sintassi semplificata e più chiara rispetto alle versioni precedenti dello standard;
-	\item permette l'integrazione con diversi formati multimediali senza utilizzare plugin esterni; 
-	\item favorisce una struttura dinamica di visualizzazione dei dati, allontanandosi da quella di ipertesto delle versioni precedenti.
+	\item \textbf{Aspetti positivi}: HTML5 ha il vantaggio di utilizzare una sintassi semplificata e più chiara rispetto alle versioni precedenti dello standard e permette l'integrazione con diversi formati multimediali senza utilizzare plugin esterni. Il nuovo standard inoltre favorisce una struttura dinamica di visualizzazione dei dati, allontanandosi da quella di ipertesto delle versioni precedenti.
+	\item \textbf{Aspetti negativi}: Lo svantaggio principale di HTML5 è che non è ancora pienamente supportato dai diversi browser, e le caratteristiche supportate variano dall'uno all'altro.
 \end{itemize}
+Abbiamo scelto di utilizzare HTML5 in quanto è lo standard più recente e presenta numerosi vantaggi sulle versioni precedenti di HTML. Inoltre il supporto per lo standard da parte dei diversi browser milgiora continuamente con i loro aggiornamenti.
 
 \subsection{Sass (CSS3)}
-È un'estensione del CSS che permette di utilizzare variabili, creare funzioni e organizzare il foglio di stile dividendolo in più file. Rispetto al CSS standard permette di costruire strutture più complesse con minor sforzo, minimizzando così la possibilità di fare errori durante la stesura.
+È un'estensione del CSS che permette di utilizzare variabili, creare funzioni e organizzare il foglio di stile dividendolo in più file.
+\begin{itemize}
+	\item \textbf{Aspetti positivi}: Rispetto al CSS standard permette di costruire strutture più complesse con minor sforzo, minimizzando così la possibilità di fare errori durante la stesura.
+	\item \textbf{Aspetti negativi}: Viste le funzionalità ulteriori offerte Sass richiede un tempo di apprendimento maggiore rispetto al CSS standard.
+\end{itemize} 
+Abbiamo scelto di utilizzare Sass per sfruttarne le maggiori potenzialità rispetto al CSS standard a scapito della quantità di tempo maggiore richiesta per apprenderlo. 
 
 \subsection{Bootstrap}
-Bootstrap è un framework per la progettazione della parte front end di siti e applicazioni web. Questo framework permette di migliorare la qualità del codice utilizzando \glossario{template} HTML e CSS di comprovata efficienza ed efficacia. Bootstrap garantisce un notevole supporto allo sviluppo del front end di \ProjectName{} grazie alla presenza di numerose componenti responsive e classi CSS già configurate.
+Bootstrap è un framework per la progettazione della parte front end di siti e applicazioni web. 
+\begin{itemize}
+	\item \textbf{Aspetti positivi}: Questo framework permette di migliorare la qualità del codice utilizzando \glossario{template} HTML e CSS di comprovata efficienza ed efficacia. Bootstrap garantisce un notevole supporto allo sviluppo del front end di \ProjectName{} grazie alla presenza di numerose componenti responsive e classi CSS già configurate. Il framework è inoltre ben supportato da tutti i maggiori browser, evitando alcuni dei rischi del CSS standard.
+	\item \textbf{Aspetti negativi}: Gli stili e classi di Bootstrap sono spesso verbosi e possono portare a del codice HTML non perfettamente semantico. L'utilizzo del framework richiede anche un notevole lavoro di riscrittura e overriding di stili se si desidera personalizzare molto il proprio sito o deviare dalla struttura di Bootstrap.
+\end{itemize}
+Abbiamo deciso di utilizzare Bootstrap in quanto rende molto più semplice la progettazione del front end del progetto a dispetto della maggiore difficoltà di customizzazione.
 
 \subsection{React}
-Per una migliore gestione della UI il gruppo ha deciso di utilizzare la libreria JavaScript React. Essa utilizza HTML e CSS per creare componenti web. È possibile creare delle viste dedicate per ogni stato dell'applicazione e le modifiche ad ogni componente verranno aggiornate singolarmente direttamente da React. Questo risulta in una maggior facilità di scrittura di codice JavaScript. L'utilizzo della libreria React è stato consigliato dal proponente, vista la notevole diffusione e la conseguente intenzione degli sviluppatori di mantenere il progetto.
+React è una libreria JavaScript per la costruzione di interfacce utente.
+\begin{itemize}
+	\item \textbf{Aspetti positivi}: Tramite React è possibile creare delle viste dedicate per ogni stato dell'applicazione e le modifiche ad ogni componente verranno aggiornate singolarmente direttamente da React. Questo risulta in una maggior facilità di scrittura di codice JavaScript. \item \textbf{Aspetti negativi}: React è una libreria limitata all'interfaccia utente, dunque deve per necessità essere integrata dall'utilizzo di altre librerie per gestire il resto dell'applicazione. Non essendo un framework React è anche più soggetto a potenziali problemi derivanti da cambiamenti nel corso dei suoi aggiornamenti. 
+\end{itemize} 
+L'utilizzo della libreria React è stato consigliato dal proponente vista la notevole diffusione e la conseguente intenzione degli sviluppatori di mantenere il progetto.
 
 \subsection{WebStorm}
-Per la stesura del codice la scelta è ricaduta sull'\glossario{IDE} WebStorm della \glossario{JetBrains}, indicato come principale IDE per lo sviluppo di codice web e JavaScript. Esso infatti è un IDE estremamente sofisticato che include:
+WebStorm è un \glossario{IDE} della \glossario{JetBrains}, indicato come principale IDE per lo sviluppo di codice web e JavaScript.
 \begin{itemize}
-	\item suggerimenti nel codice tratti sia dalla libreria standard che dalle librerie incluse;
-	\item integrazione con git;
-	\item funzionalità di analisi del codice;
-	\item analisi delle ripetizioni;
-	\item segnalazione della ricorsione.
+	\item \textbf{Aspetti positivi}: WebStorm è un IDE estremamente sofisticato che tra le molte funzionalità include:
+	\begin{itemize}
+		\item suggerimenti nel codice tratti sia dalla libreria standard che dalle librerie incluse;
+		\item integrazione con git;
+		\item funzionalità di analisi del codice;
+		\item analisi delle ripetizioni;
+		\item segnalazione della ricorsione. 
+	\end{itemize}
+	Consente inoltre di tracciare le chiamate dei metodi e di integrarsi con un debugger.
+	\item \textbf{Aspetti negativi}: Il problema principale di WebStorm è la sua natura di prodotto a pagamento, richiede inoltre qualche secondo alla prima apertura e quando vengono aperti file non appartenenti al progetto corrente apre un nuovo IDE.
 \end{itemize}
-Consente inoltre di tracciare le chiamate dei metodi e di integrarsi con un debugger.
+Abbiamo scelto di utilizzare WebStorm per via delle sue molteplici funzionalità e come studenti dell'università abbiamo potuto ottenere una licenza temporanea della durata di un anno che ci ha permesso di aggirare il problema del costo dell'IDE.

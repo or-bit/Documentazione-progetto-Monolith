@@ -1,6 +1,21 @@
-\subsection{Ruoli di progetto}
+\subsection{Gestione di progetto}
 
+\subsubsection{Repository e strumenti per la condivisione dei file}
 
+\paragraph{Repository}\mbox{}\\
+Per il versionamento sia dei documenti che del codice sorgente del progetto sono impiegati due repository di \glossario{Git}. Il repository del codice sorgente ha licenza \glossario{MIT} ed è possibile accedervi al seguente indirizzo: \url{https://github.com/or-bit/Monolith}.
+La documentazione ha lo stesso tipo di licenza ed è mantenuta al seguente indirizzo: \url{https://github.com/or-bit/Documentazione-progetto-Monolith}.\\
+Il repository dei documenti è suddiviso in due cartelle: 
+\begin{itemize}
+	\item \textit{Interni}, che contiene tutti i documenti interni;
+	\item \textit{Esterni}, che contiene tutti i documenti esterni.
+\end{itemize}
+Tutti i partecipanti al progetto devono essere aggiunti come collaboratori ai due repository.
+
+\paragraph{Condivisione dei file}\mbox{}\\
+Tutti i file principali del progetto devono essere resi disponibili sulla piattaforma \glossario{GitHub}. Per tutti gli altri file di cui sia necessaria la condivisione è possibile utilizzare il servizio offerto da \glossario{Google Drive}.
+
+\subsubsection{Ruoli di progetto}
 Il gruppo \GroupName{} si impegna a organizzare una rotazione dei ruoli per permettere a tutti i membri del gruppo di aver svolto almeno una volta ogni ruolo, durante la durata del progetto. Durante una fase un singolo componente potrà ricoprire più ruoli, purché non entrino in conflitto, non sarà permesso per esempio che qualcuno sia il \Verificatore{} del lavoro da lui svolto. Alcuni ruoli potranno essere ricoperti da più persone contemporaneamente.
 Nell'assegnazione dei ruoli deve essere prestata particolare attenzione ad evitare che il processo di verifica di una particolare attività sia effettuato dalle stesse persone che l'hanno svolta originariamente.
 
@@ -29,7 +44,7 @@ Ciascun ruolo ha un diverso costo, riportato nella tabella sottostante.
 \end{table}
 
 
-\subsubsection{Responsabile di Progetto} \label{sec:responsabile}
+\paragraph{Responsabile di Progetto} \label{sec:responsabile}\mbox{}\\
 Il \Responsabile{} si occupa degli aspetti organizzativi e decisionali.\\
 Sono compiti specifici del \Responsabile:
 \begin{itemize}
@@ -48,7 +63,7 @@ Egli è anche il responsabile ultimo dei risultati conseguiti.
 Redige \textit{Piano di Progetto} e \textit{Piano di Qualifica}.
 
 
-\subsubsection{Amministratore}
+\paragraph{Amministratore}\mbox{}\\
 L'\Amministratore{} garantisce il funzionamento dell'infrastruttura tecnologica predisponendo strumenti e regole. Si assicura che tutte le risorse siano operanti. \`{E} compito dell'\Amministratore{} garantire l'efficienza e l'operatività dell'ambiente. A questo fine tra le sue mansioni si annoverano:
 \begin{itemize}
 	\item ricerca degli strumenti volti all'automatizzazione dei vari compiti;
@@ -58,7 +73,7 @@ L'\Amministratore{} garantisce il funzionamento dell'infrastruttura tecnologica 
 \end{itemize}
 Redige \textit{Norme di progetto} e \textit{Piano di Qualifica}.
 
-\subsubsection{Analista}
+\paragraph{Analista}\mbox{}\\
 Il compito dell'\Analista{} è quello di svolgere tutte le attività di analisi necessarie prima dello svolgimento del progetto o di una particolare attività. Sottopone ad analisi il problema reale per soddisfare le richieste degli stakeholders. Deve quindi possedere una piena conoscenza della natura e complessità del progetto in tutte le sue parti. L'\Analista{} ha il compito di redigere due documenti:
 \begin{itemize}
 	\item \textit{Studio di Fattibilità};
@@ -73,7 +88,7 @@ Lo \textit{Studio di Fattibilità} definisce formalmente e ufficialmente quelle 
 L'\Analista{} partecipa anche alla redazione del \textit{Piano di Qualifica} rendendo disponibile le sue approfondite conoscenze dal punto di vista teorico e applicativo.
 Redige \textit{Studio di fattibilità}, \textit{Analisi dei Requisiti} e \textit{Piano di Qualifica}.
 
-\subsubsection{Progettista}
+\paragraph{Progettista}\mbox{}\\
 \`{E} compito del \Progettista:
 \begin{itemize}
 	\item studiare il dominio e stabilire l'insieme delle tecnologie impiegate per lo svolgimento del progetto;
@@ -83,10 +98,10 @@ Redige \textit{Studio di fattibilità}, \textit{Analisi dei Requisiti} e \textit
 \end{itemize}
 Redige \textit{Specifica Tecnica}, \textit{Definizione di Prodotto} e \textit{Piano di Qualifica}.
 
-\subsubsection{Programmatore}
+\paragraph{Programmatore}\mbox{}\\
 Il \Programmatore{} ha il compito di implementare le soluzioni determinate dal \Progettista, per aderire a quanto stabilito dagli \Analisti{} durante le attività di analisi. \`{E} inoltre responsabilità del \Programmatore{} documentare il codice prodotto secondo gli standard descritti nella \sezione{sec:convenzioni} delle \NormeDiProgetto{} e dotare il codice di appropriati test per le attività di \VV. Il \Programmatore{} deve inoltre assicurarsi che il codice prodotto sia correttamente versionato e facilmente manutenibile.
 Redige \textit{Manuale utente} e documenta il codice implementato.
 
-\subsubsection{Verificatore}
+\paragraph{Verificatore}\mbox{}\\
 Il \Verificatore{} ha il compito di valutare la correttezza del lavoro fatto dagli altri membri del team e di assicurarsi che sia svolto in maniera conforme a quanto descritto nelle \NormeDiProgetto. In caso trovi errori il \Verificatore, se ne ha la possibilità, deve anche provvedere a correggerli. In caso l'attività di correzione risulti troppo dispendiosa è compito del \Verificatore{} comunicarlo al \Responsabile, il quale provvederà ad aggiornare l'ordine del giorno della successiva riunione.\\
 Il \Verificatore{} redige parte del \textit{Piano di Qualifica}, in particolare quanto concerne l'esito e la completezza delle verifiche e delle prove effettuate.

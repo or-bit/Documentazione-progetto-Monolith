@@ -21,70 +21,70 @@
 
 \subsubsection{Bubble To-do list}
 
-\begin{longtable}{|c|P{9cm}|c|}
-	\hline \multicolumn{1}{|l|}{\textbf{Codice}} &  \multicolumn{1}{l|}{\textbf{Descrizione}} & \multicolumn{1}{l|}{\textbf{Requisito}} \\ 
+\begin{longtable}{|c|m{7cm}|c|m{3cm}|}
+	\hline \multicolumn{1}{|l|}{\textbf{Codice}} &  \multicolumn{1}{l|}{\textbf{Descrizione}} & \multicolumn{1}{l|}{\textbf{Requisito}} & \multicolumn{1}{l|}{\textbf{Esito}} \\ 
 	\endfirsthead
-	\hline \test{S} & Verificare che la bubble To-do list permetta all'utente la creazione di liste & \ref{AdR-L17} \\
-	\hline \test{S} & Verificare che l'utente possa invocare il comando di creazione della to-do list & \ref{AdR-L71} \\
-	\hline \test{S} & Verificare che la bubble carichi un form per l'inserimento delle informazioni & \ref{AdR-L95} \\
-	\hline \test{S} & Verificare che l'utente possa inserire le informazioni per la creazione della to-do list all’interno del form & \ref{AdR-L72} \\
-	\hline \test{S} & Verificare che l'utente possa confermare le informazioni inserite visualizzandole in un riepilogo & \ref{AdR-L73} \\
-	\hline \test{S} & Verificare che la bubble To-do list permetta l’inserimento di nuovi elementi nella lista tramite un form & \ref{AdR-L18} \\
-	\hline \test{S} & Verificare che una volta aggiunti nuovi elementi la bubble li mostri nella To-do list & \ref{AdR-L74} \\
-	\hline \test{S} & Verificare che la bubble To-do list permetta di segnare come completati gli elementi della lista & \ref{AdR-L19} \\
-	\hline \test{S} & Verificare che una volta segnato come completato un elemento della To-do list questo venga disabilitato e reso non modificabile & \ref{AdR-L75} \\
-	\hline \test{S} & Verificare che la To-do list permetta di settare un reminder come notifica statica & \ref{AdR-L20} \\
-	\hline \test{S} & Verificare che la notifica statica venga visualizzata una volta scaduto l'intervallo temporale impostato & \ref{AdR-L76} \\
+	\hline \test{S} & Verificare che la bubble To-do list permetta all'utente la creazione di liste & \ref{AdR-L17} & Superato \\
+	\hline \test{S} & Verificare che l'utente possa invocare il comando di creazione della to-do list & \ref{AdR-L71} & Superato \\
+	\hline \test{S} & Verificare che la bubble carichi un form per l'inserimento delle informazioni & \ref{AdR-L95} & Superato \\
+	\hline \test{S} & Verificare che l'utente possa inserire le informazioni per la creazione della to-do list all’interno del form & \ref{AdR-L72} & Superato \\
+	\hline \test{S} & Verificare che l'utente possa confermare le informazioni inserite visualizzandole in un riepilogo & \ref{AdR-L73} & Non implementato \\
+	\hline \test{S} & Verificare che la bubble To-do list permetta l’inserimento di nuovi elementi nella lista tramite un form & \ref{AdR-L18} & Superato \\
+	\hline \test{S} & Verificare che una volta aggiunti nuovi elementi la bubble li mostri nella To-do list & \ref{AdR-L74} & Superato \\
+	\hline \test{S} & Verificare che la bubble To-do list permetta di segnare come completati gli elementi della lista & \ref{AdR-L19} & Superato \\
+	\hline \test{S} & Verificare che una volta segnato come completato un elemento della To-do list questo venga disabilitato e reso non modificabile & \ref{AdR-L75} & Non implementato \\
+	\hline \test{S} & Verificare che la To-do list permetta di settare un reminder come notifica statica & \ref{AdR-L20} & Non implementato \\
+	\hline \test{S} & Verificare che la notifica statica venga visualizzata una volta scaduto l'intervallo temporale impostato & \ref{AdR-L76} & Non implementato \\
 	\hline
 	\caption{Test di sistema per la bubble To-do list}
 \end{longtable}
 
 \subsubsection{Bubble \& eat}
 
-\begin{longtable}{|c|P{9cm}|c|}
-	\hline \multicolumn{1}{|l|}{\textbf{Codice}} & \multicolumn{1}{l|}{\textbf{Descrizione}} & \multicolumn{1}{l|}{\textbf{Requisito}} \\ 
+\begin{longtable}{|c|m{7cm}|c|m{3cm}|}
+	\hline \multicolumn{1}{|l|}{\textbf{Codice}} & \multicolumn{1}{l|}{\textbf{Descrizione}} & \multicolumn{1}{l|}{\textbf{Requisito}} & \multicolumn{1}{l|}{\textbf{Esito}} \\  
 	\endfirsthead
 	
-	\hline \test{S} & Verificare che la bubble per la ristorazione si interfacci con un database per il salvataggio delle informazioni & \ref{AdR-L21} \\
-	\hline \test{S} & Verificare che la bubble per la ristorazione si interfacci con un database per il recupero delle informazioni & \ref{AdR-L61} \\
-	\hline \test{S} & Verificare che la bubble per la ristorazione si interfacci con un database per aggiornare informazioni & \ref{AdR-L62} \\	
-	\hline \test{S} & Verificare che i Customer per poter utilizzare la bubble possano inserire le proprie informazioni & \ref{AdR-L22} \\
-	\hline \test{S} & Verificare che la bubble mostri un form per l'inserimento delle informazioni personali dell'utente & \ref{AdR-L96} \\
-	\hline \test{S} & Verificare che l'utente possa inserire le informazioni nel form & \ref{AdR-L97} \\
-	\hline \test{S} &Verificare che l'utente possa confermare le informazioni inserite visualizzandole nella bubble & \ref{AdR-L98} \\
-	\hline \test{S} & Verificare che i Customer possano consultare il menu del ristorante, visualizzandolo nella bubble & \ref{AdR-L23} \\
-	\hline \test{S} & Verificare che i Customer visualizzino i prezzi delle pietanze nel menu & \ref{AdR-L68} \\
-	\hline \test{S} & Verificare che i Customer possano selezionare cibi e relative quantità per effettuare un ordine & \ref{AdR-L24} \\
-	\hline \test{S} & Verificare che la quantità di default per un cibo non selezionato sia 0 & \ref{AdR-L69} \\
-	\hline \test{S} & Verificare che la quantità di default per un cibo selezionato sia 1 & \ref{AdR-L77} \\
-	\hline \test{S} & Verificare che non possa essere incrementata la quantità per un cibo non selezionato & \ref{AdR-L70} \\
-	\hline \test{S} & Verificare che l'utente possa confermare di aver concluso la modifica cliccando su un pulsante di conferma & \ref{AdR-L99} \\
-	\hline \test{S} & Verificare che la bubble mostri all'utente un resoconto dell'ordine prima della sua conferma definitiva & \ref{AdR-L100} \\
-	\hline \test{S} & Verificare che l'utente Chef possa visualizzare la lista di piatti da preparare & \ref{AdR-L25} \\
-	\hline \test{S} & Verificare che l'utente Chef possa marcare come completati i piatti già preparati tra quelli dalla lista di piatti da preparare  & \ref{AdR-L26} \\
-	\hline \test{S} & Verificare che i piatti spuntati dallo Chef vengono eliminati dalla lista dei piatti da preparare & \ref{AdR-L78} \\
-	\hline \test{S} & Verificare che l'utente Purchasing Manager possa visualizzare la lista degli acquisti da effettuare & \ref{AdR-L27} \\
-	\hline \test{S} & Verificare che l'utente Purchasing Manager possa spuntare i prodotti che ha acquistato dalla lista acquisti & \ref{AdR-L28} \\
-	\hline \test{S} & Verificare che l'utente Manager possa visualizzare il menu del ristorante all’interno della bubble & \ref{AdR-L104}  \\
-	\hline \test{S} & Verificare che l'utente Manager possa cambiare il menu del ristorante & \ref{AdR-L105} \\
-	\hline \test{S} & Verificare che l'utente Manager possa modificare le voci del menu ed i relativi prezzi all’interno della bubble & \ref{AdR-L29} \\
-	\hline \test{S} & Verificare che l'utente Manager possa aggiungere le voci del menu con relativi prezzi tramite un form & \ref{AdR-L79} \\
-	\hline \test{S} & Verificare che l'utente Manager possa selezionare l'opzione per aggiungere elemento & \ref{AdR-L108} \\
-	\hline \test{S} & Verificare che l'utente Manager possa rimuovere le voci del menu & \ref{AdR-L80} \\
-	\hline \test{S} & Verificare che l'utente Manager possa selezionare le voci del menu & \ref{AdR-L106} \\
-	\hline \test{S} & Verificare che l'utente Manager possa visualizzare la lista dei piatti da preparare all’interno della bubble & \ref{AdR-L30} \\
-	\hline \test{S} & Verificare che l'utente Manager possa visualizzare la lista degli acquisti da effettuare all’interno della bubble & \ref{AdR-L31} \\
-	\hline \test{S} & Verificare che l'utente Manager possa eliminare voci dalla lista dei piatti da preparare & \ref{AdR-L32} \\
-	\hline \test{S} & Verificare che l'utente Manager possa selezionare ordini nella lista dei piatti da preparare & \ref{AdR-L101} \\
-	\hline \test{S} & Verificare che l'utente Manager possa selezionare l'opzione per rimuovere gli elementi selezionati & \ref{AdR-L102} \\
-	\hline \test{S} & Verificare che l'utente Manager possa selezionare l'opzione per modificare gli elementi selezionati & \ref{AdR-L107} \\
-	\hline \test{S} & Verificare che l'utente Manager possa confermare di voler effettuare l'operazione tramite un pulsante & \ref{AdR-L103} \\
-	\hline \test{S} & Verificare che l'utente Manager possa aggiungere ingredienti alla lista degli acquisti da effettuare & \ref{AdR-L53}\\
-	\hline \test{S} & Verificare che l'utente Manager possa eliminare ingredienti dalla lista degli acquisti da effettuare & \ref{AdR-L65} \\
-	\hline \test{S} & Verificare che l'utente Manager possa selezionare elementi dalla lista degli acquisti da effettuare & \ref{AdR-L109} \\
-	\hline \test{S} & Verificare che l'utente Deliveryman possa visualizzare la lista delle consegne da effettuare all’interno della bubble & \ref{AdR-L50}  \\
-	\hline \test{S} & Verificare che l'utente Deliveryman possa selezionare la consegna che intende effettuare & \ref{AdR-L51} \\
-	\hline \test{S} & Verificare che l'utente Deliveryman possa confermare la consegna che ha effettuato & \ref{AdR-L52} \\
+	\hline \test{S} & Verificare che la bubble per la ristorazione si interfacci con un database per il salvataggio delle informazioni & \ref{AdR-L21} & Superato \\
+	\hline \test{S} & Verificare che la bubble per la ristorazione si interfacci con un database per il recupero delle informazioni & \ref{AdR-L61} & Superato \\
+	\hline \test{S} & Verificare che la bubble per la ristorazione si interfacci con un database per aggiornare informazioni & \ref{AdR-L62} & Superato \\	
+	\hline \test{S} & Verificare che i Customer per poter utilizzare la bubble possano inserire le proprie informazioni & \ref{AdR-L22} & Superato \\
+	\hline \test{S} & Verificare che la bubble mostri un form per l'inserimento delle informazioni personali dell'utente & \ref{AdR-L96} & Superato \\
+	\hline \test{S} & Verificare che l'utente possa inserire le informazioni nel form & \ref{AdR-L97} & Superato \\
+	\hline \test{S} & Verificare che l'utente possa confermare le informazioni inserite visualizzandole nella bubble & \ref{AdR-L98} & Non implementato \\
+	\hline \test{S} & Verificare che i Customer possano consultare il menu del ristorante, visualizzandolo nella bubble & \ref{AdR-L23} & Superato \\
+	\hline \test{S} & Verificare che i Customer visualizzino i prezzi delle pietanze nel menu & \ref{AdR-L68} & Superato \\
+	\hline \test{S} & Verificare che i Customer possano selezionare cibi e relative quantità per effettuare un ordine & \ref{AdR-L24} & Superato \\
+	\hline \test{S} & Verificare che la quantità di default per un cibo non selezionato sia 0 & \ref{AdR-L69} & Superato \\
+	\hline \test{S} & Verificare che la quantità di default per un cibo selezionato sia 1 & \ref{AdR-L77} & Superato \\
+	\hline \test{S} & Verificare che non possa essere incrementata la quantità per un cibo non selezionato & \ref{AdR-L70} & Non implementato \\
+	\hline \test{S} & Verificare che l'utente possa confermare di aver concluso la modifica cliccando su un pulsante di conferma & \ref{AdR-L99} & Superato \\
+	\hline \test{S} & Verificare che la bubble mostri all'utente un resoconto dell'ordine prima della sua conferma definitiva & \ref{AdR-L100} & Non implementato \\
+	\hline \test{S} & Verificare che l'utente Chef possa visualizzare la lista di piatti da preparare & \ref{AdR-L25} & Superato \\
+	\hline \test{S} & Verificare che l'utente Chef possa marcare come completati i piatti già preparati tra quelli dalla lista di piatti da preparare  & \ref{AdR-L26} & Superato \\
+	\hline \test{S} & Verificare che i piatti spuntati dallo Chef vengono eliminati dalla lista dei piatti da preparare & \ref{AdR-L78} & Superato \\
+	\hline \test{S} & Verificare che l'utente Purchasing Manager possa visualizzare la lista degli acquisti da effettuare & \ref{AdR-L27} & Non implementato \\
+	\hline \test{S} & Verificare che l'utente Purchasing Manager possa spuntare i prodotti che ha acquistato dalla lista acquisti & \ref{AdR-L28} & Non implementato \\
+	\hline \test{S} & Verificare che l'utente Manager possa visualizzare il menu del ristorante all’interno della bubble & \ref{AdR-L104}  & Superato \\
+	\hline \test{S} & Verificare che l'utente Manager possa cambiare il menu del ristorante & \ref{AdR-L105} & Superato \\
+	\hline \test{S} & Verificare che l'utente Manager possa modificare le voci del menu ed i relativi prezzi all’interno della bubble & \ref{AdR-L29} & Superato \\
+	\hline \test{S} & Verificare che l'utente Manager possa aggiungere le voci del menu con relativi prezzi tramite un form & \ref{AdR-L79} & Superato \\
+	\hline \test{S} & Verificare che l'utente Manager possa selezionare l'opzione per aggiungere elemento & \ref{AdR-L108} & Superato \\
+	\hline \test{S} & Verificare che l'utente Manager possa rimuovere le voci del menu & \ref{AdR-L80} & Superato \\
+	\hline \test{S} & Verificare che l'utente Manager possa selezionare le voci del menu & \ref{AdR-L106} & Superato \\
+	\hline \test{S} & Verificare che l'utente Manager possa visualizzare la lista dei piatti da preparare all’interno della bubble & \ref{AdR-L30} & Superato \\
+	\hline \test{S} & Verificare che l'utente Manager possa visualizzare la lista degli acquisti da effettuare all’interno della bubble & \ref{AdR-L31} & Non implementato \\
+	\hline \test{S} & Verificare che l'utente Manager possa eliminare voci dalla lista dei piatti da preparare & \ref{AdR-L32} & Superato \\
+	\hline \test{S} & Verificare che l'utente Manager possa selezionare ordini nella lista dei piatti da preparare & \ref{AdR-L101} & Non implementato \\
+	\hline \test{S} & Verificare che l'utente Manager possa selezionare l'opzione per rimuovere gli elementi selezionati & \ref{AdR-L102} & Superato \\
+	\hline \test{S} & Verificare che l'utente Manager possa selezionare l'opzione per modificare gli elementi selezionati & \ref{AdR-L107} & Non implementato \\
+	\hline \test{S} & Verificare che l'utente Manager possa confermare di voler effettuare l'operazione tramite un pulsante & \ref{AdR-L103} & Non implementato \\
+	\hline \test{S} & Verificare che l'utente Manager possa aggiungere ingredienti alla lista degli acquisti da effettuare & \ref{AdR-L53}& Non implementato \\
+	\hline \test{S} & Verificare che l'utente Manager possa eliminare ingredienti dalla lista degli acquisti da effettuare & \ref{AdR-L65} & Non implementato \\
+	\hline \test{S} & Verificare che l'utente Manager possa selezionare elementi dalla lista degli acquisti da effettuare & \ref{AdR-L109} & Non implementato \\
+	\hline \test{S} & Verificare che l'utente Deliveryman possa visualizzare la lista delle consegne da effettuare all’interno della bubble & \ref{AdR-L50}  & Non implementato \\
+	\hline \test{S} & Verificare che l'utente Deliveryman possa selezionare la consegna che intende effettuare & \ref{AdR-L51} & Non implementato \\
+	\hline \test{S} & Verificare che l'utente Deliveryman possa confermare la consegna che ha effettuato & \ref{AdR-L52} & Non implementato \\
 	\hline
 	\caption{Test di sistema per la bubble Bubble \& eat}
 \end{longtable}

@@ -19,7 +19,7 @@ Conformemente a quanto riportato nell'\AnalisiDeiRequisiti{} saranno possibili l
 
 \paragraph{Package To-do list}\mbox{}\\
 
-Il package della To-do list segue il pattern Model-View-Controller (MVC), e dunque contiene i package View, Controller e Model. Il package View contiene tutti gli elementi grafici della To-do list e forma la GUI visibile agli utenti della bubble. Il package Model permette operazioni sui dati riguardanti la To-do list e le notifiche ad essi associate salvati sia nella bubble memory sia nel database attraverso il package Db\-Gateway. Il package Controller è dedicato alla ricezione degli input dagli attori permettendo agli stessi l'interazione con i dati contenuti nel Model e l'aggiornamento della View.
+Il package della To-do list segue il pattern Model-View-Controller (MVC), e dunque contiene i package View, Controller e Model. Il package View contiene tutti gli elementi grafici della To-do list e forma la GUI visibile agli utenti della bubble. Il package Model permette operazioni sui dati riguardanti la To-do list e le notifiche ad essi associate salvati sia nella bubble memory sia nel database attraverso il package DataChecker. Il package Controller è dedicato alla ricezione degli input dagli attori permettendo agli stessi l'interazione con i dati contenuti nel Model e l'aggiornamento della View.
 
 \begin{figure}[H]
 	\centering
@@ -28,37 +28,46 @@ Il package della To-do list segue il pattern Model-View-Controller (MVC), e dunq
 \end{figure}
 
 \subparagraph{Model}\mbox{}\\
-Il package Model gestisce i dati contenuti nella bubble memory e nel database associato tramite i package BubbleMemory e Db\-Gateway. Permette inoltre di impostare notifiche tramite il package Notification. I dati sono rappresentati dal package List\-Items ovvero le liste contenute nella bubble To-do list. List\-Items\-Container definisce le liste, formate da oggetti della classe List\-Item, cioè singole voci delle liste. 
+Il package Model gestisce i dati contenuti nella bubble memory e nel database associato tramite i package ItemsStore e DataChecker. Permette inoltre di impostare notifiche tramite il package Notification.  
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=14cm]{../../documenti/SpecificaTecnica/diagrammi_img/classi_e_package/todo_model.png}
 	\caption{Model}
 \end{figure}
 
+\subsubparagraph{TodoList\-::Model\-::ItemsStore}\label{todo-itemsstore}\mbox{}\\
+\textbf{Descrizione:}\\
+La classe ItemsStore contiene i dati riguardanti le entrate della TodoList.\\
+\textbf{Utilizzo:}\\
+L'utilizzo di questa classe è quello di fornire il salvataggio dei dati per le entrate della bubble To-do list in modo da poter modificare i dati alla creazione, eliminazione o completamento di voci della lista.\\
+
+\subsubparagraph{TodoList\-::Model\-::Data\-Checker}\label{todo-datachecker}\mbox{}\\
+\textbf{Descrizione:}\\
+La classe DataChecker verifica la correttezza dei dati rispetto ad uno schema dato e li salva sul database.\\
+\textbf{Utilizzo:}\\
+Questa classe permette di verificare l'integrità dei dati inviati dall'utente rispetto ad uno schema dato, salvandoli successivamente sul database.
+
+\subsubparagraph{TodoList\-::Model\-::ListItems}\mbox{}\\ \label{todo-item-model}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=14cm]{../../documenti/SpecificaTecnica/diagrammi_img/classi_e_package/todo_listitems.png}
 	\caption{List\-Items}
 \end{figure}
 
-\subsubparagraph{TodoList\-::Model\-::List\-Items\-::List\-Item}\label{todo-item}\mbox{}\\
-\textbf{Descrizione:}\\
-La classe List\-Item rappresenta un'entrata per la To-do list.\\
-\textbf{Utilizzo:}\\
-L'utilizzo di questa classe è quello di fornire un'implementazione per le entrate della bubble To-do list in modo da poter creare o eliminare voci della lista, segnarle come completate o settare un reminder.\\
+Il package ListItems rappresenta tramite le classi che contiene la to-do list a livello logico.\\
+\begin{description}
+	\item[\textbf{TodoList\-::Model\-::ListItems::ListItem}] \hfill\\
+	\textbf{Descrizione:}\\
+	La classe ListItem rappresenta una voce della to-do list.\\
+	\textbf{Utilizzo:}\\
+	Viene utilizzata per contenere i dati relativi alla voce della lista.
+	\item[\textbf{TodoList\-::Model\-::ListItems::ListItemContainer}] \hfill\\
+	\textbf{Descrizione:}\\
+	La classe ListItemContainer rappresenta un contenitore per gli elementi della lista, ovvero la lista stessa.\\
+	\textbf{Utilizzo:}\\
+	Viene utilizzata per mantenere le informazioni riguardo alla lista.
+\end{description}
 
-\subsubparagraph{TodoList\-::Model\-::List\-Items\-::List\-Item\-Container}\label{todo-container}\mbox{}\\
-\textbf{Descrizione:}\\
-La classe List\-Item permette la gestione di una collezione di voci della To-do list definite dalla classe List\-Item.\\
-\textbf{Utilizzo:}\\
-Questa classe offre la possibilità di aggiungere, rimuovere e restituire elementi da una collezione di elementi della To-do list.\\
-
-
-\subsubparagraph{TodoList\-::Model\-::Db\-Gateway\-::Data\-Checker}\label{todo-gateway}\mbox{}\\
-\textbf{Descrizione:}\\
-La classe Db\-Gateway verifica la correttezza dei dati rispetto ad uno schema dato.\\
-\textbf{Utilizzo:}\\
-Questa classe permette di verificare l'integrità dei dati inviati dall'utente rispetto ad uno schema dato.
 
 \subparagraph{View}\mbox{}\\
 \nopagebreak
@@ -68,19 +77,24 @@ Questa classe permette di verificare l'integrità dei dati inviati dall'utente r
 	\caption{View}
 \end{figure}
 
-Le classi presenti in questo package non vengono descritte, in quanto corrispondono a quelle riportate nel framework.
+\subsubparagraph{TodoList\-::View\-::ListItemView}\label{todo-view}\mbox{}\\
+\textbf{Descrizione:}\\
+La classe ListItemView rappresenta graficamente un'entrata per la To-do list.\\
+\textbf{Utilizzo:}\\
+L'utilizzo di questa classe è quello di rappresentare le singole entrate della To-do list e permetterne la selezione per la gestione della rimozione e del completamento in modo indipendente dalle altre voci all'interno della lista.\\
+
 
 \subparagraph{Controller}\mbox{}
 \begin{samepage}
-	\subsubparagraph{TodoList\-::Controller\-::Todo\-Controller}\label{todo-controller}\mbox{}\\
+	\subsubparagraph{TodoList\-::Controller\-::ListItemController}\label{todo-controller}\mbox{}\\
 	\nopagebreak
 	\begin{figure}[H]
 		\centering
 		\includegraphics[height=5cm]{diagrammi_img/classi_e_package/todo_controller}
-		\caption{Controller\-::Todo\-Controller}
+		\caption{Controller\-::ListItemsController}
 	\end{figure}
 \end{samepage}
 \textbf{Descrizione:}\\
-La classe TodoController svolge il ruolo di controller all'interno della bubble To-do list. \\
+La classe ListItemController permette di associare agli elementi della view funzionalità logiche definite nel model.\\
 \textbf{Utilizzo:}\\
-Viene utilizzata per controllare le interazioni tra GUI e model all'interno della bubble. Corrisponde alla GenericBubble del framework. \\
+La funzione di questa classe è quella di Controller della To-do list; essa controlla la renderizzazione grafica ed il comportamento della To-do list.\\

@@ -20,5 +20,8 @@ deploy:
   overwrite: true
   on:
     repo: or-bit/WIP-docs
-    all_branches: true
+    tags: true
+    branch: master
+notifications:
+  slack: or-bitteam:QUI8ReSEYuE6reMuP3icez5j
     

@@ -33,17 +33,18 @@
 \newcommand{\ResponsabileInCarica}{}
 
 % La versione dei documenti deve essere definita qui in global, perchè serve anche agli altri documenti
-\newcommand{\VersioneG}{2.0.0}
-\newcommand{\VersionePQ}{2.0.0}
-\newcommand{\VersioneNP}{2.0.0}
-\newcommand{\VersionePP}{2.0.0}
-\newcommand{\VersioneAR}{2.0.0}
+\newcommand{\VersioneG}{3.0.0}
+\newcommand{\VersionePQ}{3.0.0}
+\newcommand{\VersioneNP}{3.0.0}
+\newcommand{\VersionePP}{3.0.0}
+\newcommand{\VersioneAR}{3.0.0}
 \newcommand{\VersioneSF}{1.0.0}
-\newcommand{\VersioneST}{1.0.0}
+\newcommand{\VersioneST}{2.0.0}
 \newcommand{\VersioneMA}{0.0.0}
 \newcommand{\VersioneMS}{0.0.0}
-\newcommand{\VersioneMU}{0.0.0}
-\newcommand{\VersioneDP}{0.0.0}
+\newcommand{\VersioneMUD}{1.0.0}
+\newcommand{\VersioneMUF}{1.0.0}
+\newcommand{\VersioneDP}{1.0.0}
 % Il verbale non ha versionamento.
 % Lasciare vuoto, non mettere trattini o puntini
 % Non sono permessi numeri nel nome di un comando :(
@@ -60,9 +61,10 @@
 \newcommand{\AnalisiDeiRequisiti}{\emph{Analisi dei Requisiti v\VersioneAR{}}}
 \newcommand{\SpecificaTecnica}{\emph{Specifica Tecnica v\VersioneST{}}}
 \newcommand{\ManualeAdmin}{\emph{Manuale Admin}}
-\newcommand{\ManualeSviluppatore}{\emph{Manuale Sviluppatore}}
-\newcommand{\ManualeUtente}{\emph{Manuale Utente}}
-\newcommand{\DefinizioneDiProdotto}{\emph{Definizione di Prodotto}}
+\newcommand{\ManualeSviluppatore}{\emph{Manuale Sviluppatore} v\VersioneMS}
+\newcommand{\ManualeUtenteDemo}{\emph{Demo User Manual v\VersioneMUD}}
+\newcommand{\ManualeUtenteFramework}{\emph{Framework User Manual v\VersioneMUF}}
+\newcommand{\DefinizioneDiProdotto}{\emph{Definizione di Prodotto v\VersioneDP}}
 \newcommand{\LetteraPresentazione}{\emph{Lettera di Presentazione}}
 
 % Per riferirsi alle revisioni usare i comandi seguenti:
@@ -110,6 +112,11 @@ Lo scopo di questo progetto è sviluppare un \glossario{framework} volto alla co
 Il progetto si propone anche di utilizzare il framework prodotto per fornire esempi significativi delle suddette bubble.
 }
 
+\newcommand{\ScopoDelProdottoEng}{
+The aim of this project is to develop a \glossario{framework} aimed at the construction of interactive \glossario{bubbles} to add and improve on the functionalities offered by the communication platform \glossario{Rocket.Chat}.
+The project also aims at providing significant examples of such bubbles developed using the aforementioned framework.
+}
+
 \newcommand{\GlossarioIntroduzione}{
 Insieme al progetto il gruppo fornisce un glossario nel quale sono raccolti i termini tecnici, gli acronimi e le parole che necessitano di chiarimenti utilizzate nella documentazione.\\
 I vocaboli presenti nel documento \Glossario{} sono marcati alla loro prima occorrenza con una \textit{\small{G}} al pedice.
@@ -134,19 +141,19 @@ I vocaboli presenti nel documento \Glossario{} sono marcati alla loro prima occo
 % Comando per usare comodamente le virgolette
 \newcommand{\virgolette}[1]{``#1''}
 
-\newcommand*\flextt{%
-  \fontdimen2\font=0.4em% interword space
-  \fontdimen3\font=0.6em% interword stretch
-  \fontdimen4\font=0.1em% interword shrink
-  \fontdimen7\font=0.1em% extra space
-  \hyphenchar\font=`\:
+\newcommand\flextt{%
+	\fontdimen2\font=0.2em% interword space
+	\fontdimen3\font=0.1em% interword stretch
+	\fontdimen4\font=0.1em% interword shrink
+	\fontdimen7\font=0.2em% extra space
+	\hyphenchar\font=`\-
 }
 
 % Serve a dare la giusta formattazione al codice inline
-\newcommand{\code}[1]{\flextt{\texttt{#1}}}
+\newcommand{\code}[1]{\ttfamily\flextt{#1}\normalfont}
 
 % Serve a dare la giusta formattazione a tutte le path presenti nei documenti
-\newcommand{\file}[1]{\flextt{\texttt{#1}}}
+\newcommand{\file}[1]{\flextt{#1}}
 
 % Permette di andare a capo all'interno di una cella in una tabella
 \newcommand{\multiLineCell}[2][c]{\begin{tabular}[#1]{@{}l@{}}#2\end{tabular}}
