@@ -1,1 +1,7 @@
 \section{Troubleshooting}
+
+\subsection{Most common error messages}
+
+\definizione{UninitializedStoreError}
+When \DemoName's front-end starts before the OrderGateway and tries to pass its state to the Store, but the store itself is not yet initialized.
+The OrderGateway must be launched before \DemoName's front-end.

@@ -33,17 +33,17 @@ Viene utilizzato per affidare la gestione dell'interfaccia alla view, lasciando 
 
 \subsection{Design Pattern Strutturali}
 
-\subsubsection{Fa\c{c}ade}
-\textbf{Scopo:} \\
-Fornisce un'interfaccia unica per un sottosistema più complesso, rendendo visibili solamente alcune parti agli altri oggetti. Rendendo unico il punto d'accesso vengono minimizzate le comunicazioni e le dipendenze. Fa\c{c}ade inoltre non impedisce l'utilizzo delle classi interne al sottosistema, creando un compromesso tra facilità d'uso e generalità. \\
-\textbf{Utilizzo:} \\ 
-Fa\c{c}ade viene utilizzato per creare un livello astratto all'interno della view. Viene infatti delegato alla classe \glossario{GUI} il compito di indirizzare le richieste ricevute dal controller al giusto componente interno. Vengono in questo modo semplificate le comunicazioni, viene ridotto l'accoppiamento e quindi aumentata la portabilità.
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=15cm]{./diagrammi_img/applicazione_pattern/facade_framework.png}
-	\caption{Applicazione pattern fa\c{c}ade all'interno del framework}
-\end{figure}
+%\subsubsection{Fa\c{c}ade}
+%\textbf{Scopo:} \\
+%Fornisce un'interfaccia unica per un sottosistema più complesso, rendendo visibili solamente alcune parti agli altri oggetti. Rendendo unico il punto d'accesso vengono minimizzate le comunicazioni e le dipendenze. Fa\c{c}ade inoltre non impedisce l'utilizzo delle classi interne al sottosistema, creando un compromesso tra facilità d'uso e generalità. \\
+%\textbf{Utilizzo:} \\ 
+%Fa\c{c}ade viene utilizzato per creare un livello astratto all'interno della view. Viene infatti delegato alla classe \glossario{GUI} il compito di indirizzare le richieste ricevute dal controller al giusto componente interno. Vengono in questo modo semplificate le comunicazioni, viene ridotto l'accoppiamento e quindi aumentata la portabilità.
+%
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=15cm]{./diagrammi_img/applicazione_pattern/facade_framework.png}
+%	\caption{Applicazione pattern fa\c{c}ade all'interno del framework}
+%\end{figure}
 
 \subsubsection{Proxy}
 \textbf{Scopo:}\\
@@ -68,26 +68,26 @@ Verrà utilizzato questo design qualora nella scrittura dell'oggetto debbano ess
 	\caption{Applicazione pattern module all'interno della bubble Bubble \& eat}
 \end{figure}
 
-\subsection{Design Pattern Comportamentali}
+\subsection{Design Pattern Comportamentali}\label{DesignPatterComportamentali}
 
 \subsubsection{Observer}
 \textbf{Scopo:} \\
 Permette l'aggiornamento di più viste contemporaneamente, disinteressandosi di quante o quali esse siano.\\
 \textbf{Utilizzo:} \\
 Verrà usato per sincronizzare le varie bubble che opereranno con dati condivisi, in modo da mantenerle sempre aggiornate e consistenti le une con le altre. Allo stesso modo l'OrderGateway contiene al suo interno un observer per gestire la connessione e la sincronizzazione degli eventi.
-%\begin{figure}[H]
-%	\centering
-%	\includegraphics[width=15cm]{./diagrammi_img/applicazione_pattern/observer_demo.png}
-%	\caption{Applicazione pattern fa\c{c}ade all'interno del framework}
-%\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{./diagrammi_img/applicazione_pattern/observer_demo.png}
+	\caption{Applicazione pattern observer all'interno della \DemoName}
+\end{figure}
 
 \subsubsection{Strategy}
 \textbf{Scopo:} \\
 Definisce una famiglia di algoritmi, li incapsula e li rende interscambiabili. Il pattern strategy permette di variare l'algoritmo, indipendentemente dai clients che lo utilizzano.\\
 \textbf{Utilizzo:} \\
 Questo pattern verrà usato per indirizzare le informazioni dell'OrderGateway alla bubble corretta, tramite un handler interno ad esso.
-%\begin{figure}[H]
-%	\centering
-%	\includegraphics[width=15cm]{./diagrammi_img/applicazione_pattern/observer_demo.png}
-%	\caption{Applicazione pattern fa\c{c}ade all'interno del framework}
-%\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm]{./diagrammi_img/applicazione_pattern/strategy_demo.png}
+	\caption{Applicazione pattern strategy all'interno della \DemoName}
+\end{figure}

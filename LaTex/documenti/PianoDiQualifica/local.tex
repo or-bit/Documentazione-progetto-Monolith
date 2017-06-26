@@ -9,9 +9,9 @@
 \newcommand{\DocTitle}{Piano di Qualifica}
 \newcommand{\DocVersion}{\VersionePQ{}}
 
-\newcommand{\DocRedazione}{\lorenzo \\ \mattia \\ \bea}
-\newcommand{\DocVerifica}{\nick \\ \tommy \\ \alice \\ \marco \\ \bea}
-\newcommand{\DocApprovazione}{\nick}
+\newcommand{\DocRedazione}{\alice \\ \bea \\ \marco \\ \mattia}
+\newcommand{\DocVerifica}{\lorenzo \\ \nick}
+\newcommand{\DocApprovazione}{\mattia}
 
 \newcommand{\DocUso}{Esterno}
 \newcommand{\DocDistribuzione}{
@@ -33,9 +33,18 @@
 \usepackage{xr}
 \externaldocument[AdR-]{../AnalisiDeiRequisiti/capitolo-requisiti}
 
+\makeatletter
+\newcommand*{\textlabel}[2]{%
+	\edef\@currentlabel{#1}% Set target label
+	\phantomsection% Correct hyper reference link
+	\label{#2}% store label
+}
+\makeatother
+
 \newcounter{testcounter}
-\newcommand*{\test}[1]{%
-	\stepcounter{testcounter}
+\newcommand*{\test}[2]{%
+	\refstepcounter{testcounter}
+	\textlabel{T#1\thetestcounter}{#2}
 	T#1\thetestcounter
 }
 
@@ -44,3 +53,12 @@
 	\refstepcounter{testcount}
 	TI\thetestcount
 }
+
+
+\definecolor{green}{RGB}{0,180,0}
+\definecolor{red}{RGB}{215,0,0}
+\newcommand{\si}{\textcolor{green}{Superato}\stepcounter{si}}
+\newcommand{\no}{\textcolor{red}{Non implementato}\stepcounter{no}}
+
+\newcounter{no}
+\newcounter{si}

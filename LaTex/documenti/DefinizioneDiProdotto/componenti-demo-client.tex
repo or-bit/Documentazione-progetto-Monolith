@@ -59,10 +59,10 @@ Viene utilizzata per raccogliere le informazioni dei clienti.
 	\caption{Classe \class}
 \end{figure}
 \textbf{Descrizione:}\\
-Classe che rappresenta il Customer e le sue funzionalità all'interno dell'applicazione.
+La classe BubbleCustomer rappresenta il Customer e tutte le sue funzionalità all'interno dell'applicazione. In particolare dispone di tutti i metodi necessari a svolgere le diverse attività rese disponibili al Customer, come l'effettuare un ordine o il visualizzare il menu. Questa classe si occupa anche di renderizzare la componente di GUI della bubble, e fornisce tutti i metodi necessari a navigarne le diverse pagine. Infine la bubble dispone dei metodi necessari a connettersi e disconnettersi dal socket che la collega al resto dell'applicazione.
 
 \textbf{Utilizzo:}\\
-Viene utilizzata per gestire le funzionalità dei clienti.
+Viene utilizzata per gestire le funzionalità dei clienti e renderizzare la parte grafica della bubble.
 
 \textbf{Classi ereditate:}
 \begin{itemize}
@@ -90,9 +90,9 @@ Viene utilizzata per gestire le funzionalità dei clienti.
 
 \textbf{Metodi:}
 \begin{itemize}
-	\item \method{+ CustomerBubble(props: Object[])}: costruttore, assegna i parametri;
+	\item \method{+ BubbleCustomer(client: Client)}: costruttore, assegna i parametri:
 		\begin{itemize}
-			\item \param{props: Object[]}: array contenente le proprietà dei componenti React;
+			\item \param{client: Client}: cliente utilizzatore della bubble;
 		\end{itemize}
 	\item \method{+ componentDidMount(): void}: viene invocata alla creazione della classe e invoca la funzione connect;
 	\item \method{+ componentWillUnmount(): void}: chiama il metodo disconnect alla distruzione della classe;
@@ -102,7 +102,7 @@ Viene utilizzata per gestire le funzionalità dei clienti.
 		\begin{itemize}
 			\item \param{something: Order} l'ordine selezionato.
 		\end{itemize}
-	\item \method{+ queryFor(orderId: string): void}: invia la richiesta di informazioni sullo stato dell'ordine selezionato;
+	\item \method{+ queryFor(orderId: int): void}: invia la richiesta di informazioni sullo stato dell'ordine selezionato;
 		\begin{itemize}
 			\item \param{orderId: int}: id che identifica l'ordine.
 		\end{itemize}
@@ -133,7 +133,9 @@ Viene utilizzata per gestire le funzionalità dei clienti.
 			\item \param{data: string}: indica il tipo di informazione modificata;
 		\end{itemize}
 	\item \method{+ confirmOrder(): void}: effettua l'ordine;
-	\item \method{+ render(): React.Component}: renderizza la bubble.
+	\item \method{+ aliveRender(): React::Component}: renderizza la bubble nello stato attivo;
+	\item \method{+ notAliveRender(): React::Component}: renderizza la bubble nello stato non attivo;
+	\item \method{+ render(): React::Component}: renderizza la bubble.
 \end{itemize}
 
 \setclass{BubbleAndEat::Restaurant::Chef::BubbleChef}
@@ -144,14 +146,14 @@ Viene utilizzata per gestire le funzionalità dei clienti.
 	\caption{Classe \class}
 \end{figure}
 \textbf{Descrizione:}\\
-Classe che rappresenta lo Chef e le sue funzionalità all'interno dell'applicazione.
+La classe BubbleChef rappresenta lo Chef e le sue funzionalità all'interno dell'applicazione. Questa classe dispone dei metodi che svolgono le diverse attività dello Chef, ovvero il recuperare la lista degli ordini e l'indicare il completamento di uno di questi. BubbleChef si occupa anche di renderizzare la parte di GUI della bubble e dispone dei metodi necessari a connettersi e disconnettersi dal resto dell'applicazione tramite socket.
 
 \textbf{Utilizzo:}\\
-Viene utilizzata per gestire le funzionalità dello Chef.
+Viene utilizzata per gestire le funzionalità della bubble Chef e renderizzarne la parte grafica.
 
 \textbf{Classi ereditate:}
 \begin{itemize}
-	\item \code{React::Component}.
+	\item \coderef{Framework::Controller::GenericBubble}.
 \end{itemize}
 
 %\textbf{Sottoclassi:}
@@ -168,10 +170,7 @@ Viene utilizzata per gestire le funzionalità dello Chef.
 
 \textbf{Metodi:}
 \begin{itemize}
-	\item \method{+ ChefBubble(props: Object[])}: costruttore, assegna i parametri;
-	\begin{itemize}
-		\item \param{props: Object[]}: array contenente le proprietà degli elementi;
-	\end{itemize}
+	\item \method{+ BubbleChef()}: costruttore di default;
 	\item \method{+ componentDidMount(): void}: viene invocata alla creazione della classe e invoca la funzione connect;
 	\item \method{+ connect(): void}: crea la connessione con il server;
 	\item \method{+ fetchOrders(): void}: invia la richiesta di visualizzazione delle ordinazioni;
@@ -180,6 +179,8 @@ Viene utilizzata per gestire le funzionalità dello Chef.
 		\begin{itemize}
 			\item \param{id: int}: identifica l'ordine da completare;
 		\end{itemize}
+	\item \method{+ aliveRender(): React::Component}: renderizza la bubble nello stato attivo;
+	\item \method{+ notAliveRender(): React::Component}: renderizza la bubble nello stato non attivo;
 	\item \method{+ render(): React::Component}: renderizza la bubble.
 \end{itemize}
 
@@ -192,14 +193,14 @@ Viene utilizzata per gestire le funzionalità dello Chef.
 	\caption{Classe \class}
 \end{figure}
 \textbf{Descrizione:}\\
-Classe che rappresenta la bubble del Manager.
+Questa classe che rappresenta la bubble del Manager all'interno dell'applicazione. BubbleManager rende disponibili tutti i metodi necessari a svolgere le diverse attività del manager, come modificare il menu e gestire gli ordini, e si occupa di invocarli in base all'interazione con l'utente. La classe renderizza anche la componente di GUI della bubble e dispone di tutti i metodi necessari a navigarne le diverse pagine. BubbleManager mantiene anche una lista sempre aggiornata di tutti gli ordini correntemente attivi e di quelli completati. Infine la classe dispone anche dei metodi necessari a collegarsi e scollegarsi dal resto dell'applicazione tramite il socket.
 
 \textbf{Utilizzo:}\\
-Viene utilizzata per fornire all'utente Manager le funzionalità per egli disponibili.
+Viene utilizzata per fornire all'utente Manager tutte le funzionalità a lui disponibili e per renderizzare la parte grafica della bubble.
 
 \textbf{Classi ereditate:}
 \begin{itemize}
-	\item \code{React::Component}.
+	\item \coderef{Framework::Controller::GenericBubble}.
 \end{itemize}
 %
 %\textbf{Sottoclassi:}
@@ -221,10 +222,7 @@ Viene utilizzata per fornire all'utente Manager le funzionalità per egli dispon
 
 \textbf{Metodi:}
 \begin{itemize}
-	\item \method{+ BubbleManager(props: Object[])}: costruttore, passa al costruttore della classe ereditata \texttt{props} e inizializza gli attributi con valori di default:
-	\begin{itemize}
-		\item \param{props: Object[]}: proprietà del componente React;
-	\end{itemize}
+	\item \method{+ BubbleManager()}: costruttore di default;
 	\item \method{+ componentDidMount(): void}: metodo invocato in automatico al caricamento della bubble, richiama in sè il metodo \texttt{connect};
 	\item \method{+ connect(): void}: crea la connessione con il server;
 	\item \method{+ showMenu(): void}: invia una richiesta al server per ricevere il menu aggiornato e lo assegna a \texttt{menu};
@@ -245,6 +243,8 @@ Viene utilizzata per fornire all'utente Manager le funzionalità per egli dispon
 	\item \method{+ redirectToHome(): void}: invoca la renderizzazione della pagina principale della bubble;
 	\item \method{+ redirectToMenu(): void}: invoca la renderizzazione della pagina di visualizzazione del menu;
 	\item \method{+ redirectToOrders(): void}: invoca la renderizzazione della pagina di visualizzazione degli ordini;
+	\item \method{+ aliveRender(): React::Component}: renderizza la bubble nello stato attivo;
+	\item \method{+ notAliveRender(): React::Component}: renderizza la bubble nello stato non attivo;
 	\item \method{+ render(): React::Component}: renderizza la bubble.
 	
 \end{itemize}

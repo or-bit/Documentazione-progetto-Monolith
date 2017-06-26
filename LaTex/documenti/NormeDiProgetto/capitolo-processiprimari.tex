@@ -11,6 +11,17 @@ In seguito ad una discussione tra i componenti del gruppo sui capitolati propost
 \end{itemize}
 Deve essere quindi convocata una riunione interna per la decisione finale sul capitolato su cui svolgere il progetto.
 
+\subsubsection{Consegna}
+La consegna deve avvenire entro il giorno 27-06-2017, come da \PianoDiProgetto{}, previo appuntamento, presso la sede del \Committente{}. Il collaudo finale del prodotto si terrà durante la \RA{}.\\
+Fanno parte del materiale da consegnare:
+\begin{itemize}
+	\item sorgente del framework e della demo;
+	\item documentazione completa del prodotto.
+\end{itemize}
+
+\subsubsection{Completamento del progetto}
+Con la consegna ed il collaudo effettuati nella \RA{}, il progetto è ritenuto concluso. Ulteriori modifiche saranno a carico dei singoli. Il gruppo Or-bit non si assume l'obbligo di mantenimento del codice sorgente, che rimarrà disponibile sul repository dedicato, in formato aperto.
+
 \subsection{Sviluppo}
 
 \subsubsection{Analisi dei Requisiti}
@@ -69,9 +80,37 @@ dove:
 \paragraph{Tracciamento}\mbox{}\\
 \`{E} compito degli \Analisti{} controllare la corrispondenza tra i requisiti e le loro fonti (capitolato, casi d'uso, verbali di riunioni). Questa corrispondenza deve essere presentata nelle due tabelle di tracciamento Fonti-Requisiti e Requisiti-Fonti per facilitarne la consultazione. 
 
-\subsubsection{Progettazione}
-\paragraph{Specifica Tecnica}\mbox{}\\
-\`{E} compito dei \Progettisti{} descrivere la \PA{} ad alto livello del prodotto nella \SpecificaTecnica.
+\subsubsection{Progettazione}\label{Progettazione}
+Scopo delle attività di progettazione è la traduzione dei requisiti individuati durante l'analisi in una architettura software, soluzione del problema, unione dei sottosistemi che rappresentano le funzionalità.
+È quindi compito dei \Progettisti{} costruire una architettura logica del prodotto, che sia efficace ed efficiente, ovvero che funzioni, soddisfi i requisiti e lo faccia nel miglior modo possibile, riducendo il consumo di risorse allo stretto necessario. È altresì compito dei \Progettisti{} suddividere il sistema in componenti semplici, implementabili da singoli individui, così da guidare il lavoro dei \Programmatori{} durante i periodi di \Cod{}.\\
+Al fine di garantire la qualità, il prodotto della progettazione dovrà avere le seguenti caratteristiche:
+\begin{itemize}
+	\item sufficienza;
+	\item comprensibilità;
+	\item modularità;
+	\item robustezza;
+	\item flessibilità;
+	\item riusabilità;
+	\item efficienza;
+	\item affidabilità;
+	\item disponibilità;
+	\item sicurezza rispetto a malfunzionamenti;
+	\item sicurezza rispetto a intrusioni;
+	\item semplicità;
+	\item incapsulazione;
+	\item coesione;
+	\item basso accoppiamento.
+\end{itemize}
+
+\paragraph{Progettazione architetturale}\mbox{}\\
+\`{E} compito dei \Progettisti{} eseguire la \PA{} ad alto livello del prodotto. È altresì compito loro descriverla nella \SpecificaTecnica.\\
+Vanno perseguiti i seguenti obiettivi:
+\begin{itemize}
+	\item soddisfare i requisiti con un sistema di qualità;
+	\item impiegare componenti con specifica chiara e coesa, realizzabili con le risorse e i costi fissati;
+	\item realizzare una struttura che faciliti eventuali cambiamenti futuri;
+	\item identificare schemi architetturali utili al caso e componenti riusabili, sfruttando i design pattern.
+\end{itemize}
 
 \subparagraph{Diagrammi UML}\mbox{}\\
 Devono essere realizzati i seguenti diagrammi:
@@ -90,38 +129,36 @@ Devono essere descritti i \glossario{design pattern} utilizzati specificando:
 	\item diagramma delle classi generico del design pattern.
 \end{itemize}
 
-\subparagraph{Tracciamento Componenti}\mbox{}\\
+\subparagraph{Tracciamento componenti}\mbox{}\\
 Deve essere tracciata la corrispondenza tra requisiti e componenti che li soddisfano.
 
-\paragraph{Definizione di Prodotto}\mbox{}\\
-\`{E} compito dei \Progettisti{} stilare la \DefinizioneDiProdotto, in cui è descritta la \PD{} del prodotto, ampliando quanto detto nella \SpecificaTecnica.
-
-\subparagraph{Diagrammi UML}\mbox{}\\
-Devono essere aggiornati i seguenti diagrammi:
+\paragraph{Progettazione di dettaglio}\mbox{}\\
+\`{E} compito dei \Progettisti{} effettuare la \PD{} del prodotto, dettagliando quanto progettato ad alto livello e descritto nella \SpecificaTecnica{}. È altresì loro compito riportare quanto risultante nella \DefinizioneDiProdotto{}.\\
+Vanno perseguiti i seguenti obiettivi:
 \begin{itemize}
-	\item Diagrammi delle classi;
-	\item Diagrammi di sequenza;
-	\item Diagrammi di attività.
+	\item dominare la complessità del sistema, suddividendolo in componenti con complessità trattabile e implementabili dai singoli;
+	\item riconoscere le componenti terminali;
+	\item mantenere un compromesso tra complessità delle unità e dell'integrazione di queste tra loro.
 \end{itemize}
 
-\subparagraph{Definizione di Classe}\mbox{}\\
-Nella \DefinizioneDiProdotto{} deve essere descritta ogni classe progettata, secondo lo standard UML 2.5. La descrizione deve essere costituita da:
+\subparagraph{Diagrammi UML}\mbox{}\\
+Devono essere realizzati i seguenti diagrammi:
 \begin{itemize}
-	\item \textbf{attributi}: vanno indicati l'accessibilità, il nome e la descrizione di ognuno;
-	\item \textbf{metodi}: vanno indicati l'accessibilità, il nome e la descrizione di ognuno;
-	\item \textbf{parametri}: vanno racchiusi tra parentesi tonde e devono essere riportati con nome e tipo, separati da due punti;
-	\item \textbf{argomenti}: vanno indicati la direzione tra parentesi quadre, nome e tipo separati da due punti, seguiti da una breve descrizione.
+	\item Diagrammi delle classi;
+	\item Diagrammi di sequenza.
+\end{itemize}
+
+\subparagraph{Definizione di classe}\mbox{}\\
+Ogni classe progettata deve seguire lo standard UML 2.5 e deve avere le seguenti proprietà, accompagnate nella \DefinizioneDiProdotto{} da una descrizione chiarificante:
+\begin{itemize}
+	\item \textbf{attributi}: vanno indicati l'accessibilità e il nome;
+	\item \textbf{metodi}: vanno indicati l'accessibilità e il nome;
+	\item \textbf{parametri}: vanno racchiusi tra parentesi tonde e devono essere riportati con nome e tipo, separati da due punti.
 \end{itemize}
 Ogni classe deve inoltre essere accompagnata da una descrizione che ne includa lo scopo e le funzionalità.
 
-\subparagraph{Tracciamento delle Classi}\mbox{}\\
+\subparagraph{Tracciamento delle classi}\mbox{}\\
 Deve essere tracciata la corrispondenza tra requisiti e classi che li soddisfano.
-
-\subparagraph{Test}\mbox{}\\
-\`{E} compito dei \Progettisti{} configurare in modo adeguato i test di unità e di integrazione, tramite \glossario{driver}, \glossario{stub} ed altri eventuali strumenti.\\
-\`{E} responsabilità del \Programmatore{} attuare i test di unità più semplici, mentre i restanti devono essere eseguiti tramite strumenti automatici.\\
-I test di integrazione devono essere eseguiti tramite strumenti automatici quando possibile. \`{E} compito dei \Verificatori{} verificarne l'integrità.\\
-Devono essere eseguiti inoltre test di regressione in caso di modifiche, per accertare che queste non causino errori nelle parti già sottoposte a verifica con esito positivo. In questo modo viene garantito che le modifiche effettuate non pregiudichino le funzionalità esistenti e già testate.
 
 \paragraph{Metriche per la progettazione}\mbox{}\\
 Si concentrano sulle caratteristiche dell'architettura ad alto livello. Si basano sull'analisi di modelli di progetto nei quali sono evidenziati i moduli di sistema e i dati scambiati.
@@ -140,8 +177,8 @@ Dato un grafo $G$ di $n$ nodi ed $e$ archi, la complessità ciclomatica è data 
 \[ V\left(G\right) = e - n + 2 \]
 Valori alti di complessità indicano poca manutenibilità del codice e maggiore quantità di test per la verifica, ma valori bassi possono indicare poca efficienza.
 
-\subsubsection{Codifica}
-Tutti i file contenenti codice o documentazione dovranno essere conformi alla codifica \glossario{UTF-8}.
+\subsubsection{Codifica}\label{Codifica}
+Lo scopo del processo di codifica è quello di implementare il codice in conformità con la progettazione svolta. Parte fondamentale di questo processo è anche la stesura di un'adeguata documentazione del codice sviluppato. Tutti i file contenenti codice o documentazione prodotti da questo processo dovranno essere conformi alla codifica \glossario{UTF-8}.
 
 \paragraph{Convenzioni} \label{sec:convenzioni}\mbox{}\\
 Al fine di ottimizzare il passaggio tra progettazione e prodotto finale, i \Programmatori{} sono tenuti a rispettare le convenzioni che seguono.\\
@@ -150,8 +187,15 @@ Si è deciso di seguire le linee guida specificate nel capitolato e concordate c
 	\item \glossario{Airbnb JavaScript style guide}\footnote{\url{https://github.com/airbnb/javascript}};
 	\item \glossario{12 Factors app}\footnote{\url{https://12factor.net/}} documentandone l'utilizzo;
 	\item limitare i commenti alle sole parti di codice che richiedano una spiegazione immediata del loro funzionamento;
-	\item evitare le \glossario{callback}, o motivarne opportunamente l’uso.
+	\item evitare le \glossario{callback}, o motivarne opportunamente l’uso;
 \end{itemize}
+
+\paragraph{Nomi}\label{sec:nomi}\mbox{}\\
+I nomi di variabili, metodi e classi devono essere scritti in lingua inglese. I nomi delle classi devono iniziare con una lettera maiuscola, mentre quelli dei metodi con una lettera minuscola. Tutte le classi, metodi e variabili devono avere dei nomi significativi che aiutino a comprendere la loro funzione al fine di rendere il codice più facilmente comprensibile ad una lettura diretta. Bisogna inoltre evitare di utilizzare più volte lo stesso nome per diversi elementi, anche se facenti parte di pezzi diversi del progetto, al fine di ridurre al minimo la possibile confuzione.
+
+\paragraph{Documentazione}\label{sec:documentazione}\mbox{}\\
+Tutto il codice prodotto deve venire appropriatamente documentato. La documentazione va scritta in inglese e deve risultare sufficiente a comprendere le funzionalità di ciascun componente del progetto. In particolare ogni classe ed ogni metodo dovranno essere correlati da una breve ma completa descrizione delle loro funzionalità. Qualora durante il processo di codifica vengano identificate sezioni di codice particolarmente complicate o non chiare queste devono essere documentate in maniera più approfondia. I commenti devono sempre precedere le parti di codice a cui si riferiscono e devono essere scritti in modo da risultare facilmente comprensibili.
+
 \paragraph{Ricorsione}\mbox{}\\
 La ricorsione deve essere evitata quando possibile, onde evitare un elevato consumo di memoria a discapito delle performance del prodotto finale.
 

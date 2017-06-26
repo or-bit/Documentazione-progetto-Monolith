@@ -1,1 +1,23 @@
-\section{Troubleshooting}
+\section{Troubleshooting}\label{Troubleshooting}
+
+\subsection{Most common error messages}
+
+\definizione{EACCES (Permission denied)}
+An attempt was made to access a file in a way forbidden by its file access permissions.
+
+\definizione{EADDRINUSE (Address already in use)}
+An attempt to bind a server (net, http, or https) to a local address failed due to another server on the local system already occupying that address.
+
+\definizione{ECONNRESET (Connection reset by peer)}
+A connection was forcibly closed by a peer. This normally results from a loss of the connection on the remote socket due to a timeout or reboot. Commonly encountered via the http and net modules.
+
+\definizione{EEXIST (File exists)}
+An existing file was the target of an operation that required that the target not exist.
+
+\definizione{ENOENT (No such file or directory)}
+Commonly raised by fs operations to indicate that a component of the specified pathname does not exist -- no entity (file or directory) could be found by the given path.
+
+\definizione{ERR\_INVALID\_URL\_SCHEME}
+The code 'ERR\_INVALID\_URL\_SCHEME' is used generically to signify an attempt to use a URL of an incompatible scheme (aka protocol) for a specific purpose. It is currently only used in the WHATWG URL API support in the fs module (which only accepts URLs with 'file' scheme), but may be used in other Node.js APIs as well in the future.
+
+For a list of the most common system errors for a Node.js program, please visit the Nodejs error documentation that can be found at  \url{https://nodejs.org/api/errors.html}.

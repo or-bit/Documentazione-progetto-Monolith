@@ -24,15 +24,10 @@ Il package Model gestisce i dati della To-do list ed è composto a sua volta dal
 	\caption{Classe \class}
 \end{figure}
 \textbf{Descrizione:}
-ItemsStore implementa la classe BubbleMemory e gestisce i dati della To-do list.
+ItemsStore gestisce i dati della To-do list. Per fare questo dunque dispone di un array contenente gli elementi della lista e di tutti i metodi necessari ad operare sui diversi elementi. La classe offre anche dei metodi per recuperare l'intera lista degli elementi e la lista degli elementi completati.
 
 \textbf{Utilizzo:}
 Viene utilizzata per gestire gli elementi della To-do list.
-
-\textbf{Classi ereditate:}
-\begin{itemize}
-	\item \coderef{Framework::Model::BubbleMemory::BubbleMemory}.
-\end{itemize}
 
 \textbf{Attributi:}
 \begin{itemize}
@@ -116,14 +111,15 @@ Viene utilizzata per gestire la view della To-do list.
 
 \textbf{Attributi:}
 \begin{itemize}
-	\item \field{- props: Object[]}: array contenente le proprietà degli elementi della lista.
+	\item \field{- checkBox: CheckBox}: checkBox per l'elemento;
+	\item \field{- label: Label}: label per l'elemento; 
 \end{itemize}
 
 \textbf{Metodi:}
 \begin{itemize}
-	\item \method{+ ListItem(props: Object[])}: costruttore della classe, assegna le proprietà:
+	\item \method{+ ListItem(label: Label)}: costruttore della classe, assegna le proprietà:
 	\begin{itemize}
-		\item \param{props: Object[]}: array contenente le proprietà degli elementi.
+		\item \param{label: Label}: etichetta per l'elemento;
 	\end{itemize}
 	\item \method{+ render(): React::Component}: renderizza il componente.
 \end{itemize}
@@ -141,10 +137,10 @@ Il package controller è composto dalla classe ListItemController.
 	\caption{Classe \class}
 \end{figure}
 \textbf{Descrizione:}
-Questa classe rappresenta il controller della To-do list.
+La classe ListItemController rappresenta il controller della To-do list, e dispone quindi di tutti i metodi necessari a collegare la componente grafica della bubble al model. ListItemController quindi offre sia il metodo necessario a renderizzare la view sia i metodi di gestione della lista di elementi, i quali si occupano di collegare le richieste effettuate dall'utente ai metodi di ItemsStore che effettuano le modifiche.
 
 \textbf{Utilizzo:}
-Viene utilizzata per associare agli elementi della view le funzionalità logiche rese disponibili dal model.
+Viene utilizzata per renderizzare la view e associarne gli elementi alle funzionalità logiche rese disponibili dal model.
 
 \textbf{Classi ereditate:}
 \begin{itemize}

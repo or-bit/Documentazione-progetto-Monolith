@@ -1,154 +1,155 @@
 \subsection{Test di Unità}
 \subsubsection{Framework}
 \begin{longtable}{|c|P{9cm}|c|}
-	\hline \multicolumn{1}{|l|}{\textbf{Codice}} &  \multicolumn{1}{l|}{\textbf{Descrizione}} & \multicolumn{1}{l|}{\textbf{Esito}} \\ 
+	\hline \multicolumn{1}{|l|}{\textbf{Codice}} &  \multicolumn{1}{l|}{\textbf{Descrizione}}  \\ 
 	\endfirsthead
-	\hline \test{U}\label{tu-genericbubble} & Verifica che la Generic Bubble:
+
+	\hline \test{U}{L102}\label{tu-genericbubble} & Verifica che la Generic Bubble:
 	\begin{itemize}
 		\item renderizzi correttamente come componente React;
 		\item renderizzi elementi diversi a seconda che sia in vita.
 	\end{itemize}
-	& Superato \\
-	\hline \test{U}\label{tu-memory} & Verifica che la Bubble Memory:
-	\begin{itemize}
-		\item sia un oggetto di tipo EventEmitter.
-	\end{itemize}
-	& Superato \\
-	\hline \test{U}\label{tu-database} & Verifica che il DataBase:
+	 \\
+%	\hline \test{U}{L103}\label{tu-memory} & Verifica che la Bubble Memory:
+%	\begin{itemize}
+%		\item sia un oggetto di tipo EventEmitter.
+%	\end{itemize}
+%	 \\
+	\hline \test{U}{L104}\label{tu-database} & Verifica che il DataBase:
 	\begin{itemize}
 		\item abbia l'URL corretto;
 		\item si connetta e riceva l'oggetto in modo corretto;
 		\item salvi gli oggetti nella collezione nel modo corretto.
 	\end{itemize}
-	& Superato \\
-	\hline \test{U}\label{tu-externalapi} & Verifica che ExternalAPI:
+	 \\
+	\hline \test{U}{L105}\label{tu-externalapi} & Verifica che ExternalAPI:
 	\begin{itemize}
 		\item controlli che esista un myurl valido;
 		\item riceva un un oggetto JSON valido dall'url.
 	\end{itemize}
-	& Superato \\
-	\hline \test{U}\label{tu-itemsstore} & Verifica che l'ItemsStore:
+	 \\
+	\hline \test{U}{L106}\label{tu-itemsstore} & Verifica che l'ItemsStore:
 	\begin{itemize}
 		\item venga creato in modo coretto e sia vuoto;
 		\item aggiunga un elemento in modo corretto;
 		\item rimuova correttamente l'ultimo elemento.
 	\end{itemize}
-	& Superato \\
-	\hline \test{U}\label{tu-lifecycle} & Verifica che il LifeCycle:
+	 \\
+	\hline \test{U}{L107}\label{tu-lifecycle} & Verifica che il LifeCycle:
 	\begin{itemize}
 		\item venga creato in modo coretto;
 		\item faccia il reset del timer correttamente.
 	\end{itemize}
-	& Superato \\
-	\hline \test{U}\label{tu-regex} & Verifica che la classe MatchRegularExpr:
+	 \\
+	\hline \test{U}{L108}\label{tu-regex} & Verifica che la classe MatchRegularExpr:
 	\begin{itemize}
 		\item venga istanziata in modo coretto;
 		\item utilizzi le funzioni di match in modo corretto;
 		\item il risultato del match sia corretto.
 	\end{itemize}
-	& Superato \\
-	\hline \test{U}\label{tu-barchart} & Verifica che il grafico a istogramma:
+	 \\
+	\hline \test{U}{L109}\label{tu-barchart} & Verifica che il grafico a istogramma:
 	\begin{itemize}
 		\item renderizzi il corretto numero di barre a seconda dei dati immessi;
 	\end{itemize}
-	& Superato \\
-	\hline \test{U}\label{tu-button} & Verifica che il componente Button:
+	 \\
+	\hline \test{U}{L110}\label{tu-button} & Verifica che il componente Button:
 	\begin{itemize}
 		\item renderizzi correttamente;
 		\item esegua correttamente la funzione chiamata cliccando sul componente.
 	\end{itemize}
-	& Superato \\
-	\hline \test{U}\label{tu-checkbox} & Verifica che il il componente CheckBox:
+	 \\
+	\hline \test{U}{L111}\label{tu-checkbox} & Verifica che il il componente CheckBox:
 	\begin{itemize}
 		\item renderizzi correttamente;
 		\item cambi lo stato quando viene spuntato.
 	\end{itemize}
-	& Superato \\
-	\hline \test{U}\label{tu-checkboxgroup} & Verifica che il componente CheckBoxGroup: renderizzi correttamente & Superato \\
-	\hline \test{U}\label{tu-image} & Verifica che il componente Image renderizzi correttamente	& Superato \\
-	\hline \test{U}\label{tu-inputfile} & Verifica che l'InputFile sia sia formato in modo corretto & Superato \\
-	\hline \test{U} & Verifica che il componente InputText sia formato in modo corretto & Superato \\
-	\hline \test{U} & Verifica che il componente InputText:
+	 \\
+	\hline \test{U}{L112}\label{tu-checkboxgroup} & Verifica che il componente CheckBoxGroup: renderizzi correttamente  \\
+	\hline \test{U}{L113}\label{tu-image} & Verifica che il componente Image renderizzi correttamente	 \\
+	\hline \test{U}{L114}\label{tu-inputfile} & Verifica che l'InputFile sia sia formato in modo corretto  \\
+	\hline \test{U}{L115} & Verifica che il componente InputText sia formato in modo corretto  \\
+	\hline \test{U}{L116} & Verifica che il componente InputText:
 	\begin{itemize}
 		\item contenga i giusti tag html;
 		\item abbia le corrette proprietà.
 	\end{itemize}
-	& Superato \\
-	\hline \test{U} & Verifica che il componente Label:
+	 \\
+	\hline \test{U}{L117} & Verifica che il componente Label:
 	\begin{itemize}
 		\item venga renderizzato;
 		\item riceva il valore da renderizzare correttamente.
 	\end{itemize}
-	& Superato \\
-	\hline \test{U} & Verifica che il componente PieChart:
+	 \\
+	\hline \test{U}{L118} & Verifica che il componente PieChart:
 	\begin{itemize}
 		\item renderizzi correttamente i settori a seconda dei dati immessi.
 	\end{itemize}
-	& Superato \\
-	\hline \test{U} & Verifica che il componente RadioButton:
+	 \\
+	\hline \test{U}{L119} & Verifica che il componente RadioButton:
 	\begin{itemize}
 		\item renderizzi correttamente;
 		\item cambi stato quando il suo valore cambi.
 	\end{itemize}
-	& Superato \\
-	\hline \test{U} & Verifica che il componente RadioButtonGroup:
+	 \\
+	\hline \test{U}{L120} & Verifica che il componente RadioButtonGroup:
 	\begin{itemize}
 		\item venga renderizzato correttamente;
 		\item cambi il proprio stato quando cambia il RadioButtonGroup selezionato.
 	\end{itemize}
-	& Superato \\
-	\hline \test{U} & Verifica che il componente TextEdit:
+	 \\
+	\hline \test{U}{L121} & Verifica che il componente TextEdit:
 	\begin{itemize}
 		\item venga renderizzato correttamente;
 		\item aggiorni il suo stato quando cambia il valore.
 	\end{itemize}
-	& Superato \\
-	\hline \test{U}\label{tu-textview} & Verifica che il TextView:
+	 \\
+	\hline \test{U}{L122}\label{tu-textview} & Verifica che il TextView:
 	\begin{itemize}
 		\item venga renderizzato;
 		\item riceva il valore da renderizzare correttamente.
 	\end{itemize}
-	& Superato \\
-	\hline \test{U} & Verifica che il componente GUI:
+	 \\
+	\hline \test{U}{L123} & Verifica che il componente GUI:
 	\begin{itemize}
 		\item renderizzi correttamente;
 		\item renderizzi correttamente il componente che si vuole creare tramite esso.
 	\end{itemize}
-	& Superato \\
-	\hline \test{U} & Verifica che il componente GUIContainer venga renderizzato correttamente & Superato \\
+	 \\
+	\hline \test{U}{L124} & Verifica che il componente GUIContainer venga renderizzato correttamente  \\
 	\hline
 	\caption{Test di unità per il framework}
 \end{longtable}
 
 \subsubsection{To-do List}
 \begin{longtable}{|c|P{9cm}|c|}
-	\hline \multicolumn{1}{|l|}{\textbf{Codice}} &  \multicolumn{1}{l|}{\textbf{Descrizione}} & \multicolumn{1}{l|}{\textbf{Esito}} \\ 
+	\hline \multicolumn{1}{|l|}{\textbf{Codice}} &  \multicolumn{1}{l|}{\textbf{Descrizione}}  \\ 
 	\endfirsthead
-	\hline \test{U} & Verifica che il Model:
+	\hline \test{U}{L125} & Verifica che il Model:
 	\begin{itemize}
 		\item crei correttamente un elemento della lista;
 		\item crei correttamente la lista;
 		\item aggiorni lo stato degli elementi quando gli viene notificato.
 	\end{itemize}
-	& Non implementato \\
-	\hline \test{U} & Verifica che il Controller renderizzi correttamente & Non implementato \\
-	\hline \test{U} & Verifica che la View renderizzi correttamente & Non implementato \\
+	 \\
+	\hline \test{U}{L126} & Verifica che il Controller renderizzi correttamente  \\
+	\hline \test{U}{L127} & Verifica che la View renderizzi correttamente  \\
 	\hline
 	\caption{Test di unità per la To-do list}
 \end{longtable}
 
 \subsubsection{\DemoName{}}
 \begin{longtable}{|c|P{9cm}|c|}
-	\hline \multicolumn{1}{|l}{\textbf{Codice}} &  \multicolumn{1}{|l|}{\textbf{Descrizione}} & \multicolumn{1}{l|}{\textbf{Esito}} \\ 
+	\hline \multicolumn{1}{|l}{\textbf{Codice}} &  \multicolumn{1}{|l|}{\textbf{Descrizione}}  \\ 
 	\endfirsthead
-	\hline \test{U} & Verifica che il server:
+	\hline \test{U}{L128} & Verifica che il server:
 	\begin{itemize}
 		\item venga creato correttamente;
 		\item ascolti alla porta assegnata;
 		\item ritorni un socket che non sia nullo.
 	\end{itemize}
-	& Superato \\
-	\hline\test{U}\label{tu-adminhandler} & Verifica che l'handler dell'admin:
+	 \\
+	\hline\test{U}{L129}\label{tu-adminhandler} & Verifica che l'handler dell'admin:
 	\begin{itemize}
 		\item si connetta correttamente alla porta;
 		\item ottenga il menu;
@@ -160,8 +161,8 @@
 		\item ottenga le ordinazioni completate;
 		\item rimuova un'ordinazione.
 	\end{itemize}
-	 & Superato \\
-	 \hline\test{U}\label{tu-clienthandler} & Verifica che l'handler del client:
+	  \\
+	 \hline\test{U}{L130}\label{tu-clienthandler} & Verifica che l'handler del client:
 	 \begin{itemize}
 	 	\item si connette correttamente alla porta;
 	 	\item ottenga il menu;
@@ -173,8 +174,8 @@
 	 	\item riottenga lo stato del proprio ordine nel caso di una disconnessione;
 	 	\item ottenga la notifica del proprio ordine se viene completato mentre l'utente è disconnesso alla sua riconnessione.
 	 \end{itemize}
-	 & Superato \\
-	 \hline\test{U}\label{tu-chefhandler} & Verifica che l'handler dello Chef:
+	  \\
+	 \hline\test{U}{L131}\label{tu-chefhandler} & Verifica che l'handler dello Chef:
 	 \begin{itemize}
 	 	\item si connetta correttamente alla porta;
 	 	\item si disconnetta correttamente;
@@ -182,35 +183,35 @@
 	 	\item controlli che riceva correttamente le ordinazioni attive(anche se non ce ne fossero) quando è nello stato di pronto;
 	 	\item attivi correttamente il completamento dell'ordinazione.
 	 \end{itemize}
- 	& Superato \\
-	\hline\test{U}\label{tu-json} & Verifica che l'oggetto JSON dedicato alla connessione sia formattato in modo corretta & Superato \\
-%	\hline \test{U}\label{tu-coo & Verifica che il CookReducer:
+ 	 \\
+	\hline\test{U}{L132}\label{tu-json} & Verifica che l'oggetto JSON dedicato alla connessione sia formattato in modo corretta  \\
+%	\hline \test{U}{L133}\label{tu-coo & Verifica che il CookReducer:
 %	\begin{itemize}
 %		\item legga che lo stato è indefinito se non ancora istanziato;
 %		\item imposti in modo corretto lo stato in assente;
 %		\item imposti in modo corretto lo stato in presente.
 %	\end{itemize}
-%	& Superato \\
-	\hline \test{U} & Verifica che il Menu:
+%	 \\
+	\hline \test{U}{L134} & Verifica che il Menu:
 	\begin{itemize}
 		\item legga che lo stato è indefinito se non ancora istanziato;
 		\item aggiunga correttamente il piatto ed incrementi l'id;
 		\item rimuova in modo corretto un piatto dal menu;
 		\item modifichi correttamente i dati di un piatto senza modificarne l'id.
 	\end{itemize}
-	& Superato \\
-	\hline \test{U} & Verifica che OrderContainer:
+	 \\
+	\hline \test{U}{L135} & Verifica che OrderContainer:
 	\begin{itemize}
 		\item aggiunga correttamente un'ordinazione;
 		\item cambi in modo corretto lo stato di un'ordinazione completata;
 		\item rimuova in modo corretto un'ordinazione.
 	\end{itemize}
-	& Superato \\
-%	\hline\test{U} & Verifica che l'istanza di un oggetto di tipo Actions sia formattato in modo corretto & Superato \\
-%	\hline\test{U} & Verifica che le istanze di tipo Actions della presenza e dell'assenza del cook sono generate in modo corretto & Superato \\
-	\hline\test{U} & Verifica che le chiamate di aggiunta, modifica e rimozione del menu siano generate in modo corretto & Superato \\
-	\hline\test{U} & Verifica che le chiamate di aggiunta, modifica e rimozione dell'ordinazione siano generate in modo corretto & Superato \\
-	\hline \test{U} & Verifica che la BubbleCustomer:
+	 \\
+%	\hline\test{U}{L136} & Verifica che l'istanza di un oggetto di tipo Actions sia formattato in modo corretto & Superato \\
+%	\hline\test{U}{L137} & Verifica che le istanze di tipo Actions della presenza e dell'assenza del cook sono generate in modo corretto & Superato \\
+	\hline\test{U}{L138} & Verifica che le chiamate di aggiunta, modifica e rimozione del menu siano generate in modo corretto \\
+	\hline\test{U}{L139} & Verifica che le chiamate di aggiunta, modifica e rimozione dell'ordinazione siano generate in modo corretto \\
+	\hline \test{U}{L140} & Verifica che la BubbleCustomer:
 	\begin{itemize}
 		\item renderizzi correttamente;
 		\item aggiunga le pietanze all'ordine;
@@ -218,8 +219,8 @@
 		\item invii l'ordine;
 		\item effettui una richiesta per visualizzare il menu.
 	\end{itemize}
-	& Non implementato \\
-	\hline \test{U} & Verifica che la BubbleManager:
+	 \\
+	\hline \test{U}{L141} & Verifica che la BubbleManager:
 	\begin{itemize}
 		\item renderizzi correttamente;
 		\item esegua una richiesta per aggiungere un piatto al menu;
@@ -228,13 +229,13 @@
 		\item esegua una richiesta per eliminare un ordine;
 		\item esegua una richiesta per visualizzare il menu.
 	\end{itemize}
-	& Non implementato \\
-		\hline \test{U} & Verifica che la BubbleChef:
+	\\
+		\hline \test{U}{L142} & Verifica che la BubbleChef:
 	\begin{itemize}
 		\item renderizzi correttamente;
 		\item esegua una richiesta per completare un ordine.
 	\end{itemize}
-	& Non implementato \\
+	 \\
 	\hline
 	\caption{Test di unità per l'order gateway}
 \end{longtable}

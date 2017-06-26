@@ -8,139 +8,78 @@
 	\hline \multicolumn{1}{|l|}{\textbf{Codice}} & \multicolumn{1}{l|}{\textbf{Descrizione}} & \multicolumn{1}{l|}{\textbf{Componente}}
 	\\ 
 	\endfirsthead
-	\hline \test{I} & Verificare che la bubble riceva gli input dalla GUI & Controller::GenericBubble\\
-	\hline \test{I} & Verificare che la GUI riceva i dati dalla bubble & View::GUI\\
-	\hline \test{I} & Verificare che la GUI venga modificata come previsto & View::GUI\\
-	\hline \test{I} & Verificare che l'elemento funzionale riceva i dati & Model::BubbleMemory\\
-	\hline \test{I} & Verificare che il risultato ritornato alla bolla sia corretto & Controller::GenericBubble\\
-	\hline \test{I} & Verificare che inviando all'elemento funzionale dati non corretti sia notificato l'errore & Model::BubbleMemory\\
-	\hline \test{I} & Verificare che i dati inseriti correttamente modifichino la GUI nel modo atteso & View::GUI\\
-	\hline \test{I} & Verificare che i dati inseriti non corretti non modifichino la GUI e sia notificato un errore & View::GUI\\
-	\hline \test{I} & Verificare che un evento originato dall'elemento funzionale abbia ripercussioni sulla bubble generica & Controller::GenericBubble\\
-	\hline \test{I} & Verificare che gli elementi funzionali ricevano dati dalla bubble & Model::BubbleMemory\\
-	\hline \test{I} & Verificare che la bubble riceva il risultato dell'elaborazione dei dati & Controller::GenericBubble\\
-	\hline \test{I} & Verificare che all'arrivo di un segnale dalla GUI sia ritornato un valore corretto alla bubble & Controller::GenericBubble\\
-	\hline \test{I} & Verificare che con l'invio di dati non corretti all'elemento funzionale sia notificato l'errore & Model::BubbleMemory\\
-	\hline \test{I} & Verificare che la bubble riceva input dalla GUI & Controller::GenericBubble\\
-	\hline \test{I} & Verificare che con la modifica dell'elemento funzionale la GUI venga modificata & View::GUI\\
+	\hline \test{I}{L1} & Verificare che la bubble riceva gli input dalla GUI & Controller::GenericBubble\\
+	\hline \test{I}{L2} & Verificare che la GUI riceva i dati dalla bubble & View::GUI\\
+	\hline \test{I}{L3} & Verificare che la GUI venga modificata come previsto & View::GUI\\
+	\hline \test{I}{L4} & Verificare che l'elemento funzionale riceva i dati & Model::BubbleMemory\\
+	\hline \test{I}{L5} & Verificare che il risultato ritornato alla bolla sia corretto & Controller::GenericBubble\\
+	\hline \test{I}{L6} & Verificare che inviando all'elemento funzionale dati non corretti sia notificato l'errore & Model::BubbleMemory\\
+	\hline \test{I}{L7} & Verificare che i dati inseriti correttamente modifichino la GUI nel modo atteso & View::GUI\\
+	\hline \test{I}{L8} & Verificare che i dati inseriti non corretti non modifichino la GUI e sia notificato un errore & View::GUI\\
+	\hline \test{I}{L9} & Verificare che un evento originato dall'elemento funzionale abbia ripercussioni sulla bubble generica & Controller::GenericBubble\\
+	\hline \test{I}{L10} & Verificare che gli elementi funzionali ricevano dati dalla bubble & Model::BubbleMemory\\
+	\hline \test{I}{L11} & Verificare che la bubble riceva il risultato dell'elaborazione dei dati & Controller::GenericBubble\\
+	\hline \test{I}{L12} & Verificare che all'arrivo di un segnale dalla GUI sia ritornato un valore corretto alla bubble & Controller::GenericBubble\\
+	\hline \test{I}{L13} & Verificare che con l'invio di dati non corretti all'elemento funzionale sia notificato l'errore & Model::BubbleMemory\\
+	\hline \test{I}{L14} & Verificare che la bubble riceva input dalla GUI & Controller::GenericBubble\\
+	\hline \test{I}{L15} & Verificare che con la modifica dell'elemento funzionale la GUI venga modificata & View::GUI\\
 	\hline
 	\caption{Test di integrazione per il framework}
 \end{longtable}
 
-\begin{longtable}{|c|c|}
-	\hline \multicolumn{1}{|l|}{\textbf{Codice}} & \multicolumn{1}{l|}{\textbf{Esito}}
-	\\
-	\hline \testt{} & Superato\\
-	\hline \testt{} & Superato\\
-	\hline \testt{} & Superato\\
-	\hline \testt{} & Superato\\
-	\hline \testt{} & Superato\\
-	\hline \testt{} & Superato\\
-	\hline \testt{} & Superato\\
-	\hline \testt{} & Superato\\
-	\hline \testt{} & Superato\\
-	\hline \testt{} & Superato\\
-	\hline \testt{} & Superato\\
-	\hline \testt{} & Superato\\
-	\hline \testt{} & Superato\\
-	\hline \testt{} & Superato\\
-	\hline \testt{} & Superato\\
-	\hline
-	\caption{Testdi integrazione per il framework - esito}
-\end{longtable}
 
 \subsubsection{Bubble To-do List}
 
 \begin{longtable}{|c|P{7cm}|P{5cm}|}
 	\hline \multicolumn{1}{|l|}{\textbf{Codice}} & \multicolumn{1}{l|}{\textbf{Descrizione}} & \multicolumn{1}{l|}{\textbf{Componente}}\\ 
 	\endfirsthead
-	\hline \test{I} & Verificare che con la creazione di un nuovo elemento la vista venga modificata & TodoList::View\\
-	\hline \test{I} & Verificare che con la creazione di un nuovo elemento con dati non corretti il controller ritorni un messaggio d'errore & TodoList::Controller:: TodoController\\
-	\hline \test{I} & Verificare che con la creazione di un nuovo elemento con dati corretti ma con fallimento del salvataggio nella bubble memory venga notificato un messaggio d'errore & TodoList::Controller:: TodoController\\
-	\hline \test{I} & Verificare che alla creazione di una notifica statica con dati corretti sia ritornato un messaggio dell'avvenuta creazione & TodoList::Controller:: TodoController\\
-	\hline \test{I} & Verificare che alla creazione di una notifica statica con dati non corretti sia ritornato un messaggio d'errore & TodoList::Controller:: TodoController\\
-	\hline \test{I} & Verificare che alla creazione di un nuovo elemento nella view esso venga correttamente inviato al controller & TodoList::Controller:: TodoController\\
-	\hline \test{I} & Verificare che alla cancellazione di un elemento nella view questo venga correttamente inviato al controller & TodoList::Controller:: TodoController\\
-	\hline \test{I} & Verificare alla creazione di una notifica statica nella view essa venga correttamente inviata al controller & TodoList::Controller:: TodoController\\
-	\hline \test{I} & Verificare che un errore proveniente dal controller venga renderizzato in modo corretto dalla view & TodoList::View\\
-	\hline \test{I} & Verificare che l'aggiornamento dell'interfaccia grafica venga interpretato correttamente e che l'interfaccia grafica subisca le variazioni attese & TodoList::View\\
+	\hline \test{I}{L16} & Verificare che con la creazione di un nuovo elemento la vista venga modificata & TodoList::View\\
+	\hline \test{I}{L17} & Verificare che con la creazione di un nuovo elemento con dati non corretti il controller ritorni un messaggio d'errore & TodoList::Controller:: TodoController\\
+	\hline \test{I}{L18} & Verificare che con la creazione di un nuovo elemento con dati corretti ma con fallimento del salvataggio nella bubble memory venga notificato un messaggio d'errore & TodoList::Controller:: TodoController\\
+	\hline \test{I}{L19} & Verificare che alla creazione di una notifica statica con dati corretti sia ritornato un messaggio dell'avvenuta creazione & TodoList::Controller:: TodoController\\
+	\hline \test{I}{L20} & Verificare che alla creazione di una notifica statica con dati non corretti sia ritornato un messaggio d'errore & TodoList::Controller:: TodoController\\
+	\hline \test{I}{L21} & Verificare che alla creazione di un nuovo elemento nella view esso venga correttamente inviato al controller & TodoList::Controller:: TodoController\\
+	\hline \test{I}{L22} & Verificare che alla cancellazione di un elemento nella view questo venga correttamente inviato al controller & TodoList::Controller:: TodoController\\
+	\hline \test{I}{L23} & Verificare alla creazione di una notifica statica nella view essa venga correttamente inviata al controller & TodoList::Controller:: TodoController\\
+	\hline \test{I}{L24} & Verificare che un errore proveniente dal controller venga renderizzato in modo corretto dalla view & TodoList::View\\
+	\hline \test{I}{L25} & Verificare che l'aggiornamento dell'interfaccia grafica venga interpretato correttamente e che l'interfaccia grafica subisca le variazioni attese & TodoList::View\\
 	\hline
 	\caption{Test di integrazione per la bubble To-do list}
 \end{longtable}
 
-\begin{longtable}{|c|c|}
-	\hline \multicolumn{1}{|l|}{\textbf{Codice}} & \multicolumn{1}{l|}{\textbf{Esito}}
-	\\
-	\hline \testt{} & Non implementato\\
-	\hline \testt{} & Non implementato\\
-	\hline \testt{} & Non implementato\\
-	\hline \testt{} & Non implementato\\
-	\hline \testt{} & Non implementato\\
-	\hline \testt{} & Non implementato\\
-	\hline \testt{} & Non implementato\\
-	\hline \testt{} & Non implementato\\
-	\hline \testt{} & Non implementato\\
-	\hline \testt{} & Non implementato\\
-	\hline
-	\caption{Test di integrazione per la To-do list - esito}
-\end{longtable}
+
 
 \subsubsection{Bubble \& eat}
 
 \begin{longtable}{|c|P{7cm}|P{5cm}|}
 	\hline \multicolumn{1}{|l|}{\textbf{Codice}} & \multicolumn{1}{l|}{\textbf{Descrizione}} & \multicolumn{1}{l|}{\textbf{Componente}}\\
 	\endfirsthead
-	\hline \test{I} & Verificare che alla visualizzazione del menu da parte del Customer l'Order Gateway ritorni i dati correttamente & DemoBubble\&eat::Restaurant:: OrderGateway::OrderGateway\\
-	\hline \test{I} & Verificare che alla visualizzazione del menu da parte del Customer senza la presenza di un menu nell'Order Gateway venga ritornato un messaggio d'errore all'utente & DemoBubble\&eat:: Customer::BubbleCustomer\\
+	\hline \test{I}{L26} & Verificare che alla visualizzazione del menu da parte del Customer l'Order Gateway ritorni i dati correttamente & DemoBubble\&eat::Restaurant:: OrderGateway::OrderGateway\\
+	\hline \test{I}{L27} & Verificare che alla visualizzazione del menu da parte del Customer senza la presenza di un menu nell'Order Gateway venga ritornato un messaggio d'errore all'utente & DemoBubble\&eat:: Customer::BubbleCustomer\\
 	
-	\hline \test{I} & Verificare che l'invio di un ordinazione da parte di un utente sia immagazzinata all'interno del database e che venga correttamente inoltrata allo Chef & DemoBubble\&eat::Restaurant:: OrderGateway::OrderGateway\\
-	\hline \test{I} & Verificare che con l'invio di un ordinazione da parte di un Customer con dati sbagliati l'ordinazione non venga salvata, non venga inoltrata allo Chef e venga invece ritornato all'utente un messaggio di errore & DemoBubble\&eat::Restaurant:: OrderGateway::OrderGateway\\
+	\hline \test{I}{L28} & Verificare che l'invio di un ordinazione da parte di un utente sia immagazzinata all'interno del database e che venga correttamente inoltrata allo Chef & DemoBubble\&eat::Restaurant:: OrderGateway::OrderGateway\\
+	\hline \test{I}{L29} & Verificare che con l'invio di un ordinazione da parte di un Customer con dati sbagliati l'ordinazione non venga salvata, non venga inoltrata allo Chef e venga invece ritornato all'utente un messaggio di errore & DemoBubble\&eat::Restaurant:: OrderGateway::OrderGateway\\
 	
-	\hline \test{I} & Verificare che con l'invio dei dati personali con dati corretti i dati vengano correttamente salvati nel database & DemoBubble\&eat::Restaurant:: OrderGateway::OrderGateway\\
-	\hline \test{I} & Verificare che con l'invio di dati personali con dati non corretti i dati non vengono salvati nel database e venga inviata una segnalazione di errore all'utente & DemoBubble\&eat::Restaurant:: OrderGateway::OrderGateway\\
+	\hline \test{I}{L30} & Verificare che con l'invio dei dati personali corretti i dati vengano correttamente salvati nel database & DemoBubble\&eat::Restaurant:: OrderGateway::OrderGateway\\
+	\hline \test{I}{L31} & Verificare che con l'invio di dati personali non corretti i dati non vengano salvati nel database e venga inviata una segnalazione di errore all'utente & DemoBubble\&eat::Restaurant:: OrderGateway::OrderGateway\\
 	
-	\hline \test{I} & Verificare che con l'arrivo di un'ordinazione allo Chef l'ordinazione sia inserita nella to-do list dello Chef & DemoBubble\&eat::Restaurant:: Chef::BubbleChef\\
-	\hline \test{I} & Verificare che con il completamento della preparazione di un piatto da parte dello Chef all'interno dell'ordine il piatto sia impostato come pronto & DemoBubble\&eat::Restaurant:: OrderGateway::Order::Order\\
-	\hline \test{I} & Verificare che quando lo stato di un piatto diventa \virgolette{pronto} l'ordinazione venga trasferita al Deliveryman & DemoBubble\&eat::Restaurant::
+	\hline \test{I}{L32} & Verificare che con l'arrivo di un'ordinazione allo Chef l'ordinazione sia inserita nella to-do list dello Chef & DemoBubble\&eat::Restaurant:: Chef::BubbleChef\\
+	\hline \test{I}{L33} & Verificare che con il completamento della preparazione di un piatto da parte dello Chef all'interno dell'ordine il piatto sia impostato come pronto & DemoBubble\&eat::Restaurant:: OrderGateway::Order::Order\\
+	\hline \test{I}{L34} & Verificare che quando lo stato di un piatto diventa \virgolette{pronto} l'ordinazione venga trasferita al Deliveryman & DemoBubble\&eat::Restaurant::
 	Deliveryman::BubbleDeliveryman\\
 	
-	\hline \test{I} & Verificare che con il completamento della preparazione di un piatto da parte dello Chef con errore nel salvataggio venga mostrato allo Chef un messaggio d'errore & Demo Bubble\&eat::Restaurant:: Chef::BubbleChef\\
+	\hline \test{I}{L35} & Verificare che con il completamento della preparazione di un piatto da parte dello Chef con errore nel salvataggio venga mostrato allo Chef un messaggio d'errore & Demo Bubble\&eat::Restaurant:: Chef::BubbleChef\\
 	
-	\hline \test{I} & Verificare che al segnale di piatto pronto la consegna sia visualizzata nella lista del Deliveryman & DemoBubble\&eat::Restaurant:: Deliveryman::BubbleDeliveryman\\
-	\hline \test{I} & Verificare che al segnale di completamento della consegna da parte del Deliveryman il segnale arrivi correttamente correttamente all'Order Gateway & DemoBubble\&eat::Restaurant:: OrderGateway::OrderGateway\\
-	\hline \test{I} & Verificare che al segnale di non completamento della consegna da parte del Deliveryman il segnale arrivi correttamente all’Order Gateway & DemoBubble\&eat::Restaurant:: OrderGateway::OrderGateway\\
-	\hline \test{I} & Verificare che al segnale di carenza di un ingrediente l'ingrediente mancante sia correttamente visualizzato nella lista del Purchasing Manager & DemoBubble\&eat::Restaurant:: PurchasingManager::BubblePurchasingManager\\
-	\hline \test{I} & Verificare che al segnale di ingrediente acquistato da parte del Purchasing Manager il dato sia correttamente salvato nel database e vengano incrementati i valori relativi a tale ingrediente nella lista delle scorte & DemoBubble\&eat::Restaurant:: OrderGateway::OrderGateway\\
-	\hline \test{I} & Verificare che al segnale di carenza di un ingrediente da parte del Manager all'Order Gateway vengano correttamente salvate le informazioni nel database & DemoBubble\&eat::Restaurant:: OrderGateway::OrderGateway\\
-	\hline \test{I} & Verificare che al segnale di cancellazione di un ordine da parte del Manager le informazioni siano correttamente salvate nel database & DemoBubble\&eat::Restaurant:: OrderGateway::OrderGateway\\
-	\hline \test{I} & Verificare che al segnale di creazione di un nuovo menu nel database sia salvato il menu correttamente nel database & DemoBubble\&eat::Restaurant:: OrderGateway::Menu\\
-	\hline \test{I} & Verificare che alla modifica del menu da parte del Manager sia aggiornato correttamente il menu nel database & DemoBubble\&eat::Restaurant:: OrderGateway::Menu\\
+	\hline \test{I}{L36} & Verificare che al segnale di piatto pronto la consegna sia visualizzata nella lista del Deliveryman & DemoBubble\&eat::Restaurant:: Deliveryman::BubbleDeliveryman\\
+	\hline \test{I}{L37} & Verificare che al segnale di completamento della consegna da parte del Deliveryman il segnale arrivi correttamente all'Order Gateway & DemoBubble\&eat::Restaurant:: OrderGateway::OrderGateway\\
+	\hline \test{I}{L38} & Verificare che al segnale di non completamento della consegna da parte del Deliveryman il segnale arrivi correttamente all’Order Gateway & DemoBubble\&eat::Restaurant:: OrderGateway::OrderGateway\\
+	\hline \test{I}{L39} & Verificare che al segnale di carenza di un ingrediente l'ingrediente mancante sia correttamente visualizzato nella lista del Purchasing Manager & DemoBubble\&eat::Restaurant:: PurchasingManager::BubblePurchasingManager\\
+	\hline \test{I}{L40} & Verificare che al segnale di ingrediente acquistato da parte del Purchasing Manager il dato sia correttamente salvato nel database e vengano incrementati i valori relativi a tale ingrediente nella lista delle scorte & DemoBubble\&eat::Restaurant:: OrderGateway::OrderGateway\\
+	\hline \test{I}{L41} & Verificare che al segnale di carenza di un ingrediente da parte del Manager all'Order Gateway vengano correttamente salvate le informazioni nel database & DemoBubble\&eat::Restaurant:: OrderGateway::OrderGateway\\
+	\hline \test{I}{L42} & Verificare che al segnale di cancellazione di un ordine da parte del Manager le informazioni siano correttamente salvate nel database & DemoBubble\&eat::Restaurant:: OrderGateway::OrderGateway\\
+	\hline \test{I}{L43} & Verificare che al segnale di creazione di un nuovo menu nel database sia salvato il menu correttamente nel database & DemoBubble\&eat::Restaurant:: OrderGateway::Menu\\
+	\hline \test{I}{L44} & Verificare che alla modifica del menu da parte del Manager sia aggiornato correttamente il menu nel database & DemoBubble\&eat::Restaurant:: OrderGateway::Menu\\
 	\hline
 	\caption{Test di integrazione per la Bubble \& eat}
 \end{longtable}
 
-\begin{longtable}{|c|c|}
-	\hline \multicolumn{1}{|l|}{\textbf{Codice}} & \multicolumn{1}{l|}{\textbf{Esito}}
-	\\
-	\hline \testt{} & Superato\\
-	\hline \testt{} & Superato\\
-	\hline \testt{} & Superato\\
-	\hline \testt{} & Non implementato\\
-	\hline \testt{} & Superato\\
-	\hline \testt{} & Non implementato\\
-	\hline \testt{} & Superato\\
-	\hline \testt{} & Superato\\
-	\hline \testt{} & Non implementato\\
-	\hline \testt{} & Non implementato\\
-	\hline \testt{} & Non implementato\\
-	\hline \testt{} & Non implementato\\
-	\hline \testt{} & Non implementato\\
-	\hline \testt{} & Non implementato\\
-	\hline \testt{} & Non implementato\\
-	\hline \testt{} & Non implementato\\
-	\hline \testt{} & Non implementato\\
-	\hline \testt{} & Non implementato\\
-	\hline \testt{} & Superato\\
-	\hline
-	\caption{Testdi integrazione per la Bubble \& eat - esito}
-\end{longtable}

@@ -40,6 +40,10 @@ Il package Model gestisce i dati contenuti nella bubble memory e nel database as
 La classe ItemsStore contiene i dati riguardanti le entrate della TodoList.\\
 \textbf{Utilizzo:}\\
 L'utilizzo di questa classe è quello di fornire il salvataggio dei dati per le entrate della bubble To-do list in modo da poter modificare i dati alla creazione, eliminazione o completamento di voci della lista.\\
+\textbf{Dipendenze:}
+\begin{itemize}
+	\item \texttt{ListItems::ListItemContainer}: nello store vengono memorizzati uno o più contenitori (liste).
+\end{itemize}
 
 \subsubparagraph{TodoList\-::Model\-::Data\-Checker}\label{todo-datachecker}\mbox{}\\
 \textbf{Descrizione:}\\
@@ -65,7 +69,11 @@ Il package ListItems rappresenta tramite le classi che contiene la to-do list a 
 	\textbf{Descrizione:}\\
 	La classe ListItemContainer rappresenta un contenitore per gli elementi della lista, ovvero la lista stessa.\\
 	\textbf{Utilizzo:}\\
-	Viene utilizzata per mantenere le informazioni riguardo alla lista.
+	Viene utilizzata per mantenere le informazioni riguardo alla lista.\\
+	\textbf{Dipendenze:}
+	\begin{itemize}
+		\item \texttt{ListItem}: essendo un contenitore, ListItemContainer è una aggregazione di ListItem.
+	\end{itemize}
 \end{description}
 
 
@@ -81,7 +89,13 @@ Il package ListItems rappresenta tramite le classi che contiene la to-do list a 
 \textbf{Descrizione:}\\
 La classe ListItemView rappresenta graficamente un'entrata per la To-do list.\\
 \textbf{Utilizzo:}\\
-L'utilizzo di questa classe è quello di rappresentare le singole entrate della To-do list e permetterne la selezione per la gestione della rimozione e del completamento in modo indipendente dalle altre voci all'interno della lista.\\
+Lo scopo di questa classe è quello di rappresentare le singole entrate della To-do list e permetterne la selezione per la gestione della rimozione e del completamento in modo indipendente dalle altre voci all'interno della lista.\\
+\textbf{Dipendenze:}
+\begin{itemize}
+	\item \texttt{Framework::View::GUI::CheckBox}: checkbox tramite cui è possibile spuntare l'oggetto;
+	\item \texttt{Framework::View::GUI::Label}: etichetta di testo per l'elemento.
+\end{itemize}
+ListItemView può essere esteso utilizzando bottoni e testo editabile come entry.
 
 
 \subparagraph{Controller}\mbox{}
@@ -90,7 +104,7 @@ L'utilizzo di questa classe è quello di rappresentare le singole entrate della 
 	\nopagebreak
 	\begin{figure}[H]
 		\centering
-		\includegraphics[height=5cm]{diagrammi_img/classi_e_package/todo_controller}
+		\includegraphics[width=15cm]{diagrammi_img/classi_e_package/todo_controller}
 		\caption{Controller\-::ListItemsController}
 	\end{figure}
 \end{samepage}
@@ -98,3 +112,9 @@ L'utilizzo di questa classe è quello di rappresentare le singole entrate della 
 La classe ListItemController permette di associare agli elementi della view funzionalità logiche definite nel model.\\
 \textbf{Utilizzo:}\\
 La funzione di questa classe è quella di Controller della To-do list; essa controlla la renderizzazione grafica ed il comportamento della To-do list.\\
+\textbf{Dipendenze:}
+\begin{itemize}
+	\item \texttt{TodoList::View::ListItemView}: utilizzato per rappresentare graficamente gli elementi della lista;
+	\item \texttt{TodoList::Model::ListItemStore}: store per le liste;
+	\item \texttt{TodoList::Model::ListItemContainer}: per manipolare la lista.
+\end{itemize}

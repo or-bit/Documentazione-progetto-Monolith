@@ -4,7 +4,7 @@
 	\hline \textbf{Componente} & \textbf{Requisiti} \tabularnewline 
 	\endfirsthead
 	% Framework
-	\hline \coderef{Framework::Model::BubbleMemory::BubbleMemory} & \ref{AdR-L90} \linebreak \ref{AdR-L91} \tabularnewline
+%	\hline \coderef{Framework::Model::BubbleMemory::BubbleMemory} & \ref{AdR-L90} \linebreak \ref{AdR-L91} \tabularnewline
 	\hline \coderef{Framework::Model::API::LifeCycle::LifeCycle} & \ref{AdR-L9} \linebreak \ref{AdR-L10} \linebreak \ref{AdR-L93} \tabularnewline
 	\hline \coderef{Framework::Model::API::Notification::WebNotification} & \ref{AdR-L15} \linebreak \tabularnewline
 	\hline \coderef{Framework::Model::API::ExternalAPI::ExternalAPI} & \ref{AdR-L44} \linebreak \ref{AdR-L92} \tabularnewline
@@ -12,7 +12,7 @@
 	\hline \coderef{Framework::Model::API::DBOperations::DBOperations} & \ref{AdR-L8} \linebreak \ref{AdR-L81} \linebreak \ref{AdR-L82} \linebreak \ref{AdR-L83} \linebreak \ref{AdR-L89} \tabularnewline
 	\hline \coderef{Framework::Model::API::MatchRegularExpr::MatchRegularExpr} & \ref{AdR-L42} \tabularnewline
 	\hline \coderef{Framework::Controller::GenericBubble} & \ref{AdR-L6} \linebreak \ref{AdR-L7} \linebreak \ref{AdR-L86} \linebreak \ref{AdR-L87} \linebreak \ref{AdR-L11} \linebreak \ref{AdR-L56} \linebreak \ref{AdR-L89} \linebreak \ref{AdR-L55} \linebreak \ref{AdR-L88} \linebreak \ref{AdR-L90} \tabularnewline
-	\hline \coderef{Framework::View::GUI::GUI} &\ref{AdR-L11} \linebreak \ref{AdR-L56} \linebreak \ref{AdR-L12} \linebreak  \ref{AdR-L13} \linebreak \ref{AdR-L14} \linebreak \ref{AdR-L63} \linebreak \ref{AdR-L33} \linebreak \ref{AdR-L34} \linebreak \ref{AdR-L38} \linebreak \ref{AdR-L41} \linebreak \ref{AdR-L84} \linebreak \ref{AdR-L85} \linebreak \ref{AdR-L45} \linebreak \ref{AdR-L46} \linebreak \ref{AdR-L64} \tabularnewline
+%	\hline \coderef{Framework::View::GUI::GUI} &\ref{AdR-L11} \linebreak \ref{AdR-L56} \linebreak \ref{AdR-L12} \linebreak  \ref{AdR-L13} \linebreak \ref{AdR-L14} \linebreak \ref{AdR-L63} \linebreak \ref{AdR-L33} \linebreak \ref{AdR-L34} \linebreak \ref{AdR-L38} \linebreak \ref{AdR-L41} \linebreak \ref{AdR-L84} \linebreak \ref{AdR-L85} \linebreak \ref{AdR-L45} \linebreak \ref{AdR-L46} \linebreak \ref{AdR-L64} \tabularnewline
 	\hline \coderef{Framework::View::GUIContainer} & \ref{AdR-L11} \linebreak \ref{AdR-L56} \linebreak \ref{AdR-L89} \linebreak \ref{AdR-L55} \linebreak \ref{AdR-L88} \tabularnewline
 	\hline \coderef{Framework::View::GUI::Label} & \ref{AdR-L12} \tabularnewline
 	\hline \coderef{Framework::View::GUI::InputFile} & \ref{AdR-L38} \tabularnewline
@@ -69,36 +69,62 @@
 	\hline \ref{AdR-L87} & \coderef{Framework::Controller::GenericBubble} \tabularnewline
 	\hline \ref{AdR-L9} & \coderef{Framework::Model::API::LifeCycle::LifeCycle} \tabularnewline
 	\hline \ref{AdR-L10} & \coderef{Framework::Model::API::LifeCycle::LifeCycle} \tabularnewline
-	\hline \ref{AdR-L11} & \coderef{Framework::Controller::GenericBubble} \linebreak \coderef{Framework::View::GUIContainer} \linebreak \coderef{Framework::View::GUI::GUI} \tabularnewline %15
-	\hline \ref{AdR-L56} & \coderef{Framework::Controller::GenericBubble} \linebreak \coderef{Framework::View::GUIContainer} \linebreak \coderef{Framework::View::GUI::GUI} \tabularnewline
+	\hline \ref{AdR-L11} & \coderef{Framework::Controller::GenericBubble} \linebreak \coderef{Framework::View::GUIContainer} \linebreak 
+%	\coderef{Framework::View::GUI::GUI} 
+	\tabularnewline %15
+	\hline \ref{AdR-L56} & \coderef{Framework::Controller::GenericBubble} \linebreak \coderef{Framework::View::GUIContainer} \linebreak 
+%	\coderef{Framework::View::GUI::GUI} 
+	\tabularnewline
 	\hline \ref{AdR-L89} & \coderef{Framework::Model::API::DBOperations::DBOperations} \linebreak \coderef{Framework::Controller::GenericBubble} \linebreak \coderef{Framework::View::GUIContainer} \tabularnewline
 	\hline \ref{AdR-L55} & \coderef{Framework::Controller::GenericBubble} \linebreak \coderef{Framework::View::GUIContainer} \tabularnewline
 	\hline \ref{AdR-L88} & \coderef{Framework::Controller::GenericBubble} \linebreak \coderef{Framework::View::GUIContainer} \tabularnewline
-	\hline \ref{AdR-L12} & \coderef{Framework::View::GUI::Label} \linebreak \coderef{Framework::View::GUI::GUI} \tabularnewline %20
-	\hline \ref{AdR-L13} & \coderef{Framework::View::GUI::GUIContainer} \linebreak \coderef{Framework::View::GUI::GUI} \tabularnewline
-	\hline \ref{AdR-L14} & \coderef{Framework::View::GUI::GUI} \tabularnewline
-	\hline \ref{AdR-L63} & \coderef{Framework::View::GUI::GUI} \tabularnewline
+	\hline \ref{AdR-L12} & \coderef{Framework::View::GUI::Label} \linebreak
+%	\coderef{Framework::View::GUI::GUI}
+	\tabularnewline %20
+	\hline \ref{AdR-L13} & \coderef{Framework::View::GUI::GUIContainer} \linebreak 
+%	\coderef{Framework::View::GUI::GUI} 
+	\tabularnewline
+	\hline \ref{AdR-L14} & \code{React::Component} \tabularnewline
+	\hline \ref{AdR-L63} & \code{React::Component} \tabularnewline
 	\hline \ref{AdR-L15} & \coderef{Framework::Model::API::Notification::WebNotification} \tabularnewline
 	\hline \ref{AdR-L16} & \coderef{Framework::Model::API::Notification::WebNotification} \tabularnewline %25
-	\hline \ref{AdR-L33} & \coderef{Framework::View::GUI::TextView} \linebreak \coderef{Framework::View::GUI::GUI} \tabularnewline
-	\hline \ref{AdR-L34} & \coderef{Framework::View::GUI::TextEdit} \linebreak \coderef{Framework::View::GUI::GUI} \tabularnewline
+	\hline \ref{AdR-L33} & \coderef{Framework::View::GUI::TextView} \linebreak 
+%	\coderef{Framework::View::GUI::GUI} 
+	\tabularnewline
+	\hline \ref{AdR-L34} & \coderef{Framework::View::GUI::TextEdit} \linebreak 
+%	\coderef{Framework::View::GUI::GUI} 
+	\tabularnewline
 %	\hline \ref{AdR-L35} & \coderef{api-json} \tabularnewline
 %	\hline \ref{AdR-L94} & \coderef{Framework::Controller::GenericBubble} \linebreak \coderef{Framework::View::GUIContainer} \tabularnewline
 %	\hline \ref{AdR-L36} & \coderef{api-partecipanti} \tabularnewline %30
 %	\hline \ref{AdR-L37} & \coderef{api-partecipanti} \tabularnewline
-	\hline \ref{AdR-L38} & \coderef{Framework::View::GUI::InputFile} \linebreak \coderef{Framework::View::GUI::GUI} \tabularnewline
+	\hline \ref{AdR-L38} & \coderef{Framework::View::GUI::InputFile} \linebreak 
+%	\coderef{Framework::View::GUI::GUI} 
+	\tabularnewline
 %	\hline \ref{AdR-L39} & \coderef{api-file} \tabularnewline
 %	\hline \ref{AdR-L40} & \coderef{api-file} \tabularnewline
-	\hline \ref{AdR-L41} & \coderef{Framework::View::GUI::Button} \linebreak \coderef{Framework::View::GUI::GUI} \tabularnewline %35
-	\hline \ref{AdR-L84} & \coderef{Framework::View::GUI::RadioButton} \linebreak \coderef{Framework::View::GUI::RadioButtonGroup} \linebreak \coderef{Framework::View::GUI::GUI} \tabularnewline
-	\hline \ref{AdR-L85} & \coderef{Framework::View::GUI::CheckBox} \linebreak \coderef{Framework::View::GUI::CheckBoxGroup} \linebreak \coderef{Framework::View::GUI::GUI} \tabularnewline
+	\hline \ref{AdR-L41} & \coderef{Framework::View::GUI::Button} \linebreak 
+%	\coderef{Framework::View::GUI::GUI} 
+	\tabularnewline %35
+	\hline \ref{AdR-L84} & \coderef{Framework::View::GUI::RadioButton} \linebreak \coderef{Framework::View::GUI::RadioButtonGroup} \linebreak 
+%	\coderef{Framework::View::GUI::GUI} 
+	\tabularnewline
+	\hline \ref{AdR-L85} & \coderef{Framework::View::GUI::CheckBox} \linebreak \coderef{Framework::View::GUI::CheckBoxGroup} \linebreak 
+%	\coderef{Framework::View::GUI::GUI} 
+	\tabularnewline
 	\hline \ref{AdR-L42} & \coderef{Framework::Model::API::MatchRegularExpr::MatchRegularExpr} \tabularnewline
 %	\hline \ref{AdR-L43} & \coderef{api-timing} \tabularnewline
 	\hline \ref{AdR-L44} & \coderef{Framework::Model::API::ExternalAPI::ExternalAPI} \linebreak \coderef{Framework::Model::API::ExternalAPI::ExternalAPIStore} \tabularnewline %40
 	\hline \ref{AdR-L92} & \coderef{Framework::Model::API::ExternalAPI::ExternalAPI} \linebreak \coderef{Framework::Model::API::ExternalAPI::ExternalAPIStore} \tabularnewline
-	\hline \ref{AdR-L45} & \coderef{Framework::View::GUI::Image} \linebreak \coderef{Framework::View::GUI::GUI} \tabularnewline
-	\hline \ref{AdR-L46} & \coderef{Framework::View::GUI::PieChart} \linebreak \coderef{Framework::View::GUI::GUI} \tabularnewline
-	\hline \ref{AdR-L64} & \coderef{Framework::View::GUI::BarChart} \linebreak \coderef{Framework::View::GUI::GUI} \tabularnewline
+	\hline \ref{AdR-L45} & \coderef{Framework::View::GUI::Image} \linebreak 
+%	\coderef{Framework::View::GUI::GUI} 
+	\tabularnewline
+	\hline \ref{AdR-L46} & \coderef{Framework::View::GUI::PieChart} \linebreak 
+%	\coderef{Framework::View::GUI::GUI} 
+	\tabularnewline
+	\hline \ref{AdR-L64} & \coderef{Framework::View::GUI::BarChart} \linebreak 
+%	\coderef{Framework::View::GUI::GUI} 
+	\tabularnewline
 	\hline \ref{AdR-L93} & \coderef{Framework::Model::API::LifeCycle::LifeCycle} \tabularnewline %45
 %	\hline \ref{AdR-L47} & \coderef{api-limiti} \tabularnewline
 %	\hline \ref{AdR-L48} & \coderef{api-limiti} \tabularnewline

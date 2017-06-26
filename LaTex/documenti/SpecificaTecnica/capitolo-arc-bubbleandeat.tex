@@ -50,38 +50,63 @@ Tutte le operazioni saranno fornite dall'Order\-Gateway che si occuperà, oltre 
 \textbf{Descrizione:}\\
 La classe permette al \Customer{} di consultare il menu, registrare i propri dati personali e inviare le proprie ordinazioni.\\
 \textbf{Utilizzo:}\\
-Questa classe attraverso l'Order\-Gateway riceve il menu da consultare per mezzo del quale può creare la propria ordinazione.
+Questa classe attraverso l'Order\-Gateway riceve il menu da consultare per mezzo del quale può creare la propria ordinazione.\\
+\textbf{Dipendenze:}
+\begin{itemize}
+	\item \texttt{Restaurant::OrderGateway::OrderGateway}: riferimento al gateway presente nel server.
+\end{itemize}
 
 \subparagraph{Demo\-Bubble\&eat\-::Restaurant\-::Manager\-::Bubble\-Manager}\label{eat-manager}\mbox{}\\
 \textbf{Descrizione:}\\
 La classe permette al \Manager{} di gestire il menu, il magazzino e le ordinazioni.\\
 \textbf{Utilizzo:}\\
-Questa classe permette di gestire tutte le operazioni fornite da Order\-Gateway ed ha la possibilità di manipolare il magazzino e le ordinazioni.
+Questa classe permette di gestire tutte le operazioni fornite da Order\-Gateway ed ha la possibilità di manipolare il magazzino e le ordinazioni.\\
+\textbf{Dipendenze:}
+\begin{itemize}
+	\item \texttt{OrderGateway::OrderGateway}: riferimento al gateway presente nel server.
+\end{itemize}
 
 \subparagraph{Demo\-Bubble\&eat\-::Restaurant\-::Chef\-::Bubble\-Chef}\label{eat-chef}\mbox{}\\
 \textbf{Descrizione:}\\
 La classe permette allo \Chef{} di consultare le ordinazioni e di impostare lo stato di una ordinazione in modo da renderla disponibile alla consegna.\\
 \textbf{Utilizzo:}\\
-Questa classe, attraverso l'Order\-Gateway, recupera e visualizza le ordinazioni e offre la possibilità allo \Chef{} di modificarne lo stato.
+Questa classe, attraverso l'Order\-Gateway, recupera e visualizza le ordinazioni e offre la possibilità allo \Chef{} di modificarne lo stato.\\
+\textbf{Dipendenze:}
+\begin{itemize}
+	\item \texttt{OrderGateway::OrderGateway}: riferimento al gateway presente nel server.
+\end{itemize}
 
-\subparagraph{Demo\-Bubble\&eat\-::Restaurant\-::Deliveryman\-::Bubble\-Deliveryman}\label{eat-deliveryman}\mbox{}\\
+\subparagraph{Demo\-Bubble\&eat\-::Restaurant\-::Deliveryman\-::Bubble\-Deli\-very\-man}\label{eat-deliveryman}\mbox{}\\
 \textbf{Descrizione:}\\
 La classe permette al \Deliveryman{} di consultare gli ordini pronti alla consegna, di ottenere i dati personali dei \Customer[2]{} relativi alle consegne selezionate e di eliminarle una volta completate.\\
 \textbf{Utilizzo:}\\
-Questa classe, attraverso l'Order\-Gateway, riceve la lista delle ordinazioni da consegnare, le visualizza e permette di selezionare le consegne ed eliminarle una volta selezionate.
+Questa classe, attraverso l'Order\-Gateway, riceve la lista delle ordinazioni da consegnare, le visualizza e permette di selezionare le consegne ed eliminarle una volta selezionate.\\
+\textbf{Dipendenze:}
+\begin{itemize}
+	\item \texttt{OrderGateway::OrderGateway}: riferimento al gateway presente nel server.
+\end{itemize}
 
-\subparagraph{Demo\-Bubble\&eat\-::Restaurant\-::PurchasingManager\-::Bubble\-Purcha\-sing\-Ma\-nager}\label{eat-purchasing}\mbox{}\\
+\subparagraph{Demo\-Bubble\&eat\-::Restaurant\-::PurchasingManager\-::Bub\-ble\-Purcha\-sing\-Ma\-nager}\label{eat-purchasing}\mbox{}\\
 \textbf{Descrizione:}\\
 La classe permette al \Purchasingmanager{} di recuperare e visualizzare la lista della fornitura da acquistare oltre ad eliminare gli acquisti dalla lista.\\
 \textbf{Utilizzo:}\\
-Questa classe recupera dall'Order\-Gateway la lista degli acquisti, la visualizza e consente di eliminare gli acquisti presenti nella stessa.
+Questa classe recupera dall'Order\-Gateway la lista degli acquisti, la visualizza e consente di eliminare gli acquisti presenti nella stessa.\\
+\textbf{Dipendenze:}
+\begin{itemize}
+	\item \texttt{OrderGateway::OrderGateway}: riferimento al gateway presente nel server.
+\end{itemize}
 
-\subparagraph{Demo\-Bubble\&eat\-::Restaurant\-::Order\-Gateway\-::Order\-Gateway}\label{eat-gateway}\mbox{}\\
+\subparagraph{Demo\-Bubble\&eat\-::Restaurant\-::Order\-Gateway\-::Order\-Ga\-te\-way}\label{eat-gateway}\mbox{}\\
 \textbf{Descrizione:}\\
 La classe permette a tutti gli attori di interagire con il database attraverso apposite funzioni e si occupa di gestire le interazioni con il menu e l'insieme delle ordinazioni contenute nell'OrderContainer. La classe si occupa inoltre di inviare le notifiche agli attori quando viene richiesto o in maniera automatica ed aggiorna le risorse e le liste in tempo reale.\\
 \textbf{Utilizzo:}\\
 Questa classe offre diverse funzionalità agli attori per manipolare il database, le ordinazioni contenute nell'OrderContainer ed il menu, che permette a sua volta la creazione delle ordinazioni. Queste funzioni saranno disponibili o meno a seconda del tipo di attore.\\
-La classe aggiorna le risorse in modo automatico, scalando gli ingredienti dai valori impostati per ogni piatto nel menu. Ha inoltre delle funzioni di notifica che possono essere impostate automaticamente durante le operazioni o chiamate da alcuni attori.
+La classe aggiorna le risorse in modo automatico, scalando gli ingredienti dai valori impostati per ogni piatto nel menu. Ha inoltre delle funzioni di notifica che possono essere impostate automaticamente durante le operazioni o chiamate da alcuni attori.\\
+\textbf{Dipendenze:}
+\begin{itemize}
+	\item \texttt{Menu}: l'OrderGateway contiene i Menu del ristorante;
+	\item \texttt{Orders::OrderContainer}: gli ordini ricevuti e processati sono divisi in appositi contenitori.
+\end{itemize}
 
 \subparagraph{Demo\-Bubble\&eat\-::Restaurant\-::Order\-Gateway\-::Menu}\label{eat-menu}\mbox{}\\
 \textbf{Descrizione:}\\
@@ -93,15 +118,19 @@ La classe permette la creazione delle ordinazioni ed attraverso l'Order\-Gateway
 \textbf{Utilizzo:}\\
 Questa classe implementa il design pattern del Factory method e permette la creazione delle orinazioni, inoltre fornisce dei metodi per modificare ed ottenere il menu.
 
-\subparagraph{Demo\-Bubble\&eat\-::Restaurant\-::Order\-Gateway\-::Order\-::Order}\label{eat-order}\mbox{}\\ 
+\subparagraph{Demo\-Bubble\&eat\-::Restaurant\-::Order\-Gateway\-::Order\-::Or\-der}\label{eat-order}\mbox{}\\ 
 \textbf{Descrizione:}\\
 Questa classe definisce il contenuto dell'ordinazione. Contiene gli elementi scelti dal menu e i dati forniti dall'utente per la consegna.\\
 L'ordinazione è definita anche da uno stato e la classe offre i metodi per modificarlo. \\
 \textbf{Utilizzo:}\\
 Questa classe permette di inserire gli elementi del menu nell'ordinazione e di modificare lo stato della stessa. 
 
-\subparagraph{Demo\-Bubble\&eat\-::Restaurant\-::Order\-Gateway\-::Order\-::Order\-Contai\-ner}\label{eat-container}\mbox{}\\
+\subparagraph{Demo\-Bubble\&eat\-::Restaurant\-::Order\-Gateway\-::Order\-::Or\-der\-Contai\-ner}\label{eat-container}\mbox{}\\
 \textbf{Descrizione:}\\
 La classe permette la gestione di una collezione di ordinazioni definite dalla classe Order.\\
 \textbf{Utilizzo:}\\
-Questa classe offre la possibilità di aggiungere, rimuovere e restituire elementi da una collezione di ordinazioni.
+Questa classe offre la possibilità di aggiungere, rimuovere e restituire elementi da una collezione di ordinazioni.\\
+\textbf{Dipendenze:}
+\begin{itemize}
+	\item \texttt{Order}: riferimento al gateway presente nel server.
+\end{itemize}

@@ -8,9 +8,9 @@
 \newcommand{\DocTitle}{Demo User Manual}
 \newcommand{\DocVersion}{\VersioneMUD{}}
 
-\newcommand{\DocRedazione}{\lorenzo \\ \alice}
-\newcommand{\DocVerifica}{\lorenzo}
-\newcommand{\DocApprovazione}{\tommy}
+\newcommand{\DocRedazione}{\nick \\ \alice}
+\newcommand{\DocVerifica}{\marco \\ \tommy}
+\newcommand{\DocApprovazione}{\bea}
 
 \newcommand{\DocUso}{External}
 \newcommand{\DocDistribuzione}{
@@ -30,3 +30,63 @@ This document's purpose is to provide a detailed and comprehensive guide for use
 
 % In questa seconda parte vanno definite le 'funzioni' utilizzate soltanto da questo documento.
 \newcommand{\definizione}[1] {\textbf{#1}:}
+
+%italiano in global
+\newcommand{\makeFrontPageEng}{
+  % Declare new goemetry for the title page only.
+  \newgeometry{top=1cm}
+  
+  \begin{titlepage}
+  \begin{center}
+
+  \begin{center}
+  \includegraphics[width=8cm]{../../modello/or-bit_bkg.png}
+  \end{center}
+  
+%  \vspace{1cm}
+
+  \begin{Huge}
+  \textbf{\DocTitle{}}
+  \end{Huge}
+  
+  \textbf{\emph{ \GroupName{} Team \, \texttwelveudash{} \, Project \ProjectName{}}}
+  
+  \vspace{10pt}
+
+  \bgroup
+  \def\arraystretch{1.3}
+  \begin{tabular}{ r|l }
+    \multicolumn{2}{c}{\textbf{Information about this document}} \\
+    \hline
+		% differenzia a seconda che \DocVersion{} stampi testo o no
+		\setbox0=\hbox{\DocVersion{}\unskip}\ifdim\wd0=0pt
+			% nulla (non ho trovato come togliere l'a capo)
+			\\
+		\else
+			\textbf{Version} & \DocVersion{} \\
+		\fi
+    \textbf{Drafting} & \multiLineCell[t]{\DocRedazione{}} \\
+    \textbf{Verification} & \multiLineCell[t]{\DocVerifica{}} \\
+    \textbf{Approval} & \multiLineCell[t]{\DocApprovazione{}} \\
+    \textbf{Usage} & \DocUso{} \\
+    \textbf{Distribution} & \multiLineCell[t]{\DocDistribuzione{}} \\
+  \end{tabular}
+  \egroup
+
+  \vspace{10pt}
+
+  \textbf{Description} \\
+  \DocDescription{}  
+
+%  \vspace{0.2cm}
+  
+
+  \end{center}
+  \begin{figure}[H]
+	\includegraphics[height=3cm, right]{../../modello/monolith}
+  \end{figure}
+  \end{titlepage}
+  
+  % Ends the declared geometry for the titlepage
+  \restoregeometry
+}

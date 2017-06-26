@@ -1,6 +1,6 @@
-\section{Diagrammi - Framework}
+\section{Diagrammi - Framework}\label{DiagrammiFramework}
 
-Nei digrammi \ref{fig:alt_framework} e \ref{fig:seq_framework} sono rappresentate le interazioni che avvengono generalmente e ad alto
+Nei digrammi \ref{fig:alt_framework} e \ref{fig:seq_framework} sono rappresentate le interazioni che avvengono generalmente ad alto
 livello tra le componenti del framework, model, view e controller. I segnali inviati dall’utente
 vengono ricevuti dalla view, la quale li invia al controller; questo quindi individua l’elemento
 funzionale incaricato di elaborare le informazioni e quindi gli inoltra i dati. L’elemento funzionale
@@ -20,4 +20,4 @@ L'elemento della GUI riceve un input dall'utente e invia dei dati alla Generic B
 	\caption{Diagramma di sequenza - Framework}
 	\label{fig:seq_framework}
 \end{figure}
-Lo User da un input alla GUI, la quale invia dei dati alla GenericBubble. La GenericBubble invia anch'essa dei dati all FunctionalElement il quale svolge le operazioni richieste. Nel caso le operazioni non abbiano un output il FunctionalElement, dopo averle svolte, segnala il loro completamento alla GenericBubble che inoltra il segnale alla GUI. Nel caso in cui le operazioni abbiano un output FunctionalElement restituisce l'output alla GenericBubble che lo inoltra alla GUI, la quale mostra i risultati all'utente. In entrambi i casi al termine delle operazioni la GUI si aggiorna.
+Lo User da un input alla GUI, la quale invia dei dati alla GenericBubble. La GenericBubble invia anch'essa dei dati al FunctionalElement il quale svolge le operazioni richieste. Nel caso le operazioni non abbiano un output il FunctionalElement, dopo averle svolte, segnala il loro completamento alla GenericBubble che inoltra il segnale alla GUI. Nel caso in cui le operazioni abbiano un output FunctionalElement restituisce l'output alla GenericBubble che lo inoltra alla GUI, la quale mostra i risultati all'utente. In entrambi i casi al termine delle operazioni la GUI si aggiorna.

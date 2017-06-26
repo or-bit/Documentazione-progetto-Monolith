@@ -8,36 +8,36 @@
 
 \setclass{Framework::Model}
 \subsubsection[::Model]{\class} \label{\class}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=10cm]{./diagrammi/framework/model.png}
-	\caption{Componente \class}
-\end{figure}
-Contiene la business logic del framework, ed è composto dai package API e BubbleMemory.
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=10cm]{./diagrammi/framework/model.png}
+%	\caption{Componente \class}
+%\end{figure}
+%Contiene la business logic del framework, ed è composto dai package API e BubbleMemory.
 
-\setclass{Framework::Model::BubbleMemory::BubbleMemory}
-\paragraph[::BubbleMemory::BubbleMemory]{\class}\mbox{}\\ \label{class}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=7cm]{./diagrammi/framework/model/bubblememory.png}
-	\caption{Classe \class}
-\end{figure}
-
-\textbf{Descrizione:}\\
-Classe astratta che rappresenta la memoria della bubble.
-
-\textbf{Utilizzo:}\\
-Viene utilizzata per dare un'interfaccia comune per vari possibili sviluppi della memoria della bubble.
-
-\textbf{Classi ereditate:}
-\begin{itemize}
-	\item \code{EventEmitter}.
-\end{itemize}
-
-\textbf{Sottoclassi:}
-\begin{itemize}
-	\item \coderef{Framework::Model::API::ExternalAPI::ExternalAPIStore}.
-\end{itemize}
+%\setclass{Framework::Model::BubbleMemory::BubbleMemory}
+%\paragraph[::BubbleMemory::BubbleMemory]{\class}\mbox{}\\ \label{class}
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=7cm]{./diagrammi/framework/model/bubblememory.png}
+%	\caption{Classe \class}
+%\end{figure}
+%
+%\textbf{Descrizione:}\\
+%Classe astratta che rappresenta la memoria della bubble.
+%
+%\textbf{Utilizzo:}\\
+%Viene utilizzata per dare un'interfaccia comune per vari possibili sviluppi della memoria della bubble.
+%
+%\textbf{Classi ereditate:}
+%\begin{itemize}
+%	\item \code{EventEmitter}.
+%\end{itemize}
+%
+%\textbf{Sottoclassi:}
+%\begin{itemize}
+%	\item \coderef{Framework::Model::API::ExternalAPI::ExternalAPIStore}.
+%\end{itemize}
 
 %\textbf{Attributi:}
 %
@@ -155,11 +155,11 @@ Classe che permette di effettuare richieste a API esterne.
 
 \textbf{Metodi:}
 \begin{itemize}
-	\item \method{+ ExternalAPI(props: Object[])}: costruttore della classe, assegna le proprietà:
+	\item \method{+ ExternalAPI(url: string)}: costruttore della classe, assegna le proprietà:
 	\begin{itemize}
-		\item \param{props: Object[]}: array generico contenente le proprietà da assegnare;
+		\item \param{url: string}: URI dell'API;
 	\end{itemize}
-	\item \method{+ getInitialState(): Object}: ritorna lo stato iniziale della classe, sotto forma di oggetto;
+	\item \method{+ getInitialState(): JSON}: ritorna lo stato iniziale della classe, sotto forma di oggetto;
 	\item \method{+ componentWillMount(): void}: aggiorna in memoria la risposta ricevuta;
 	\item \method{+ componentDidMount(): void}: effettua la richiesta vera e propria.
 \end{itemize}
@@ -177,12 +177,6 @@ Classe che permette di salvare una risposta API.
 
 %\textbf{Utilizzo:}\\
 %Viene utilizzata per salvare nella memoria della bubble le informazioni ricevute da \cref{Framework::Model::API::ExternalAPI::ExternalAPI}.
-
-\textbf{Classi ereditate:}
-\begin{itemize}
-	\item \code{\cref{Framework::Model::BubbleMemory::BubbleMemory}}
-\end{itemize}
-%\textbf{Sottoclassi:}
 
 \textbf{Attributi:}
 \begin{itemize}
@@ -259,12 +253,12 @@ Viene utilizzata per connettere la bubble al database e effettuare operazioni su
 	\item \method{+ readOne(collectionName: string, filter: Object): Promise}: effettua una ricerca e ritorna una promise con cui è possibile effettuare operazioni sul risultato:
 	\begin{itemize}
 		\item \param{collectionName: string}: nome della collezione MongoDB in cui cercare;
-		\item \param{filter: Object}: query di ricerca sotto forma di oggetto;
+		\item \param{filter: JSON}: query di ricerca sotto forma di oggetto;
 	\end{itemize}
-	\item \method{+ insertOne(collectionName: string, element: Object): Promise}: inserisce un elemento nella collezione indicata e ritorna una promise con cui è possibile effettuare operazioni sul risultato:
+	\item \method{+ insertOne(collectionName: string, element: JSON): Promise}: inserisce un elemento nella collezione indicata e ritorna una promise con cui è possibile effettuare operazioni sul risultato:
 	\begin{itemize}
 		\item \param{collectionName: string}: nome della collezione;
-		\item \param{element: Object}: elemento da inserire.
+		\item \param{element: JSON}: elemento da inserire.
 	\end{itemize}
 \end{itemize}
 
@@ -396,24 +390,24 @@ Classe che permette di effettuare confronti tramite espressioni regolari.
 \textbf{Attributi:}
 \begin{itemize}
 	\item \field{- regExp: string}: stringa contenente l'espressione regolare;
-	\item \field{- mod: Object}: oggetto contenente i modificatori;
-	\item \field{+ \ul{suffixQuantifiers: string[]}}: array contenente i quantificatori che sono suffissi dell'espressione regolare;
-	\item \field{+ \ul{prefixQuantifiers: string[]}}: array contenente i quantificatori che sono prefissi dell'espressione regolare.
+	\item \field{- mod: JSON}: oggetto contenente i modificatori;
+	\item \field{- suffixQuantifiers: string[]}: array contenente i quantificatori che sono suffissi dell'espressione regolare;
+	\item \field{- prefixQuantifiers: string[]}: array contenente i quantificatori che sono prefissi dell'espressione regolare.
 \end{itemize}
 
 \textbf{Metodi:}
 \begin{itemize}
-	\item \method{+ MatchRegularExpr(expr: string, m: Object)}: costruttore della classe, assegna i parametri agli attributi:
+	\item \method{+ MatchRegularExpr(expr: string, m: JSON)}: costruttore della classe, assegna i parametri agli attributi:
 	\begin{itemize}
 		\item \param{expr: string}: espressione regolare;
-		\item \param{m: Object}: oggetto contenente i modificatori
+		\item \param{m: JSON}: oggetto contenente i modificatori
 	\end{itemize}
 	\item \method{+ modifiersToString(): string}: ritorna i modificatori sotto forma di stringa;
-	\item \method{+ setModifiers(m: Object): void}: setta i modificatori:
+	\item \method{+ setModifiers(m: JSON): void}: setta i modificatori:
 	\begin{itemize}
-		\item \param{m: Object}: oggetto contenente i modificatori;
+		\item \param{m: JSON}: oggetto contenente i modificatori;
 	\end{itemize}
-	\item \method{+ getModifiers(): Object}: ritorna l'oggetto contenente i modificatori;
+	\item \method{+ getModifiers(): JSON}: ritorna l'oggetto contenente i modificatori;
 	\item \method{- \ul{quote(str: string): string}}: ritorna una stringa dove ai caratteri speciali per le espressioni regolari è anteposto un carattere di escape:
 	\begin{itemize}
 		\item \param{str: string}: stringa su cui effettuare l'escaping;
@@ -458,7 +452,7 @@ Classe che permette di effettuare confronti tramite espressioni regolari.
 		\item \param{strings: string[]}: array contenente le stringhe da cercare;
 	\end{itemize}
 	\item \method{+ toString(): string}: ritorna l'espressione regolare sotto forma di stringa;
-	\item \method{+ execMatch(string: string): Object[]}: esegue la ricerca dell'espressione regolare costruita all'interno della stringa \texttt{string}, e ritorna un oggetto contenente informazioni sul match in caso sia presente, null altrimenti:
+	\item \method{+ execMatch(string: string): JSON}: esegue la ricerca dell'espressione regolare costruita all'interno della stringa \texttt{string}, e ritorna un oggetto contenente informazioni sul match in caso sia presente, null altrimenti:
 	\begin{itemize}
 		\item \param{string: string}: stringa su cui effettuare la ricerca;
 	\end{itemize}
@@ -478,10 +472,10 @@ Il controller del framework è composto dalla sola classe GenericBubble, la qual
 	\caption{Classe \class}
 \end{figure}
 \textbf{Descrizione:}\\
-Classe astratta che collega la logica del Model alla resa grafica della View.
+GenericBubble è la classe astratta che collega la logica del Model alla resa grafica della View. Questa classe definisce le caratteristiche base comuni a tutte le bubble, rendendo disponibile in particolare la possibilità di controllare il tempo di vita delle stesse e il loro metodo di renderizzazione.
 
 \textbf{Utilizzo:}\\
-Viene utilizzata come base per creare le bubble.
+GenericBubble Viene utilizzata come base per creare le diverse bubble, definendone le caratteristiche comuni.
 
 \textbf{Classi ereditate:}
 \begin{itemize}
@@ -490,7 +484,9 @@ Viene utilizzata come base per creare le bubble.
 
 \textbf{Sottoclassi:}
 \begin{itemize}
-	\item 
+	\item \coderef{BubbleAndEat::Customer::BubbleCustomer};
+	\item \coderef{BubbleAndEat::Restaurant::Chef::BubbleChef};
+	\item \coderef{BubbleAndEat::Restaurant::Manager::BubbleManager};
 \end{itemize}
 
 \textbf{Attributi:}
@@ -502,10 +498,13 @@ Viene utilizzata come base per creare le bubble.
 
 \textbf{Metodi:}
 \begin{itemize}
-	\item \method{+ GenericBubble(props: Object[])}: costruttore della classe, inizializza gli attributi con le corrispondenti proprietà:
+	\item \method{+ GenericBubble()}: costruttore i default della classe;
+	\item \method{+ GenericBubble(time: int)}: costruttore della classe che ne inizializza il tempo di vita:
 	\begin{itemize}
-		\item \param{props: Object[]}: oggetto contenente tutte le proprietà passate al costruttore;
+		\item \param{time: int}: tempo di vita della bubble in secondi;
 	\end{itemize}
+	\item \method{+ getTime(): int}: getter per \texttt{time};
+	\item \method{+ setTime(time: int): void}: setter per \texttt{time};
 	\item \method{\textit{+ aliveRender(): React::Component}}: renderizza la bubble mentre è in vita;
 	\item \method{\textit{+ notAliveRender(): React::Component}}: renderizza la bubble a vita terminata;
 	\item \method{+ render(): React::Component}: renderizza la bubble.
@@ -518,7 +517,7 @@ Viene utilizzata come base per creare le bubble.
 	\includegraphics[width=15cm]{./diagrammi/framework/view.png}
 	\caption{Classe \class}
 \end{figure}
-Il componente View è il contenitore principale per gli elementi grafici del framework. È composto al suo interno da un pattern Fa\c{c}ace sul sottosistema GUI e dalla classe GUIContainer che fa da contenitore per qualsiasi componente grafico.
+Il componente View è il contenitore principale per gli elementi grafici del framework. È composto al suo interno da un sottosistema di componenti grafici e dalla classe GUIContainer che fa da contenitore per qualsiasi componente derivato da React.Component.
 
 \setclass{Framework::View::GUIContainer}
 \paragraph[::GUIContainer]{\class}\mbox{}\\ \label{\class}
@@ -545,55 +544,60 @@ Viene utilizzato per raggruppare blocchi di elementi correlati tra loro.
 
 \textbf{Attributi:}
 \begin{itemize}
-	\item \field{- children: GUI[]}: array di componenti grafici.
+	\item \field{- children: React::Component[]}: array di componenti grafici.
 \end{itemize}
 
 \textbf{Metodi:}
 \begin{itemize}
-	\item \method{+ GUIContainer(props: Object[])}: costruttore della classe, inizializza gli attributi con le corrispondenti proprietà:
+	\item \method{+ GUIContainer()}: costruttore di default;
+	\item \method{+ GUIContainer(children: React::Component[])}: costruttore della classe:
 	\begin{itemize}
-		\item \param{props: Object[]}: oggetto contenente tutte le proprietà passate al costruttore;
+		\item \param{children: React::Component[]}: oggetto contenente gli elementi contenuti;
+	\end{itemize}
+	\item \method{+ addItem(item: React::Component): void}: aggiunge un elemento alla lista:
+	\begin{itemize}
+		\item \param{item: React::Component}: elemento da aggiungere;
 	\end{itemize}
 	\item \method{+ render(): React::Component}: renderizza il contenitore.
 \end{itemize}
 
-\setclass{Framework::View::GUI::GUI}
-\paragraph[::GUI]{\class}\mbox{}\\ \label{\class}
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=9cm]{./diagrammi/framework/view/gui/gui.png}
-	\caption{Classe \class}
-\end{figure}
-\textbf{Descrizione:}\\
-Classe che rappresenta un generico elemento grafico. Implementa il design pattern Fa\c{c}ade.
-
-\textbf{Utilizzo:}\\
-Viene utilizzato per costruire gli elementi grafici.
-
-\textbf{Classi ereditate:}
-\begin{itemize}
-	\item \code{React::Component}
-\end{itemize}
-
+%\setclass{Framework::View::GUI::GUI}
+%\paragraph[::GUI]{\class}\mbox{}\\ \label{\class}
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=9cm]{./diagrammi/framework/view/gui/gui.png}
+%	\caption{Classe \class}
+%\end{figure}
+%\textbf{Descrizione:}\\
+%Classe che rappresenta un generico elemento grafico. Implementa il design pattern Fa\c{c}ade.
+%
+%\textbf{Utilizzo:}\\
+%Viene utilizzato per costruire gli elementi grafici.
+%
+%\textbf{Classi ereditate:}
+%\begin{itemize}
+%	\item \code{React::Component}
+%\end{itemize}
+%
 %\textbf{Sottoclassi:}
 %\begin{itemize}
 %	\item 
 %\end{itemize}
-
-\textbf{Attributi:}
-\begin{itemize}
-	\item \field{- props: Object[]}: array contenente le proprietà del componente da creare.
-\end{itemize}
-
-\textbf{Metodi:}
-\begin{itemize}
-	\item \method{+ GUI(props: Object[], WrappedComponent: class)}: costruttore della classe, inizializza le proprietà del componente da creare:
-	\begin{itemize}
-		\item \param{props: Object[]}: oggetto contenente tutte le proprietà passate al costruttore;
-		\item \param{WrappedComponent: class}: componente da creare;
-	\end{itemize}
-	\item \method{+ render(): React::Component}: renderizza il componente.
-\end{itemize}
+%
+%\textbf{Attributi:}
+%\begin{itemize}
+%	\item \field{- props: Object[]}: array contenente le proprietà del componente da creare.
+%\end{itemize}
+%
+%\textbf{Metodi:}
+%\begin{itemize}
+%	\item \method{+ GUI(props: Object[], WrappedComponent: class)}: costruttore della classe, inizializza le proprietà del componente da creare:
+%	\begin{itemize}
+%		\item \param{props: Object[]}: oggetto contenente tutte le proprietà passate al costruttore;
+%		\item \param{WrappedComponent: class}: componente da creare;
+%	\end{itemize}
+%	\item \method{+ render(): React::Component}: renderizza il componente.
+%\end{itemize}
 
 \setclass{Framework::View::GUI::BarChart}
 \paragraph[::BarChart]{\class}\mbox{}\\ \label{\class}
@@ -620,14 +624,21 @@ Classe che rappresenta un grafico a istogramma.
 
 \textbf{Attributi:}
 \begin{itemize}
-	\item \field{- props: Object[]}: proprietà della classe.
+	\item \field{- data: Map<string, int[]>}: dati del grafico raggruppati per etichetta.
 \end{itemize}
 
 \textbf{Metodi:}
 \begin{itemize}
-	\item \method{+ BarChart(props: Object[])}: costruttore, assegna le proprietà;
+	\item \method{+ BarChart()}: costruttore di default;
+	\item \method{+ BarChart(data: Map<string, int[]>)}: costruttore, assegna le proprietà:
 	\begin{itemize}
-		\item \param{props: Object[]}: array di oggetti contenenti le proprietà;
+		\item \param{data: Map<string, int>}: mappa dei dati;
+	\end{itemize}
+	\item \method{+ getData(): Map<string, int[]>}: getter per \texttt{data};
+	\item \method{+ setData(key: string, data: int[]): void}: setter per \texttt{data}:
+	\begin{itemize}
+		\item \param{key: string}: chiave dei dati;
+		\item \param{data: int[]}: dati da aggiungere;
 	\end{itemize}
 	\item \method{+ render(): React::Component}: renderizza il componente.
 \end{itemize}
@@ -657,14 +668,18 @@ Viene utilizzato per i bottoni generici all'interno della bubble.
 
 \textbf{Attributi:}
 \begin{itemize}
-	\item \field{- props: Object[]}: array contenente le proprietà.
+	\item \field{- label: string}: etichetta per il pulsante.
 \end{itemize}
 
 \textbf{Metodi:}
 \begin{itemize}
-	\item \method{+ Button(props: Object[])}: costruttore della classe, assegna le proprietà:
+	\item \method{+ Button(label: string)}: costruttore della classe, assegna le proprietà:
 	\begin{itemize}
-		\item \param{props: Object[]}: array di oggetti contenenti le proprietà;
+		\item \param{label: string}: etichetta del pulsante;
+	\end{itemize}
+	\item \method{+ onClick(action: function): void}: esegue l'azione quando avviene l'evento \textit{click}:
+	\begin{itemize}
+		\item \param{action: function}: azione da eseguire;
 	\end{itemize}
 	\item \method{+ render(): React::Component}: renderizza il componente.
 \end{itemize}
@@ -694,15 +709,26 @@ Viene utilizzata per costruire gli elementi della to-do list.
 
 \textbf{Attributi:}
 \begin{itemize}
-	\item \field{- props: Object[]}: array contenente le proprietà della classe;
+	\item \field{- label: string}: etichetta del pulsante;
 	\item \field{- checked: boolean}: indica lo stato della checkbox.
 \end{itemize}
 
 \textbf{Metodi:}
 \begin{itemize}
-	\item \method{+ CheckBox(props: Object[])}: costruttore della classe, assegna le proprietà:
+	\item \method{+ CheckBox()}: costruttore di default;
+	\item \method{+ CheckBox(label: string)}: costruttore della classe, assegna le proprietà:
 	\begin{itemize}
-		\item \param{props: Object[]}: array contenente le proprietà della classe;
+		\item \param{label: string}: etichetta del pulsante;
+	\end{itemize}
+	\item \method{+ getLabel(): string}: getter per \texttt{label};
+	\item \method{+ setLabel(label: string): void}: setter per \texttt{label}:
+	\begin{itemize}
+		\item \param{label: string}: etichetta da associare al pulsante;
+	\end{itemize} 
+	\item \method{+ isChecked(): boolean}: getter per \texttt{checked};
+	\item \method{+ setChecked(checked: boolean): void}: setter per \texttt{checked}:
+	\begin{itemize}
+		\item \param{checked: boolean}: stato da settare;
 	\end{itemize}
 	\item \method{+ render(): React::Component}: renderizza il componente.
 \end{itemize}
@@ -732,16 +758,18 @@ Viene utilizzata per racchiudere gli elementi della to-do list.
 
 \textbf{Attributi:}
 \begin{itemize}
-	\item \field{- checks: CheckBox[]}: array contenente le checkbox;
-	\item \field{- props: Object[]}: array contenente le proprietà della classe.
+	\item \field{- checkboxes: CheckBox[]}: array contenente le checkbox\footnote{Nel diagramma sono preceduti da \virgolette{>>} i tipi appartenenti ad un sotto-package rispetto a quello attuale, indicandone quindi il percorso relativo.}.
 \end{itemize}
 
 \textbf{Metodi:}
 \begin{itemize}
-	\item \method{+ CheckBoxGroup(checks: CheckBox[], props: Object[])}: costruttore della classe, assegna le proprietà:
+	\item \method{+ CheckBoxGroup(checks: CheckBox[])}: costruttore della classe, assegna le proprietà:
 	\begin{itemize}
 		\item \param{checks: CheckBox[]}: array contenente le checkbox;
-		\item \param{props: Object[]}: array contenente le proprietà della classe;
+	\end{itemize}
+	\item \method{+ addItem(item: CheckBox): void}: aggiunge un elemento al gruppo:
+	\begin{itemize}
+		\item \param{item: CheckBox}: elemento da aggiungere;
 	\end{itemize}
 	\item \method{+ processInput(): React::Component}: renderizza i singoli componenti CheckBox;
 	\item \method{+ render(): React::Component}: renderizza il componente.
@@ -820,6 +848,7 @@ Viene utilizzata per caricare file.
 	\begin{itemize}
 		\item \param{id: string}: id da assegnare;
 	\end{itemize}
+	\item \method{+ getId(): string}: getter per \texttt{id};
 	\item \method{+ render(): React::Component}: renderizza il componente.
 \end{itemize}
 
@@ -926,14 +955,20 @@ Classe che rappresenta un grafico a torta.
 
 \textbf{Attributi:}
 \begin{itemize}
-	\item \field{- props: Object[]}: proprietà della classe.
+	\item \field{- data: Map<string, int>}: dati del grafico associati ad una etichetta;
 \end{itemize}
 
 \textbf{Metodi:}
 \begin{itemize}
-	\item \method{+ PieChart(props: Object[])}: costruttore della classe, assegna le proprietà:
+	\item \method{+ PieChart()}: costruttore di default;
+	\item \method{+ PieChart(data: Map<string, int>)}: costruttore della classe, assegna le proprietà:
 	\begin{itemize}
-		\item \param{props: Object[]}: proprietà dell'oggetto da costruire;
+		\item \param{data: Map<string, int>}: dati del grafico da costruire;
+	\end{itemize}
+	\item \method{+ getData(): Map<string, int>}: getter per \texttt{data};
+	\item \method{+ addData(data: Map<string, int>): void}: setter per \texttt{data}:
+	\begin{itemize}
+		\item \param{data: Map<string, int>}: dati da aggiungere;
 	\end{itemize}
 	\item \method{+ render(): React::Component}: renderizza il componente.
 \end{itemize}
@@ -967,18 +1002,33 @@ Viene utilizzata per i bottoni radio all'interno della bubble.
 	\item \field{- groupName: string}: identificativo del gruppo di bottoni di appartenenza;
 	\item \field{- checked: boolean}: stato di selezione;
 	\item \field{- label: string}: descrizione testuale del bottone;
-	\item \field{- optional: Object[]}: array contenente proprietà opzionali.
+	\item \field{- optional: JSON}: JSON contenente proprietà opzionali.
 \end{itemize}
 
 \textbf{Metodi:}
 \begin{itemize}
-	\item \method{+ RadioButton(value: string, groupName: string, checked: boolean, label: string, optional: Object[])}: costruttore della classe, assegna gli attributi:
+	\item \method{+ RadioButton(value: string, groupName: string, checked: boolean, label: string, optional: JSON)}: costruttore della classe, assegna gli attributi:
 	\begin{itemize}
 		\item \param{value: string}: valore del bottone;
 		\item \param{groupName: string}: nome del gruppo di appartenenza;
 		\item \param{checked: boolean}: setta il bottone come selezionato se true (solo uno per gruppo dovrebbe avere questo parametro a true);
 		\item \param{label: string}: descrizione testuale del bottone;
-		\item \param{optional: Object[]}: array di oggetti contenente proprietà opzionali;
+		\item \param{optional: JSON}: array di oggetti contenente proprietà opzionali;
+	\end{itemize}
+	\item \method{+ getValuel(): string}: getter per \texttt{value};
+	\item \method{+ setValue(value: string): void}: setter per \texttt{value}:
+	\begin{itemize}
+		\item \param{label: string}: valore da settare;
+	\end{itemize}
+	\item \method{+ isChecked(): boolean}: getter per \texttt{checked};
+	\item \method{+ setCheched(checked: boolean): void}: setter per \texttt{checked}:
+	\begin{itemize}
+		\item \param{checked: boolean}: stato da settare;
+	\end{itemize}
+	\item \method{+ getLabel(): string}: getter per \texttt{label};
+	\item \method{+ setLabel(label: string): void}: setter per \texttt{label}:
+	\begin{itemize}
+	\item \param{label: string}: stato da settare;
 	\end{itemize}
 	\item \method{+ onChange(): void}: comportamento da adottare quando lo stato \texttt{checked} varia;
 	\item \method{+ render(): React::Component}: renderizza il componente.
@@ -1020,6 +1070,10 @@ Viene utilizzata nella bubble per raggruppare bottoni radio affini.
 	\begin{itemize}
 		\item \param{groupName: string}: nome del gruppo;
 		\item \param{buttons: RadioButton[]}: insieme di bottoni radio da assegnare all'istanza del gruppo;
+	\end{itemize}
+	\item \method{+ addItem(item: RadioButton): void}: aggiunge un elemento al gruppo:
+	\begin{itemize}
+		\item \param{item: RadioButton}: elemento da aggiungere;
 	\end{itemize}
 	\item \method{+ onCheckedChange(value: string): void}: aggiorna il valore di \texttt{selected};
 	\item \method{+ render(): React::Component}: renderizza il componente.
@@ -1064,6 +1118,11 @@ Viene utilizzata per permettere l'inserimento di più righe di testo.
 		\item \param{name: string}: identificativo del campo di testo;
 		\item \param{label: string}: descrizione testuale dell'input;
 	\end{itemize}
+	\item \method{+ getValue(): string}: getter per \texttt{value};
+	\item \method{+ setValue(value: string): void}: setter per \texttt{value}:
+	\begin{itemize}
+	\item \param{value: string}: valore da settare;
+	\end{itemize}
 	\item \method{+ handleChange(event: Event): void}: aggiorna lo stato del componente;
 	\item \method{+ render(): React::Component}: renderizza il componente.
 \end{itemize}
@@ -1102,6 +1161,11 @@ Viene utilizzata per mostrare testo generico.
 	\item \method{+ TextView(text: string)}: costruttore della classe:
 	\begin{itemize}
 		\item \param{text: string}: testo da visualizzare.
+	\end{itemize}
+	\item \method{+ getText(): string}: getter per \texttt{text};
+	\item \method{+ getText(text: string): void}: setter per \texttt{text}:
+	\begin{itemize}
+		\item \param{text: string}: testo da visualizzare;
 	\end{itemize}
 	\item \method{+ render(): React::Component}: renderizza il componente.
 \end{itemize}

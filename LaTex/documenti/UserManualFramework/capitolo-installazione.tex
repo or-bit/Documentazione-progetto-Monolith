@@ -9,33 +9,28 @@ To be able to install the Framework, npm v4.2.0 and nodejs v7.10.0 are required.
 
 \subsection{Installation}
 
-\subsubsection{Windows}
-
-To install the Framework on a Windows operating system please follow this procedure:
+To install the Framework  please follow this procedure:
+1. Install rocket.chat (MAC OSX / LINUX):
 \begin{itemize}
-	\item open the command propt, or any command-line interface program of your choice;
-	\item navigate to the server directory through the command propt;
-	\item launch the command ``npm i \&\& npm start'';
-	\item navigate to the client directory through the command propt;
-	\item launch the command ``npm i \&\& npm start'';
-	\item when the client and server have finished installing, a new browser tab will open where it will be possible to open the bubble.
+    \item ``curl https://install.meteor.com/ | sh'';
+    \item ``git clone git@github.com:RocketChat/Rocket.Chat.git'';
+    \item ``cd Rocket.chat'';
+    \item ``meteor npm install''; 
 \end{itemize}
 
-\subsubsection{Linux}
-To install the Framework on a Linux operating system please follow this procedure:
-\begin{itemize}
-	\item open the terminal, or any command-line interface program of your choice;
-	\item navigate to the application directory through the terminal; 
-	\item start the installation's script by typing ``./start.sh'' in the terminal and then click enter;
-	\item when the application has finished installing, a new browser tab will open where it will be possible to open the bubble.
+2. Install this integration package
+  From Rocket.Chat root source folder:
+ \begin{itemize}
+    \item ``git clone https://github.com/or-bit/monolith-rocketchat.git packages/monolith'';
+    \item ``meteor add monolith'';
 \end{itemize}
 
-In the event of failure of the installation process please follow this alternative procedure for installing the application:
+How do you use this package?
+From Rocket.Chat root source folder:
 \begin{itemize}
-	\item open the terminal, or any command-line interface program of your choice;
-	\item navigate to the server directory through the terminal;
-	\item launch the command ``npm i \&\& npm start'';
-	\item navigate to the client directory through the terminal;
-	\item launch the command ``npm i \&\& npm start'';
-	\item when client and server have finished installing, a new browser tag will open where it will be possible to open the bubble.
+\item navigate to packages/monolith-rocketchat
+\item create a file named ``routes.js''
+\item inside ``routes.js'' you must write 2 objects:   url (type String)  routes (type Object)
 \end{itemize}
+
+The url string is the base url of your webapp, for example: "http://my-heroku-app.herokuapp.com".

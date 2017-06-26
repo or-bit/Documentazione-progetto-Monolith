@@ -1,19 +1,20 @@
 \section{Basic Functionalities guide}
 \subsection{Functional Elements}
+
 \subsubsection{ExternalAPI}
-ExternalAPI is a useful element capable of recovering a \glossario{JSON} file from an \glossario{API} method and storing it in the BubbleMemory. 
+ExternalAPI is a useful element capable of retrieving a \glossario{JSON} file from an \glossario{API} method and storing it in the Bubble. 
 \begin{figure}[H]
-	\centering
-	\includegraphics[width=14cm]{../../documenti/UserManualFramework/framework_model/1framework_model_api.png}
-	\caption{ExternalAPI}
+ 	\centering
+ 	\includegraphics[width=14cm]{../../documenti/UserManualFramework/framework_model/1framework_model_api.png}
+ 	\caption{ExternalAPI}
 \end{figure}
 
-\subsubsection{Notification}
-Through Notification it is possible to show the user a notification, to create the notification a user has to specify a title, an icon and some text. 
+\subsubsection{WebNotification}
+Through WebNotification it is possible to show the user a notification, to create the notification a user has to specify a title, an icon and some text. 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=14cm]{../../documenti/UserManualFramework/framework_model/2framework_model_notification.png}
-	\caption{Notification}
+	\caption{WebNotification}
 \end{figure}
 
 \subsubsection{Database}
@@ -22,14 +23,6 @@ The functional element Database is based on the \glossario{MongoDB} collection s
 	\centering
 	\includegraphics[width=14cm]{../../documenti/UserManualFramework/framework_model/3framework_model_mongo.png}
 	\caption{MongoDB}
-\end{figure}
-
-\subsubsection{BubbleMemory}
-\glossario{BubbleMemory} can emit signals to alert other components when the data collections that it stores is subject to changes. Different types of actions can operate on these collections, storing new objects, removing or editing them. 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=14cm]{../../documenti/UserManualFramework/framework_model/4framework_model_memory.png}
-	\caption{BubbleMemory}
 \end{figure}
 
 \subsubsection{MatchRegularExpr}
@@ -48,7 +41,39 @@ MatchRegularExpr can combine strings and regexp to create other MatchRegularExpr
 	\caption{Regular Expressions}
 \end{figure}
 
-\subsection{Graphical Elements}
+\subsubsection{Action}
+An action is executed on an object, is is described by a string, in the following example we are creating a DELETE action. 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=14cm]{../../documenti/UserManualFramework/framework_model/Action.png}
+	\caption{Action}
+\end{figure}
+
+\subsubsection{IDGenerator}
+IDGenerator generates random id objects for a MongoDB DataBase. It is possible to get a String version of the id.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=14cm]{../../documenti/UserManualFramework/framework_model/idGenerator.png}
+	\caption{IDGenerator}
+\end{figure}
+
+\subsubsection{Server}
+Server istantiate an ExpressApp.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=14cm]{../../documenti/UserManualFramework/framework_model/Server.png}
+	\caption{Server}
+\end{figure}
+
+\subsubsection{User}
+A User consists of a username and a role. It is possible to get the username of a User.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=14cm]{../../documenti/UserManualFramework/framework_model/User.png}
+	\caption{User}
+\end{figure}
+
+\subsection{Graphical Elements}\label{GraphicalElements}
 \subsubsection{Button}
 In a Button tag it is possible to specify the text for the button and to bind a function that will be called when the button is clicked.
 \begin{figure}[H]
@@ -57,12 +82,24 @@ In a Button tag it is possible to specify the text for the button and to bind a 
 	\caption{Button}
 \end{figure}
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=6cm]{../../documenti/UserManualFramework/graphical_elements/buttonGE.png}
+	\caption{Rendering of the Button}
+\end{figure}
+
 \subsubsection{Label}
 A Label can be associated to an \glossario{HTML} element, it can contain some informative text regarding the element.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=14cm]{../../documenti/UserManualFramework/framework_view/12framework_view_label.png}
 	\caption{Label}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=6cm]{../../documenti/UserManualFramework/graphical_elements/labelGE.png}
+	\caption{A Label associated to a CheckBox}
 \end{figure}
 
 \subsubsection{Image}
@@ -81,11 +118,23 @@ A TextView is a container for some text.
 	\caption{TextView}
 \end{figure}
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{../../documenti/UserManualFramework/graphical_elements/textViewGE.png}
+	\caption{TextView}
+\end{figure}
+
 \subsubsection{TextEdit}
 A TextEdit contains a text paragraph and allows the user to interact with it, it is possble to bind a function to handle the editing.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=14cm]{../../documenti/UserManualFramework/framework_view/15framework_view_textedit.png}
+	\caption{TextEdit}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{../../documenti/UserManualFramework/graphical_elements/textEditGE.png}
 	\caption{TextEdit}
 \end{figure}
 
@@ -97,11 +146,23 @@ InputText renders an input field for strings.
 	\caption{InputText}
 \end{figure}
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=6cm]{../../documenti/UserManualFramework/graphical_elements/inputTextGE.png}
+	\caption{InputText}
+\end{figure}
+
 \subsubsection{InputFile}
 InputText renders an input field for a file.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=14cm]{../../documenti/UserManualFramework/framework_view/17framework_view_inputfile.png}
+	\caption{InputFile}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=6cm]{../../documenti/UserManualFramework/graphical_elements/inputFileGE.png}
 	\caption{InputFile}
 \end{figure}
 
@@ -122,6 +183,12 @@ RadioButtonGroup will require the user of the GUI to select a single RadioButton
 	\caption{RadioButtonGroup}
 \end{figure}
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=6cm]{../../documenti/UserManualFramework/graphical_elements/radioButtonGroupGE.png}
+	\caption{RadioButtonGroup}
+\end{figure}
+
 \subsubsection{CheckBox}
 CheckBox represents a single instance of a button that will be placed together with other checkBoxes either in a CheckBoxGroup or in a simple sequence of CheckBoxes.
 \begin{figure}[H]
@@ -139,12 +206,23 @@ CheckBoxGroup will allow the user of the \glossario{GUI} to select any number of
 	\caption{CheckBoxGroup}
 \end{figure}
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=6cm]{../../documenti/UserManualFramework/graphical_elements/checkBoxGroupGE.png}
+	\caption{CheckBoxGroup}
+\end{figure}
+
 \subsubsection{BarChart}
 BarChart allows to represent data whith bars that are proportional to the values they represent. It's possible to select colors for the bars and grid limits.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=14cm]{../../documenti/UserManualFramework/framework_view/18framework_view_bar.png}
 	\caption{BarChart}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=14cm]{../../documenti/UserManualFramework/framework_view/barchart.png}
+	\caption{BarChart example}
 \end{figure}
 
 \subsubsection{PieChart}
@@ -154,7 +232,13 @@ PieChart allows to represent data as a circle divided into slices. It's possible
 	\includegraphics[width=14cm]{../../documenti/UserManualFramework/framework_view/19framework_view_pie.png}
 	\caption{PieChart}
 \end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=14cm]{../../documenti/UserManualFramework/framework_view/piechart.png}
+	\caption{PieChart example}
+\end{figure}
 
+\subsection{Bubbles}
 \subsubsection{GenericBubble}
 Import the GenericBubble class and place it inside your code to render your Generic Bubble. 
 \begin{figure}[H]

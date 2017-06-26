@@ -5,7 +5,14 @@
 	\includegraphics[width=15cm]{./diagrammi/demo/server/ordergatewaypkg.png}
 	\caption{Componente \class}
 \end{figure}
-La parte server della \DemoName{} è formata da OrderGateway, la classe principale che amministra tutte le operazioni legate al server stesso, Server, che crea il server vero e proprio, Menu e MenuItem, che rappresentano il menu del ristorante, e dai package Order e Handler, che si occupano rispettivamente di rappresentare gli ordini e di gestire le richieste da parte delle bubble. 
+La parte server della \DemoName{} è formata da:
+\begin{itemize}
+\item OrderGateway, la classe principale che amministra tutte le operazioni legate al server stesso;
+\item Server, che crea il server vero e proprio;
+\item Menu e MenuItem, che rappresentano il menu del ristorante;
+\item Il package Order, che si occupa di rappresentare gli ordini;
+\item Il package Handler, che gestisce le richieste da parte delle diverse bubble.
+\end{itemize}
 
 \setclass{BubbleAndEat::Restaurant::OrderGateway::Server}
 \paragraph[::Server]{\class}\mbox{}\\ \label{\class}
@@ -57,10 +64,10 @@ Viene utilizzata per inizializzare il server stesso e i socket.
 	\caption{Classe \class}
 \end{figure}
 \textbf{Descrizione:}\\
-Classe che rappresenta un gateway per le comunicazioni tra le bubble e il server.
+La classe OrderGateway rappresenta un gateway per le comunicazioni tra le bubble e il server. In particolare si occupa di gestire e indirizzare le diverse attività della demo. OrderGateway reindirizza le diverse connessioni all'handler della bubble corretta e salva le varie informazioni necessarie sul DB, come lo stato dell'applicazione e gli ordini completati. È compito di questa classe anche quello di avviare il server.
 
 \textbf{Utilizzo:}\\
-Viene utilizzata per inizializzare le connessioni e indirizzare le comunicazioni alle giuste bubble attraverso appositi handler.
+Viene utilizzata per inizializzare le connessioni e indirizzare le comunicazioni alle giuste bubble attraverso appositi handler. Si occupa anche di avviare il server e salvare le informazioni importanti sul databasae.
 
 %\textbf{Classi ereditate:}
 %\begin{itemize}
@@ -109,10 +116,10 @@ Questo componente raggruppa gli handler per le varie bubble. Gli handler hanno l
 	\caption{Classe \class}
 \end{figure}
 \textbf{Descrizione:}\\
-Classe astratta che fornisce una base comune per gli handlers.
+Classe astratta che fornisce una base comune per gli handlers. In particolare contiene ed offre l'accesso all'elenco degli ordini del ristorante, al socket necessario per le comunicazioni con il server e allo store redux dell'applicazione.
 
 \textbf{Utilizzo:}\\
-Viene utilizzata per gestire gli handlers tramite polimorfismo.
+Viene utilizzata come base per gestire gli handlers tramite polimorfismo.
 
 %\textbf{Classi ereditate:}
 %\begin{itemize}
@@ -155,7 +162,7 @@ Viene utilizzata per gestire gli handlers tramite polimorfismo.
 	\caption{Classe \class}
 \end{figure}
 \textbf{Descrizione:}\\
-Classe che gestisce le richieste provenienti dalla bubble ManagerBubble.
+La classe ManagerHandler si occupa di gestire le richieste provenienti dalla bubble ManagerBubble ed eseguire le operazioni necessarie sul server. Per fare questo ManagerHandler possiede un corrispondente dei metodi necessari a svolgere tutte le attività del Manager che operano sul server, i quali vengono invocati al momento opportuno dalle loro controparti della bubble BubbleManager quando le diverse funzionalità vengono utilizzate. 
 
 \textbf{Utilizzo:}\\
 Viene utilizzata per gestire l'autenticazione del Manager ed eseguire le operazioni richieste dalla bubble lato client sul server.
@@ -213,10 +220,10 @@ Viene utilizzata per gestire l'autenticazione del Manager ed eseguire le operazi
 	\caption{Classe \class}
 \end{figure}
 \textbf{Descrizione:}\\
-Classe che gestisce le richieste provenienti dalla bubble ChefBubble.
+La classe ChefHandler gestisce le richieste provenienti dalla bubble ChefBubble e le reindirizza al server. Possiede dunque il metodo necessario a notificare lo Chef della presenza di una nuova ordinazione da preparare e quello per registrare il completamento di un ordine.
 
 \textbf{Utilizzo:}\\
-Viene utilizzata per gestire l'autenticazione dello Chef ed eseguire le operazioni richieste dalla bubble lato client sul server.
+Viene utilizzata per gestire l'autenticazione dello Chef, eseguire le operazioni richieste dalla bubble lato client sul server e notificare il client della presenza di nuovi ordini da preparare.
 
 \textbf{Classi ereditate:}
 \begin{itemize}
@@ -256,10 +263,10 @@ Viene utilizzata per gestire l'autenticazione dello Chef ed eseguire le operazio
 	\caption{Classe \class}
 \end{figure}
 \textbf{Descrizione:}\\
-Classe che gestisce le richieste provenienti dalla bubble CustomerBubble.
+La classe CustomerHandler gestisce le richieste provenienti dalla bubble CustomerBubble e le reindirizza al server. Fornisce i metodi necessari a recuperare il menu, effettuare un ordine e controllarne lo stato, che vengono invocati quando viene effettuata la richiesta corrispondente dal client.
 
 \textbf{Utilizzo:}\\
-Viene utilizzata per gestire l'autenticazione del Customer ed eseguire le operazioni richieste dalla bubble lato client sul server.
+Viene utilizzata per gestire l'autenticazione del Customer ed eseguire le diverse operazioni richieste dalla bubble lato client sul server. Si occupa anche di tenere aggiornate le informazioni sullo stato dell'ordine.
 
 \textbf{Classi ereditate:}
 \begin{itemize}

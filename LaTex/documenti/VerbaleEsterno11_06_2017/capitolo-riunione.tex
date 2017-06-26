@@ -1,0 +1,42 @@
+\section{Riunione}
+\subsection{Ordine del Giorno}
+\begin{itemize}
+	\item Dimostrazione demo;
+	\item resoconto funzionalità implementate;
+	\item varie ed eventuali.
+\end{itemize}
+
+\subsection{Dimostrazione demo}
+Come introduzione alla riunione viene effettuata una breve dimostrazione della demo, così come è stata presentata in sede di revisione.
+Premessa è che la demo è ristretta ai ruoli \textit{Customer}, \textit{Chef} e \textit{Manager}, primari per la demo stessa. Il proponente concorda su questa scelta e non ha ulteriori richieste per gli altri ruoli non implementati.
+
+\subsubsection{Heroku}
+La demo viene presentata tramite screen sharing, in quanto il caricamento dell'applicazione su \glossario{Heroku} è ancora in sviluppo. Sono stati riscontrati alcuni problemi nel caricare in Heroku sia il front end che il back end in un unico contenitore. È stata effettuata una seconda prova caricando le due componenti in contenitori distinti e mettendo in comunicazione le due parti, ma Heroku chiude le comunicazioni se non riceve segnali entro un certo periodo di tempo, rendendo l'applicazione inutilizzabile.\\
+VE\_2017-06-11\_D1: Si è deciso pertanto di ritornare alla prima versione.
+
+\subsubsection{Presentazione grafica delle bubble}
+Il proponente chiede a titolo informativo la motivazione per cui i vari ordini si trovino all'interno della stessa bubble e non su diversi messaggi. Questa disposizione è stata pensata per raccogliere le informazioni ed evitare la dispersione all'interno della chat. Viene inoltre proposto l'utilizzo dei webhook per la condivisione delle informazioni tra la web app indipendente e Rocket.Chat.\\
+VE\_2017-06-11\_D2: La variante proposta sarà presa in considerazione, ma non ne viene assicurata l'implementazione.
+
+\subsection{Descrizione progetto}
+Viene quindi effettuata, su richiesta di \Proponente{}, una descrizione del progetto ad alto livello, specificando la suddivisione delle componenti software utilizzate. Il punto focale della descrizione è stata la suddivisione globale in tre parti:
+\begin{itemize}
+	\item web app esterna con un database dedicato;
+	\item \glossario{bubble}, attualmente inserita come frame;
+	\item \glossario{Rocket.Chat}, a cui viene integrata la bubble.
+\end{itemize}
+
+\subsection{Autenticazione}
+L'autenticazione avviene in avvio della connessione tra la bubble e il server. La bubble comunica il proprio ruolo al server, che accetterà la richiesta e inizializzerà la connessione sulla base del ruolo comunicato. È già predisposta dunque la base per implementare una modalità di autenticazione più complessa.
+
+\subsection{SDK}
+L'\glossario{SDK} è quindi diviso in due parti, front end e back end, utilizzabili anche in modo indipendente. Esso permette di creare le bubble all'interno di Rocket.Chat, dentro al quale un pacchetto intercetta i messaggi e renderizza le bubble.
+
+Lo sviluppatore per creare una bubble può utilizzare le componenti fornitegli, integrando così la sua web app in Rocket.Chat.
+Per chiarire meglio questo punto, viene richiesta una piccola demo \virgolette{Hello World} che metta in evidenza l'utilizzo del framework, in modo tale da mostrare la semplicità o complessità di utilizzo del framework da parte di un utente esterno al progetto.
+
+\subsection{Conclusione}
+Il proponente rimane in attesa dell'esempio \virgolette{Hello World}, che il gruppo si impegna a produrre entro la fine della giornata.
+Complessivamente \Proponente{} si dichiara soddisfatta della visione con cui è stato sviluppato il progetto, anche sulla base della suddivisione dei componenti e sui loro nomi, che si allineano con il suo modo di pensare la struttura di un'applicazione web. 
+
+\clearpage
